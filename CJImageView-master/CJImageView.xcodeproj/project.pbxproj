@@ -257,6 +257,7 @@
 		5A729AA825209A1C007A7136 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A685ECF24D2E7B200BF9737 /* NSData+Base64.m */; };
 		5A7C0B55251DDCF3009C427D /* CustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C0B54251DDCF3009C427D /* CustomAlertView.m */; };
 		5A7C0B56251DDCF3009C427D /* CustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C0B54251DDCF3009C427D /* CustomAlertView.m */; };
+		5A82CB0025514F0A0035F2D2 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A82CAFF25514F0A0035F2D2 /* IJKMediaFramework.framework */; };
 		5A8522E224E69BFC00EF7157 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8522E024E69BFC00EF7157 /* TestViewController.m */; };
 		5A8522E324E69BFC00EF7157 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8522E124E69BFC00EF7157 /* TestViewController.xib */; };
 		5A8522E424E69F2D00EF7157 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8522E124E69BFC00EF7157 /* TestViewController.xib */; };
@@ -608,6 +609,7 @@
 		5A729A8E2520829A007A7136 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
 		5A7C0B53251DDCF3009C427D /* CustomAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomAlertView.h; sourceTree = "<group>"; };
 		5A7C0B54251DDCF3009C427D /* CustomAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomAlertView.m; sourceTree = "<group>"; };
+		5A82CAFF25514F0A0035F2D2 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		5A8522DF24E69BFC00EF7157 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		5A8522E024E69BFC00EF7157 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		5A8522E124E69BFC00EF7157 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
@@ -700,6 +702,7 @@
 				5A2E8AE124BC0CE300B859AB /* SystemConfiguration.framework in Frameworks */,
 				5A6694C4253581070073FDF6 /* libbz2.1.0.tbd in Frameworks */,
 				F040FCB469F550DED38D52D3 /* Pods_CJImageViewDefault_CJImageView.framework in Frameworks */,
+				5A82CB0025514F0A0035F2D2 /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -846,6 +849,7 @@
 				5A0BC8EA25135D5A00426728 /* View */,
 				5A0BC8D525134ADE00426728 /* Utility */,
 				5A0BC8CC25134A2F00426728 /* Model */,
+				5A82CAFF25514F0A0035F2D2 /* IJKMediaFramework.framework */,
 				5A0BC8DA25134C7300426728 /* IJK.bundle */,
 				5A0BC8DD25134F4700426728 /* LMVideoPlayer.h */,
 				5A0BC8DE25134F4700426728 /* LMVideoPlayer.m */,
@@ -2506,6 +2510,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
+					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer/Model",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CJImageView/Resources(资源)/Global/PrefixHeader.pch";
 				INFOPLIST_FILE = CJImageView/Info.plist;
@@ -2529,6 +2534,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
+					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer/Model",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CJImageView/Resources(资源)/Global/PrefixHeader.pch";
 				INFOPLIST_FILE = CJImageView/Info.plist;
