@@ -34,6 +34,7 @@
 #import "UIColor+Gradient.h"
 #import "UIViewController+LL_Utils.h"
 #import "UIViewController+Direction.h"
+#import "RootWebViewController.h"
 
 /**Foundation*/
 #import "NSArray+SafeAccess.h"

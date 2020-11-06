@@ -12,6 +12,8 @@
 //#import "AESCipher.h"
 //#import <YYKit.h>
 
+static NSString * const canGoBackKeyPath = @"canGoBack";
+static NSString * const estimatedProgressKeyPath = @"estimatedProgress";
 @interface XLWebViewController () <WKNavigationDelegate>
 //@property (nonatomic,strong) XLJSHandler * jsHandler;
 @property (nonatomic,assign) double lastProgress;//上次进度条位置
@@ -68,7 +70,8 @@
     _webView.allowsBackForwardNavigationGestures =YES;//打开网页间的 滑动返回
     _webView.scrollView.decelerationRate = UIScrollViewDecelerationRateNormal;
     //监控进度
-    [_webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
+    [_webView addObserver:self forKeyPath:estimatedProgressKeyPath options:NSKeyValueObservingOptionNew context:nil];
+    [_webView addObserver:self forKeyPath:canGoBackKeyPath options:NSKeyValueObservingOptionNew context:nil];
     [self.view addSubview:_webView];
     //进度条
     _progressView = [[UIProgressView alloc]initWithProgressViewStyle:UIProgressViewStyleDefault];
@@ -100,8 +103,18 @@
 
 #pragma mark --进度条
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    
-    [self updateProgress:_webView.estimatedProgress];
+    Dlog(@"%@-----",keyPath);
+    if (object == self.webView && [keyPath isEqualToString:canGoBackKeyPath]) {
+        BOOL cangoBack = [[change objectForKey:NSKeyValueChangeNewKey] boolValue];
+        if (cangoBack) {
+            self.fd_interactivePopDisabled = true;
+        }else{
+            self.fd_interactivePopDisabled = false;
+        }
+        
+    }else{
+        [self updateProgress:_webView.estimatedProgress];
+    }
 }
 
 #pragma mark -  更新进度条
@@ -185,7 +198,8 @@
 -(void)dealloc {
 //    [_jsHandler cancelHandler];
     self.webView.navigationDelegate = nil;
-    [_webView removeObserver:self forKeyPath:@"estimatedProgress"];
+    [_webView removeObserver:self forKeyPath:estimatedProgressKeyPath];
+    [_webView removeObserver:self forKeyPath:canGoBackKeyPath];
 }
 
 @end

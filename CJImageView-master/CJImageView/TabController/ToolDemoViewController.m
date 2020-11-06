@@ -68,10 +68,17 @@
     
 //    dispatch_async(queue, ^{
 //        [NSThread sleepForTimeInterval:2];
-////        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-////
-////        });
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            Dlog(@"%@---0当前线程",[NSThread currentThread]);
+//        });
 //        Dlog(@"%@---2当前线程",[NSThread currentThread]);
+//    });
+//    dispatch_async(queue, ^{
+////        [NSThread sleepForTimeInterval:2];
+//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            Dlog(@"%@---3当前线程",[NSThread currentThread]);
+//        });
+//        Dlog(@"%@---4当前线程",[NSThread currentThread]);
 //    });
 ////
 //    dispatch_sync(queue, ^{
@@ -106,11 +113,11 @@
     self.operView.frame = CGRectMake(10, KNavHeight, 50, 50);
     [self.view addSubview:self.operView];
     
-//    [self addOperation];
+    [self addOperation];
 //    [self testdispatchGroup];
     
-    self.dispatchSemaphore = dispatch_semaphore_create(5);
-    [self testDispatchSemaphore];
+//    self.dispatchSemaphore = dispatch_semaphore_create(5);
+//    [self testDispatchSemaphore];
 }
 
 
@@ -157,30 +164,32 @@
 
 
 -(void)testdispatchGroup{
-    dispatch_group_t group = dispatch_group_create();
-    dispatch_queue_t queue = dispatch_queue_create("myQueue", DISPATCH_QUEUE_CONCURRENT);
-
-    dispatch_group_async(group, queue, ^{
-        for (int i = 0; i<5; i++) {
-            NSLog(@"任务1 ----%@",[NSThread currentThread]);
-        };
-    });
-
-    dispatch_group_async(group, queue, ^{
-        for (int i = 0; i<5; i++) {
-            NSLog(@"任务2 ----%@",[NSThread currentThread]);
-        };
-    });
-
-    //等前面的任务都执行完,会自动执行这个任务
-    dispatch_group_notify(group, queue, ^{
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            for (int i = 0; i<5; i++) {
-                NSLog(@"任务3 ----%@",[NSThread currentThread]);
-            };
-        });
-    });
+//    dispatch_group_t group = dispatch_group_create();
+//    dispatch_queue_t queue = dispatch_queue_create("myQueue", DISPATCH_QUEUE_CONCURRENT);
+//
+//    dispatch_group_async(group, queue, ^{
+//        for (int i = 0; i<5; i++) {
+//            NSLog(@"任务1 ----%@",[NSThread currentThread]);
+//        };
+//    });
+//
+//    dispatch_group_async(group, queue, ^{
+//        for (int i = 0; i<5; i++) {
+//            NSLog(@"任务2 ----%@",[NSThread currentThread]);
+//        };
+//    });
+//
+//    //等前面的任务都执行完,会自动执行这个任务
+//    dispatch_group_notify(group, queue, ^{
+//
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            for (int i = 0; i<5; i++) {
+//                NSLog(@"任务3 ----%@",[NSThread currentThread]);
+//            };
+//        });
+//    });
+    
+//    [[GCDGroup new]groupTest];
 }
 
 -(void)addOperation{
@@ -190,76 +199,96 @@
        // 2.设置最大并发操作数
        queue.maxConcurrentOperationCount = 1; // 串行队列
     
+    self.dispatchSemaphore = dispatch_semaphore_create(3);
+    
+//    dispatch_semaphore_wait(self.dispatchSemaphore, 0);
+//    [self operOnMainThread];
+//    dispatch_semaphore_wait(self.dispatchSemaphore, DISPATCH_TIME_FOREVER);
+//    [self operOnMainThread2];
     // 使用 NSBlockOperation 创建操作3
     @weakify(self);
-//       NSBlockOperation *op3 = [NSBlockOperation blockOperationWithBlock:^{
-//           @strongify(self);
-////           [self operOnMainThread];
-//       }];
-//
-//
-//
-//    NSBlockOperation *op2 = [NSBlockOperation blockOperationWithBlock:^{
-//        @strongify(self);
-////        [self operOnMainThread2];
-////        [UIView animateWithDuration:0.3 animations:^{
-////            @strongify(self);
-////            self.operView.left= self.operView.frame.origin.x + 10;
-////        }];
-//    }];
-//
-//    // 3.使用 addOperation: 添加所有操作到队列中
-//        [queue addOperation:op3];
-//    [queue addOperation:op2];
+       NSBlockOperation *op3 = [NSBlockOperation blockOperationWithBlock:^{
+           @strongify(self);
+           [self operOnMainThread];
+       }];
+
+
+
+    NSBlockOperation *op2 = [NSBlockOperation blockOperationWithBlock:^{
+        @strongify(self);
+        [self operOnMainThread2];
+//        [UIView animateWithDuration:0.3 animations:^{
+//            @strongify(self);
+//            self.operView.left= self.operView.frame.origin.x + 10;
+//        }];
+    }];
+
+    // 3.使用 addOperation: 添加所有操作到队列中
+        [queue addOperation:op3];
+    [queue addOperation:op2];
     
     // 3.添加操作
-       [queue addOperationWithBlock:^{
-           @strongify(self);
-//           [self operOnMainThread];
-           for (int i = 0; i < 2; i++) {
-               [NSThread sleepForTimeInterval:4]; // 模拟耗时操作
-               NSLog(@"1---%@", [NSThread currentThread]); // 打印当前线程
-           }
-       }];
-       [queue addOperationWithBlock:^{
-           @strongify(self);
-//           [self operOnMainThread2];
-
-           for (int i = 0; i < 2; i++) {
-               [NSThread sleepForTimeInterval:3]; // 模拟耗时操作
-               NSLog(@"2---%@", [NSThread currentThread]); // 打印当前线程
-           }
-       }];
-       [queue addOperationWithBlock:^{
-           for (int i = 0; i < 2; i++) {
-               [NSThread sleepForTimeInterval:2]; // 模拟耗时操作
-               NSLog(@"3---%@", [NSThread currentThread]); // 打印当前线程
-           }
-       }];
-       [queue addOperationWithBlock:^{
-           for (int i = 0; i < 2; i++) {
-               [NSThread sleepForTimeInterval:1]; // 模拟耗时操作
-               NSLog(@"4---%@", [NSThread currentThread]); // 打印当前线程
-           }
-       }];
+//       [queue addOperationWithBlock:^{
+//           @strongify(self);
+////           [self operOnMainThread];
+//           for (int i = 0; i < 2; i++) {
+//               [NSThread sleepForTimeInterval:4]; // 模拟耗时操作
+//               NSLog(@"1---%@", [NSThread currentThread]); // 打印当前线程
+//           }
+//       }];
+//       [queue addOperationWithBlock:^{
+//           @strongify(self);
+////           [self operOnMainThread2];
+//
+//           for (int i = 0; i < 2; i++) {
+//               [NSThread sleepForTimeInterval:3]; // 模拟耗时操作
+//               NSLog(@"2---%@", [NSThread currentThread]); // 打印当前线程
+//           }
+//       }];
+//       [queue addOperationWithBlock:^{
+//           for (int i = 0; i < 2; i++) {
+//               [NSThread sleepForTimeInterval:2]; // 模拟耗时操作
+//               NSLog(@"3---%@", [NSThread currentThread]); // 打印当前线程
+//           }
+//       }];
+//       [queue addOperationWithBlock:^{
+//           for (int i = 0; i < 2; i++) {
+//               [NSThread sleepForTimeInterval:1]; // 模拟耗时操作
+//               NSLog(@"4---%@", [NSThread currentThread]); // 打印当前线程
+//           }
+//       }];
 }
 -(void)operOnMainThread{
     @weakify(self);
+//    dispatch_semaphore_wait(self.dispatchSemaphore, DISPATCH_TIME_FOREVER);
     dispatch_async(dispatch_get_main_queue(), ^{
-//        [UIView animateWithDuration:0.3 animations:^{
-//            @strongify(self);
-//            self.operView.top= self.operView.frame.origin.y + 50;
-//        }];
+        [UIView animateWithDuration:0.3 animations:^{
+            @strongify(self);
+//            dispatch_async(dispatch_get_main_queue(), ^{
+                self.operView.left= self.operView.frame.origin.x + 50;
+//            });
+            
+        }completion:^(BOOL finished) {
+            intptr_t y =   dispatch_semaphore_signal(self.dispatchSemaphore);
+            Dlog(@"%ld-------",y);
+        }];
     });
+//    [NSThread sleepForTimeInterval:0.3];
 }
 -(void)operOnMainThread2{
     @weakify(self);
+    intptr_t y =   dispatch_semaphore_wait(self.dispatchSemaphore, DISPATCH_TIME_NOW);//当返回值为0时表示当前并没有线程等待其处理的信号量，其处理的信号量的值加1即可。当返回值不为0时，表示其当前有（一个或多个）线程等待其处理的信号量，
+    Dlog(@"%ld+++++++",y);
+    dispatch_async(dispatch_get_main_queue(), ^{
     [UIView animateWithDuration:0.3 animations:^{
-        dispatch_async(dispatch_get_main_queue(), ^{
+//        dispatch_async(dispatch_get_main_queue(), ^{
             @strongify(self);
             self.operView.top= self.operView.frame.origin.y + 50;
-        });
+//        });
+    }completion:^(BOOL finished) {
+//        dispatch_semaphore_signal(self.dispatchSemaphore);
     }];
+    });
 }
 /*
 #pragma mark - Navigation
