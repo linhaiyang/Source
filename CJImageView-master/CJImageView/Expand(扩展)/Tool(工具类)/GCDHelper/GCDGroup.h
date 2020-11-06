@@ -22,5 +22,5 @@
 - (void)leave;
 - (void)wait;
 - (BOOL)wait:(int64_t)delta;
-
+-(void)groupTest;
 @end

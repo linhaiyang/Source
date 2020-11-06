@@ -35,19 +35,18 @@
     self = [super init];
     
     if (self) {
-        
         self.dispatchSemaphore = dispatch_semaphore_create(value);
     }
     
     return self;
 }
 
-- (BOOL)signal {
+- (BOOL)signal {//信号量+1
     
     return dispatch_semaphore_signal(self.dispatchSemaphore) != 0;
 }
 
-- (void)wait {
+- (void)wait {//等待信号量，直到信号量>0，当前线程才会往下继续执行
     
     dispatch_semaphore_wait(self.dispatchSemaphore, DISPATCH_TIME_FOREVER);
 }
