@@ -48,14 +48,9 @@ NSString*sttr1=@"S1ViewController";
 //}
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-//    
     //设置导航栏背景颜色
     [self.navigationController.navigationBar setBarTintColor:KColorNavDefault];
     self.navigationController.navigationBar.translucent = false;
-//       [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor orangeColor]] forBarMetrics:UIBarMetricsDefault];
-//    [self.navigationController.navigationBar setBarTintColor:[UIColor clearColor]];
-//    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:[UIColor clearColor]] forBarMetrics:UIBarMetricsDefault];
-//[self.navigationController.view setBackgroundColor:KColorNavDefault];
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
