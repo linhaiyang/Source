@@ -323,6 +323,8 @@
 		5AE9BBE72508DFA20010945B /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBE52508DFA20010945B /* UIViewController+Alert.m */; };
 		5AE9BBF3250A2EB60010945B /* UIApplication+Permissions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBF1250A2EB60010945B /* UIApplication+Permissions.m */; };
 		5AE9BBF4250A2EB60010945B /* UIApplication+Permissions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBF1250A2EB60010945B /* UIApplication+Permissions.m */; };
+		8BBBAEFF2552F0DB001767D9 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BBBAEFE2552F0DB001767D9 /* IJKMediaFramework.framework */; };
+		8BBBAF002552F0DB001767D9 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BBBAEFE2552F0DB001767D9 /* IJKMediaFramework.framework */; };
 		EBBF34E2E4D545EBD2B0902E /* Pods_CJImageViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 137C7CF9A3FB6AE76951D9DA /* Pods_CJImageViewTests.framework */; };
 		F040FCB469F550DED38D52D3 /* Pods_CJImageViewDefault_CJImageView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6868481593E21019F930C9EA /* Pods_CJImageViewDefault_CJImageView.framework */; };
 /* End PBXBuildFile section */
@@ -615,7 +617,6 @@
 		5A729A8E2520829A007A7136 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
 		5A7C0B53251DDCF3009C427D /* CustomAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomAlertView.h; sourceTree = "<group>"; };
 		5A7C0B54251DDCF3009C427D /* CustomAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomAlertView.m; sourceTree = "<group>"; };
-		5A82CAFF25514F0A0035F2D2 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		5A8522DF24E69BFC00EF7157 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		5A8522E024E69BFC00EF7157 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		5A8522E124E69BFC00EF7157 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
@@ -683,6 +684,7 @@
 		5AE9BBF2250A2EB60010945B /* UIApplication+Permissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Permissions.h"; sourceTree = "<group>"; };
 		5B400EDD14C4BA6134FE6508 /* Pods-CJImageViewDefault-CJImageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDefault-CJImageView.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewDefault-CJImageView/Pods-CJImageViewDefault-CJImageView.release.xcconfig"; sourceTree = "<group>"; };
 		6868481593E21019F930C9EA /* Pods_CJImageViewDefault_CJImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CJImageViewDefault_CJImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BBBAEFE2552F0DB001767D9 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		910612C4969EA109705B385E /* Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDefault-CJImageViewDebug/Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig"; sourceTree = "<group>"; };
 		A2EEC272AACE0C7BF5314D5D /* Pods-CJImageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageView.debug.xcconfig"; path = "Target Support Files/Pods-CJImageView/Pods-CJImageView.debug.xcconfig"; sourceTree = "<group>"; };
 		AA514D8CF96B42216947AF8A /* Pods_CJImageViewDefault_CJImageViewDebug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CJImageViewDefault_CJImageViewDebug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -708,7 +710,7 @@
 				5A2E8AE124BC0CE300B859AB /* SystemConfiguration.framework in Frameworks */,
 				5A6694C4253581070073FDF6 /* libbz2.1.0.tbd in Frameworks */,
 				F040FCB469F550DED38D52D3 /* Pods_CJImageViewDefault_CJImageView.framework in Frameworks */,
-				5A82CB0025514F0A0035F2D2 /* IJKMediaFramework.framework in Frameworks */,
+				8BBBAEFF2552F0DB001767D9 /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -734,6 +736,7 @@
 				5A6694DD2535832F0073FDF6 /* libbz2.1.0.tbd in Frameworks */,
 				5A5493E924BD539D00C49207 /* SystemConfiguration.framework in Frameworks */,
 				02B4F05EA5EF1CB8040EB821 /* Pods_CJImageViewDefault_CJImageViewDebug.framework in Frameworks */,
+				8BBBAF002552F0DB001767D9 /* IJKMediaFramework.framework in Frameworks */,
 				5A6694DC253583190073FDF6 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -854,10 +857,10 @@
 		5A0BC8A12513040600426728 /* ijkPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				8BBBAEFE2552F0DB001767D9 /* IJKMediaFramework.framework */,
 				5A0BC8EA25135D5A00426728 /* View */,
 				5A0BC8D525134ADE00426728 /* Utility */,
 				5A0BC8CC25134A2F00426728 /* Model */,
-				5A82CAFF25514F0A0035F2D2 /* IJKMediaFramework.framework */,
 				5A0BC8DA25134C7300426728 /* IJK.bundle */,
 				5A0BC8DD25134F4700426728 /* LMVideoPlayer.h */,
 				5A0BC8DE25134F4700426728 /* LMVideoPlayer.m */,
