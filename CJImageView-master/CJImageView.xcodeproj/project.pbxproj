@@ -120,6 +120,8 @@
 		5A38B495250F6C070077F6DE /* UITextField+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A38B492250F6C070077F6DE /* UITextField+Shake.m */; };
 		5A38B498250F71610077F6DE /* UITableView+RadiusStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A38B497250F71610077F6DE /* UITableView+RadiusStyle.m */; };
 		5A38B499250F71610077F6DE /* UITableView+RadiusStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A38B497250F71610077F6DE /* UITableView+RadiusStyle.m */; };
+		5A4815362559268E001DC006 /* loadAinitializeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4815352559268E001DC006 /* loadAinitializeTest.m */; };
+		5A4815372559268E001DC006 /* loadAinitializeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4815352559268E001DC006 /* loadAinitializeTest.m */; };
 		5A4DA3EF24A9E56000DB175A /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4DA3EE24A9E56000DB175A /* BaseEntity.m */; };
 		5A4DA3F424AA1C9800DB175A /* UIView+Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4DA3F324AA1C9800DB175A /* UIView+Layer.m */; };
 		5A516F6425189BE400C346CB /* UIScrollView+Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A516F6325189BE400C346CB /* UIScrollView+Gesture.m */; };
@@ -524,6 +526,8 @@
 		5A38B496250F71610077F6DE /* UITableView+RadiusStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+RadiusStyle.h"; sourceTree = "<group>"; };
 		5A38B497250F71610077F6DE /* UITableView+RadiusStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+RadiusStyle.m"; sourceTree = "<group>"; };
 		5A38B49A250F7C9F0077F6DE /* ConstantString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstantString.h; sourceTree = "<group>"; };
+		5A4815342559268E001DC006 /* loadAinitializeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = loadAinitializeTest.h; sourceTree = "<group>"; };
+		5A4815352559268E001DC006 /* loadAinitializeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = loadAinitializeTest.m; sourceTree = "<group>"; };
 		5A4DA3ED24A9E56000DB175A /* BaseEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
 		5A4DA3EE24A9E56000DB175A /* BaseEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
 		5A4DA3F224AA1C9800DB175A /* UIView+Layer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Layer.h"; sourceTree = "<group>"; };
@@ -810,6 +814,8 @@
 				5A55A96B2500F27A0037DACF /* RACObserveController.m */,
 				5A0BC8BE251346E500426728 /* IJKPlayerController.h */,
 				5A0BC8BF251346E500426728 /* IJKPlayerController.m */,
+				5A4815342559268E001DC006 /* loadAinitializeTest.h */,
+				5A4815352559268E001DC006 /* loadAinitializeTest.m */,
 				435830B21C33D42F0074D713 /* Main.storyboard */,
 				435830B51C33D42F0074D713 /* Assets.xcassets */,
 				435830B71C33D42F0074D713 /* LaunchScreen.storyboard */,
@@ -2147,6 +2153,7 @@
 				5A2882AA24A1FB970059F96C /* PropertyController.m in Sources */,
 				5A0BC8FF25135D5A00426728 /* LMBrightnessView.m in Sources */,
 				5A516F6425189BE400C346CB /* UIScrollView+Gesture.m in Sources */,
+				5A4815362559268E001DC006 /* loadAinitializeTest.m in Sources */,
 				5A17163924907D8D001CAADF /* DashLineView.m in Sources */,
 				5A25BA2825148F6400E49ACD /* UIView+Frame.m in Sources */,
 				5A10967F249B417B000398F5 /* GCDGroup.m in Sources */,
@@ -2364,6 +2371,7 @@
 				5A5493DD24BD539D00C49207 /* UINavigationController+JZExtension.m in Sources */,
 				5A55A96624FE52490037DACF /* CATransaction+AnimateWithDuration.m in Sources */,
 				5A5493DE24BD539D00C49207 /* JRSwizzle.m in Sources */,
+				5A4815372559268E001DC006 /* loadAinitializeTest.m in Sources */,
 				5A516F83251A066D00C346CB /* YMCardPresentationController.m in Sources */,
 				5A5493DF24BD539D00C49207 /* cameraHelper.m in Sources */,
 				5A5493E024BD539D00C49207 /* UIImage+FX.m in Sources */,

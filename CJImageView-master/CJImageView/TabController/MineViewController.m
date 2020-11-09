@@ -8,6 +8,7 @@
 
 #import "MineViewController.h"
 #import "YYFPSLabel.h"
+#import "PropertyController.h"
 
 @interface MineViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic,strong) NSArray             *dataArray;

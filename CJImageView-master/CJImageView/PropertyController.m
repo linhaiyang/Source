@@ -78,20 +78,20 @@
     
     
 //    [self.navigationController.navigationItem standardAppearance] 
-//    LogInApi*request = [[LogInApi alloc] init];
-//    NSError *loadCacheError = nil;
-//    if ([request loadCacheWithError:&loadCacheError]) {
-//        id obj = [NSJSONSerialization JSONObjectWithData:[request responseData] options:NSJSONReadingMutableContainers error:nil];
-//    //    NSDictionary *json = [request responseJSONObject];
-//        Dlog(@"json loadCacheWithError = %@", obj);
-//        // show cached data
-//        }
-//    [request startRequestWithCompletionBlockWithSuccess:^(BaseRequestService * _Nonnull batchRequest) {
-//        LoginModel * model = batchRequest.paraData;
-////        [batchRequest saveResponseDataToCacheFile:batchRequest.responseData];
-//    } failure:^(YTKBaseRequest * _Nonnull batchRequest) {
-//
-//    }];
+    LogInApi*request = [[LogInApi alloc] init];
+    NSError *loadCacheError = nil;
+    if ([request loadCacheWithError:&loadCacheError]) {
+        id obj = [NSJSONSerialization JSONObjectWithData:[request responseData] options:NSJSONReadingMutableContainers error:nil];
+    //    NSDictionary *json = [request responseJSONObject];
+        Dlog(@"json loadCacheWithError = %@", obj);
+        // show cached data
+        }
+    [request startRequestWithCompletionBlockWithSuccess:^(BaseRequestService * _Nonnull batchRequest) {
+        LoginModel * model = batchRequest.paraData;
+//        [batchRequest saveResponseDataToCacheFile:batchRequest.responseData];
+    } failure:^(YTKBaseRequest * _Nonnull batchRequest) {
+
+    }];
 //    [self alertWithCallBackBlock:^(NSInteger buttonIndex) {
 //
 //    } title:@"" message:@"退出当前账号，将不能发表更贴、参与主题讨论、同步关注内容了" cancelButtonName:@"取消" defaultButtonTitle:@"确认退出"];

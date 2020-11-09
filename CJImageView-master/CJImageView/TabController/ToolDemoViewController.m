@@ -9,6 +9,7 @@
 #import "ToolDemoViewController.h"
 #import "GCD.h"
 #import "UIView+Frame.h"
+//#import "loadAinitializeTest.h"
 
 @interface ToolDemoViewController ()
 @property(nonatomic,strong)UIView * operView;
@@ -19,6 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    loadAinitializeTest * load = [loadAinitializeTest new];
+//    [loadAinitializeTest initializeTestBegin];
+    
+    
     /**
      
      GCD (Grand Central Dispatch) 是Apple公司开发的一种技术，
