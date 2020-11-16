@@ -21,6 +21,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    
+    
+    
 //    loadAinitializeTest * load = [loadAinitializeTest new];
 //    [loadAinitializeTest initializeTestBegin];
     
@@ -67,19 +71,21 @@
      */
     
     
+    
+    
     dispatch_queue_t queue = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_SERIAL);
     dispatch_queue_t queue2 = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_CONCURRENT);
 
-//    Dlog(@"%@---1当前线程",[NSThread currentThread]);
+    Dlog(@"%@---1当前线程",[NSThread currentThread]);
     
-//    dispatch_async(queue, ^{
+//    dispatch_async(queue2, ^{
 //        [NSThread sleepForTimeInterval:2];
 //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //            Dlog(@"%@---0当前线程",[NSThread currentThread]);
 //        });
 //        Dlog(@"%@---2当前线程",[NSThread currentThread]);
 //    });
-//    dispatch_async(queue, ^{
+//    dispatch_async(queue2, ^{
 ////        [NSThread sleepForTimeInterval:2];
 //        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //            Dlog(@"%@---3当前线程",[NSThread currentThread]);
@@ -87,9 +93,6 @@
 //        Dlog(@"%@---4当前线程",[NSThread currentThread]);
 //    });
 ////
-//    dispatch_sync(queue, ^{
-//        Dlog(@"%@---3当前线程",[NSThread currentThread]);
-//    });
 //    dispatch_async(queue, ^{
 //        Dlog(@"%@---2当前线程",[NSThread currentThread]);
 //        dispatch_sync(queue2, ^{

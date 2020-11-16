@@ -26,7 +26,7 @@
     return @"storeapi/wx/home/global-index";
 }
 - (YTKRequestMethod)requestMethod {
-    return YTKRequestMethodPOST;
+    return YTKRequestMethodGET;
 }
 - (Class)parseJSONClass{
     return [LoginModel class];
