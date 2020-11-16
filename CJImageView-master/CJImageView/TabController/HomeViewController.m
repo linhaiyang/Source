@@ -12,17 +12,26 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 @interface HomeViewController ()
-
+@property(nonatomic,copy)NSString * dymStr;
 @end
 
 @implementation HomeViewController
-
+@dynamic dymStr;
+-(void)setDymStr:(NSString *)dymStr{
+//    self.dymStr = dymStr;
+    Dlog(@"----setDymStr---");
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.dymStr = @"123456";
+    
+    const char * testChar = "testChar";
+    Dlog(@"%@---testChar",[NSString stringWithUTF8String:testChar]);
     
     Class getclass=objc_getClass("ViewController");// @return The Class object for the named class0x000000010b7e62c0
     Class getclassH = objc_getClass("BaseViewController");
+//    Class objectClass = object_getClass(<#id  _Nullable obj#>)
     Class metaClass = objc_getMetaClass(class_getName(getclass));
     Class metaClassH = objc_getMetaClass("BaseViewController");
     Class superClass_metaClass_parent = class_getSuperclass(metaClass);
@@ -39,7 +48,7 @@
     NSString * str_superClass_metaClass_child = NSStringFromClass(superClass_metaClass_child);
     NSString * str_metaClass_NSObject = NSStringFromClass(metaClass_NSObject);
     NSString * str_superClass_metaClass_NSObject = NSStringFromClass(superClass_metaClass_NSObject);
-    BOOL ismeta=class_isMetaClass(metaClassH);
+    BOOL ismeta=class_isMetaClass(getclassH);
 //    objc_msgSend(getclass,"runTest");
     
     Class objectClass =  object_getClass(getclass);//return The class object of which \e object is an instance,0x000000010b7e62e8
@@ -78,7 +87,9 @@
     NSString * str = @"123";
     Class strClass = [str class];
     Class cclass = [NSString class];
-    
+    if (self = [super init]) {
+        <#statements#>
+    }
 }
 
 /*

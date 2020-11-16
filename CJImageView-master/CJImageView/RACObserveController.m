@@ -51,6 +51,15 @@
     }]subscribeNext:^(NSString * _Nullable x) {
         Dlog(@"%@----",x);
     }];
+    
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    //创建对象 采用可变的网络请求对象
+       NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@""]];
+    
+    NSURLSessionDataTask *task  = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+    }];
 //    [RACObserve(self, racStr) subscribeNext:^(NSString *  _Nullable x) {
 //        Dlog(@"str值变化监听---%@",x);
 //    }];

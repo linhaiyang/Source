@@ -34,7 +34,7 @@ static GlobalDefault *instance = nil;
     return self;
 }
 -(void)setUserInfo:(UserInfo *)userInfo{
-    _userInfo = userInfo;
+    _userInfo = userInfo;//(id<NSCoding>)object写入对象 需遵循NSCoding协议
     [_Cache setObject:userInfo forKey:userInfoKey];
 }
 -(long long)appVersion{
