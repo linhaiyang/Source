@@ -18,7 +18,9 @@
 @end
 
 @implementation MineViewController
-
+/**
+ @throw [NSException exceptionWithName:@"YYDiskCache init error" reason:@"YYDiskCache must be initialized with a path. Use 'initWithPath:' or 'initWithPath:inlineThreshold:' instead." userInfo:nil];
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor whiteColor];
@@ -73,14 +75,5 @@
     RootWebViewController * controller = [[RootWebViewController alloc]initWithUrl:@"https://storetest.quyibao.com/store/activity/cut/index.html?id=51"];
     [self.navigationController pushViewController:controller animated:YES];
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

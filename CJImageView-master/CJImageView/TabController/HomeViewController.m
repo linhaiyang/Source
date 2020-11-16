@@ -18,7 +18,14 @@
 @implementation HomeViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    
+    UserInfo * info = [UserInfo new];
+    info.token = @"token";
+    info.userId = @"111";
+    [[GlobalDefault sharedInstance]setUserInfo:info];
+    
     // Do any additional setup after loading the view.
     
     Class getclass=objc_getClass("ViewController");// @return The Class object for the named class0x000000010b7e62c0
