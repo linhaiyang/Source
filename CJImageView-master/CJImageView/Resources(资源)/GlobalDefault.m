@@ -8,6 +8,9 @@
 
 #import "GlobalDefault.h"
 #import <YYCache/YYCache.h>
+
+NSString * const UserCacheName = @"userInfoKey";
+
 NSString * const userInfoKey = @"userInfoKey";
 
 @implementation GlobalDefault{
@@ -24,7 +27,7 @@ static GlobalDefault *instance = nil;
 }
 -(instancetype)init{
     if (self = [super init]) {
-        _Cache = [[YYCache alloc]initWithName:KUserCacheName];
+        _Cache = [[YYCache alloc]initWithName:UserCacheName];
         UserInfo * user =(UserInfo *)[_Cache objectForKey:userInfoKey];
         if (!kObjectIsEmpty(user)) {
             self.isLogin = YES;

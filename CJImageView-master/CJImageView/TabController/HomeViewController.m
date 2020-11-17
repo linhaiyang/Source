@@ -22,7 +22,14 @@
     Dlog(@"----setDymStr---");
 }
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    
+    UserInfo * info = [UserInfo new];
+    info.token = @"token";
+    info.userId = @"111";
+    [[GlobalDefault sharedInstance]setUserInfo:info];
+    
     // Do any additional setup after loading the view.
     self.dymStr = @"123456";
     
