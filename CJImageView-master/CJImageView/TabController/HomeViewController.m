@@ -87,9 +87,18 @@
     NSString * str = @"123";
     Class strClass = [str class];
     Class cclass = [NSString class];
-    if (self = [super init]) {
-        <#statements#>
-    }
+    
+    UserInfo * info = [UserInfo new];
+    info.token = @"token";
+    info.userId = @"userId";
+    [[GlobalDefault sharedInstance]setUserInfo:info];
+    NSArray * chcheArray = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+    ///Users/shengkaili/Library/Developer/CoreSimulator/Devices/EC15EA33-E233-426B-A1C0-660C79D8798B/data/Containers/Data/Application/A4602EFA-3D9A-4AC9-89B1-2E18C5841449/Library/Caches
+    ////Users/shengkaili/Library/Developer/CoreSimulator/Devices/EC15EA33-E233-426B-A1C0-660C79D8798B/data/Containers/Data/Application/C5839A03-E77E-43A4-8B41-2127794C6B42/Library/Caches
+//    Dlog(@"%@-------缓存地址",[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]);
+    NSString * url = @"https://storetest.quyibao.com/wap/product-2430.html";
+    NSArray * ary = [url componentsSeparatedByString:@"product-"];
+    
 }
 
 /*
