@@ -24,11 +24,25 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    //一.UDID(Unique Device 苹果从iOS5开始就移除了通过代码访问UDID的权限。 Identifier)许多开发者把UDID跟用户的真实姓名、密码、住址、其它数据关联起来；网络窥探者会从多个应用收集这些数据，然后顺藤摸瓜得到这个人的许多隐私数据。
+//    NSString *udid = [[UIDevice currentDevice] uniqueIdentifier];
     
-    UserInfo * info = [UserInfo new];
-    info.token = @"cq2upymiMbnawoy-OaDpAi5MDJ8MTYwNTU4MDQ0MQO0O0OO0O0O";
-    info.userId = @"111";
-    [[GlobalDefault sharedInstance]setUserInfo:info];
+//<<<<<<< HEAD
+//    UserInfo * info = [UserInfo new];
+//    info.token = @"cq2upymiMbnawoy-OaDpAi5MDJ8MTYwNTU4MDQ0MQO0O0OO0O0O";
+//    info.userId = @"111";
+//    [[GlobalDefault sharedInstance]setUserInfo:info];
+//=======
+//    二.UUID(Universally Unique Identifier) 通用唯一识别码
+    //它是让分布式系统中的所有元素，都能有唯一的辨识资讯，而不需要透过中央控制端来做辨识资讯的指定。这样，每个人都可以建立不与其它人冲突的 UUID。在此情况下，就不需考虑数据库建立时的名称重复问题。苹果公司建议使用UUID为应用生成唯一标识字符串。
+    //每次调用CFUUIDCreate，系统都会返回一个新的唯一标示符。如果你希望存储这个标示符，那么需要自己将其存储到NSUserDefaults, Keychain, Pasteboard或其它地方。
+//    CFUUIDRef cfuuid = CFUUIDCreate(kCFAllocatorDefault);
+//    NSString *cfuuidString = (NSString*)CFBridgingRelease(CFUUIDCreateString(kCFAllocatorDefault, cfuuid));
+    
+//    UserInfo * info = [UserInfo new];
+//    info.token = @"token";
+//    info.userId = @"111";
+//    [[GlobalDefault sharedInstance]setUserInfo:info];
     
     // Do any additional setup after loading the view.
     self.dymStr = @"123456";
@@ -95,16 +109,22 @@
     Class strClass = [str class];
     Class cclass = [NSString class];
     
+    UIImageView * img = [UIImageView new];
+    [img setShowActivityIndicatorView:true];
+    [img sd_setImageWithURL:[NSURL URLWithString:@""] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+            
+    }];
 //    UserInfo * info = [UserInfo new];
 //    info.token = @"token";
 //    info.userId = @"userId";
 //    [[GlobalDefault sharedInstance]setUserInfo:info];
-    NSArray * chcheArray = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+//    NSArray * chcheArray = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
+//    NSArray * chcheArray = NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES);
     ///Users/shengkaili/Library/Developer/CoreSimulator/Devices/EC15EA33-E233-426B-A1C0-660C79D8798B/data/Containers/Data/Application/A4602EFA-3D9A-4AC9-89B1-2E18C5841449/Library/Caches
     ////Users/shengkaili/Library/Developer/CoreSimulator/Devices/EC15EA33-E233-426B-A1C0-660C79D8798B/data/Containers/Data/Application/C5839A03-E77E-43A4-8B41-2127794C6B42/Library/Caches
 //    Dlog(@"%@-------缓存地址",[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]);
-    NSString * url = @"https://storetest.quyibao.com/wap/product-2430.html";
-    NSArray * ary = [url componentsSeparatedByString:@"product-"];
+//    NSString * url = @"https://storetest.quyibao.com/wap/product-2430.html";
+//    NSArray * ary = [url componentsSeparatedByString:@"product-"];
     
 }
 
