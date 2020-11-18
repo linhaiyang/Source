@@ -15,7 +15,7 @@
 
 #define  MRScreenWidth [UIScreen mainScreen].bounds.size.width
 #define  MRScreenHeight [UIScreen mainScreen].bounds.size.height
-@interface PropertyController ()<UIScrollViewDelegate>
+@interface PropertyController ()<UIScrollViewDelegate,UITableViewDataSource, UITableViewDelegate>
 {
     @public
     int _no;
@@ -75,8 +75,11 @@
     }];
     
     
-    
-    
+    self.tableV = [self.view addTableViewDelegate:self];
+    [self.tableV mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
+    }];
+    self.tableV.rowHeight = 50.f;
 //    [self.navigationController.navigationItem standardAppearance] 
     LogInApi*request = [[LogInApi alloc] init];
     NSError *loadCacheError = nil;
@@ -126,16 +129,16 @@
 //        NSLog(@"Error");
 //    }];
 
-       UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, KNavHeight, KScreen_Width, 200)];
-        [self.view addSubview:imageView];
-        UIImage * img =[UIImage imageNamed:@"background"];
-//        imageView.contentMode = UIViewContentModeScaleAspectFit;
-        imageView.image = img;
-    imageView.transform = CGAffineTransformScale(imageView.transform, 0.5, 0.5);
-    [UIView animateWithDuration:0.3 animations:^{
-        imageView.transform = CGAffineTransformIdentity;
-    }];
-    
+//       UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, KNavHeight, KScreen_Width, 200)];
+//        [self.view addSubview:imageView];
+//        UIImage * img =[UIImage imageNamed:@"background"];
+////        imageView.contentMode = UIViewContentModeScaleAspectFit;
+//        imageView.image = img;
+//    imageView.transform = CGAffineTransformScale(imageView.transform, 0.5, 0.5);
+//    [UIView animateWithDuration:0.3 animations:^{
+//        imageView.transform = CGAffineTransformIdentity;
+//    }];
+//
     self.view.right = 0.f;
     
     
@@ -215,9 +218,59 @@
      Ctrl + E : 移动光标到本行行尾   （替换end键）
      
      */
+    
+    
+    self.muAry = @[@"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                   @"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                   @"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                   @"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                   @"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                   @"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                                  @"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                                  @"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                                  @"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                                  @"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                   @"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                                  @"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                                  @"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                                  @"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                                  @"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                   @"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                                  @"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                                  @"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                                  @"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                                  @"https://static.asus.com.cn/store/20201009/13210650100515.jpg",
+                        @"https://static.asus.com.cn/store/20201009/13211598545397.jpg",
+    @"https://static.asus.com.cn/store/20201009/13212149495255.jpg",
+    @"https://static.asus.com.cn/store/20200525/14062852494950.png",
+                        @"https://static.asus.com.cn/store/20200525/14063155995256.png",
+                        @"https://static.asus.com.cn/store/20201009/11554310250555.png",
+                        @"https://static.asus.com.cn/store/20201009/11561198985453.png",
+                        @"https://static.asus.com.cn/store/20201009/11563652489910.png",
+                        @"https://static.asus.com.cn/store/20200525/14062448579851.png",
+                        @"https://static.asus.com.cn/store/album/images/I6695CQ5SH4IIZ/14453299515698.jpg",
+                        @"https://static.asus.com.cn/store/album/images/CK9YUGTOU1H56L/17061454544810.jpg",
+                        @"https://static.asus.com.cn/store/album/images/OA6DZMQABQXWNP/11181757519956.jpg",
+                        @"https://static.asus.com.cn/store/album/images/USBZLH7EZPNRMX/14104553495348.png",
+                        @"https://static.asus.com.cn/store/album/images/WACUWRMHGBM9QG/15133510248535.jpg",
+                        @"https://static.asus.com.cn/store/album/images/CSXI0UYT8GWM5A/16220710298484.jpg",
+                        @"https://static.asus.com.cn/store/album/images/X4L60A6Z1ONRAL/09115155545610.jpg",
+                        @"https://static.asus.com.cn/store/album/images/WKZ4MWAM33IQVV/15055955984998.jpg"
+    ];
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class]) forIndexPath:indexPath];
+    BaseTableViewCell * cell = [BaseTableViewCell registerCell:tableView];
+    cell.accessoryType    = UITableViewCellAccessoryDisclosureIndicator;
+    [cell.imageView sd_setImageWithURL:self.muAry[indexPath.row] placeholderImage:nil options:SDWebImageLowPriority];
+//    cell.textLabel.text   = self.dataArray[indexPath.row];
+    return cell;
+}
 -(void)scrollViewZoomTest{
     _srcollView = [[UIScrollView alloc]init];
 

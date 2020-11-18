@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class UserInfo;
 @interface GlobalDefault : NSObject
 +(GlobalDefault *)sharedInstance;
-@property(nonatomic,assign)long long appVersion;
+@property(nonatomic,copy)NSString* appVersion;
 @property(nonatomic,copy)NSString * systemVersion;
 @property(nonatomic,copy)NSString * device_token;
 @property(nonatomic,copy)NSString * device_name;

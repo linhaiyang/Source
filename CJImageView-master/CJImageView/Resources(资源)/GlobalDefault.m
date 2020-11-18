@@ -43,11 +43,11 @@ static GlobalDefault *instance = nil;
     }];
     
 }
--(long long)appVersion{
+-(NSString*)appVersion{
     if (!_appVersion) {
-       _appVersion = (long long)[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+       _appVersion = (NSString*)[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     }
-    return _appVersion;
+    return _appVersion;//-8340879753757468082
 }
 -(NSString *)systemVersion{
     if (!_systemVersion) {

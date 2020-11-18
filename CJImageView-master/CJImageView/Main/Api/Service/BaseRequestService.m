@@ -18,11 +18,11 @@
 //公共头部设置
 - (NSDictionary *)requestHeaderFieldValueDictionary
 {
-    long long version = GlobalInstance.appVersion;
+    NSString * version = GlobalInstance.appVersion;
     NSString * systemVersion = GlobalInstance.systemVersion;
     NSString * deviveName = GlobalInstance.device_name;
-    NSString * token = GlobalUserInfo.token?GlobalUserInfo.token:@"cq2upymifbDaIow-Majpki5N3wxNTk5NDQ0OTkw";
-    NSDictionary *headerDictionary=@{@"platform":@"ios",@"version":[NSString stringWithFormat:@"%lld",version],@"device":[NSString stringWithFormat:@"%@-%@", deviveName, systemVersion],@"token":token};
+    NSString * token = GlobalUserInfo.token?GlobalUserInfo.token:@"cq2upymiMbnawoy-OaDpAi5MDJ8MTYwNTU4MDQ0MQO0O0OO0O0O";
+    NSDictionary *headerDictionary=@{@"platform":@"ios",@"version":[NSString stringWithFormat:@"%@",version],@"device":[NSString stringWithFormat:@"%@-%@", deviveName, systemVersion],@"token":token};
     NSString * headStr = [headerDictionary JSONString];
     return headerDictionary;
 }
