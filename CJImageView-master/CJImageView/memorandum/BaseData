@@ -1,0 +1,56 @@
+/**
+ 
+ 当类对象被引入项目时, runtime 会向每一个类对象发送 load 消息. load 方法还是非常的神奇的, 因为它会在每一个类甚至分类被引入时仅调用一次, 调用的顺序是父类优先于子类, 子类优先于分类. 而且 load 方法不会被类自动继承, 每一个类中的 load 方法都不需要像 viewDidLoad 方法一样调用父类的方法. 由于 load 方法会在类被 import 时调用一次, 而这时往往是改变类的行为的最佳时机. 我在 DKNightVersion 中使用 method swizlling 来修改原有的方法时, 就是在分类 load 中实现的.
+ */
+
++(void)load{
+    Dlog(@"loadAinitializeTest-----load");
+}
+
+
+/**
+ 该类的第一个方法执行之前调用
+ 
+ */
++(void)initialize{
+    Dlog(@"loadAinitializeTest-----initialize");
+}
+
++(void)initializeTestBegin{
+    Dlog(@"loadAinitializeTest-----initializeBegin");
+}
+
+
+nil：指向一个对象的空指针,对objective c id 对象赋空值.
+Nil：指向一个类的空指针,表示对类进行赋空值.
+NULL：指向其他类型（如：基本类型、C类型）的空指针, 用于对非对象指针赋空值.
+NSNull：在集合对象中，表示空值的对象.
+
+
+
+
+layouSubviews调用时机:  调用它的setNeedsLayout  不能手动调用它
+layoutIfNeeded不一定会调用layoutSubviews方法。
+setNeedsLayout一定会调用layoutSubviews方法（有延迟，在下一轮runloop结束前）。
+如果想在当前runloop中立即刷新，调用顺序应该是
+[self setNeedsLayout];
+[self layoutIfNeeded];
+
+
+
+UINavigationBar
+
+1——[navBar setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];//
+
+UIViewController 从导航栏底部开始
+
+2——[navBar setBarTintColor:color];
+//UIViewController 从导航栏顶部开始
+navBar.translucent = true;//是否覆盖内容
+
+[[UIScreen main] scale] == 1; //代表320 x 480 的分辨率
+[[UIScreen main] scale] == 2; //代表640 x 960 的分辨率
+[[UIScreen main] scale] == 3; //代表1242 x 2208 的分辨率
+
+
+当APP进入后台，此时的APP所占用的内存就不是由我们自己控制，而是由系统去控制。当系统认为其他应用需要占用内存时，系统会优先把进入后台的APP Kill掉，进而释放内存供其他应用使用。

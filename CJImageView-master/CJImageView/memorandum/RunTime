@@ -1,0 +1,101 @@
+    Class getclass=objc_getClass("ViewController");// @return The Class object for the named class0x000000010b7e62c0
+//    Person *person = [[Person alloc] init];
+    /// 向person 对象发送一条post方法 参数为2
+    ((void(*)(id,SEL))objc_msgSend)(getclass,@selector(runTest));
+//    其中(void(*)(id,SEL,int) 表示
+//    返回类型为void 参数为id，方法名，参数类型
+
+respondsToSelector 用来判断某一个方法时候实现
+instancesRespondToSelector 类方法
+
+// 获取变量列表
+class_copyIvarList(Class _Nullable cls, unsigned int * _Nullable outCount)
+// 获取方法列表
+class_copyMethodList(Class _Nullable cls, unsigned int * _Nullable outCount)
+// 获取属性列表
+class_copyPropertyList(Class _Nullable cls, unsigned int * _Nullable outCount)
+iOS 消息机制(一)  runtime
+
+
+Runtime
+
+对于实例方法，每个实例的 isa 指针指向着对应类对象，而每一个类对象中都一个对象方法列表。
+
+static char overlayKey;
+return objc_getAssociatedObject(self, &overlayKey);
+
+objc_setAssociatedObject(self, &overlayKey, overlay, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+
+objc_getAssociatedObject(self, _cmd);
+objc_setAssociatedObject(self, _cmd, delegate, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+
+
+而根据具体情况，编译器会将消息发送修改为四种情况之一
+objc_msgSend
+objc_msgSend_stret
+objc_msgSendSuper
+objc_msgSendSuper_stret
+比如我们调用[super xxx]的时候,则会改为objc_msgSendSuper的形式，而带有stret，表明方法返回值是一个结构体类型。
+
+实际上，类对象是元类对象的一个实例！！元类描述了 一个类对象，就像类对象描述了普通对象一样。
+Class getclass=objc_getClass("ViewController");
+    Class getclassH = objc_getClass("BaseViewController");
+    Class metaClass = objc_getMetaClass(class_getName(getclass));
+    Class metaClassH = objc_getMetaClass("BaseViewController");
+    Class superClass_metaClass_parent = class_getSuperclass(metaClass);
+    
+    Class superClass_metaClass_child = class_getSuperclass(metaClassH);
+    Class metaClass_NSObject = objc_getMetaClass("NSObject");
+    Class superClass_metaClass_NSObject = class_getSuperclass(metaClass_NSObject);
+
+
+/// Represents an instance of a class.表示类的实例。//通过注释和代码不难发现，我们创建的一个对象或实例其实就是一个struct objc_object结构体，而我们常用的id也就是这个结构体的指针。
+struct objc_object {
+    Class _Nonnull isa  OBJC_ISA_AVAILABILITY;//这个isa就指向了所属类（如str isa就指向了NSString类）
+};
+/// A pointer to an instance of a class.//指向类实例的指针。
+typedef struct objc_object *id;
+
+/// An opaque type that represents an Objective-C class.//表示Objective-C类（class object（类对象））
+
+/// An opaque type that represents a method in a class definition.
+typedef struct objc_method *Method;
+
+/// An opaque type that represents an instance variable.//实例变量
+typedef struct objc_ivar *Ivar;
+
+/// An opaque type that represents a category.
+typedef struct objc_category *Category;
+
+/// An opaque type that represents an Objective-C declared property.//属性
+typedef struct objc_property *objc_property_t;
+struct objc_class {
+    Class _Nonnull isa  OBJC_ISA_AVAILABILITY;
+#if !__OBJC2__
+    Class _Nullable super_class                              OBJC2_UNAVAILABLE;
+    const char * _Nonnull name                               OBJC2_UNAVAILABLE;
+    long version                                             OBJC2_UNAVAILABLE;
+    long info                                                OBJC2_UNAVAILABLE;
+    long instance_size                                       OBJC2_UNAVAILABLE;
+    struct objc_ivar_list * _Nullable ivars                  OBJC2_UNAVAILABLE;
+    struct objc_method_list * _Nullable * _Nullable methodLists                    OBJC2_UNAVAILABLE;
+    struct objc_cache * _Nonnull cache                       OBJC2_UNAVAILABLE;
+    struct objc_protocol_list * _Nullable protocols          OBJC2_UNAVAILABLE;
+#endif
+
+}//这就说明了Class本身其实也是一个对象，我们称之为类对象
+
+@interface NSObject <NSObject> {
+Class isa;
+}
+
+
+系统的Runtime库通过函数objc_msgSend以及OC对象中隐藏的isa数据成员来实现多态和运行时方法查找以及执行。
+/*下面的例子是在arm64体系下的函数调用实现，本文中如果没有特殊说明都是指在arm64体系下的结论*/
+
+
+    ((void(*)(id,SEL))objc_msgSend)(getclass,@selector(runTest));
+//    其中(void(*)(id,SEL,int) 表示
+//    返回类型为void 参数为id，方法名，参数类型
+
+系统的Runtime库通过函数objc_msgSend以及OC对象中隐藏的isa数据成员来实现多态和运行时方法查找以及执行。每个对象的isa中保存着这个对象的类对象指针，类对象是一个Class类型的数据，而Class则是一个objc_class结构体指针类型的别名，它被定义如下：typedef struct objc_class * Class;

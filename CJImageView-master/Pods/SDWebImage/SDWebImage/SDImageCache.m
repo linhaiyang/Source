@@ -334,7 +334,7 @@ FOUNDATION_STATIC_INLINE NSUInteger SDCacheCostForImage(UIImage *image) {
 }
 
 - (NSData *)diskImageDataBySearchingAllPathsForKey:(NSString *)key {
-    NSString *defaultPath = [self defaultCachePathForKey:key];
+    NSString *defaultPath = [self defaultCachePathForKey:key];///Users/shengkaili/Library/Developer/CoreSimulator/Devices/719C70A4-89C8-471F-8B47-C48C893A8ABE/data/Containers/Data/Application/5FCF9EB4-4D97-42C1-AD6C-AFD80CF73012/Library/Caches/default/com.hackemist.SDWebImageCache.default/d71820e3a1a6bbe767f38ef6c9ecb290.jpg
     NSData *data = [NSData dataWithContentsOfFile:defaultPath];
     if (data) {
         return data;

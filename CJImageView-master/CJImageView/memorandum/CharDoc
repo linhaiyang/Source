@@ -1,0 +1,8 @@
+
+static const char *LL_automaticallySetModalPresentationStyleKey;
+const char * testChar = "testChar";
+Dlog(@"%@---testChar",[NSString stringWithUTF8String:testChar]);
+const char *str = [[NSString stringWithUTF8String:testChar] UTF8String];
+
+unsigned char buffer[1024];char数组
+const Byte ivbyte[] = {1,2,3,4,5,6,7,8}; byte数组

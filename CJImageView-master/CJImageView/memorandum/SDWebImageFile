@@ -1,0 +1,49 @@
+SDWebImage
+
+sd_cancelImageLoadOperationWithKey 取消当前UIView和键的所有操作
+
+
+ /**
+     * The image wasn't available the SDWebImage caches, but was downloaded from the web.该图像无法从SDWebImage缓存中获得，但是从网上下载的。
+     */
+    SDImageCacheTypeNone,
+    /**
+     * The image was obtained from the disk cache.图像是从磁盘缓存中获得的。
+     */
+    SDImageCacheTypeDisk,
+    /**
+     * The image was obtained from the memory cache.图像是从内存缓存中获得的。
+     */
+    SDImageCacheTypeMemory
+
+
+
+NSCache *memCache;——— SDImageCacheTypeMemory
+
+
+
+SDImageCache *imageCache;
+/**
+ * Query the disk cache asynchronously.
+ *
+ * @param key The unique key used to store the wanted image
+ */
+- (NSOperation *)queryDiskCacheForKey:(NSString *)key done:(SDWebImageQueryCompletedBlock)doneBlock
+1.// First check the in-memory cache…从缓存中获取   用NSCache  [self.memCache setObject:diskImage forKey:key cost:cost]
+    UIImage *image = [self imageFromMemoryCacheForKey:key];
+//SDImageCacheTypeMemory
+2.UIImage *diskImage = [self diskImageForKey:key];//从磁盘中获取
+SDImageCacheTypeMemory
+
+Disk 存储位置：NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    return [paths[0] stringByAppendingPathComponent:fullNamespace];cache/default/
+NSString *fullNamespace = [@"com.hackemist.SDWebImageCache." stringByAppendingString:ns];——/com.hackemist.SDWebImageCache.default
+
+
+SDWebImageDownloader 下载图片类
+
+SDWebImageDownloaderOperation : NSOperation 下载操作
+[wself.downloadQueue addOperation:operation];
+下载结束：
+[self.memCache setObject:image forKey:key cost:cost];存到缓存
+storeImageDataToDisk//存到磁盘
