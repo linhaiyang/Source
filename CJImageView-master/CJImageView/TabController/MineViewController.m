@@ -62,6 +62,7 @@
         _fpsLabel.alpha = 0.6;
         [self.view addSubview:_fpsLabel];
     }
+    Dlog(@"%@-----current",[NSRunLoop currentRunLoop].currentMode);
 }
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -94,5 +95,7 @@
     }
     
 }
-
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    Dlog(@"%@-----current",[NSRunLoop currentRunLoop].currentMode);
+}
 @end

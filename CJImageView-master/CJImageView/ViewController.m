@@ -123,7 +123,9 @@ NSString*sttr1=@"S1ViewController";
             
         });
     }];
-    
+    dispatch_main_sync_safe(^{
+        
+    });
     UIView *bgView = [[UIView alloc] initWithFrame:CGRectOffset(CGRectMake(0, 0, KScreen_Width, KScreen_Height), 0, -KScreen_Height)];
             bgView.backgroundColor = [UIColor orangeColor];
             [self.tableV insertSubview:bgView atIndex:0];

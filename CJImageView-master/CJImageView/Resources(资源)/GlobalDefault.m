@@ -33,21 +33,22 @@ static GlobalDefault *instance = nil;
             self.isLogin = YES;
             self.userInfo = user;
         }
+        // 添加检测app进入后台的观察者
+           [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationEnterBackground) name: UIApplicationDidEnterBackgroundNotification object:nil];
     }
     return self;
 }
 -(void)setUserInfo:(UserInfo *)userInfo{
     [[GCDQueue globalQueue]execute:^{
         _userInfo = userInfo;//(id<NSCoding>)object写入对象 需遵循NSCoding协议
-        [_Cache setObject:userInfo forKey:userInfoKey];
     }];
     
 }
--(long long)appVersion{
+-(NSString*)appVersion{
     if (!_appVersion) {
-       _appVersion = (long long)[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+       _appVersion = (NSString*)[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     }
-    return _appVersion;
+    return _appVersion;//-8340879753757468082
 }
 -(NSString *)systemVersion{
     if (!_systemVersion) {
@@ -69,6 +70,11 @@ static GlobalDefault *instance = nil;
 -(BOOL)loadUserInfo{
     return self.isLogin;
 }
+
+-(void)applicationEnterBackground{
+    [_Cache.diskCache setObject:_userInfo forKey:userInfoKey];
+}
+
 @end
 
 

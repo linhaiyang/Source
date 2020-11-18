@@ -265,6 +265,26 @@
 		5A8522E324E69BFC00EF7157 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8522E124E69BFC00EF7157 /* TestViewController.xib */; };
 		5A8522E424E69F2D00EF7157 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A8522E124E69BFC00EF7157 /* TestViewController.xib */; };
 		5A8522E524E69F3B00EF7157 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8522E024E69BFC00EF7157 /* TestViewController.m */; };
+		5AB1B8CB256520DF0083408B /* AppDelegate+Monitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB1B8CA256520DF0083408B /* AppDelegate+Monitor.m */; };
+		5AB1B8CC256520DF0083408B /* AppDelegate+Monitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB1B8CA256520DF0083408B /* AppDelegate+Monitor.m */; };
+		5AB1B8D325652CD00083408B /* UDID in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B8D225652CD00083408B /* UDID */; };
+		5AB1B8D425652CD00083408B /* UDID in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B8D225652CD00083408B /* UDID */; };
+		5AB1B8DA25652FE60083408B /* RunTime in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B8D925652FE60083408B /* RunTime */; };
+		5AB1B8DB25652FE60083408B /* RunTime in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B8D925652FE60083408B /* RunTime */; };
+		5AB1B8E1256530890083408B /* BaseData in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B8E0256530890083408B /* BaseData */; };
+		5AB1B8E2256530890083408B /* BaseData in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B8E0256530890083408B /* BaseData */; };
+		5AB1B8E8256530EA0083408B /* CharDoc in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B8E7256530EA0083408B /* CharDoc */; };
+		5AB1B8E9256530EA0083408B /* CharDoc in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B8E7256530EA0083408B /* CharDoc */; };
+		5AB1B8EF256531C70083408B /* DataDoc in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B8EE256531C70083408B /* DataDoc */; };
+		5AB1B8F0256531C70083408B /* DataDoc in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B8EE256531C70083408B /* DataDoc */; };
+		5AB1B8F62565329F0083408B /* SDWebImageFile in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B8F52565329F0083408B /* SDWebImageFile */; };
+		5AB1B8F72565329F0083408B /* SDWebImageFile in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B8F52565329F0083408B /* SDWebImageFile */; };
+		5AB1B8FD256533AC0083408B /* NSHomeDirectoryFile in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B8FC256533AC0083408B /* NSHomeDirectoryFile */; };
+		5AB1B8FE256533AC0083408B /* NSHomeDirectoryFile in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B8FC256533AC0083408B /* NSHomeDirectoryFile */; };
+		5AB1B9042565341E0083408B /* GCDQueue in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B9032565341E0083408B /* GCDQueue */; };
+		5AB1B9052565341E0083408B /* GCDQueue in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B9032565341E0083408B /* GCDQueue */; };
+		5AB1B9102565345E0083408B /* idStyle in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B90F2565345E0083408B /* idStyle */; };
+		5AB1B9112565345E0083408B /* idStyle in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B90F2565345E0083408B /* idStyle */; };
 		5AE1DEDF2501EC4B00F511A6 /* TestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE1DEDE2501EC4B00F511A6 /* TestViewModel.m */; };
 		5AE1DEE1250227A000F511A6 /* TestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE1DEDE2501EC4B00F511A6 /* TestViewModel.m */; };
 		5AE1DEE825024A2000F511A6 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE1DEE725024A2000F511A6 /* LoginModel.m */; };
@@ -621,6 +641,17 @@
 		5A8522DF24E69BFC00EF7157 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		5A8522E024E69BFC00EF7157 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		5A8522E124E69BFC00EF7157 /* TestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
+		5AB1B8C9256520DF0083408B /* AppDelegate+Monitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Monitor.h"; sourceTree = "<group>"; };
+		5AB1B8CA256520DF0083408B /* AppDelegate+Monitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Monitor.m"; sourceTree = "<group>"; };
+		5AB1B8D225652CD00083408B /* UDID */ = {isa = PBXFileReference; lastKnownFileType = text; path = UDID; sourceTree = "<group>"; };
+		5AB1B8D925652FE60083408B /* RunTime */ = {isa = PBXFileReference; lastKnownFileType = text; path = RunTime; sourceTree = "<group>"; };
+		5AB1B8E0256530890083408B /* BaseData */ = {isa = PBXFileReference; lastKnownFileType = text; path = BaseData; sourceTree = "<group>"; };
+		5AB1B8E7256530EA0083408B /* CharDoc */ = {isa = PBXFileReference; lastKnownFileType = text; path = CharDoc; sourceTree = "<group>"; };
+		5AB1B8EE256531C70083408B /* DataDoc */ = {isa = PBXFileReference; lastKnownFileType = text; path = DataDoc; sourceTree = "<group>"; };
+		5AB1B8F52565329F0083408B /* SDWebImageFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = SDWebImageFile; sourceTree = "<group>"; };
+		5AB1B8FC256533AC0083408B /* NSHomeDirectoryFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = NSHomeDirectoryFile; sourceTree = "<group>"; };
+		5AB1B9032565341E0083408B /* GCDQueue */ = {isa = PBXFileReference; lastKnownFileType = text; path = GCDQueue; sourceTree = "<group>"; };
+		5AB1B90F2565345E0083408B /* idStyle */ = {isa = PBXFileReference; lastKnownFileType = text; path = idStyle; sourceTree = "<group>"; };
 		5AE1DEDD2501EC4B00F511A6 /* TestViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewModel.h; sourceTree = "<group>"; };
 		5AE1DEDE2501EC4B00F511A6 /* TestViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewModel.m; sourceTree = "<group>"; };
 		5AE1DEE625024A2000F511A6 /* LoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
@@ -802,8 +833,6 @@
 				5A109688249B45A6000398F5 /* Vender(第三方) */,
 				5A109671249B3FB3000398F5 /* Expand(扩展) */,
 				5A109670249B3FA9000398F5 /* Main */,
-				435830AC1C33D42F0074D713 /* AppDelegate.h */,
-				435830AD1C33D42F0074D713 /* AppDelegate.m */,
 				5A66952A25358D5F0073FDF6 /* AppDelegate */,
 				5A6694F825358B810073FDF6 /* TabController */,
 				435830AF1C33D42F0074D713 /* ViewController.h */,
@@ -825,6 +854,7 @@
 				435830B51C33D42F0074D713 /* Assets.xcassets */,
 				435830B71C33D42F0074D713 /* LaunchScreen.storyboard */,
 				435830BA1C33D42F0074D713 /* Info.plist */,
+				5AB1B8D125652CAA0083408B /* memorandum */,
 				435830A91C33D42F0074D713 /* Supporting Files */,
 			);
 			path = CJImageView;
@@ -916,6 +946,7 @@
 		5A109670249B3FA9000398F5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				5AB1B8B8256520230083408B /* AppDelegate */,
 				5A2E8A9524B7263600B859AB /* Public(公共) */,
 				5A2E8A8924B71AF800B859AB /* Uploader */,
 				5A2E8A8524B70D0000B859AB /* Api */,
@@ -1559,6 +1590,33 @@
 			path = CustomAlertView;
 			sourceTree = "<group>";
 		};
+		5AB1B8B8256520230083408B /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				435830AC1C33D42F0074D713 /* AppDelegate.h */,
+				435830AD1C33D42F0074D713 /* AppDelegate.m */,
+				5AB1B8C9256520DF0083408B /* AppDelegate+Monitor.h */,
+				5AB1B8CA256520DF0083408B /* AppDelegate+Monitor.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		5AB1B8D125652CAA0083408B /* memorandum */ = {
+			isa = PBXGroup;
+			children = (
+				5AB1B8D225652CD00083408B /* UDID */,
+				5AB1B8D925652FE60083408B /* RunTime */,
+				5AB1B8E0256530890083408B /* BaseData */,
+				5AB1B8E7256530EA0083408B /* CharDoc */,
+				5AB1B8EE256531C70083408B /* DataDoc */,
+				5AB1B8F52565329F0083408B /* SDWebImageFile */,
+				5AB1B8FC256533AC0083408B /* NSHomeDirectoryFile */,
+				5AB1B9032565341E0083408B /* GCDQueue */,
+				5AB1B90F2565345E0083408B /* idStyle */,
+			);
+			path = memorandum;
+			sourceTree = "<group>";
+		};
 		5AE8AD9124C04B03003C08BF /* UITableViewCell+Tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -1854,12 +1912,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AB1B8E1256530890083408B /* BaseData in Resources */,
 				435830B91C33D42F0074D713 /* LaunchScreen.storyboard in Resources */,
 				5A516F89251A06E600C346CB /* Placehoder in Resources */,
+				5AB1B8E8256530EA0083408B /* CharDoc in Resources */,
+				5AB1B8EF256531C70083408B /* DataDoc in Resources */,
 				5A17164824921914001CAADF /* MBProgressHUD.bundle in Resources */,
 				5A35580F249CC34A002DAD41 /* NoData.bundle in Resources */,
+				5AB1B8FD256533AC0083408B /* NSHomeDirectoryFile in Resources */,
+				5AB1B8D325652CD00083408B /* UDID in Resources */,
+				5AB1B8F62565329F0083408B /* SDWebImageFile in Resources */,
 				5A0BC8DB25134C7300426728 /* IJK.bundle in Resources */,
+				5AB1B9102565345E0083408B /* idStyle in Resources */,
+				5AB1B9042565341E0083408B /* GCDQueue in Resources */,
 				435830B61C33D42F0074D713 /* Assets.xcassets in Resources */,
+				5AB1B8DA25652FE60083408B /* RunTime in Resources */,
 				5A8522E324E69BFC00EF7157 /* TestViewController.xib in Resources */,
 				8BC9C4BC25641615009D43C0 /* RunloopPlaceHoder in Resources */,
 				435830B41C33D42F0074D713 /* Main.storyboard in Resources */,
@@ -1884,12 +1951,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AB1B8E2256530890083408B /* BaseData in Resources */,
 				5A5493EC24BD539D00C49207 /* LaunchScreen.storyboard in Resources */,
 				5A516F8A251A06E600C346CB /* Placehoder in Resources */,
+				5AB1B8E9256530EA0083408B /* CharDoc in Resources */,
+				5AB1B8F0256531C70083408B /* DataDoc in Resources */,
 				5A5493ED24BD539D00C49207 /* MBProgressHUD.bundle in Resources */,
 				5A5493EE24BD539D00C49207 /* NoData.bundle in Resources */,
+				5AB1B8FE256533AC0083408B /* NSHomeDirectoryFile in Resources */,
+				5AB1B8D425652CD00083408B /* UDID in Resources */,
+				5AB1B8F72565329F0083408B /* SDWebImageFile in Resources */,
 				5A0BC8DC25134C7300426728 /* IJK.bundle in Resources */,
+				5AB1B9112565345E0083408B /* idStyle in Resources */,
+				5AB1B9052565341E0083408B /* GCDQueue in Resources */,
 				5A5493EF24BD539D00C49207 /* Assets.xcassets in Resources */,
+				5AB1B8DB25652FE60083408B /* RunTime in Resources */,
 				5A8522E424E69F2D00EF7157 /* TestViewController.xib in Resources */,
 				8BC9C4BD25641615009D43C0 /* RunloopPlaceHoder in Resources */,
 				5A5493F024BD539D00C49207 /* Main.storyboard in Resources */,
@@ -2215,6 +2291,7 @@
 				5A2882C324A343A10059F96C /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				5A55A96124FE51D30037DACF /* CALayer+Addition.m in Sources */,
 				5A7C0B55251DDCF3009C427D /* CustomAlertView.m in Sources */,
+				5AB1B8CB256520DF0083408B /* AppDelegate+Monitor.m in Sources */,
 				5A109687249B4258000398F5 /* WJYAlertView.m in Sources */,
 				5A2E8AC024B87BAA00B859AB /* ImageItemModel.m in Sources */,
 				5A355808249CC03A002DAD41 /* EaseBlankPageView.m in Sources */,
@@ -2368,6 +2445,7 @@
 				5AE9BBF4250A2EB60010945B /* UIApplication+Permissions.m in Sources */,
 				5A0BC90E25135DD000426728 /* UIColor+Hex.m in Sources */,
 				5AE9BBC525075BB20010945B /* NetworkUnit.m in Sources */,
+				5AB1B8CC256520DF0083408B /* AppDelegate+Monitor.m in Sources */,
 				5AE9BBB525075BB20010945B /* YTKChainRequest.m in Sources */,
 				5AE9BBB725075BB20010945B /* YTKNetworkPrivate.m in Sources */,
 				5A5493D424BD539D00C49207 /* MBProgressHUD+JJ.m in Sources */,
@@ -2653,7 +2731,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2686,7 +2764,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
