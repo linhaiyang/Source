@@ -259,7 +259,6 @@
 		5A729AA825209A1C007A7136 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A685ECF24D2E7B200BF9737 /* NSData+Base64.m */; };
 		5A7C0B55251DDCF3009C427D /* CustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C0B54251DDCF3009C427D /* CustomAlertView.m */; };
 		5A7C0B56251DDCF3009C427D /* CustomAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A7C0B54251DDCF3009C427D /* CustomAlertView.m */; };
-		5A82CB0025514F0A0035F2D2 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A82CAFF25514F0A0035F2D2 /* IJKMediaFramework.framework */; };
 		5A82CB2325554C2C0035F2D2 /* RootWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66948E253557D70073FDF6 /* RootWebViewController.m */; };
 		5A82CB2825554C3E0035F2D2 /* XLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A669491253557D70073FDF6 /* XLWebViewController.m */; };
 		5A8522E224E69BFC00EF7157 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A8522E024E69BFC00EF7157 /* TestViewController.m */; };
@@ -325,6 +324,8 @@
 		5AE9BBF4250A2EB60010945B /* UIApplication+Permissions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBF1250A2EB60010945B /* UIApplication+Permissions.m */; };
 		8BBBAEFF2552F0DB001767D9 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BBBAEFE2552F0DB001767D9 /* IJKMediaFramework.framework */; };
 		8BBBAF002552F0DB001767D9 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BBBAEFE2552F0DB001767D9 /* IJKMediaFramework.framework */; };
+		8BC9C4BC25641615009D43C0 /* RunloopPlaceHoder in Resources */ = {isa = PBXBuildFile; fileRef = 8BC9C4BB25641615009D43C0 /* RunloopPlaceHoder */; };
+		8BC9C4BD25641615009D43C0 /* RunloopPlaceHoder in Resources */ = {isa = PBXBuildFile; fileRef = 8BC9C4BB25641615009D43C0 /* RunloopPlaceHoder */; };
 		EBBF34E2E4D545EBD2B0902E /* Pods_CJImageViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 137C7CF9A3FB6AE76951D9DA /* Pods_CJImageViewTests.framework */; };
 		F040FCB469F550DED38D52D3 /* Pods_CJImageViewDefault_CJImageView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6868481593E21019F930C9EA /* Pods_CJImageViewDefault_CJImageView.framework */; };
 /* End PBXBuildFile section */
@@ -685,6 +686,7 @@
 		5B400EDD14C4BA6134FE6508 /* Pods-CJImageViewDefault-CJImageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDefault-CJImageView.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewDefault-CJImageView/Pods-CJImageViewDefault-CJImageView.release.xcconfig"; sourceTree = "<group>"; };
 		6868481593E21019F930C9EA /* Pods_CJImageViewDefault_CJImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CJImageViewDefault_CJImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BBBAEFE2552F0DB001767D9 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		8BC9C4BB25641615009D43C0 /* RunloopPlaceHoder */ = {isa = PBXFileReference; lastKnownFileType = text; path = RunloopPlaceHoder; sourceTree = "<group>"; };
 		910612C4969EA109705B385E /* Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDefault-CJImageViewDebug/Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig"; sourceTree = "<group>"; };
 		A2EEC272AACE0C7BF5314D5D /* Pods-CJImageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageView.debug.xcconfig"; path = "Target Support Files/Pods-CJImageView/Pods-CJImageView.debug.xcconfig"; sourceTree = "<group>"; };
 		AA514D8CF96B42216947AF8A /* Pods_CJImageViewDefault_CJImageViewDebug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CJImageViewDefault_CJImageViewDebug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1403,6 +1405,7 @@
 		5A6694F825358B810073FDF6 /* TabController */ = {
 			isa = PBXGroup;
 			children = (
+				8BC9C4BA256415F3009D43C0 /* RunLoop */,
 				5A6694F925358B980073FDF6 /* HomeViewController.h */,
 				5A6694FA25358B980073FDF6 /* HomeViewController.m */,
 				5A66950525358BCC0073FDF6 /* PersonListViewController.h */,
@@ -1694,6 +1697,14 @@
 			path = UITextField;
 			sourceTree = "<group>";
 		};
+		8BC9C4BA256415F3009D43C0 /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				8BC9C4BB25641615009D43C0 /* RunloopPlaceHoder */,
+			);
+			path = RunLoop;
+			sourceTree = "<group>";
+		};
 		953F6B6241D510F9F38C53F0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1850,6 +1861,7 @@
 				5A0BC8DB25134C7300426728 /* IJK.bundle in Resources */,
 				435830B61C33D42F0074D713 /* Assets.xcassets in Resources */,
 				5A8522E324E69BFC00EF7157 /* TestViewController.xib in Resources */,
+				8BC9C4BC25641615009D43C0 /* RunloopPlaceHoder in Resources */,
 				435830B41C33D42F0074D713 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1879,6 +1891,7 @@
 				5A0BC8DC25134C7300426728 /* IJK.bundle in Resources */,
 				5A5493EF24BD539D00C49207 /* Assets.xcassets in Resources */,
 				5A8522E424E69F2D00EF7157 /* TestViewController.xib in Resources */,
+				8BC9C4BD25641615009D43C0 /* RunloopPlaceHoder in Resources */,
 				5A5493F024BD539D00C49207 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

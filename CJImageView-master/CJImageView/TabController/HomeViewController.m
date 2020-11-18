@@ -11,6 +11,9 @@
 
 #import <objc/runtime.h>
 #import <objc/message.h>
+
+typedef NSString * NSStringResourceKey NS_STRING_ENUM;
+
 @interface HomeViewController ()
 @property(nonatomic,copy)NSString * dymStr;
 @end
@@ -105,9 +108,13 @@
     
     UIImageView * img = [UIImageView new];
     [img setShowActivityIndicatorView:true];
-    [img sd_setImageWithURL:[NSURL URLWithString:@""] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-            
-    }];
+//    [img sd_setImageWithURL:[NSURL URLWithString:@""] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//
+//    }];
+    
+    [img sd_setImageWithURL:[NSURL URLWithString:@""] placeholderImage:nil options:SDWebImageLowPriority];
+    
+    
 //    UserInfo * info = [UserInfo new];
 //    info.token = @"token";
 //    info.userId = @"userId";
@@ -130,5 +137,6 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+NSStringResourceKey const NSStringResourceKeyNamedPipe;
+NSStringResourceKey const NSStringResourceKeyUserPipe;
 @end
