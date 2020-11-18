@@ -342,6 +342,8 @@
 		5AE9BBE72508DFA20010945B /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBE52508DFA20010945B /* UIViewController+Alert.m */; };
 		5AE9BBF3250A2EB60010945B /* UIApplication+Permissions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBF1250A2EB60010945B /* UIApplication+Permissions.m */; };
 		5AE9BBF4250A2EB60010945B /* UIApplication+Permissions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBF1250A2EB60010945B /* UIApplication+Permissions.m */; };
+		8B2349A02565684C0083C7B4 /* RunloopDoc in Resources */ = {isa = PBXBuildFile; fileRef = 8B23499F2565684C0083C7B4 /* RunloopDoc */; };
+		8B2349A12565684C0083C7B4 /* RunloopDoc in Resources */ = {isa = PBXBuildFile; fileRef = 8B23499F2565684C0083C7B4 /* RunloopDoc */; };
 		8BBBAEFF2552F0DB001767D9 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BBBAEFE2552F0DB001767D9 /* IJKMediaFramework.framework */; };
 		8BBBAF002552F0DB001767D9 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BBBAEFE2552F0DB001767D9 /* IJKMediaFramework.framework */; };
 		8BC9C4BC25641615009D43C0 /* RunloopPlaceHoder in Resources */ = {isa = PBXBuildFile; fileRef = 8BC9C4BB25641615009D43C0 /* RunloopPlaceHoder */; };
@@ -716,6 +718,7 @@
 		5AE9BBF2250A2EB60010945B /* UIApplication+Permissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Permissions.h"; sourceTree = "<group>"; };
 		5B400EDD14C4BA6134FE6508 /* Pods-CJImageViewDefault-CJImageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDefault-CJImageView.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewDefault-CJImageView/Pods-CJImageViewDefault-CJImageView.release.xcconfig"; sourceTree = "<group>"; };
 		6868481593E21019F930C9EA /* Pods_CJImageViewDefault_CJImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CJImageViewDefault_CJImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B23499F2565684C0083C7B4 /* RunloopDoc */ = {isa = PBXFileReference; lastKnownFileType = text; path = RunloopDoc; sourceTree = "<group>"; };
 		8BBBAEFE2552F0DB001767D9 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		8BC9C4BB25641615009D43C0 /* RunloopPlaceHoder */ = {isa = PBXFileReference; lastKnownFileType = text; path = RunloopPlaceHoder; sourceTree = "<group>"; };
 		910612C4969EA109705B385E /* Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDefault-CJImageViewDebug/Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1613,6 +1616,7 @@
 				5AB1B8FC256533AC0083408B /* NSHomeDirectoryFile */,
 				5AB1B9032565341E0083408B /* GCDQueue */,
 				5AB1B90F2565345E0083408B /* idStyle */,
+				8B23499F2565684C0083C7B4 /* RunloopDoc */,
 			);
 			path = memorandum;
 			sourceTree = "<group>";
@@ -1926,6 +1930,7 @@
 				5AB1B9102565345E0083408B /* idStyle in Resources */,
 				5AB1B9042565341E0083408B /* GCDQueue in Resources */,
 				435830B61C33D42F0074D713 /* Assets.xcassets in Resources */,
+				8B2349A02565684C0083C7B4 /* RunloopDoc in Resources */,
 				5AB1B8DA25652FE60083408B /* RunTime in Resources */,
 				5A8522E324E69BFC00EF7157 /* TestViewController.xib in Resources */,
 				8BC9C4BC25641615009D43C0 /* RunloopPlaceHoder in Resources */,
@@ -1965,6 +1970,7 @@
 				5AB1B9112565345E0083408B /* idStyle in Resources */,
 				5AB1B9052565341E0083408B /* GCDQueue in Resources */,
 				5A5493EF24BD539D00C49207 /* Assets.xcassets in Resources */,
+				8B2349A12565684C0083C7B4 /* RunloopDoc in Resources */,
 				5AB1B8DB25652FE60083408B /* RunTime in Resources */,
 				5A8522E424E69F2D00EF7157 /* TestViewController.xib in Resources */,
 				8BC9C4BD25641615009D43C0 /* RunloopPlaceHoder in Resources */,

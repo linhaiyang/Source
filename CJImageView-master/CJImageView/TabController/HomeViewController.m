@@ -19,19 +19,30 @@ typedef NSString * NSStringResourceKey NS_STRING_ENUM;
 @end
 
 @implementation HomeViewController
-@synthesize muStr=_muStr;
+@synthesize muStr=_muStr2;
 -(void)setMuStr:(NSString *)muStr{
 //    _muStr = muStr;
+    Dlog(@"111111");
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.muStr = @"123";
-    Dlog(@"%@---_muStr",_muStr);
-    /**
-     self.就是调用property自动生成的getter和setter方法，而_则是直接去调用实例变量（property会自动生成一个实例变量，如果你重写了getter与setter方法，property自动生成的实例变量就无效了，需要手动去申明一个实例变量或者用@@synthesize）
 
-     */
 
+    
+    NSRunLoop *loop = [NSRunLoop currentRunLoop];
+    Dlog(@"runloop--------------%@",loop);
+    [[GCDQueue globalQueue]execute:^{
+        NSRunLoop *loop = [NSRunLoop currentRunLoop];
+    }];
+    CFRunLoopRef runLoop = [NSRunLoop currentRunLoop].getCFRunLoop;
+//    __weak KWBackgroundTask *weakSelf = self;
+    CFRunLoopTimerRef timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, CFAbsoluteTimeGetCurrent() + 10.0, 0, 0, 0, ^(CFRunLoopTimerRef timer) {
+//        [NSException raise:KWBackgroundTaskException format:@"Task %@ timed out", weakSelf];
+        Dlog(@"112222");
+        CFRunLoopStop(runLoop);
+    });
+    CFRunLoopAddTimer(runLoop, timer, kCFRunLoopDefaultMode);
+    CFRunLoopRun();
 
 }
 
