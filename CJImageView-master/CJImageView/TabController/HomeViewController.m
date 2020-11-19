@@ -44,13 +44,16 @@ typedef NSString * NSStringResourceKey NS_STRING_ENUM;
     }];
     CFRunLoopRef runLoop = [NSRunLoop currentRunLoop].getCFRunLoop;
 //    __weak KWBackgroundTask *weakSelf = self;
-    CFRunLoopTimerRef timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, CFAbsoluteTimeGetCurrent() + 10.0, 0, 0, 0, ^(CFRunLoopTimerRef timer) {
+    CFRunLoopTimerRef timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, CFAbsoluteTimeGetCurrent() + 5.0, 1, 0, 0, ^(CFRunLoopTimerRef timer) {
 //        [NSException raise:KWBackgroundTaskException format:@"Task %@ timed out", weakSelf];
         Dlog(@"112222");
         CFRunLoopStop(runLoop);
     });
     CFRunLoopAddTimer(runLoop, timer, kCFRunLoopDefaultMode);
     CFRunLoopRun();
+    
+    
+
 
 }
 

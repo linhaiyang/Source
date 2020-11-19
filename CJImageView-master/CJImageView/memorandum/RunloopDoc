@@ -1,4 +1,13 @@
 RunLoop是通过内部维护的事件循环(Event Loop)来对事件/消息进行管理的一个对象。
+
+UIApplicationMain内部默认开启了主线程的RunLoop
+
+void CFRunLoopAddSource(CFRunLoopRef rl, CFRunLoopSourceRef source, CFRunLoopMode mode);
+
+void CFRunLoopAddObserver(CFRunLoopRef rl, CFRunLoopObserverRef observer, CFRunLoopMode mode);
+
+CF_EXPORT void CFRunLoopAddTimer(CFRunLoopRef rl, CFRunLoopTimerRef timer, CFRunLoopMode mode);
+
 https://juejin.im/post/6844904039419740168
 current mode = kCFRunLoopDefaultMode,
 common modes = <CFBasicHash 0x600001c4b6c0 [0x102959b80]>{type = mutable set, count = 2,

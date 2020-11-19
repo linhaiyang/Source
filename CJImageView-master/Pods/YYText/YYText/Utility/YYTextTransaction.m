@@ -37,7 +37,7 @@ static void YYTextTransactionSetup() {
         transactionSet = [NSMutableSet new];
         CFRunLoopRef runloop = CFRunLoopGetMain();
         CFRunLoopObserverRef observer;
-        
+//        [NSNotificationCenter defaultCenter]add
         observer = CFRunLoopObserverCreate(CFAllocatorGetDefault(),
                                            kCFRunLoopBeforeWaiting | kCFRunLoopExit,
                                            true,      // repeat
