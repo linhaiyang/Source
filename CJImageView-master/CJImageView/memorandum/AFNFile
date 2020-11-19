@@ -1,0 +1,87 @@
+AFN
+.AFHttpRequest中的方法执行，其中当没有设置序列化方法时，会走默认的序列化方法，在此方法中最后序列化成为urlencode编码格式，问题也出在此处
+self.requestSerializer = [AFHTTPRequestSerializer serializer];
+    self.responseSerializer = [AFJSONResponseSerializer serializer];
+
+
+第一种方法，设置AFJSONRequetSerializer，此方法中参数以json对象的二进制形式传向后台服务器
+netMnager.requestSerializer  = [AFJSONRequestSerializer serializer];
+    netMnager.responseSerializer = [AFHTTPResponseSerializer serializer];
+ NSData *jsonData = [NSJSONSerialization dataWithJSONObject:parameters options:self.writingOptions error:error];
+        
+        if (!jsonData) {
+            return nil;
+        }
+        
+        [mutableRequest setHTTPBody:jsonData];
+
+第二种，配置request的序列化查询方法，该方法参数以json字符串的二进制流形式传向服务器
+netMnager.requestSerializer  = [AFHTTPRequestSerializer serializer];
+[mutableRequest setHTTPBody:[query dataUsingEncoding:self.stringEncoding]];
+参数转换AFQueryStringFromParameters
+
+dictionary转成{
+device=iOS,
+nonce=089008,
+signature=6767CCF23536B09F51F57B4FF74E2DEB,
+timestamp=1605000176
+转成
+device=iOS&nonce=
+}
+    netMnager.responseSerializer = [AFHTTPResponseSerializer serializer];
+
+
+
+会话对象（NSURLSession 类对象）
+/*
+NSURLSession 支持 http2.0 协议
+在处理下载任务的时候可以直接把数据下载到磁盘（通过配置）
+支持后台下载|上传（通过配置）
+同一个 session 发送多个请求，只需要建立一次连接（复用了TCP）
+提供了全局的 session 并且可以统一配置，使用更加方便
+下载的时候是多线程异步处理，效率更高
+*/
+——>NSURLRequest生成NSURLSessionDataTask继承于NSURLSessionTask
+NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:request];
+
+
+* NSURLSessionTask -一个可取消的对象，它引用生命周期
+*处理给定请求。
+
+
+
+suspend——暂停
+resume-----中断后）重新开始
+
+self.mutableTaskDelegatesKeyedByTaskIdentifier[@(task.taskIdentifier)] = delegate;
+
+
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(taskDidResume:) name:AFNSURLSessionTaskDidResumeNotification object:task];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(taskDidSuspend:) name:AFNSURLSessionTaskDidSuspendNotification object:task];
+
+
+[[NSNotificationCenter defaultCenter] postNotificationName:AFNSURLSessionTaskDidResumeNotification object:self];
+
+[[NSNotificationCenter defaultCenter] postNotificationName:AFNetworkingTaskDidResumeNotification object:task];
+
+
+1.NSURLSessionDataDelegate
+didReceiveData：接收数据过程
+didSendBodyData：发送body数据过程
+
+2.NSURLSessionTaskDelegate
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task
+                           didCompleteWithError:(nullable NSError *)error
+didCompleteWithError：请求结束回调
+
+3.NSURLSessionDownloadDelegate 下架相关
+didResumeAtOffset  didWriteData
+
+
+****NSParameterAssert(task);*********
+
+/*
+<7b22636f 6465223a 3230302c 22646174 61223a7b 2275726c 223a2268 74747073 3a5c2f5c 2f73746f 72657465 73742e71 75796962 616f2e63 6f6d5c2f 7761705c 2f627261 6e63685c 2f696e64 65782e68 746d6c3f 69643d35 31222c22 616e6472 6f696422 3a226874 7470733a 5c2f5c2f 73746174 69632e61 7375732e 636f6d2e 636e5c2f 73746f72 655c2f32 30323030 3631375c 2f323135 31313435 30313031 3537312e 6a706722 2c226970 686f6e65 223a2268 74747073 3a5c2f5c 2f737461 7469632e 61737573 2e636f6d 2e636e5c 2f73746f 72655c2f 32303230 30363137 5c2f3231 35313139 35353937 35373537 2e6a7067 222c2269 70686f6e 6558223a 22687474 70733a5c 2f5c2f73 74617469 632e6173 75732e63 6f6d2e63 6e5c2f73 746f7265 5c2f3230 32303036 31375c2f 32313531 32343939 31303035 34392e6a 7067222c 2275726c 5f747970 65223a32 322c2274 7970655f 6964223a 35312c22 746f6b65 6e223a22 6170692d 64393532 63323264 63373738 37366166 63316330 34356135 34356134 30653938 227d2c22 74696d65 7374616d 70223a31 36303530 38383135 372c2274 6f6b656e 223a2261 70692d64 39353263 32326463 37373837 36616663 31633034 35613534 35613430 65393822 2c226465 62756722 3a6e756c 6c7d>
+
+
+*/

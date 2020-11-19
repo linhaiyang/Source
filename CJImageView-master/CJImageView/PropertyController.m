@@ -49,7 +49,7 @@
         LoginModel * model = batchRequest.paraData;
 //        [batchRequest saveResponseDataToCacheFile:batchRequest.responseData];
     } failure:^(YTKBaseRequest * _Nonnull batchRequest) {
-
+        [MPRequstFailedHelper requstFailed:batchRequest];
     }];
     self.muAry = @[@"http://img.daimg.com/uploads/allimg/201103/1-2011031K128.jpg",
                    @"http://img.daimg.com/uploads/allimg/201104/1-201104000616.jpg",
@@ -106,6 +106,10 @@
          imageView.highlighted = !imageView.highlighted;
      */
     [self addTableView];
+    
+    
+    
+    
 }
 -(void)addTableView{
     self.tableV = [self.view addTableViewDelegate:self];

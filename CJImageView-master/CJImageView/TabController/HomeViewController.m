@@ -26,8 +26,16 @@ typedef NSString * NSStringResourceKey NS_STRING_ENUM;
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, KScreen_Height)];
+            bgView.backgroundColor = [UIColor orangeColor];
+    bgView.autoresizingMask = UIViewAutoresizingFlexibleWidth;//横屏后 屏幕宽度 变化，子视图跟着变化
+    
+//            [self.tableV insertSubview:bgView atIndex:0];
+    [self.view addSubview:bgView];
 
-
+    Dlog(@"%f-------%f",KScreen_Width,bgView);
     
     NSRunLoop *loop = [NSRunLoop currentRunLoop];
     Dlog(@"runloop--------------%@",loop);

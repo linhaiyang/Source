@@ -126,9 +126,6 @@ NSString*sttr1=@"S1ViewController";
     dispatch_main_sync_safe(^{
         
     });
-    UIView *bgView = [[UIView alloc] initWithFrame:CGRectOffset(CGRectMake(0, 0, KScreen_Width, KScreen_Height), 0, -KScreen_Height)];
-            bgView.backgroundColor = [UIColor orangeColor];
-            [self.tableV insertSubview:bgView atIndex:0];
     
     if ([DeviceTool isIPhoneX]) {
         
@@ -136,7 +133,7 @@ NSString*sttr1=@"S1ViewController";
 //    self.fd_prefersBarTintColor = [UIColor clearColor];
 //    self.fd_prefersNavigationBarHidden = true;
     
-//    [self.tableV.mj_header beginRefreshing];
+    [self.tableV.mj_header beginRefreshing];
 
 //    UserInfo * user = [UserInfo new];
 //    user.userId = @"1";
@@ -163,19 +160,7 @@ NSString*sttr1=@"S1ViewController";
     NSString * entcry = [str encryptUseDESkey:@"Xo823-dl230df23r.&"];
     NSString * entcry0 = [entcry
                           decryptedWith3DESUsingKey:@"Xo823-dl230df23r.&"];
-//
-//    Dlog(@"%@111--------------111%@+++++++%@",str,entcry,entcry0);
-    
-    
-    
-    UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(KScreen_Width/2, 100, 200, 200)];
-//    [self.view addSubview:imageView];
-    UIImage * img =[UIImage imageNamed:@"background"];
-    imageView.contentMode = UIViewContentModeScaleAspectFit;
-    imageView.image = img;
-    
-//    self.tableV.transform  = CGAffineTransformMakeScale(-1, 1);
-//    self.tableV.transform = CGAffineTransformMakeRotation(M_PI);
+
     
     
     [self mutableStringTest];
@@ -380,14 +365,6 @@ return newShadow;
 }
 
 
-//- (void)setObjStr: (NSMutableString*)objStr{
-//      [_objStr release];   //把_ objStr以前的对象release一次
-//      _objStr = [objStr copy]; // 把objStr 的对象拷贝一份给_ objStr
-//    _objStr = objStr;
-//}
-//-(void)setStr:(NSString *)str{
-//    _str = str;
-//}
 
 /**
  *  提示用户最新的微博数量

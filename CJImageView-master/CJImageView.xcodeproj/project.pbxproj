@@ -285,6 +285,10 @@
 		5AB1B9052565341E0083408B /* GCDQueue in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B9032565341E0083408B /* GCDQueue */; };
 		5AB1B9102565345E0083408B /* idStyle in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B90F2565345E0083408B /* idStyle */; };
 		5AB1B9112565345E0083408B /* idStyle in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B90F2565345E0083408B /* idStyle */; };
+		5AB1B91F256647170083408B /* AFNFile in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B91E256647170083408B /* AFNFile */; };
+		5AB1B920256647170083408B /* AFNFile in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B91E256647170083408B /* AFNFile */; };
+		5AB1B929256678D30083408B /* MJRefrshDoc in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B928256678D30083408B /* MJRefrshDoc */; };
+		5AB1B92A256678D30083408B /* MJRefrshDoc in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B928256678D30083408B /* MJRefrshDoc */; };
 		5AE1DEDF2501EC4B00F511A6 /* TestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE1DEDE2501EC4B00F511A6 /* TestViewModel.m */; };
 		5AE1DEE1250227A000F511A6 /* TestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE1DEDE2501EC4B00F511A6 /* TestViewModel.m */; };
 		5AE1DEE825024A2000F511A6 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE1DEE725024A2000F511A6 /* LoginModel.m */; };
@@ -654,6 +658,8 @@
 		5AB1B8FC256533AC0083408B /* NSHomeDirectoryFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = NSHomeDirectoryFile; sourceTree = "<group>"; };
 		5AB1B9032565341E0083408B /* GCDQueue */ = {isa = PBXFileReference; lastKnownFileType = text; path = GCDQueue; sourceTree = "<group>"; };
 		5AB1B90F2565345E0083408B /* idStyle */ = {isa = PBXFileReference; lastKnownFileType = text; path = idStyle; sourceTree = "<group>"; };
+		5AB1B91E256647170083408B /* AFNFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = AFNFile; sourceTree = "<group>"; };
+		5AB1B928256678D30083408B /* MJRefrshDoc */ = {isa = PBXFileReference; lastKnownFileType = text; path = MJRefrshDoc; sourceTree = "<group>"; };
 		5AE1DEDD2501EC4B00F511A6 /* TestViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewModel.h; sourceTree = "<group>"; };
 		5AE1DEDE2501EC4B00F511A6 /* TestViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewModel.m; sourceTree = "<group>"; };
 		5AE1DEE625024A2000F511A6 /* LoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
@@ -1617,6 +1623,8 @@
 				5AB1B9032565341E0083408B /* GCDQueue */,
 				5AB1B90F2565345E0083408B /* idStyle */,
 				8B23499F2565684C0083C7B4 /* RunloopDoc */,
+				5AB1B91E256647170083408B /* AFNFile */,
+				5AB1B928256678D30083408B /* MJRefrshDoc */,
 			);
 			path = memorandum;
 			sourceTree = "<group>";
@@ -1916,10 +1924,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AB1B91F256647170083408B /* AFNFile in Resources */,
 				5AB1B8E1256530890083408B /* BaseData in Resources */,
 				435830B91C33D42F0074D713 /* LaunchScreen.storyboard in Resources */,
 				5A516F89251A06E600C346CB /* Placehoder in Resources */,
 				5AB1B8E8256530EA0083408B /* CharDoc in Resources */,
+				5AB1B929256678D30083408B /* MJRefrshDoc in Resources */,
 				5AB1B8EF256531C70083408B /* DataDoc in Resources */,
 				5A17164824921914001CAADF /* MBProgressHUD.bundle in Resources */,
 				5A35580F249CC34A002DAD41 /* NoData.bundle in Resources */,
@@ -1956,10 +1966,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AB1B920256647170083408B /* AFNFile in Resources */,
 				5AB1B8E2256530890083408B /* BaseData in Resources */,
 				5A5493EC24BD539D00C49207 /* LaunchScreen.storyboard in Resources */,
 				5A516F8A251A06E600C346CB /* Placehoder in Resources */,
 				5AB1B8E9256530EA0083408B /* CharDoc in Resources */,
+				5AB1B92A256678D30083408B /* MJRefrshDoc in Resources */,
 				5AB1B8F0256531C70083408B /* DataDoc in Resources */,
 				5A5493ED24BD539D00C49207 /* MBProgressHUD.bundle in Resources */,
 				5A5493EE24BD539D00C49207 /* NoData.bundle in Resources */,
