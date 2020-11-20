@@ -26,7 +26,6 @@
 #import "NSString+Encrypt.h"
 #import "NSData+Base64.h"
 #import "MainTabBarController.h"
-
 #define loadUrl @"http://mrobot.pcauto.com.cn/v2/cms/channels/1?pageNo=1&pageSize=400&v=4.0.0"
 #define DECODE YES
 NSString * const mainNotification = @"mainNotification";
@@ -113,7 +112,7 @@ NSString*sttr1=@"S1ViewController";
     self.tableV.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableV.separatorInset = UIEdgeInsetsZero;
     @weakify(self);
-    self.tableV.mj_header = [MJRefreshLoadingHeader headerWithRefreshingBlock:^{
+    self.tableV.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             @strongify(self);
 //            [self showNewStatusesCount:5];
@@ -123,6 +122,8 @@ NSString*sttr1=@"S1ViewController";
             
         });
     }];
+    
+    
     dispatch_main_sync_safe(^{
         
     });

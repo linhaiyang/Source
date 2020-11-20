@@ -1,5 +1,11 @@
 RunLoop是通过内部维护的事件循环(Event Loop)来对事件/消息进行管理的一个对象。
 
+    NSTimer * timer0 = [NSTimer timerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        Dlog(@"123--------");
+    }];
+    [[NSRunLoop mainRunLoop]addTimer:timer0 forMode:NSDefaultRunLoopMode];
+
+
 UIApplicationMain内部默认开启了主线程的RunLoop
 
 void CFRunLoopAddSource(CFRunLoopRef rl, CFRunLoopSourceRef source, CFRunLoopMode mode);

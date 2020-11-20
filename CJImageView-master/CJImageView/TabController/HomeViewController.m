@@ -36,7 +36,7 @@ typedef NSString * NSStringResourceKey NS_STRING_ENUM;
     [self.view addSubview:bgView];
 
     Dlog(@"%f-------%f",KScreen_Width,bgView);
-    
+    /*
     NSRunLoop *loop = [NSRunLoop currentRunLoop];
     Dlog(@"runloop--------------%@",loop);
     [[GCDQueue globalQueue]execute:^{
@@ -46,13 +46,13 @@ typedef NSString * NSStringResourceKey NS_STRING_ENUM;
 //    __weak KWBackgroundTask *weakSelf = self;
     CFRunLoopTimerRef timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, CFAbsoluteTimeGetCurrent() + 5.0, 1, 0, 0, ^(CFRunLoopTimerRef timer) {
 //        [NSException raise:KWBackgroundTaskException format:@"Task %@ timed out", weakSelf];
-        Dlog(@"112222");
+//        Dlog(@"112222");
         CFRunLoopStop(runLoop);
     });
     CFRunLoopAddTimer(runLoop, timer, kCFRunLoopDefaultMode);
     CFRunLoopRun();
     
-    
+    */
 
 
 }

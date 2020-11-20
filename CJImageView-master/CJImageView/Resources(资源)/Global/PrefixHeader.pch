@@ -69,5 +69,6 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <ReactiveObjC/RACEXTScope.h>
 #import <UIImageView+WebCache.h>
+#import <MJRefresh/MJRefresh.h>
 
 #endif /* PrefixHeader_pch */
