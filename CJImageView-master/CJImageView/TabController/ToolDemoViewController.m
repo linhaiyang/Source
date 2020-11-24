@@ -274,7 +274,7 @@
         [UIView animateWithDuration:0.3 animations:^{
             @strongify(self);
 //            dispatch_async(dispatch_get_main_queue(), ^{
-                self.operView.left= self.operView.frame.origin.x + 50;
+                self.operView.ui_left= self.operView.frame.origin.x + 50;
 //            });
             
         }completion:^(BOOL finished) {
@@ -292,7 +292,7 @@
     [UIView animateWithDuration:0.3 animations:^{
 //        dispatch_async(dispatch_get_main_queue(), ^{
             @strongify(self);
-            self.operView.top= self.operView.frame.origin.y + 50;
+            self.operView.ui_top= self.operView.frame.origin.y + 50;
 //        });
     }completion:^(BOOL finished) {
 //        dispatch_semaphore_signal(self.dispatchSemaphore);

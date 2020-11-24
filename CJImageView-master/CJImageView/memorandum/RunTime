@@ -1,3 +1,11 @@
+  
+   //创建一个类
+        Class superClass = [NSObject class];
+        newClass = objc_allocateClassPair(superClass, className, 0);
+        //注册你创建的这个类
+        objc_registerClassPair(newClass);
+  
+  
     Class getclass=objc_getClass("ViewController");// @return The Class object for the named class0x000000010b7e62c0
 //    Person *person = [[Person alloc] init];
     /// 向person 对象发送一条post方法 参数为2
@@ -36,6 +44,9 @@ objc_msgSend_stret
 objc_msgSendSuper
 objc_msgSendSuper_stret
 比如我们调用[super xxx]的时候,则会改为objc_msgSendSuper的形式，而带有stret，表明方法返回值是一个结构体类型。
+
+objc_getClass参数是类名的字符串，返回的就是这个类的类对象；
+object_getClass参数是id类型，它返回的是这个id的isa指针所指向的Class，如果传参是Class，则返回该Class的metaClass。
 
 实际上，类对象是元类对象的一个实例！！元类描述了 一个类对象，就像类对象描述了普通对象一样。
 Class getclass=objc_getClass("ViewController");

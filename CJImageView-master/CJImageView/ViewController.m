@@ -15,7 +15,6 @@
 #import "BaseEntity.h"
 #import "SYSafeCategory.h"
 #import "MJRefreshLoadingHeader.h"
-#import "BaseTableViewCell.h"
 #import "TestViewController.h"
 #import "RACObserveController.h"
 #import "UITableView+RadiusStyle.h"
@@ -135,6 +134,13 @@ NSString*sttr1=@"S1ViewController";
 //    self.fd_prefersNavigationBarHidden = true;
     
     [self.tableV.mj_header beginRefreshing];
+    self.tableV.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        @strongify(self);
+//            [self showNewStatusesCount:5];
+        [[GCDQueue mainQueue]execute:^{
+            [self.tableV.mj_footer endRefreshing];
+        } afterDelaySecs:1.5];
+    }];
 
 //    UserInfo * user = [UserInfo new];
 //    user.userId = @"1";
@@ -205,7 +211,7 @@ return newShadow;
 //    if (cell.imageView) {
 //
 //    }
-    BaseTableViewCell * cell = [BaseTableViewCell registerCell:tableView];
+    UITableViewCell * cell = [UITableViewCell registerCell:tableView];
     
 //    Dlog(@"cellForRowAtIndexPath ------%ld",indexPath.row);
 //    Dlog(@"%@-----%ld",cell.textLabel.text,indexPath.row);

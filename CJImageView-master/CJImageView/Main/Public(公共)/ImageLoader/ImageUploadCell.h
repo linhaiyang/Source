@@ -6,11 +6,11 @@
 //  Copyright © 2020 C.K.Lian. All rights reserved.
 //
 
-#import "BaseTableViewCell.h"
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ImageUploadCell : BaseTableViewCell
+@interface ImageUploadCell : UITableViewCell
 
 @end
 

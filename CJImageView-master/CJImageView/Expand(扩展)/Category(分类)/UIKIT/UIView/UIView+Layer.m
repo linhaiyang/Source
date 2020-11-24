@@ -9,9 +9,7 @@
 #import "UIView+Layer.h"
 
 @implementation UIView (Layer)
--(void)addSubViewLayer:(UIView *)subView{
-    [self.layer addSublayer:subView.layer];
-}
+
 -(void)addCornerRedius:(CGFloat)redius backGroundColor:(UIColor*)color{
     self.backgroundColor = [UIColor clearColor];
     UIRectCorner corner = UIRectCornerAllCorners; // 圆角位置，全部位置

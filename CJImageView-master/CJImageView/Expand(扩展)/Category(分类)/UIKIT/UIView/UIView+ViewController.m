@@ -23,5 +23,4 @@
     } while (responder);
     return nil;
 }
-
 @end

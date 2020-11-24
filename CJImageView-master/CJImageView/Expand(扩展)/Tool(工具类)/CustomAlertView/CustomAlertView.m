@@ -32,7 +32,6 @@
         [dismissView makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
         }];
-                                     
         self.contentView = [UIView new];
         [self addSubview:self.contentView];
         self.contentView.backgroundColor = [UIColor whiteColor];
@@ -45,14 +44,8 @@
     return self;
 }
 
-//-(void)viewDidLoad{
-//    [super viewDidLoad];
-//
-////    [self show];
-//}
 /** 弹出此弹窗 */
 - (void)show {
-//    self.contentView.hidden = true;
     // 出场动画
     @weakify(self);
     self.contentView.transform = CGAffineTransformScale(self.contentView.transform, 0.8, 0.8);

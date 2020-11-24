@@ -123,7 +123,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    BaseTableViewCell * cell = [BaseTableViewCell registerCell:tableView];
+    UITableViewCell * cell = [UITableViewCell registerCell:tableView];
     cell.accessoryType    = UITableViewCellAccessoryDisclosureIndicator;
     [cell.imageView sd_setImageWithURL:self.muAry[indexPath.row] placeholderImage:nil options:SDWebImageProgressiveDownload];
 //    cell.textLabel.text   = self.dataArray[indexPath.row];

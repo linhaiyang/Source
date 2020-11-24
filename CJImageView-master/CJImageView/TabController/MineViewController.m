@@ -10,6 +10,7 @@
 #import "YYFPSLabel.h"
 #import "PropertyController.h"
 #import "MJRefreshLoadingHeader.h"
+#import "UITableViewCell+Tool.h"
 
 #import "ViewController.h"
 @interface MineViewController ()<UITableViewDataSource, UITableViewDelegate>
@@ -75,7 +76,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    BaseTableViewCell *cell = [BaseTableViewCell registerCell:tableView];
+    UITableViewCell *cell = [UITableViewCell registerCell:tableView];
     cell.accessoryType    = UITableViewCellAccessoryDisclosureIndicator;
     cell.textLabel.text   = self.dataArray[indexPath.row];
     return cell;
