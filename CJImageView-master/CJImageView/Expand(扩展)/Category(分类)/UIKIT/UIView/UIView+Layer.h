@@ -12,9 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (Layer)
 
-/**无交互视图 添加到父视图上*/
--(void)addSubViewLayer:(UIView *)subView;
-
 /**圆角*/
 -(void)addCornerRedius:(CGFloat)redius;
 

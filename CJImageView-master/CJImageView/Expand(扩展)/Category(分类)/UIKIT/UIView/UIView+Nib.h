@@ -1,8 +1,8 @@
 //
-//  UIViewController+Direction.h
+//  UIView+Nib.h
 //  CJImageView
 //
-//  Created by shengkai li on 2020/10/13.
+//  Created by shengkai li on 2020/11/23.
 //  Copyright © 2020 C.K.Lian. All rights reserved.
 //
 
@@ -10,9 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIViewController (Direction)
-- (void)backBtnClicked;
-
+@interface UIView (Nib)
++ (instancetype)loadNib;
 @end
 
 NS_ASSUME_NONNULL_END

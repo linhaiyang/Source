@@ -32,5 +32,5 @@
 
 - (void)pushViewController:(UIViewController *)controller withTransition:(UIViewAnimationTransition)transition;
 - (UIViewController *)popViewControllerWithTransition:(UIViewAnimationTransition)transition;
-
+- (void)pushViewController:(NSString *)vcName propertyDic:(NSDictionary *)propertyDic;
 @end

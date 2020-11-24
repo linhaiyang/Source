@@ -35,7 +35,7 @@
 #import "UIViewController+LL_Utils.h"
 #import "UIViewController+Direction.h"
 #import "RootWebViewController.h"
-#import "BaseTableViewCell.h"
+#import "UITableViewCell+Tool.h"
 
 /**Foundation*/
 #import "NSArray+SafeAccess.h"

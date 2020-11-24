@@ -77,7 +77,7 @@
     graView.frame = CGRectMake(10, 100, KScreen_Width - 20, 300.f);
     [self.view addSubview:graView];
 //    graView.backgroundColor = [UIColor gradientFromColor:[UIColor colorWithHexString:@"#106FD7 "] toColor:[UIColor colorWithHexString:@"#03398A"] withWidth:graView.size.width];
-    graView.backgroundColor = [UIColor gradientFromColor:[UIColor colorWithHexString:@"#106FD7 "] toColor:[UIColor colorWithHexString:@"#03398A"] withHeight:graView.size.height];
+    graView.backgroundColor = [UIColor gradientFromColor:[UIColor colorWithHexString:@"#106FD7 "] toColor:[UIColor colorWithHexString:@"#03398A"] withHeight:graView.ui_size.height];
 }
 /*
 -(void)initIjkPlayer{
