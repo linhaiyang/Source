@@ -1,0 +1,38 @@
+
+
+抓包
+
+
+请求报文
+POST /somedir/page.html HTTP/1.1
+//以上是请求行:方法字段、URL字段和HTTP版本字段
+Host: www.user.com
+Content-Type: application/x-www-form-urlencoded
+Connection: Keep-Alive
+User-agent: Mozilla/5.0.
+Accept-lauguage: fr
+//以上是首部行  请求头部
+（此处必须有一空行）  //空行分割header和请求内容
+name=world   请求体
+
+响应报文
+HTTP/1.1 200 OK
+//以上是状态行：协议版本字段、状态码、相应状态信息
+Connection：close
+Server:Apache/2.2.3(CentOS)
+Date: Sat, 31 Dec 2005 23:59:59 GMT
+Content-Type: text/html
+Content-Length: 122
+//以上是首部行 响应头部
+（此处必须有一空行）  //空行分割header和实体主体
+(data data data data)//响应实体主体
+
+
+
+
+GET请求会主动进行Cache 直接由CDN缓存，大大减轻服务器的负担
+GET：获取资源是 安全的，幂等的(只读的，纯粹的)， 可缓存的
+对于GET方式的请求，浏览器会把Header和实体主体一并发送出去，服务器响应200（返回数据）；
+
+而对于POST，浏览器先发送Header，服务器响应100 Continue，浏览器再发送实体主体，服务器响应200 OK（返回数据）。
+POST：获取资源是 非安全的，非幂等的，不可缓存的

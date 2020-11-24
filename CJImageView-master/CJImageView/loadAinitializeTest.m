@@ -7,8 +7,10 @@
 //
 
 #import "loadAinitializeTest.h"
-
 @implementation loadAinitializeTest
+- (void)initCSocket{
+}
+
 
 
 @end

@@ -352,6 +352,8 @@
 		8BBBAF002552F0DB001767D9 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BBBAEFE2552F0DB001767D9 /* IJKMediaFramework.framework */; };
 		8BC9C4BC25641615009D43C0 /* RunloopPlaceHoder in Resources */ = {isa = PBXBuildFile; fileRef = 8BC9C4BB25641615009D43C0 /* RunloopPlaceHoder */; };
 		8BC9C4BD25641615009D43C0 /* RunloopPlaceHoder in Resources */ = {isa = PBXBuildFile; fileRef = 8BC9C4BB25641615009D43C0 /* RunloopPlaceHoder */; };
+		8BE8769C256A2D5A00F7F143 /* HttpFile in Resources */ = {isa = PBXBuildFile; fileRef = 8BE8769B256A2D5A00F7F143 /* HttpFile */; };
+		8BE8769D256A2D5A00F7F143 /* HttpFile in Resources */ = {isa = PBXBuildFile; fileRef = 8BE8769B256A2D5A00F7F143 /* HttpFile */; };
 		EBBF34E2E4D545EBD2B0902E /* Pods_CJImageViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 137C7CF9A3FB6AE76951D9DA /* Pods_CJImageViewTests.framework */; };
 		F040FCB469F550DED38D52D3 /* Pods_CJImageViewDefault_CJImageView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6868481593E21019F930C9EA /* Pods_CJImageViewDefault_CJImageView.framework */; };
 /* End PBXBuildFile section */
@@ -727,6 +729,7 @@
 		8B23499F2565684C0083C7B4 /* RunloopDoc */ = {isa = PBXFileReference; lastKnownFileType = text; path = RunloopDoc; sourceTree = "<group>"; };
 		8BBBAEFE2552F0DB001767D9 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		8BC9C4BB25641615009D43C0 /* RunloopPlaceHoder */ = {isa = PBXFileReference; lastKnownFileType = text; path = RunloopPlaceHoder; sourceTree = "<group>"; };
+		8BE8769B256A2D5A00F7F143 /* HttpFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = HttpFile; sourceTree = "<group>"; };
 		910612C4969EA109705B385E /* Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDefault-CJImageViewDebug/Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig"; sourceTree = "<group>"; };
 		A2EEC272AACE0C7BF5314D5D /* Pods-CJImageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageView.debug.xcconfig"; path = "Target Support Files/Pods-CJImageView/Pods-CJImageView.debug.xcconfig"; sourceTree = "<group>"; };
 		AA514D8CF96B42216947AF8A /* Pods_CJImageViewDefault_CJImageViewDebug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CJImageViewDefault_CJImageViewDebug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1625,6 +1628,7 @@
 				8B23499F2565684C0083C7B4 /* RunloopDoc */,
 				5AB1B91E256647170083408B /* AFNFile */,
 				5AB1B928256678D30083408B /* MJRefrshDoc */,
+				8BE8769B256A2D5A00F7F143 /* HttpFile */,
 			);
 			path = memorandum;
 			sourceTree = "<group>";
@@ -1938,6 +1942,7 @@
 				5AB1B8F62565329F0083408B /* SDWebImageFile in Resources */,
 				5A0BC8DB25134C7300426728 /* IJK.bundle in Resources */,
 				5AB1B9102565345E0083408B /* idStyle in Resources */,
+				8BE8769C256A2D5A00F7F143 /* HttpFile in Resources */,
 				5AB1B9042565341E0083408B /* GCDQueue in Resources */,
 				435830B61C33D42F0074D713 /* Assets.xcassets in Resources */,
 				8B2349A02565684C0083C7B4 /* RunloopDoc in Resources */,
@@ -1980,6 +1985,7 @@
 				5AB1B8F72565329F0083408B /* SDWebImageFile in Resources */,
 				5A0BC8DC25134C7300426728 /* IJK.bundle in Resources */,
 				5AB1B9112565345E0083408B /* idStyle in Resources */,
+				8BE8769D256A2D5A00F7F143 /* HttpFile in Resources */,
 				5AB1B9052565341E0083408B /* GCDQueue in Resources */,
 				5A5493EF24BD539D00C49207 /* Assets.xcassets in Resources */,
 				8B2349A12565684C0083C7B4 /* RunloopDoc in Resources */,
