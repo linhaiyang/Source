@@ -2638,6 +2638,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CJImageView/Resources(资源)/Global/PrefixHeader.pch";
 				INFOPLIST_FILE = CJImageView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2662,6 +2663,7 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CJImageView/Resources(资源)/Global/PrefixHeader.pch";
 				INFOPLIST_FILE = CJImageView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

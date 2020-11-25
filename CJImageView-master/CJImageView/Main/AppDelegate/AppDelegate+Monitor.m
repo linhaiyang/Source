@@ -15,7 +15,9 @@
    //进入后台
     
 }
-
+- (void)sceneDidEnterBackground:(UIScene *)scene  API_AVAILABLE(ios(13.0)){
+    
+}
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // app从后台进入前台都会调用这个方法
 }

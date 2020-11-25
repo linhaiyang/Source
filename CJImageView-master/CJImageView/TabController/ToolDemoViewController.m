@@ -203,10 +203,10 @@
 
 -(void)addOperation{
     // 1.创建队列
-       NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+   NSOperationQueue *queue = [[NSOperationQueue alloc] init];
 
-       // 2.设置最大并发操作数
-       queue.maxConcurrentOperationCount = 1; // 串行队列
+   // 2.设置最大并发操作数
+   queue.maxConcurrentOperationCount = 1; // 串行队列
     
     self.dispatchSemaphore = dispatch_semaphore_create(3);
     
