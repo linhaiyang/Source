@@ -9,10 +9,77 @@ RunLoop是通过内部维护的事件循环(Event Loop)来对事件/消息进行
 UIApplicationMain内部默认开启了主线程的RunLoop
 
 void CFRunLoopAddSource(CFRunLoopRef rl, CFRunLoopSourceRef source, CFRunLoopMode mode);
+ // 创建线程，并调用run1方法执行任务
+    self.thread = [[NSThread alloc] initWithTarget:self selector:@selector(run1) object:nil];
+// 开启线程
+    [self.thread start];
+- (void) run1
+{
+    // 这里写任务
+    NSLog(@"----run1-----");
 
+    // 添加下边两句代码，就可以开启RunLoop，之后self.thread就变成了常驻线程，可随时添加任务，并交于RunLoop处理
+    [[NSRunLoop currentRunLoop] addPort:[NSPort port] forMode:NSDefaultRunLoopMode];
+    [[NSRunLoop currentRunLoop] run];
+
+    // 测试是否开启了RunLoop，如果开启RunLoop，则来不了这里，因为RunLoop开启了循环。
+    NSLog(@"未开启RunLoop");
+}
+
+
+
+
+
+
+
+
+添加观察者
 void CFRunLoopAddObserver(CFRunLoopRef rl, CFRunLoopObserverRef observer, CFRunLoopMode mode);
+    CFRunLoopRef runloop = CFRunLoopGetMain();
+    CFRunLoopObserverRef observer;
+//        [NSNotificationCenter defaultCenter]add
+    observer = CFRunLoopObserverCreate(CFAllocatorGetDefault(),
+                                       kCFRunLoopBeforeWaiting | kCFRunLoopExit,//休眠或者退出的时候监听
+                                       true,      // repeat
+                                       0xFFFFFF,  // after CATransaction(2000000)
+                                       YYRunLoopObserverCallBack, NULL);
+    CFRunLoopAddObserver(runloop, observer, kCFRunLoopCommonModes);
+    CFRelease(observer);
 
+static void YYRunLoopObserverCallBack(CFRunLoopObserverRef observer,   //监听的代码 CFRunLoopActivity activity, void *info) {
+//    Dlog(@"kCFRunLoopBeforeWaiting---kCFRunLoopExit");
+//    NSLog(@"kCFRunLoopBeforeWaiting---kCFRunLoopExit");
+}
+
+
+
+
+添加定时器
 CF_EXPORT void CFRunLoopAddTimer(CFRunLoopRef rl, CFRunLoopTimerRef timer, CFRunLoopMode mode);
+    /*
+    NSRunLoop *loop = [NSRunLoop currentRunLoop];
+    Dlog(@"runloop--------------%@",loop);
+    [[GCDQueue globalQueue]execute:^{
+        NSRunLoop *loop = [NSRunLoop currentRunLoop];
+    }];
+    CFRunLoopRef runLoop = [NSRunLoop currentRunLoop].getCFRunLoop;
+//    __weak KWBackgroundTask *weakSelf = self;
+    CFRunLoopTimerRef timer = CFRunLoopTimerCreateWithHandler(kCFAllocatorDefault, CFAbsoluteTimeGetCurrent() + 5.0, 1, 0, 0, ^(CFRunLoopTimerRef timer) {
+//        [NSException raise:KWBackgroundTaskException format:@"Task %@ timed out", weakSelf];
+//        Dlog(@"112222");
+        CFRunLoopStop(runLoop);
+    });
+    CFRunLoopAddTimer(runLoop, timer, kCFRunLoopDefaultMode);
+    CFRunLoopRun();
+    
+    */
+
+
+
+
+
+
+
 
 https://juejin.im/post/6844904039419740168
 current mode = kCFRunLoopDefaultMode,

@@ -61,13 +61,7 @@
         
     }];
     [self.tableV.mj_header beginRefreshing];
-//    self.dataArray.count
-    
-//    [self.dataArray addObject:@"23"];
-//    [self.tableV reloadData];
-//    Dlog(@"%@-----current",[NSRunLoop currentRunLoop].currentMode);
-    
-    
+
     
 }
 
