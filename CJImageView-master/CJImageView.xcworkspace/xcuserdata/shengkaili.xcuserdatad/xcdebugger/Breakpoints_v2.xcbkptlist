@@ -16,5 +16,53 @@
             stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "72289BEF-B2D1-4874-ACAE-1AC6091D2061"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CJImageView/RACObserveController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "72289BEF-B2D1-4874-ACAE-1AC6091D2061 - e2e59d4a0694dfc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RACObserveController viewDidLoad]"
+                  moduleName = "CJImageViewDebug"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shengkaili/Downloads/%E4%BA%92%E8%81%94%E7%BD%91%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/project/Source/CJImageView-master/CJImageView/RACObserveController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "907">
+               </Location>
+               <Location
+                  uuid = "72289BEF-B2D1-4874-ACAE-1AC6091D2061 - b9b3c94dde8a34ed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__35-[RACObserveController viewDidLoad]_block_invoke_2.149"
+                  moduleName = "CJImageViewDebug"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shengkaili/Downloads/%E4%BA%92%E8%81%94%E7%BD%91%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/project/Source/CJImageView-master/CJImageView/RACObserveController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "51">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

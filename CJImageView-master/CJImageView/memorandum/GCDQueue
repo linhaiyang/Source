@@ -43,3 +43,15 @@ App：你叫 **abc** 去那边打印机上，打印个东西，但是你不能�
      没有开启新的线程，线程中任务都是串行执行
      
      并发功能只有在异步函数(dispatch_async)下才有效
+
+
+
+线程安全
+    pthread_mutex_t _mutex;
+    
+    pthread_mutex_init(&_mutex, NULL);//初始化
+
+
+    pthread_mutex_lock(&_mutex);线程安全锁
+    BOOL disposed = _disposed;
+    pthread_mutex_unlock(&_mutex);

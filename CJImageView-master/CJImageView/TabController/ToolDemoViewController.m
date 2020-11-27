@@ -9,6 +9,7 @@
 #import "ToolDemoViewController.h"
 #import "GCD.h"
 #import "UIView+Frame.h"
+#import "loadAinitializeTest.h"
 //#import "loadAinitializeTest.h"
 
 @interface ToolDemoViewController ()
@@ -24,7 +25,7 @@
     
     
     
-    
+//    [loadAinitializeTest initializeTestBegin];
 //    loadAinitializeTest * load = [loadAinitializeTest new];
 //    [loadAinitializeTest initializeTestBegin];
     

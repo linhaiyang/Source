@@ -50,7 +50,6 @@
 			self.completed = nil;
 		}
 	}];
-
 	_disposable = [RACCompoundDisposable compoundDisposable];
 	[_disposable addDisposable:selfDisposable];
 

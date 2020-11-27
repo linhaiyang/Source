@@ -116,14 +116,14 @@
 		5A38B487250F4F130077F6DE /* UIView+AddSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A38B485250F4F120077F6DE /* UIView+AddSubView.m */; };
 		5A38B48C250F559B0077F6DE /* UITextField+Placthoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A38B48B250F559B0077F6DE /* UITextField+Placthoder.m */; };
 		5A38B48D250F559B0077F6DE /* UITextField+Placthoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A38B48B250F559B0077F6DE /* UITextField+Placthoder.m */; };
-		5A38B494250F6C070077F6DE /* UITextField+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A38B492250F6C070077F6DE /* UITextField+Shake.m */; };
-		5A38B495250F6C070077F6DE /* UITextField+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A38B492250F6C070077F6DE /* UITextField+Shake.m */; };
 		5A38B498250F71610077F6DE /* UITableView+RadiusStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A38B497250F71610077F6DE /* UITableView+RadiusStyle.m */; };
 		5A38B499250F71610077F6DE /* UITableView+RadiusStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A38B497250F71610077F6DE /* UITableView+RadiusStyle.m */; };
 		5A39C233256BA7590052A133 /* UIView+Nib.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A39C232256BA7590052A133 /* UIView+Nib.m */; };
 		5A39C234256BA7590052A133 /* UIView+Nib.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A39C232256BA7590052A133 /* UIView+Nib.m */; };
 		5A39C23C256BB54A0052A133 /* NSBundle+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A39C23B256BB54A0052A133 /* NSBundle+Path.m */; };
 		5A39C23D256BB54A0052A133 /* NSBundle+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A39C23B256BB54A0052A133 /* NSBundle+Path.m */; };
+		5A39C2CA256E5CBB0052A133 /* RACFile in Resources */ = {isa = PBXBuildFile; fileRef = 5A39C2C9256E5CBB0052A133 /* RACFile */; };
+		5A39C2CB256E5CBB0052A133 /* RACFile in Resources */ = {isa = PBXBuildFile; fileRef = 5A39C2C9256E5CBB0052A133 /* RACFile */; };
 		5A4815362559268E001DC006 /* loadAinitializeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4815352559268E001DC006 /* loadAinitializeTest.m */; };
 		5A4815372559268E001DC006 /* loadAinitializeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4815352559268E001DC006 /* loadAinitializeTest.m */; };
 		5A4DA3EF24A9E56000DB175A /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4DA3EE24A9E56000DB175A /* BaseEntity.m */; };
@@ -334,8 +334,6 @@
 		5AE9BBD1250783D90010945B /* ClassifyApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBCF250783D90010945B /* ClassifyApi.m */; };
 		5AE9BBD4250784090010945B /* ClassifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBD3250784090010945B /* ClassifyModel.m */; };
 		5AE9BBD5250784090010945B /* ClassifyModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBD3250784090010945B /* ClassifyModel.m */; };
-		5AE9BBD92507952C0010945B /* UIButton+CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBD72507952C0010945B /* UIButton+CountDown.m */; };
-		5AE9BBDA2507952C0010945B /* UIButton+CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBD72507952C0010945B /* UIButton+CountDown.m */; };
 		5AE9BBDD250795870010945B /* UIButton+JKImagePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBDC250795870010945B /* UIButton+JKImagePosition.m */; };
 		5AE9BBDE250795870010945B /* UIButton+JKImagePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBDC250795870010945B /* UIButton+JKImagePosition.m */; };
 		5AE9BBE225087A4F0010945B /* UIAlertView+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBE025087A4F0010945B /* UIAlertView+Block.m */; };
@@ -550,8 +548,6 @@
 		5A38B485250F4F120077F6DE /* UIView+AddSubView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+AddSubView.m"; sourceTree = "<group>"; };
 		5A38B48A250F559B0077F6DE /* UITextField+Placthoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+Placthoder.h"; sourceTree = "<group>"; };
 		5A38B48B250F559B0077F6DE /* UITextField+Placthoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Placthoder.m"; sourceTree = "<group>"; };
-		5A38B492250F6C070077F6DE /* UITextField+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Shake.m"; sourceTree = "<group>"; };
-		5A38B493250F6C070077F6DE /* UITextField+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Shake.h"; sourceTree = "<group>"; };
 		5A38B496250F71610077F6DE /* UITableView+RadiusStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableView+RadiusStyle.h"; sourceTree = "<group>"; };
 		5A38B497250F71610077F6DE /* UITableView+RadiusStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITableView+RadiusStyle.m"; sourceTree = "<group>"; };
 		5A38B49A250F7C9F0077F6DE /* ConstantString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstantString.h; sourceTree = "<group>"; };
@@ -559,6 +555,7 @@
 		5A39C232256BA7590052A133 /* UIView+Nib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Nib.m"; sourceTree = "<group>"; };
 		5A39C23A256BB54A0052A133 /* NSBundle+Path.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Path.h"; sourceTree = "<group>"; };
 		5A39C23B256BB54A0052A133 /* NSBundle+Path.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Path.m"; sourceTree = "<group>"; };
+		5A39C2C9256E5CBB0052A133 /* RACFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = RACFile; sourceTree = "<group>"; };
 		5A4815342559268E001DC006 /* loadAinitializeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = loadAinitializeTest.h; sourceTree = "<group>"; };
 		5A4815352559268E001DC006 /* loadAinitializeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = loadAinitializeTest.m; sourceTree = "<group>"; };
 		5A4DA3ED24A9E56000DB175A /* BaseEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
@@ -710,8 +707,6 @@
 		5AE9BBCF250783D90010945B /* ClassifyApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassifyApi.m; sourceTree = "<group>"; };
 		5AE9BBD2250784090010945B /* ClassifyModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassifyModel.h; sourceTree = "<group>"; };
 		5AE9BBD3250784090010945B /* ClassifyModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassifyModel.m; sourceTree = "<group>"; };
-		5AE9BBD72507952C0010945B /* UIButton+CountDown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CountDown.m"; sourceTree = "<group>"; };
-		5AE9BBD82507952C0010945B /* UIButton+CountDown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CountDown.h"; sourceTree = "<group>"; };
 		5AE9BBDB250795870010945B /* UIButton+JKImagePosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+JKImagePosition.h"; sourceTree = "<group>"; };
 		5AE9BBDC250795870010945B /* UIButton+JKImagePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JKImagePosition.m"; sourceTree = "<group>"; };
 		5AE9BBE025087A4F0010945B /* UIAlertView+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Block.m"; sourceTree = "<group>"; };
@@ -1631,6 +1626,7 @@
 				5AB1B91E256647170083408B /* AFNFile */,
 				5AB1B928256678D30083408B /* MJRefrshDoc */,
 				8BE8769B256A2D5A00F7F143 /* HttpFile */,
+				5A39C2C9256E5CBB0052A133 /* RACFile */,
 			);
 			path = memorandum;
 			sourceTree = "<group>";
@@ -1738,8 +1734,6 @@
 			children = (
 				5AE9BBDB250795870010945B /* UIButton+JKImagePosition.h */,
 				5AE9BBDC250795870010945B /* UIButton+JKImagePosition.m */,
-				5AE9BBD82507952C0010945B /* UIButton+CountDown.h */,
-				5AE9BBD72507952C0010945B /* UIButton+CountDown.m */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -1765,8 +1759,6 @@
 		5AE9BBF5250B61870010945B /* UITextField */ = {
 			isa = PBXGroup;
 			children = (
-				5A38B493250F6C070077F6DE /* UITextField+Shake.h */,
-				5A38B492250F6C070077F6DE /* UITextField+Shake.m */,
 				5A38B48A250F559B0077F6DE /* UITextField+Placthoder.h */,
 				5A38B48B250F559B0077F6DE /* UITextField+Placthoder.m */,
 			);
@@ -1946,6 +1938,7 @@
 				5AB1B9102565345E0083408B /* idStyle in Resources */,
 				8BE8769C256A2D5A00F7F143 /* HttpFile in Resources */,
 				5AB1B9042565341E0083408B /* GCDQueue in Resources */,
+				5A39C2CA256E5CBB0052A133 /* RACFile in Resources */,
 				435830B61C33D42F0074D713 /* Assets.xcassets in Resources */,
 				8B2349A02565684C0083C7B4 /* RunloopDoc in Resources */,
 				5AB1B8DA25652FE60083408B /* RunTime in Resources */,
@@ -1989,6 +1982,7 @@
 				5AB1B9112565345E0083408B /* idStyle in Resources */,
 				8BE8769D256A2D5A00F7F143 /* HttpFile in Resources */,
 				5AB1B9052565341E0083408B /* GCDQueue in Resources */,
+				5A39C2CB256E5CBB0052A133 /* RACFile in Resources */,
 				5A5493EF24BD539D00C49207 /* Assets.xcassets in Resources */,
 				8B2349A12565684C0083C7B4 /* RunloopDoc in Resources */,
 				5AB1B8DB25652FE60083408B /* RunTime in Resources */,
@@ -2282,7 +2276,6 @@
 				5A0BC8D325134A2F00426728 /* LMPlayerModel.m in Sources */,
 				5A2882A124A1CE5B0059F96C /* UIViewController+Swizzle.m in Sources */,
 				5A109686249B4258000398F5 /* WJYAlertInputTextView.m in Sources */,
-				5A38B494250F6C070077F6DE /* UITextField+Shake.m in Sources */,
 				5A0BC8D125134A2F00426728 /* LMPlayerStatusModel.m in Sources */,
 				5A685EDA24D3B67800BF9737 /* NSObject+AddProperty.m in Sources */,
 				5A8522E224E69BFC00EF7157 /* TestViewController.m in Sources */,
@@ -2309,7 +2302,6 @@
 				5A10967D249B417B000398F5 /* GCDQueue.m in Sources */,
 				5A66949B25357CB70073FDF6 /* UIViewController+Direction.m in Sources */,
 				5AE9BB882507336A0010945B /* MPUploadImageItemService.m in Sources */,
-				5AE9BBD92507952C0010945B /* UIButton+CountDown.m in Sources */,
 				5A17164624921914001CAADF /* MBProgressHUD+JJ.m in Sources */,
 				435830AE1C33D42F0074D713 /* AppDelegate.m in Sources */,
 				5A516F732519EB6200C346CB /* DismissVCAnimation.m in Sources */,
@@ -2376,7 +2368,6 @@
 			files = (
 				5A729A8825208210007A7136 /* NSString+Encrypt.m in Sources */,
 				5A5493AB24BD539D00C49207 /* dateTimeHelper.m in Sources */,
-				5AE9BBDA2507952C0010945B /* UIButton+CountDown.m in Sources */,
 				5A5493AC24BD539D00C49207 /* UIDevice+FCUUID.m in Sources */,
 				5A5493AD24BD539D00C49207 /* BaseViewController.m in Sources */,
 				5A5493AE24BD539D00C49207 /* UINavigationController+BATransitions.m in Sources */,
@@ -2438,7 +2429,6 @@
 				5AE9BB892507336A0010945B /* MPUploadImageItemService.m in Sources */,
 				5AE9BBCD250770F90010945B /* MPImageCollectionCell.m in Sources */,
 				5A0BC90225135D5A00426728 /* LMVideoPlayerView.m in Sources */,
-				5A38B495250F6C070077F6DE /* UITextField+Shake.m in Sources */,
 				5A5493CB24BD539D00C49207 /* UIViewController+Swizzle.m in Sources */,
 				5AE9BBC125075BB20010945B /* YTKChainRequestAgent.m in Sources */,
 				5AE9BB84250731FC0010945B /* BaseRequestService.m in Sources */,

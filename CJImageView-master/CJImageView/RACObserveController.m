@@ -7,7 +7,6 @@
 //
 
 #import "RACObserveController.h"
-#import "UITextField+Shake.h"
 //#import <IJKMediaFramework/IJKMediaFramework.h>
 
 #define playUrl @"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
@@ -26,9 +25,9 @@
     
      
     UIButton * button  = [UIButton buttonWithType:UIButtonTypeCustom];
-    [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-        
-    }];
+//    [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+//        
+//    }];
     UITextField * field = [UITextField new];
 //    field.placeholder = @"输入筛选数据";
     field.frame = CGRectMake(100, 100, 200, 50);
@@ -39,9 +38,9 @@
 //        make.width.equalTo(200);
 //        make.height.equalTo(50);
 //    }];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [field shake];
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [field shake];
+//    });
     
     
     [[field.rac_textSignal
@@ -68,6 +67,20 @@
 //
 //    }];
     
+    //1、创建信号
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        //任何时候，都可以发送信号，可以异步
+        [subscriber sendNext:@"发送信号"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    
+//    signal subscribe:<#(nonnull id<RACSubscriber>)#>
+    //2、订阅信号subscribe
+    [signal subscribeNext:^(id  _Nullable x) {
+         //收到信号时
+         NSLog(@"信号内容：%@", x);
+    }];
     
 //    [self initIjkPlayer];
     
