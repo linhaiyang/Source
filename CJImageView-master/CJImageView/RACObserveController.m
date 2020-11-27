@@ -25,9 +25,9 @@
     
      
     UIButton * button  = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-//        
-//    }];
+    [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        
+    }];
     UITextField * field = [UITextField new];
 //    field.placeholder = @"输入筛选数据";
     field.frame = CGRectMake(100, 100, 200, 50);
@@ -41,7 +41,12 @@
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        [field shake];
 //    });
-    
+    //counter是一个NSInteger类型的属性
+    [[RACObserve(self, racStr) filter:^BOOL(id  _Nullable value) {
+            return [value integerValue] >= 2;
+    }] subscribeNext:^(id  _Nullable x) {
+            NSLog(@"RACObserve : value = %@", x);
+    }];
     
     [[field.rac_textSignal
       filter:^BOOL(NSString * _Nullable value) {
@@ -90,7 +95,6 @@
     graView.frame = CGRectMake(10, 100, KScreen_Width - 20, 300.f);
     [self.view addSubview:graView];
 //    graView.backgroundColor = [UIColor gradientFromColor:[UIColor colorWithHexString:@"#106FD7 "] toColor:[UIColor colorWithHexString:@"#03398A"] withWidth:graView.size.width];
-    graView.backgroundColor = [UIColor gradientFromColor:[UIColor colorWithHexString:@"#106FD7 "] toColor:[UIColor colorWithHexString:@"#03398A"] withHeight:graView.ui_size.height];
 }
 /*
 -(void)initIjkPlayer{

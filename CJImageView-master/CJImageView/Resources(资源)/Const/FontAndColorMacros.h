@@ -13,8 +13,7 @@
 
 #pragma mark -  间距区
 
-//默认间距
-#define KNormalSpace 12.0f
+
 
 #pragma mark -  颜色区
 //主题色 导航栏颜色
@@ -34,9 +33,30 @@
 //再次级字色
 #define CFontColor2 [UIColor colorWithHexString:@"5c5c5c"]
 
+//色值
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+
+#define RGB(r,g,b) RGBA(r,g,b,1.0f)
+
+#define HEXCOLOR(hex) [UIColor colorWithRed:((float)((hex & 0xFF0000) >> 16)) / 255.0 green:((float)((hex & 0xFF00) >> 8)) / 255.0 blue:((float)(hex & 0xFF)) / 255.0 alpha:1]
+
+#define COLOR_RGB(rgbValue,a) [UIColor colorWithRed:((float)(((rgbValue) & 0xFF0000) >> 16))/255.0 green:((float)(((rgbValue) & 0xFF00)>>8))/255.0 blue: ((float)((rgbValue) & 0xFF))/255.0 alpha:(a)]
+
+#define MASKCOLOR [[UIColor blackColor] colorWithAlphaComponent:0.5] //蒙版颜色
+
+#define KBlackColor [UIColor blackColor]
+
+
+
 
 #pragma mark -  字体区
-
+//中文字体
+#define CHINESE_FONT_NAME  @"Heiti SC"
+#define CHINESE_SYSTEM(x) [UIFont fontWithName:CHINESE_FONT_NAME size:x]
+// 字体大小(常规/粗体)
+#define BOLDSYSTEMFONT(FONTSIZE) [UIFont boldSystemFontOfSize:FONTSIZE]
+#define SYSTEMFONT(FONTSIZE)    [UIFont systemFontOfSize:FONTSIZE]
+#define FONT(NAME, FONTSIZE)    [UIFont fontWithName:(NAME) size:(FONTSIZE)]
 
 #define FFont1 [UIFont systemFontOfSize:12.0f]
 

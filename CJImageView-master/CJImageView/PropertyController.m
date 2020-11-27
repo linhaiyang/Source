@@ -7,11 +7,9 @@
 //
 
 #import "PropertyController.h"
-#import "ViewController.h"
 #import "LogInApi.h"
 #import "RACObserveController.h"
 #import "ClassifyApi.h"
-#import "DismissVCAnimation.h"
 
 #define  MRScreenWidth [UIScreen mainScreen].bounds.size.width
 #define  MRScreenHeight [UIScreen mainScreen].bounds.size.height
