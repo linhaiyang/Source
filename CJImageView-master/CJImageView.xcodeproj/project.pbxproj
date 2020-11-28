@@ -346,6 +346,7 @@
 		5AE9BBF4250A2EB60010945B /* UIApplication+Permissions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBF1250A2EB60010945B /* UIApplication+Permissions.m */; };
 		8B2349A02565684C0083C7B4 /* RunloopDoc in Resources */ = {isa = PBXBuildFile; fileRef = 8B23499F2565684C0083C7B4 /* RunloopDoc */; };
 		8B2349A12565684C0083C7B4 /* RunloopDoc in Resources */ = {isa = PBXBuildFile; fileRef = 8B23499F2565684C0083C7B4 /* RunloopDoc */; };
+		8B2C8735257003C500C43812 /* LHY.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C8734257003C500C43812 /* LHY.m */; };
 		8BBBAEFF2552F0DB001767D9 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BBBAEFE2552F0DB001767D9 /* IJKMediaFramework.framework */; };
 		8BBBAF002552F0DB001767D9 /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BBBAEFE2552F0DB001767D9 /* IJKMediaFramework.framework */; };
 		8BC9C4BC25641615009D43C0 /* RunloopPlaceHoder in Resources */ = {isa = PBXBuildFile; fileRef = 8BC9C4BB25641615009D43C0 /* RunloopPlaceHoder */; };
@@ -723,6 +724,7 @@
 		5B400EDD14C4BA6134FE6508 /* Pods-CJImageViewDefault-CJImageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDefault-CJImageView.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewDefault-CJImageView/Pods-CJImageViewDefault-CJImageView.release.xcconfig"; sourceTree = "<group>"; };
 		6868481593E21019F930C9EA /* Pods_CJImageViewDefault_CJImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CJImageViewDefault_CJImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B23499F2565684C0083C7B4 /* RunloopDoc */ = {isa = PBXFileReference; lastKnownFileType = text; path = RunloopDoc; sourceTree = "<group>"; };
+		8B2C8734257003C500C43812 /* LHY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHY.m; sourceTree = "<group>"; };
 		8BBBAEFE2552F0DB001767D9 /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
 		8BC9C4BB25641615009D43C0 /* RunloopPlaceHoder */ = {isa = PBXFileReference; lastKnownFileType = text; path = RunloopPlaceHoder; sourceTree = "<group>"; };
 		8BE8769B256A2D5A00F7F143 /* HttpFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = HttpFile; sourceTree = "<group>"; };
@@ -881,6 +883,7 @@
 			children = (
 				435830C31C33D42F0074D713 /* CJImageViewTests.m */,
 				435830C51C33D42F0074D713 /* Info.plist */,
+				8B2C8734257003C500C43812 /* LHY.m */,
 			);
 			path = CJImageViewTests;
 			sourceTree = "<group>";
@@ -2359,6 +2362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				435830C41C33D42F0074D713 /* CJImageViewTests.m in Sources */,
+				8B2C8735257003C500C43812 /* LHY.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2649,6 +2653,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -2673,6 +2678,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
 				);
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

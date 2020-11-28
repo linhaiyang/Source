@@ -11,6 +11,8 @@
 - (void)initCSocket{
 }
 
-
++(void)initializeTestBegin{
+    Dlog(@"initializeTestBegin");
+}
 
 @end

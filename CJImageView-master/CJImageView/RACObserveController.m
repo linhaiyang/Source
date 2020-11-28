@@ -43,6 +43,9 @@
         [field shake];
     });
     
+    [RACSignal defer:^RACSignal * _Nonnull{
+        return nil;
+    }];
     
     [[field.rac_textSignal
       filter:^BOOL(NSString * _Nullable value) {
