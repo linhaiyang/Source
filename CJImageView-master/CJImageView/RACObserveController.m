@@ -7,7 +7,6 @@
 //
 
 #import "RACObserveController.h"
-#import "UITextField+Shake.h"
 //#import <IJKMediaFramework/IJKMediaFramework.h>
 
 #define playUrl @"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
@@ -39,12 +38,23 @@
 //        make.width.equalTo(200);
 //        make.height.equalTo(50);
 //    }];
+<<<<<<< HEAD
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [field shake];
     });
     
     [RACSignal defer:^RACSignal * _Nonnull{
         return nil;
+=======
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [field shake];
+//    });
+    //counter是一个NSInteger类型的属性
+    [[RACObserve(self, racStr) filter:^BOOL(id  _Nullable value) {
+            return [value integerValue] >= 2;
+    }] subscribeNext:^(id  _Nullable x) {
+            NSLog(@"RACObserve : value = %@", x);
+>>>>>>> fb495c922428faa33316c63fb39217f33d22e924
     }];
     
     [[field.rac_textSignal
@@ -71,6 +81,20 @@
 //
 //    }];
     
+    //1、创建信号
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        //任何时候，都可以发送信号，可以异步
+        [subscriber sendNext:@"发送信号"];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    
+//    signal subscribe:<#(nonnull id<RACSubscriber>)#>
+    //2、订阅信号subscribe
+    [signal subscribeNext:^(id  _Nullable x) {
+         //收到信号时
+         NSLog(@"信号内容：%@", x);
+    }];
     
 //    [self initIjkPlayer];
     
@@ -80,7 +104,6 @@
     graView.frame = CGRectMake(10, 100, KScreen_Width - 20, 300.f);
     [self.view addSubview:graView];
 //    graView.backgroundColor = [UIColor gradientFromColor:[UIColor colorWithHexString:@"#106FD7 "] toColor:[UIColor colorWithHexString:@"#03398A"] withWidth:graView.size.width];
-    graView.backgroundColor = [UIColor gradientFromColor:[UIColor colorWithHexString:@"#106FD7 "] toColor:[UIColor colorWithHexString:@"#03398A"] withHeight:graView.ui_size.height];
 }
 /*
 -(void)initIjkPlayer{

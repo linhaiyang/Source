@@ -1,0 +1,28 @@
+RACDisposable  拆卸和清理所需的工作
+RACSignal<__covariant ValueType> : RACStream 信号相当于一个电视塔 ，只要将电视机调到跟电视塔的赫兹相同的频道，就可以收到信息。
+RACDynamicSignal : RACSignal  //一个私有的' RACSignal '子类，其中RACDynamicSignal是用的最多的动态信号
+
+@interface RACSubscriber : NSObject <RACSubscriber>----//  订阅者RACSubscriber是实现了RACSubscriber协议的订阅者类--------没有其他属性和方法
+
+@interface RACDisposable : NSObject------封装了拆卸和清理所需的工作： 清洁工 主要是对资源的释放处理，
+@interface RACCompoundDisposable:RACDisposable------其中使用RACDynamicSignal时，会创建一个RACCompoundDisposable管理清洁工对象。。其内部定义了两个数组，一个是_inlineDisposables[2]固定长度2的A fast array，超出2个对象的长度由_disposables数组管理，_inlineDisposables数组速度快，两个数组都是线程安全的。
+
+
+
+
+ RACDisposable*disposable =  [signal subscribeNext:^(id  _Nullable x) {//订阅信号------创建订阅者 并绑定订阅者
+             //订阅信号方法实现
+- (RACDisposable *)subscribeNext:(void (^)(id x))nextBlock {
+创建订阅者
+    RACSubscriber *o = [RACSubscriber subscriberWithNext:nextBlock error:NULL completed:NULL];
+    return [self subscribe:o];
+    
+    -----订阅者内部 创建 RACDisposable清洁工 和 RACCompoundDisposable管理清洁工对象
+        RACDisposable *selfDisposable = [RACDisposable disposableWithBlock:^{
+        _disposable = [RACCompoundDisposable compoundDisposable];
+}
+    [_disposable addDisposable:selfDisposable];管理清洁工对象添加 RACDisposable清洁工
+
+
+- (RACDisposable *)subscribe:(id<RACSubscriber>)subscriber
+RACCompoundDisposable 绑定订阅者

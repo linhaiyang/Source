@@ -8,8 +8,12 @@
 
 #import "loadAinitializeTest.h"
 @implementation loadAinitializeTest
-- (void)initCSocket{
-}
+//- (void)initCSocket{
+//    self.didSelecBlock = ^NSString * _Nonnull(NSString * _Nonnull blockT) {
+//
+//        return @"1";
+//    };
+//}
 
 +(void)initializeTestBegin{
     Dlog(@"initializeTestBegin");

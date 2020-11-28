@@ -7,11 +7,9 @@
 //
 
 #import "PropertyController.h"
-#import "ViewController.h"
 #import "LogInApi.h"
 #import "RACObserveController.h"
 #import "ClassifyApi.h"
-#import "DismissVCAnimation.h"
 
 #define  MRScreenWidth [UIScreen mainScreen].bounds.size.width
 #define  MRScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -88,23 +86,6 @@
                         @"http://img.daimg.com/uploads/allimg/201029/1-2010291F401.jpg",
                         @"http://img.daimg.com/uploads/allimg/201029/1-201029162106.jpg"
     ];
-    UIImageView * imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, KNavHeight, KScreen_Width, 200)];
-//     [self.view addSubview:imageView];
-//        UIImage * img =[UIImage imageNamed:@"background"];
-//        imageView.contentMode = UIViewContentModeScaleAspectFit;
-//        imageView.image = img;
-// [imageView sd_setImageWithURL:@"http://img.daimg.com/uploads/allimg/201103/1-2011031K128.jpg" placeholderImage:nil options:SDWebImageProgressiveDownload];
-//
-// imageView.transform = CGAffineTransformScale(imageView.transform, 0.5, 0.5);
-// [UIView animateWithDuration:0.3 animations:^{
-//     imageView.transform = CGAffineTransformIdentity;
-// }];
-//    [self.muAry writeToFile:@"" atomically:YES];//array dictionary string data
-    /**
-     UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"1"] highlightedImage:[UIImage imageNamed:@"2"]];
-     //点击图片时候, 让图片的高亮属性highlighted, 和之前的相反
-         imageView.highlighted = !imageView.highlighted;
-     */
     [self addTableView];
     
     
