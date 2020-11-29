@@ -81,7 +81,9 @@
 //}
 
 
-static NSString *base64_encode_data(NSData *data){
-    return nil;
+
+
+-(void)dealloc{
+    Dlog(@"%@---dealloc",NSStringFromClass([self class]));
 }
 @end

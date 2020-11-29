@@ -24,10 +24,10 @@
     [super viewDidLoad];
     
      
-    UIButton * button  = [UIButton buttonWithType:UIButtonTypeCustom];
-    [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-        
-    }];
+//    UIButton * button  = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+//        
+//    }];
     UITextField * field = [UITextField new];
 //    field.placeholder = @"输入筛选数据";
     field.frame = CGRectMake(100, 100, 200, 50);
@@ -38,14 +38,7 @@
 //        make.width.equalTo(200);
 //        make.height.equalTo(50);
 //    }];
-<<<<<<< HEAD
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [field shake];
-    });
-    
-    [RACSignal defer:^RACSignal * _Nonnull{
-        return nil;
-=======
+
 //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
 //        [field shake];
 //    });
@@ -54,25 +47,25 @@
             return [value integerValue] >= 2;
     }] subscribeNext:^(id  _Nullable x) {
             NSLog(@"RACObserve : value = %@", x);
->>>>>>> fb495c922428faa33316c63fb39217f33d22e924
     }];
     
+    @weakify(self);
     [[field.rac_textSignal
       filter:^BOOL(NSString * _Nullable value) {
-        
         return value.length>10;
     }]subscribeNext:^(NSString * _Nullable x) {
+        @strongify(self);
         Dlog(@"%@----",x);
     }];
     
     
-    NSURLSession *session = [NSURLSession sharedSession];
-    //创建对象 采用可变的网络请求对象
-       NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@""]];
-    
-    NSURLSessionDataTask *task  = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        
-    }];
+//    NSURLSession *session = [NSURLSession sharedSession];
+//    //创建对象 采用可变的网络请求对象
+//       NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@""]];
+//    
+//    NSURLSessionDataTask *task  = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+//        
+//    }];
 //    [RACObserve(self, racStr) subscribeNext:^(NSString *  _Nullable x) {
 //        Dlog(@"str值变化监听---%@",x);
 //    }];
@@ -100,9 +93,9 @@
     
 //    UIColor  clr = [UIColor colorWithRed:<#(CGFloat)#> green:<#(CGFloat)#> blue:<#(CGFloat)#> alpha:<#(CGFloat)#>]
     
-    UIView * graView = [[UIView alloc]init];
-    graView.frame = CGRectMake(10, 100, KScreen_Width - 20, 300.f);
-    [self.view addSubview:graView];
+//    UIView * graView = [[UIView alloc]init];
+//    graView.frame = CGRectMake(10, 100, KScreen_Width - 20, 300.f);
+//    [self.view addSubview:graView];
 //    graView.backgroundColor = [UIColor gradientFromColor:[UIColor colorWithHexString:@"#106FD7 "] toColor:[UIColor colorWithHexString:@"#03398A"] withWidth:graView.size.width];
 }
 /*

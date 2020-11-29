@@ -41,7 +41,6 @@
 #import "GlobalDefault.h"
 #import "Marcros.h"
 #import "BaseNavigationController.h"
-#import "EncryptKeyDefine.h"
 #import "FontAndColorMacros.h"
 #import "BlockDefine.h"
 /**Tools*/

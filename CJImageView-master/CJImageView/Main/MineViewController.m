@@ -12,7 +12,7 @@
 #import "UITableViewCell+Tool.h"
 #import "RACObserveController.h"
 #import "UploadImagesViewController.h"
-#import "IJKPlayerController.h"
+//#import "IJKPlayerController.h"
 @interface MineViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic,strong) NSMutableArray             *dataArray;
 @property (nonatomic,strong) UITableView         *myTableView;
@@ -103,8 +103,8 @@
         RACObserveController * controller = [RACObserveController new];
         [self.navigationController pushViewController:controller animated:YES];
     }else if ([title containsString:@"IJKPlayerController"]){
-        IJKPlayerController * controller = [IJKPlayerController new];
-        [self.navigationController pushViewController:controller animated:YES];
+//        IJKPlayerController * controller = [IJKPlayerController new];
+//        [self.navigationController pushViewController:controller animated:YES];
     }
     
 }

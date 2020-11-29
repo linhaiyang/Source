@@ -26,12 +26,12 @@ pod 'Bugly'
 pod 'YYCache'
 pod 'YYText'
 pod 'ReactiveObjC'
-target 'CJImageView' do
-target 'CJImageViewTests' do
-   inherit! :search_paths
-     pod 'Kiwi'
-   end
-end
+#target 'CJImageView' do
+#target 'CJImageViewTests' do
+ #  inherit! :search_paths
+  #   pod 'Kiwi'
+   #end
+#end
 
  target 'CJImageViewDebug' do
         pod 'MLeaksFinder'  #可以把它放在MobileProject_Local的target中 这样就不会影响到产品环境
