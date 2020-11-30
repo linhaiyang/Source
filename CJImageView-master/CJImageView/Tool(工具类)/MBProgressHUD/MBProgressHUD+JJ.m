@@ -1,6 +1,6 @@
 
 #import "MBProgressHUD+JJ.h"
-#import "DashLineView.h"
+
 @implementation MBProgressHUD (JJ)
 
 #pragma mark 显示一条信息
@@ -90,8 +90,7 @@
         hud.removeFromSuperViewOnHide = YES;
         hud.minSize = CGSizeMake(60,60);
         hud.mode = MBProgressHUDModeCustomView;
-        DashLineView * customView = [[DashLineView alloc]initWithFrame:CGRectMake(0, 0, hud.minSize.width, hud.minSize.height)];
-        hud.customView = customView;
+        
     return hud;
 }
 + (MBProgressHUD *)showProgressBarToView:(UIView *)view{
