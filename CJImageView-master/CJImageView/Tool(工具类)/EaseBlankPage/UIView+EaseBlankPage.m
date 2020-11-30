@@ -55,12 +55,31 @@ static char BlankPageViewKey;
 
 @implementation UITableView(EaseBlankPage)
 
-
-
+//- (void)configBlankPage:(EaseBlankPageType)blankPageType hasData:(BOOL)hasData hasError:(BOOL)hasError reloadButtonBlock:(void (^)(id))block{
+//    if (hasData){
+//        self.backgroundView = nil;
+//    }else{
+//        if (!self.blankPageView) {
+//            self.blankPageView = [[EaseBlankPageView alloc] initWithFrame:self.bounds];
+//            [self.blankPageView configWithType:blankPageType hasData:hasData hasError:hasError reloadButtonBlock:block];
+//        }
+//        self.backgroundView = self.blankPageView;
+//    }
+//}
 @end
 
 
 @implementation UICollectionView(EaseBlankPage)
 
-
+- (void)configBlankPage:(EaseBlankPageType)blankPageType hasData:(BOOL)hasData hasError:(BOOL)hasError reloadButtonBlock:(void (^)(id))block{
+    if (hasData){
+        self.backgroundView = nil;
+    }else{
+        if (!self.blankPageView) {
+            self.blankPageView = [[EaseBlankPageView alloc] initWithFrame:self.bounds];
+        }
+        self.backgroundView = self.blankPageView;
+        [self.blankPageView configWithType:blankPageType hasData:hasData hasError:hasError reloadButtonBlock:block];
+    }
+}
 @end

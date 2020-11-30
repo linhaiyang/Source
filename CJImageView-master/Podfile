@@ -5,7 +5,7 @@ abstract_target 'CJImageViewDebu' do
   use_frameworks!
 
 # Pods for CJImageView
-pod 'CocoaAsyncSocket'
+#pod 'CocoaAsyncSocket'
 #pod 'Socket.IO-Client-Swift', '~> 15.2.0'
 pod 'MJRefresh', '~> 3.1.12'
 #pod 'SVProgressHUD', '~> 2.2.5'
@@ -20,17 +20,19 @@ pod 'AFNetworking', '~>3.0'
 pod 'IQKeyboardManager', '~> 3.3.7'
 pod 'YYModel', '~> 1.0.4' #json转model
 pod "QBImagePickerController" #图片选择器
-pod 'Bugly'
 pod 'YYCache'
 pod 'YYText'
+#pod 'MWPhotoBrowser'
 pod 'ReactiveObjC'
 target 'CJImageViewProduction' do
 #target 'CJImageViewTests' do
  #  inherit! :search_paths
   #   pod 'Kiwi'
+  pod 'Bugly'
 end
 #end
 target 'CJImageViewDebug' do
+  pod 'MLeaksFinder'
       #pod 'MLeaksFinder'  #可以把它放在MobileProject_Local的target中 这样就不会影响到产品环境
 end
 end

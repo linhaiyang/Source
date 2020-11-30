@@ -20,13 +20,9 @@
 
 -(UIButton *)addUIButtonWithFont:(UIFont*)font titleColor:(UIColor*)textColor title:(NSString*)title{
     UIButton *button = [[UIButton alloc] init];
-       
     button=[UIButton buttonWithType:UIButtonTypeCustom];
-       
     [button setTitle:title forState:UIControlStateNormal];
-       
     [button setTitleColor:textColor forState:UIControlStateNormal];
-       
     button.titleLabel.font = font;
     [self addSubview:button];
     return button;
@@ -36,9 +32,11 @@
     UITableView*tableV = [[UITableView alloc] initWithFrame:CGRectZero style:(UITableViewStylePlain)];
     tableV.showsVerticalScrollIndicator = NO;
     tableV.showsHorizontalScrollIndicator = NO;
+    tableV.alwaysBounceVertical = YES;
     tableV.delegate = delegate;
+    tableV.tableHeaderView = [[UIView alloc]initWithFrame:CGRectZero];
     tableV.dataSource = delegate;
-//    tableV.backgroundColor = kCOLOR_BG_GRAY;
+    tableV.backgroundColor = CViewBgColor;
     tableV.separatorStyle = UITableViewCellSeparatorStyleNone;
     tableV.estimatedRowHeight = 0;
     tableV.estimatedSectionFooterHeight = 0;
