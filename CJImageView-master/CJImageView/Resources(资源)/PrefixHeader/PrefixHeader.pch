@@ -42,7 +42,7 @@
 #import "Marcros.h"
 #import "BaseNavigationController.h"
 #import "FontAndColorMacros.h"
-#import "BlockDefine.h"
+#import "TargetConfigContants.h"
 /**Tools*/
 #import "DeviceTool.h"
 #import "MBProgressHUD+JJ.h"

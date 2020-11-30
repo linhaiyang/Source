@@ -24,11 +24,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Kiwi.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -49,17 +44,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-CJImageViewDefault-CJImageView.xcscheme</key>
+		<key>Pods-CJImageViewDebu-CJImageViewDebug.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-CJImageViewDefault-CJImageViewDebug.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-CJImageViewTests.xcscheme</key>
+		<key>Pods-CJImageViewDebu-CJImageViewProduction.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

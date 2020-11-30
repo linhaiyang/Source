@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "435830A51C33D42F0074D713"
-               BuildableName = "CJImageView.app"
-               BlueprintName = "CJImageView"
+               BuildableName = "CJImageViewProduction.app"
+               BlueprintName = "CJImageViewProduction"
                ReferencedContainer = "container:CJImageView.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -31,7 +31,7 @@
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug-ProductionEnv"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "435830A51C33D42F0074D713"
-            BuildableName = "CJImageView.app"
-            BlueprintName = "CJImageView"
+            BuildableName = "CJImageViewProduction.app"
+            BlueprintName = "CJImageViewProduction"
             ReferencedContainer = "container:CJImageView.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "435830A51C33D42F0074D713"
-            BuildableName = "CJImageView.app"
-            BlueprintName = "CJImageView"
+            BuildableName = "CJImageViewProduction.app"
+            BlueprintName = "CJImageViewProduction"
             ReferencedContainer = "container:CJImageView.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

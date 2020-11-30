@@ -28,27 +28,32 @@
     [super viewDidLoad];
     self.view.backgroundColor=[UIColor whiteColor];
     self.navigationItem.title=@"功能导航";
-    CGFloat statuheight = KStatusBarHeight;
     if (!self.dataArray) {
-        self.dataArray=[NSMutableArray arrayWithArray:@[@"WebViewController]",@"AfnRequest--SDwebImage",@"UploadImagesViewController",@"RACObserveController",@"IJKPlayerController",@"照片上传附带进度",@"字体适配机型",@"日志记录",@"列表倒计时",@"H5交互WebViewJavascriptBridge",@"继承BaseViewController运用",@"列表空白页展现",@"省市区三级联动",@"自定义弹出窗",@"YYText富文本实例",@"列表行展开跟回收隐藏",@"常见表单行类型" ,@"人脸识别注册及验证",@"JavaScriptCore运用",@"Masonry布局实例",@"键盘处理操作",@"自定义导航栏动态显现效果",@"列表只加载显示时Cell的SDWebImage图",@"长按列表行拖动效果",@"关于FDFullscreenPopGesture的运用",@"可复用的滚动子视图",@"音视频功能集合",@"自定义日期选择控件",@"滚动视图"]];
+        self.dataArray = [NSMutableArray new];
+//        self.dataArray=[NSMutableArray arrayWithArray:@[@"WebViewController]",@"AfnRequest--SDwebImage",@"UploadImagesViewController",@"RACObserveController",@"IJKPlayerController"]];
     }
     self.tableV = [self.view addTableViewDelegate:self];
     [self.tableV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
-
+//    self.tableV.backgroundColor = UIColor.redColor;
 //    if (@available(iOS 11.0, *)) {
 //        UIEdgeInsets insert =  [self.tableV adjustedContentInset];
 //    } else {
 //        // Fallback on earlier versions
 //    }
-//    [self.tableV setContentInset:UIEdgeInsetsMake(10, 10, -10, -10)];
 //    self.tableV setContentOffset:<#(CGPoint)#>
     if (@available(iOS 11.0, *)) {
-        self.tableV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+//        self.tableV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     } else {
         // Fallback on earlier versions
     }
+    [self.tableV configBlankPage:EaseBlankPageTypeView hasData:false hasError:false reloadButtonBlock:^(id sender) {
+
+    }];
+    self.tableV.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        
+    }];
     if (!_fpsLabel) {
         _fpsLabel = [YYFPSLabel new];
         _fpsLabel.frame=CGRectMake(20, 80, 30, 30);

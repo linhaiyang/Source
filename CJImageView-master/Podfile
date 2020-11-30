@@ -1,13 +1,11 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '10.0'
-
-# There are no targets called "CJImageViewDefault" in any Xcode projects
-abstract_target 'CJImageViewDefault' do
-  # Comment the next line if you don't want to use dynamic frameworks Add this if you are targeting iOS 8+ or using Swift
+platform :ios, '10.0'
+abstract_target 'CJImageViewDebu' do
+# Comment the next line if you don't want to use dynamic frameworks Add this if you are targeting iOS 8+ or using Swift
   use_frameworks!
 
-  # Pods for CJImageView
-pod 'CocoaAsyncSocket'
+# Pods for CJImageView
+#pod 'CocoaAsyncSocket'
 #pod 'Socket.IO-Client-Swift', '~> 15.2.0'
 pod 'MJRefresh', '~> 3.1.12'
 #pod 'SVProgressHUD', '~> 2.2.5'
@@ -22,19 +20,19 @@ pod 'AFNetworking', '~>3.0'
 pod 'IQKeyboardManager', '~> 3.3.7'
 pod 'YYModel', '~> 1.0.4' #json转model
 pod "QBImagePickerController" #图片选择器
-pod 'Bugly'
 pod 'YYCache'
 pod 'YYText'
+#pod 'MWPhotoBrowser'
 pod 'ReactiveObjC'
-#target 'CJImageView' do
+target 'CJImageViewProduction' do
 #target 'CJImageViewTests' do
  #  inherit! :search_paths
   #   pod 'Kiwi'
-   #end
+  pod 'Bugly'
+end
 #end
-
- target 'CJImageViewDebug' do
-        pod 'MLeaksFinder'  #可以把它放在MobileProject_Local的target中 这样就不会影响到产品环境
-    end
-
+target 'CJImageViewDebug' do
+  pod 'MLeaksFinder'
+      #pod 'MLeaksFinder'  #可以把它放在MobileProject_Local的target中 这样就不会影响到产品环境
+end
 end

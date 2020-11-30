@@ -18,12 +18,9 @@
 
 
 @interface UITableView(EaseBlankPage)
-
-
+//- (void)setBgViewWithText:(NSString *)text backgroundImage:(NSString*)imageName;
 @end
 
 
 @interface UICollectionView(EaseBlankPage)
-
-
 @end

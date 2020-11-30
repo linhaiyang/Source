@@ -17,7 +17,6 @@ PODS:
   - Bugly (2.5.71)
   - FBRetainCycleDetector (0.1.4)
   - IQKeyboardManager (3.3.7)
-  - Kiwi (3.0.0)
   - Masonry (0.6.4)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.1.17)
@@ -36,7 +35,6 @@ DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - Bugly
   - IQKeyboardManager (~> 3.3.7)
-  - Kiwi
   - Masonry (~> 0.6.1)
   - MBProgressHUD (~> 1.2.0)
   - MJRefresh (~> 3.1.12)
@@ -54,7 +52,6 @@ SPEC REPOS:
     - Bugly
     - FBRetainCycleDetector
     - IQKeyboardManager
-    - Kiwi
     - Masonry
     - MBProgressHUD
     - MJRefresh
@@ -71,7 +68,6 @@ SPEC CHECKSUMS:
   Bugly: fd066c75c4a0eca1440f9b6a84bd37d51bfc85ac
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
-  Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: ee5b68f639775462faba4db0fd243baf4d42c2cf
@@ -83,6 +79,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 1f39364c8929b113b01096b121c516953bf6caf7
+PODFILE CHECKSUM: 15cbd3afe41b306c30020b05d99ce2493ae97f3e
 
 COCOAPODS: 1.9.0.beta.2

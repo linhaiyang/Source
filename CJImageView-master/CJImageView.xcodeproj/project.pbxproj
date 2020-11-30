@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02B4F05EA5EF1CB8040EB821 /* Pods_CJImageViewDefault_CJImageViewDebug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA514D8CF96B42216947AF8A /* Pods_CJImageViewDefault_CJImageViewDebug.framework */; };
 		435830AB1C33D42F0074D713 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 435830AA1C33D42F0074D713 /* main.m */; };
 		435830AE1C33D42F0074D713 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 435830AD1C33D42F0074D713 /* AppDelegate.m */; };
 		435830B41C33D42F0074D713 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 435830B21C33D42F0074D713 /* Main.storyboard */; };
@@ -252,13 +251,56 @@
 		5AF95B28257105EE00A03F02 /* GlobalDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF95B21257105EE00A03F02 /* GlobalDefault.m */; };
 		5AF95B29257105EE00A03F02 /* DeviceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF95B22257105EE00A03F02 /* DeviceTool.m */; };
 		5AF95B2A257105EE00A03F02 /* DeviceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF95B22257105EE00A03F02 /* DeviceTool.m */; };
+		5AFDBBF12574A26F00235EAA /* IJK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5AFDBBD42574A26E00235EAA /* IJK.bundle */; };
+		5AFDBBF22574A26F00235EAA /* IJK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5AFDBBD42574A26E00235EAA /* IJK.bundle */; };
+		5AFDBBF32574A26F00235EAA /* LMPlayerStatusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBD62574A26E00235EAA /* LMPlayerStatusModel.m */; };
+		5AFDBBF42574A26F00235EAA /* LMPlayerStatusModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBD62574A26E00235EAA /* LMPlayerStatusModel.m */; };
+		5AFDBBF52574A26F00235EAA /* LMPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBD72574A26E00235EAA /* LMPlayerModel.m */; };
+		5AFDBBF62574A26F00235EAA /* LMPlayerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBD72574A26E00235EAA /* LMPlayerModel.m */; };
+		5AFDBBF72574A26F00235EAA /* LMLandScapeControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBDE2574A26E00235EAA /* LMLandScapeControlView.m */; };
+		5AFDBBF82574A26F00235EAA /* LMLandScapeControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBDE2574A26E00235EAA /* LMLandScapeControlView.m */; };
+		5AFDBBF92574A26F00235EAA /* LMPortraitControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBDF2574A26E00235EAA /* LMPortraitControlView.m */; };
+		5AFDBBFA2574A26F00235EAA /* LMPortraitControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBDF2574A26E00235EAA /* LMPortraitControlView.m */; };
+		5AFDBBFB2574A26F00235EAA /* LMBrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBE22574A26E00235EAA /* LMBrightnessView.m */; };
+		5AFDBBFC2574A26F00235EAA /* LMBrightnessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBE22574A26E00235EAA /* LMBrightnessView.m */; };
+		5AFDBBFD2574A26F00235EAA /* LMVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBE32574A26E00235EAA /* LMVideoPlayerView.m */; };
+		5AFDBBFE2574A26F00235EAA /* LMVideoPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBE32574A26E00235EAA /* LMVideoPlayerView.m */; };
+		5AFDBBFF2574A26F00235EAA /* LMCoverControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBE52574A26E00235EAA /* LMCoverControlView.m */; };
+		5AFDBC002574A26F00235EAA /* LMCoverControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBE52574A26E00235EAA /* LMCoverControlView.m */; };
+		5AFDBC012574A26F00235EAA /* LMLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBE62574A26E00235EAA /* LMLoadingView.m */; };
+		5AFDBC022574A26F00235EAA /* LMLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBE62574A26E00235EAA /* LMLoadingView.m */; };
+		5AFDBC032574A26F00235EAA /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBE82574A26E00235EAA /* MMMaterialDesignSpinner.m */; };
+		5AFDBC042574A26F00235EAA /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBE82574A26E00235EAA /* MMMaterialDesignSpinner.m */; };
+		5AFDBC052574A26F00235EAA /* LMPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBEA2574A26E00235EAA /* LMPlayerControlView.m */; };
+		5AFDBC062574A26F00235EAA /* LMPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBEA2574A26E00235EAA /* LMPlayerControlView.m */; };
+		5AFDBC072574A26F00235EAA /* IJKPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBEB2574A26E00235EAA /* IJKPlayerController.m */; };
+		5AFDBC082574A26F00235EAA /* IJKPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBEB2574A26E00235EAA /* IJKPlayerController.m */; };
+		5AFDBC092574A26F00235EAA /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFDBBEC2574A26E00235EAA /* IJKMediaFramework.framework */; };
+		5AFDBC0A2574A26F00235EAA /* IJKMediaFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AFDBBEC2574A26E00235EAA /* IJKMediaFramework.framework */; };
+		5AFDBC0B2574A26F00235EAA /* LMVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBED2574A26E00235EAA /* LMVideoPlayer.m */; };
+		5AFDBC0C2574A26F00235EAA /* LMVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBED2574A26E00235EAA /* LMVideoPlayer.m */; };
+		5AFDBC0D2574A26F00235EAA /* LMPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBF02574A26E00235EAA /* LMPlayerManager.m */; };
+		5AFDBC0E2574A26F00235EAA /* LMPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFDBBF02574A26E00235EAA /* LMPlayerManager.m */; };
+		5AFDBC132574A29900235EAA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0BC8AA251304B800426728 /* AVFoundation.framework */; };
+		5AFDBC142574A2B600235EAA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0BC8AC251304C100426728 /* CoreMedia.framework */; };
+		5AFDBC152574A2C100235EAA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0BC8AE251304C900426728 /* CoreVideo.framework */; };
+		5AFDBC162574A2D400235EAA /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A6694B6253580950073FDF6 /* libc++.tbd */; };
+		5AFDBC172574A2DD00235EAA /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0BC8B2251304E000426728 /* libz.tbd */; };
+		5AFDBC182574A2EB00235EAA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0BC8B4251304E900426728 /* MediaPlayer.framework */; };
+		5AFDBC192574A2FF00235EAA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0BC8B6251304F300426728 /* MobileCoreServices.framework */; };
+		5AFDBC1E2574A31800235EAA /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0BC8B8251304FE00426728 /* OpenGLES.framework */; };
+		5AFDBC1F2574A32600235EAA /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0BC8BA2513050800426728 /* VideoToolbox.framework */; };
+		5AFDBCD22574DAD100235EAA /* Public.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFDBCD12574DAD100235EAA /* Public.xcassets */; };
+		5AFDBCD32574DAD100235EAA /* Public.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFDBCD12574DAD100235EAA /* Public.xcassets */; };
+		5AFDBCE12574DF4A00235EAA /* Main.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFDBCE02574DF4A00235EAA /* Main.xcassets */; };
+		5AFDBCE22574DF4A00235EAA /* Main.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFDBCE02574DF4A00235EAA /* Main.xcassets */; };
+		61811E66E85E341A9011A058 /* Pods_CJImageViewDebu_CJImageViewProduction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C17743F1443E145C3E55A1 /* Pods_CJImageViewDebu_CJImageViewProduction.framework */; };
+		7F87C19F3AFD9BA262A73CFD /* Pods_CJImageViewDebu_CJImageViewDebug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A694FE8C9A91469EEB2A73CC /* Pods_CJImageViewDebu_CJImageViewDebug.framework */; };
 		8B2349A02565684C0083C7B4 /* RunloopDoc in Resources */ = {isa = PBXBuildFile; fileRef = 8B23499F2565684C0083C7B4 /* RunloopDoc */; };
 		8B2349A12565684C0083C7B4 /* RunloopDoc in Resources */ = {isa = PBXBuildFile; fileRef = 8B23499F2565684C0083C7B4 /* RunloopDoc */; };
 		8B2C8735257003C500C43812 /* LHY.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C8734257003C500C43812 /* LHY.m */; };
 		8BE8769C256A2D5A00F7F143 /* HttpFile in Resources */ = {isa = PBXBuildFile; fileRef = 8BE8769B256A2D5A00F7F143 /* HttpFile */; };
 		8BE8769D256A2D5A00F7F143 /* HttpFile in Resources */ = {isa = PBXBuildFile; fileRef = 8BE8769B256A2D5A00F7F143 /* HttpFile */; };
-		EBBF34E2E4D545EBD2B0902E /* Pods_CJImageViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 137C7CF9A3FB6AE76951D9DA /* Pods_CJImageViewTests.framework */; };
-		F040FCB469F550DED38D52D3 /* Pods_CJImageViewDefault_CJImageView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6868481593E21019F930C9EA /* Pods_CJImageViewDefault_CJImageView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -279,10 +321,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		137C7CF9A3FB6AE76951D9DA /* Pods_CJImageViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CJImageViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BBDCF0456EA257993FA1639 /* Pods-CJImageViewDebu-CJImageViewProduction.debug-productionenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageViewProduction.debug-productionenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageViewProduction/Pods-CJImageViewDebu-CJImageViewProduction.debug-productionenv.xcconfig"; sourceTree = "<group>"; };
+		1252A71763BAA67C965F1E80 /* Pods-CJImageViewDebu-CJImageView.debug-productionenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageView.debug-productionenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageView/Pods-CJImageViewDebu-CJImageView.debug-productionenv.xcconfig"; sourceTree = "<group>"; };
+		16D5A8D9081A9FE7815E38FA /* Pods-CJImageViewDebu-CJImageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageView.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageView/Pods-CJImageViewDebu-CJImageView.debug.xcconfig"; sourceTree = "<group>"; };
 		174461B9A157BA562CA1E8F0 /* Pods-CJImageViewDefault-CJImageViewDebug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDefault-CJImageViewDebug.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewDefault-CJImageViewDebug/Pods-CJImageViewDefault-CJImageViewDebug.release.xcconfig"; sourceTree = "<group>"; };
+		225E36B610B8AD17B81B8E86 /* Pods-CJImageViewDebug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebug.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebug/Pods-CJImageViewDebug.release.xcconfig"; sourceTree = "<group>"; };
+		2321AEF78444579260FD48CB /* Pods-CJImageViewDebug-CJImageViewProduction.debug-productionenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebug-CJImageViewProduction.debug-productionenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebug-CJImageViewProduction/Pods-CJImageViewDebug-CJImageViewProduction.debug-productionenv.xcconfig"; sourceTree = "<group>"; };
+		25AFB8DE10EF66043CC91B0C /* Pods-CJImageViewProduction.debug-productionenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewProduction.debug-productionenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewProduction/Pods-CJImageViewProduction.debug-productionenv.xcconfig"; sourceTree = "<group>"; };
+		2A2E710AFF156BC0DDB771A3 /* Pods-CJImageViewDebug-CJImageViewProduction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebug-CJImageViewProduction.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebug-CJImageViewProduction/Pods-CJImageViewDebug-CJImageViewProduction.debug.xcconfig"; sourceTree = "<group>"; };
+		2A5900EF5FCE1D1696207D48 /* Pods-CJImageViewDebug-CJImageViewProduction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebug-CJImageViewProduction.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebug-CJImageViewProduction/Pods-CJImageViewDebug-CJImageViewProduction.release.xcconfig"; sourceTree = "<group>"; };
+		300E6A7B4456C0AA279C982F /* Pods-CJImageViewDebu-CJImageView.release-debugenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageView.release-debugenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageView/Pods-CJImageViewDebu-CJImageView.release-debugenv.xcconfig"; sourceTree = "<group>"; };
 		31860A404CBEE57C2AB66B48 /* Pods-CJImageViewDefault-CJImageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDefault-CJImageView.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDefault-CJImageView/Pods-CJImageViewDefault-CJImageView.debug.xcconfig"; sourceTree = "<group>"; };
-		435830A61C33D42F0074D713 /* CJImageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJImageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33E9A09BE424DD52D9064AB4 /* Pods-CJImageViewDebu-CJImageViewDebug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageViewDebug.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageViewDebug/Pods-CJImageViewDebu-CJImageViewDebug.release.xcconfig"; sourceTree = "<group>"; };
+		34C42835FCF7C01648A307BB /* Pods-CJImageViewDebu-CJImageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageView.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageView/Pods-CJImageViewDebu-CJImageView.release.xcconfig"; sourceTree = "<group>"; };
+		423A6DC746E9A8E0BDC4BB18 /* Pods-CJImageViewDebu-CJImageViewDebug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageViewDebug.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageViewDebug/Pods-CJImageViewDebu-CJImageViewDebug.debug.xcconfig"; sourceTree = "<group>"; };
+		4318EDD59C4604BF959B7B58 /* Pods-CJImageViewProduction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewProduction.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewProduction/Pods-CJImageViewProduction.debug.xcconfig"; sourceTree = "<group>"; };
+		435830A61C33D42F0074D713 /* CJImageViewProduction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJImageViewProduction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		435830AA1C33D42F0074D713 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		435830AC1C33D42F0074D713 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		435830AD1C33D42F0074D713 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -296,7 +350,7 @@
 		435830CA1C33D42F0074D713 /* CJImageViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJImageViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		435830CE1C33D42F0074D713 /* CJImageViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJImageViewUITests.m; sourceTree = "<group>"; };
 		435830D01C33D42F0074D713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4DA15B1591896050AC882F6F /* Pods-CJImageViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewTests.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewTests/Pods-CJImageViewTests.release.xcconfig"; sourceTree = "<group>"; };
+		4BB787D074AD0F4ECC127B15 /* Pods-CJImageViewDebu-CJImageViewProduction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageViewProduction.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageViewProduction/Pods-CJImageViewDebu-CJImageViewProduction.debug.xcconfig"; sourceTree = "<group>"; };
 		5A0BC8A8251304AD00426728 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		5A0BC8AA251304B800426728 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5A0BC8AC251304C100426728 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -354,7 +408,6 @@
 		5A2882BA24A343A10059F96C /* UINavigationItem+Loading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+Loading.m"; sourceTree = "<group>"; };
 		5A2882BB24A343A10059F96C /* UINavigationItem+Margin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+Margin.m"; sourceTree = "<group>"; };
 		5A2882BC24A343A10059F96C /* UINavigationItem+Lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+Lock.h"; sourceTree = "<group>"; };
-		5A2ACCCC2538582D0023A55E /* BlockDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockDefine.h; sourceTree = "<group>"; };
 		5A2C022724AC67E70098EC6C /* UIImage+Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tool.h"; sourceTree = "<group>"; };
 		5A2C022824AC67E70098EC6C /* UIImage+Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tool.m"; sourceTree = "<group>"; };
 		5A2E8A7F24B6F37000B859AB /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
@@ -528,16 +581,57 @@
 		5AF95B22257105EE00A03F02 /* DeviceTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceTool.m; sourceTree = "<group>"; };
 		5AF95B23257105EE00A03F02 /* EncodeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncodeModel.h; sourceTree = "<group>"; };
 		5AF95B24257105EE00A03F02 /* GlobalDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDefault.h; sourceTree = "<group>"; };
+		5AFDBBD22574A26E00235EAA /* IJKPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJKPlayerController.h; sourceTree = "<group>"; };
+		5AFDBBD32574A26E00235EAA /* LMVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMVideoPlayer.h; sourceTree = "<group>"; };
+		5AFDBBD42574A26E00235EAA /* IJK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IJK.bundle; sourceTree = "<group>"; };
+		5AFDBBD62574A26E00235EAA /* LMPlayerStatusModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMPlayerStatusModel.m; sourceTree = "<group>"; };
+		5AFDBBD72574A26E00235EAA /* LMPlayerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMPlayerModel.m; sourceTree = "<group>"; };
+		5AFDBBD82574A26E00235EAA /* LMPlayerStatusModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMPlayerStatusModel.h; sourceTree = "<group>"; };
+		5AFDBBD92574A26E00235EAA /* LMPlayerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMPlayerModel.h; sourceTree = "<group>"; };
+		5AFDBBDB2574A26E00235EAA /* LMVideoPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMVideoPlayerView.h; sourceTree = "<group>"; };
+		5AFDBBDC2574A26E00235EAA /* LMLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLoadingView.h; sourceTree = "<group>"; };
+		5AFDBBDD2574A26E00235EAA /* LMCoverControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMCoverControlView.h; sourceTree = "<group>"; };
+		5AFDBBDE2574A26E00235EAA /* LMLandScapeControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMLandScapeControlView.m; sourceTree = "<group>"; };
+		5AFDBBDF2574A26E00235EAA /* LMPortraitControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMPortraitControlView.m; sourceTree = "<group>"; };
+		5AFDBBE02574A26E00235EAA /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
+		5AFDBBE12574A26E00235EAA /* LMPlayerControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMPlayerControlView.h; sourceTree = "<group>"; };
+		5AFDBBE22574A26E00235EAA /* LMBrightnessView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMBrightnessView.m; sourceTree = "<group>"; };
+		5AFDBBE32574A26E00235EAA /* LMVideoPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMVideoPlayerView.m; sourceTree = "<group>"; };
+		5AFDBBE42574A26E00235EAA /* LMLandScapeControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMLandScapeControlView.h; sourceTree = "<group>"; };
+		5AFDBBE52574A26E00235EAA /* LMCoverControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMCoverControlView.m; sourceTree = "<group>"; };
+		5AFDBBE62574A26E00235EAA /* LMLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMLoadingView.m; sourceTree = "<group>"; };
+		5AFDBBE72574A26E00235EAA /* LMPortraitControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMPortraitControlView.h; sourceTree = "<group>"; };
+		5AFDBBE82574A26E00235EAA /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
+		5AFDBBE92574A26E00235EAA /* LMBrightnessView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMBrightnessView.h; sourceTree = "<group>"; };
+		5AFDBBEA2574A26E00235EAA /* LMPlayerControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMPlayerControlView.m; sourceTree = "<group>"; };
+		5AFDBBEB2574A26E00235EAA /* IJKPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJKPlayerController.m; sourceTree = "<group>"; };
+		5AFDBBEC2574A26E00235EAA /* IJKMediaFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IJKMediaFramework.framework; sourceTree = "<group>"; };
+		5AFDBBED2574A26E00235EAA /* LMVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMVideoPlayer.m; sourceTree = "<group>"; };
+		5AFDBBEF2574A26E00235EAA /* LMPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMPlayerManager.h; sourceTree = "<group>"; };
+		5AFDBBF02574A26E00235EAA /* LMPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMPlayerManager.m; sourceTree = "<group>"; };
+		5AFDBCC72574D2B900235EAA /* TargetConfigContants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TargetConfigContants.h; sourceTree = "<group>"; };
+		5AFDBCD02574DA3400235EAA /* NotificationContants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationContants.h; sourceTree = "<group>"; };
+		5AFDBCD12574DAD100235EAA /* Public.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Public.xcassets; sourceTree = "<group>"; };
+		5AFDBCE02574DF4A00235EAA /* Main.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Main.xcassets; sourceTree = "<group>"; };
 		5B400EDD14C4BA6134FE6508 /* Pods-CJImageViewDefault-CJImageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDefault-CJImageView.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewDefault-CJImageView/Pods-CJImageViewDefault-CJImageView.release.xcconfig"; sourceTree = "<group>"; };
-		6868481593E21019F930C9EA /* Pods_CJImageViewDefault_CJImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CJImageViewDefault_CJImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D07F785DDEB15BE6404DA39 /* Pods-CJImageViewProduction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewProduction.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewProduction/Pods-CJImageViewProduction.release.xcconfig"; sourceTree = "<group>"; };
 		8B23499F2565684C0083C7B4 /* RunloopDoc */ = {isa = PBXFileReference; lastKnownFileType = text; path = RunloopDoc; sourceTree = "<group>"; };
 		8B2C8734257003C500C43812 /* LHY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHY.m; sourceTree = "<group>"; };
 		8BE8769B256A2D5A00F7F143 /* HttpFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = HttpFile; sourceTree = "<group>"; };
 		910612C4969EA109705B385E /* Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDefault-CJImageViewDebug/Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig"; sourceTree = "<group>"; };
+		95C153413DB822745F1621A2 /* Pods-CJImageViewDebug-CJImageViewProduction.release-debugenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebug-CJImageViewProduction.release-debugenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebug-CJImageViewProduction/Pods-CJImageViewDebug-CJImageViewProduction.release-debugenv.xcconfig"; sourceTree = "<group>"; };
+		A096AD82ADA384886E183539 /* Pods-CJImageViewDebu-CJImageViewProduction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageViewProduction.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageViewProduction/Pods-CJImageViewDebu-CJImageViewProduction.release.xcconfig"; sourceTree = "<group>"; };
 		A2EEC272AACE0C7BF5314D5D /* Pods-CJImageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageView.debug.xcconfig"; path = "Target Support Files/Pods-CJImageView/Pods-CJImageView.debug.xcconfig"; sourceTree = "<group>"; };
-		AA514D8CF96B42216947AF8A /* Pods_CJImageViewDefault_CJImageViewDebug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CJImageViewDefault_CJImageViewDebug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A38DC7500ECA3EC9AD755F12 /* Pods-CJImageViewProduction.release-debugenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewProduction.release-debugenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewProduction/Pods-CJImageViewProduction.release-debugenv.xcconfig"; sourceTree = "<group>"; };
+		A3C17743F1443E145C3E55A1 /* Pods_CJImageViewDebu_CJImageViewProduction.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CJImageViewDebu_CJImageViewProduction.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A694FE8C9A91469EEB2A73CC /* Pods_CJImageViewDebu_CJImageViewDebug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CJImageViewDebu_CJImageViewDebug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B511DD0BCE1A3D01736992AE /* Pods-CJImageViewDebug.release-debugenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebug.release-debugenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebug/Pods-CJImageViewDebug.release-debugenv.xcconfig"; sourceTree = "<group>"; };
+		BA39F04D3C6077182203B114 /* Pods-CJImageViewDebu-CJImageViewDebug.release-debugenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageViewDebug.release-debugenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageViewDebug/Pods-CJImageViewDebu-CJImageViewDebug.release-debugenv.xcconfig"; sourceTree = "<group>"; };
+		C11A3AAD8FBB04C756415771 /* Pods-CJImageViewDebu-CJImageViewDebug.debug-productionenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageViewDebug.debug-productionenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageViewDebug/Pods-CJImageViewDebu-CJImageViewDebug.debug-productionenv.xcconfig"; sourceTree = "<group>"; };
+		C26C927BC48214C060597EE5 /* Pods-CJImageViewDebu-CJImageViewProduction.release-debugenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageViewProduction.release-debugenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageViewProduction/Pods-CJImageViewDebu-CJImageViewProduction.release-debugenv.xcconfig"; sourceTree = "<group>"; };
 		E31582D4A515E135904204A5 /* Pods-CJImageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageView.release.xcconfig"; path = "Target Support Files/Pods-CJImageView/Pods-CJImageView.release.xcconfig"; sourceTree = "<group>"; };
-		E3175E2554BBD5222F9932B5 /* Pods-CJImageViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewTests.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewTests/Pods-CJImageViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E5A56F06A2ED259A1D027C3B /* Pods-CJImageViewDebug.debug-productionenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebug.debug-productionenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebug/Pods-CJImageViewDebug.debug-productionenv.xcconfig"; sourceTree = "<group>"; };
+		F04DDD4621FE029F2871F84F /* Pods-CJImageViewDebug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebug.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebug/Pods-CJImageViewDebug.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -557,7 +651,8 @@
 				5A0BC8A9251304AD00426728 /* AudioToolbox.framework in Frameworks */,
 				5A2E8AE124BC0CE300B859AB /* SystemConfiguration.framework in Frameworks */,
 				5A6694C4253581070073FDF6 /* libbz2.1.0.tbd in Frameworks */,
-				F040FCB469F550DED38D52D3 /* Pods_CJImageViewDefault_CJImageView.framework in Frameworks */,
+				61811E66E85E341A9011A058 /* Pods_CJImageViewDebu_CJImageViewProduction.framework in Frameworks */,
+				5AFDBC092574A26F00235EAA /* IJKMediaFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,7 +660,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBBF34E2E4D545EBD2B0902E /* Pods_CJImageViewTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,8 +676,18 @@
 			files = (
 				5A6694DD2535832F0073FDF6 /* libbz2.1.0.tbd in Frameworks */,
 				5A5493E924BD539D00C49207 /* SystemConfiguration.framework in Frameworks */,
-				02B4F05EA5EF1CB8040EB821 /* Pods_CJImageViewDefault_CJImageViewDebug.framework in Frameworks */,
+				5AFDBC132574A29900235EAA /* AVFoundation.framework in Frameworks */,
+				5AFDBC1E2574A31800235EAA /* OpenGLES.framework in Frameworks */,
 				5A6694DC253583190073FDF6 /* AudioToolbox.framework in Frameworks */,
+				5AFDBC0A2574A26F00235EAA /* IJKMediaFramework.framework in Frameworks */,
+				7F87C19F3AFD9BA262A73CFD /* Pods_CJImageViewDebu_CJImageViewDebug.framework in Frameworks */,
+				5AFDBC182574A2EB00235EAA /* MediaPlayer.framework in Frameworks */,
+				5AFDBC1F2574A32600235EAA /* VideoToolbox.framework in Frameworks */,
+				5AFDBC162574A2D400235EAA /* libc++.tbd in Frameworks */,
+				5AFDBC142574A2B600235EAA /* CoreMedia.framework in Frameworks */,
+				5AFDBC192574A2FF00235EAA /* MobileCoreServices.framework in Frameworks */,
+				5AFDBC152574A2C100235EAA /* CoreVideo.framework in Frameworks */,
+				5AFDBC172574A2DD00235EAA /* libz.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,9 +712,8 @@
 				5A0BC8A8251304AD00426728 /* AudioToolbox.framework */,
 				5A2E8AE224BC0F1600B859AB /* XCTest.framework */,
 				5A2E8AE024BC0CE300B859AB /* SystemConfiguration.framework */,
-				137C7CF9A3FB6AE76951D9DA /* Pods_CJImageViewTests.framework */,
-				6868481593E21019F930C9EA /* Pods_CJImageViewDefault_CJImageView.framework */,
-				AA514D8CF96B42216947AF8A /* Pods_CJImageViewDefault_CJImageViewDebug.framework */,
+				A694FE8C9A91469EEB2A73CC /* Pods_CJImageViewDebu_CJImageViewDebug.framework */,
+				A3C17743F1443E145C3E55A1 /* Pods_CJImageViewDebu_CJImageViewProduction.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -631,7 +734,7 @@
 		435830A71C33D42F0074D713 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				435830A61C33D42F0074D713 /* CJImageView.app */,
+				435830A61C33D42F0074D713 /* CJImageViewProduction.app */,
 				435830BF1C33D42F0074D713 /* CJImageViewTests.xctest */,
 				435830CA1C33D42F0074D713 /* CJImageViewUITests.xctest */,
 				5A5493F624BD539D00C49207 /* CJImageViewDebug.app */,
@@ -653,10 +756,6 @@
 				5A55A96B2500F27A0037DACF /* RACObserveController.m */,
 				5A4815342559268E001DC006 /* loadAinitializeTest.h */,
 				5A4815352559268E001DC006 /* loadAinitializeTest.m */,
-				435830B21C33D42F0074D713 /* Main.storyboard */,
-				435830B51C33D42F0074D713 /* Assets.xcassets */,
-				435830B71C33D42F0074D713 /* LaunchScreen.storyboard */,
-				435830BA1C33D42F0074D713 /* Info.plist */,
 				5AB1B8D125652CAA0083408B /* memorandum */,
 				435830A91C33D42F0074D713 /* Supporting Files */,
 			);
@@ -698,7 +797,6 @@
 				5A66948D253557AA0073FDF6 /* WebViewController */,
 				5A2E8A9624B7265900B859AB /* ImageLoader */,
 				5A28829724A19D250059F96C /* BaseController(基类) */,
-				5AB1B8B8256520230083408B /* AppDelegate */,
 			);
 			path = "Public(公共)";
 			sourceTree = "<group>";
@@ -706,6 +804,7 @@
 		5A109672249B4107000398F5 /* Tool(工具类) */ = {
 			isa = PBXGroup;
 			children = (
+				5AFDBBD12574A26E00235EAA /* ijkPlayer */,
 				5A2E8A7E24B6F37000B859AB /* SySafeCategory */,
 				5AF95AC52570F9D200A03F02 /* Permission */,
 				5A1D45ED24B2FCE4006CA3CF /* YYFPSLabel */,
@@ -735,9 +834,10 @@
 		5A109690249B4C54000398F5 /* Resources(资源) */ = {
 			isa = PBXGroup;
 			children = (
-				5AF95B1E257105EE00A03F02 /* GlobalDefault */,
-				5A685EC224D2E1A500BF9737 /* Const */,
+				5AF95B1E257105EE00A03F02 /* Macros(宏) */,
+				5A685EC224D2E1A500BF9737 /* Const(常量) */,
 				5A109691249B4C54000398F5 /* PrefixHeader */,
+				5AFDBC952574D0D800235EAA /* LocalResource */,
 			);
 			path = "Resources(资源)";
 			sourceTree = "<group>";
@@ -1034,6 +1134,10 @@
 		5A66952A25358D5F0073FDF6 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				435830AC1C33D42F0074D713 /* AppDelegate.h */,
+				435830AD1C33D42F0074D713 /* AppDelegate.m */,
+				5AB1B8C9256520DF0083408B /* AppDelegate+Monitor.h */,
+				5AB1B8CA256520DF0083408B /* AppDelegate+Monitor.m */,
 				5A66952B25358D810073FDF6 /* AppDelegate+AppService.h */,
 				5A66952C25358D810073FDF6 /* AppDelegate+AppService.m */,
 			);
@@ -1127,15 +1231,14 @@
 			path = QuartzCore;
 			sourceTree = "<group>";
 		};
-		5A685EC224D2E1A500BF9737 /* Const */ = {
+		5A685EC224D2E1A500BF9737 /* Const(常量) */ = {
 			isa = PBXGroup;
 			children = (
-				5A66952525358CE60073FDF6 /* FontAndColorMacros.h */,
-				5A3557FC249CAEC6002DAD41 /* Marcros.h */,
+				5AFDBCD02574DA3400235EAA /* NotificationContants.h */,
 				5A38B49A250F7C9F0077F6DE /* ConstantString.h */,
-				5A2ACCCC2538582D0023A55E /* BlockDefine.h */,
+				5AFDBCC72574D2B900235EAA /* TargetConfigContants.h */,
 			);
-			path = Const;
+			path = "Const(常量)";
 			sourceTree = "<group>";
 		};
 		5A685ECE24D2E76800BF9737 /* NSData */ = {
@@ -1149,17 +1252,6 @@
 				5A685ED324D2E7B200BF9737 /* NSData+Hash.m */,
 			);
 			path = NSData;
-			sourceTree = "<group>";
-		};
-		5AB1B8B8256520230083408B /* AppDelegate */ = {
-			isa = PBXGroup;
-			children = (
-				435830AC1C33D42F0074D713 /* AppDelegate.h */,
-				435830AD1C33D42F0074D713 /* AppDelegate.m */,
-				5AB1B8C9256520DF0083408B /* AppDelegate+Monitor.h */,
-				5AB1B8CA256520DF0083408B /* AppDelegate+Monitor.m */,
-			);
-			path = AppDelegate;
 			sourceTree = "<group>";
 		};
 		5AB1B8D125652CAA0083408B /* memorandum */ = {
@@ -1332,7 +1424,7 @@
 			path = Permission;
 			sourceTree = "<group>";
 		};
-		5AF95B1E257105EE00A03F02 /* GlobalDefault */ = {
+		5AF95B1E257105EE00A03F02 /* Macros(宏) */ = {
 			isa = PBXGroup;
 			children = (
 				5AF95B23257105EE00A03F02 /* EncodeModel.h */,
@@ -1341,21 +1433,117 @@
 				5AF95B22257105EE00A03F02 /* DeviceTool.m */,
 				5AF95B24257105EE00A03F02 /* GlobalDefault.h */,
 				5AF95B21257105EE00A03F02 /* GlobalDefault.m */,
+				5A3557FC249CAEC6002DAD41 /* Marcros.h */,
+				5A66952525358CE60073FDF6 /* FontAndColorMacros.h */,
 			);
-			path = GlobalDefault;
+			path = "Macros(宏)";
+			sourceTree = "<group>";
+		};
+		5AFDBBD12574A26E00235EAA /* ijkPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				5AFDBBD22574A26E00235EAA /* IJKPlayerController.h */,
+				5AFDBBD32574A26E00235EAA /* LMVideoPlayer.h */,
+				5AFDBBD42574A26E00235EAA /* IJK.bundle */,
+				5AFDBBD52574A26E00235EAA /* Model */,
+				5AFDBBDA2574A26E00235EAA /* View */,
+				5AFDBBEB2574A26E00235EAA /* IJKPlayerController.m */,
+				5AFDBBEC2574A26E00235EAA /* IJKMediaFramework.framework */,
+				5AFDBBED2574A26E00235EAA /* LMVideoPlayer.m */,
+				5AFDBBEE2574A26E00235EAA /* Utility */,
+			);
+			path = ijkPlayer;
+			sourceTree = "<group>";
+		};
+		5AFDBBD52574A26E00235EAA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5AFDBBD62574A26E00235EAA /* LMPlayerStatusModel.m */,
+				5AFDBBD72574A26E00235EAA /* LMPlayerModel.m */,
+				5AFDBBD82574A26E00235EAA /* LMPlayerStatusModel.h */,
+				5AFDBBD92574A26E00235EAA /* LMPlayerModel.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5AFDBBDA2574A26E00235EAA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5AFDBBDB2574A26E00235EAA /* LMVideoPlayerView.h */,
+				5AFDBBDC2574A26E00235EAA /* LMLoadingView.h */,
+				5AFDBBDD2574A26E00235EAA /* LMCoverControlView.h */,
+				5AFDBBDE2574A26E00235EAA /* LMLandScapeControlView.m */,
+				5AFDBBDF2574A26E00235EAA /* LMPortraitControlView.m */,
+				5AFDBBE02574A26E00235EAA /* MMMaterialDesignSpinner.h */,
+				5AFDBBE12574A26E00235EAA /* LMPlayerControlView.h */,
+				5AFDBBE22574A26E00235EAA /* LMBrightnessView.m */,
+				5AFDBBE32574A26E00235EAA /* LMVideoPlayerView.m */,
+				5AFDBBE42574A26E00235EAA /* LMLandScapeControlView.h */,
+				5AFDBBE52574A26E00235EAA /* LMCoverControlView.m */,
+				5AFDBBE62574A26E00235EAA /* LMLoadingView.m */,
+				5AFDBBE72574A26E00235EAA /* LMPortraitControlView.h */,
+				5AFDBBE82574A26E00235EAA /* MMMaterialDesignSpinner.m */,
+				5AFDBBE92574A26E00235EAA /* LMBrightnessView.h */,
+				5AFDBBEA2574A26E00235EAA /* LMPlayerControlView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5AFDBBEE2574A26E00235EAA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				5AFDBBEF2574A26E00235EAA /* LMPlayerManager.h */,
+				5AFDBBF02574A26E00235EAA /* LMPlayerManager.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		5AFDBC952574D0D800235EAA /* LocalResource */ = {
+			isa = PBXGroup;
+			children = (
+				435830B21C33D42F0074D713 /* Main.storyboard */,
+				435830B51C33D42F0074D713 /* Assets.xcassets */,
+				5AFDBCD12574DAD100235EAA /* Public.xcassets */,
+				5AFDBCE02574DF4A00235EAA /* Main.xcassets */,
+				435830B71C33D42F0074D713 /* LaunchScreen.storyboard */,
+				435830BA1C33D42F0074D713 /* Info.plist */,
+			);
+			path = LocalResource;
 			sourceTree = "<group>";
 		};
 		953F6B6241D510F9F38C53F0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E3175E2554BBD5222F9932B5 /* Pods-CJImageViewTests.debug.xcconfig */,
-				4DA15B1591896050AC882F6F /* Pods-CJImageViewTests.release.xcconfig */,
 				A2EEC272AACE0C7BF5314D5D /* Pods-CJImageView.debug.xcconfig */,
 				E31582D4A515E135904204A5 /* Pods-CJImageView.release.xcconfig */,
 				31860A404CBEE57C2AB66B48 /* Pods-CJImageViewDefault-CJImageView.debug.xcconfig */,
 				5B400EDD14C4BA6134FE6508 /* Pods-CJImageViewDefault-CJImageView.release.xcconfig */,
 				910612C4969EA109705B385E /* Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig */,
 				174461B9A157BA562CA1E8F0 /* Pods-CJImageViewDefault-CJImageViewDebug.release.xcconfig */,
+				F04DDD4621FE029F2871F84F /* Pods-CJImageViewDebug.debug.xcconfig */,
+				E5A56F06A2ED259A1D027C3B /* Pods-CJImageViewDebug.debug-productionenv.xcconfig */,
+				225E36B610B8AD17B81B8E86 /* Pods-CJImageViewDebug.release.xcconfig */,
+				B511DD0BCE1A3D01736992AE /* Pods-CJImageViewDebug.release-debugenv.xcconfig */,
+				2A2E710AFF156BC0DDB771A3 /* Pods-CJImageViewDebug-CJImageViewProduction.debug.xcconfig */,
+				2321AEF78444579260FD48CB /* Pods-CJImageViewDebug-CJImageViewProduction.debug-productionenv.xcconfig */,
+				2A5900EF5FCE1D1696207D48 /* Pods-CJImageViewDebug-CJImageViewProduction.release.xcconfig */,
+				95C153413DB822745F1621A2 /* Pods-CJImageViewDebug-CJImageViewProduction.release-debugenv.xcconfig */,
+				4318EDD59C4604BF959B7B58 /* Pods-CJImageViewProduction.debug.xcconfig */,
+				25AFB8DE10EF66043CC91B0C /* Pods-CJImageViewProduction.debug-productionenv.xcconfig */,
+				7D07F785DDEB15BE6404DA39 /* Pods-CJImageViewProduction.release.xcconfig */,
+				A38DC7500ECA3EC9AD755F12 /* Pods-CJImageViewProduction.release-debugenv.xcconfig */,
+				16D5A8D9081A9FE7815E38FA /* Pods-CJImageViewDebu-CJImageView.debug.xcconfig */,
+				1252A71763BAA67C965F1E80 /* Pods-CJImageViewDebu-CJImageView.debug-productionenv.xcconfig */,
+				34C42835FCF7C01648A307BB /* Pods-CJImageViewDebu-CJImageView.release.xcconfig */,
+				300E6A7B4456C0AA279C982F /* Pods-CJImageViewDebu-CJImageView.release-debugenv.xcconfig */,
+				423A6DC746E9A8E0BDC4BB18 /* Pods-CJImageViewDebu-CJImageViewDebug.debug.xcconfig */,
+				C11A3AAD8FBB04C756415771 /* Pods-CJImageViewDebu-CJImageViewDebug.debug-productionenv.xcconfig */,
+				33E9A09BE424DD52D9064AB4 /* Pods-CJImageViewDebu-CJImageViewDebug.release.xcconfig */,
+				BA39F04D3C6077182203B114 /* Pods-CJImageViewDebu-CJImageViewDebug.release-debugenv.xcconfig */,
+				4BB787D074AD0F4ECC127B15 /* Pods-CJImageViewDebu-CJImageViewProduction.debug.xcconfig */,
+				0BBDCF0456EA257993FA1639 /* Pods-CJImageViewDebu-CJImageViewProduction.debug-productionenv.xcconfig */,
+				A096AD82ADA384886E183539 /* Pods-CJImageViewDebu-CJImageViewProduction.release.xcconfig */,
+				C26C927BC48214C060597EE5 /* Pods-CJImageViewDebu-CJImageViewProduction.release-debugenv.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1363,9 +1551,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		435830A51C33D42F0074D713 /* CJImageView */ = {
+		435830A51C33D42F0074D713 /* CJImageViewProduction */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 435830D31C33D42F0074D713 /* Build configuration list for PBXNativeTarget "CJImageView" */;
+			buildConfigurationList = 435830D31C33D42F0074D713 /* Build configuration list for PBXNativeTarget "CJImageViewProduction" */;
 			buildPhases = (
 				43608054DE20D0581E4EE3EC /* [CP] Check Pods Manifest.lock */,
 				435830A21C33D42F0074D713 /* Sources */,
@@ -1378,20 +1566,18 @@
 			);
 			dependencies = (
 			);
-			name = CJImageView;
+			name = CJImageViewProduction;
 			productName = CJImageView;
-			productReference = 435830A61C33D42F0074D713 /* CJImageView.app */;
+			productReference = 435830A61C33D42F0074D713 /* CJImageViewProduction.app */;
 			productType = "com.apple.product-type.application";
 		};
 		435830BE1C33D42F0074D713 /* CJImageViewTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 435830D61C33D42F0074D713 /* Build configuration list for PBXNativeTarget "CJImageViewTests" */;
 			buildPhases = (
-				6984C68D1E601339BEBE6DCB /* [CP] Check Pods Manifest.lock */,
 				435830BB1C33D42F0074D713 /* Sources */,
 				435830BC1C33D42F0074D713 /* Frameworks */,
 				435830BD1C33D42F0074D713 /* Resources */,
-				918E41F9F6A4B04B69657B16 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1430,7 +1616,7 @@
 				5A5493E824BD539D00C49207 /* Frameworks */,
 				5A5493EB24BD539D00C49207 /* Resources */,
 				5A5493F224BD539D00C49207 /* ShellScript */,
-				D507CA3D6950FB1A05F7DF9F /* [CP] Embed Pods Frameworks */,
+				4DE20A423343A84667073D98 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1481,7 +1667,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				435830A51C33D42F0074D713 /* CJImageView */,
+				435830A51C33D42F0074D713 /* CJImageViewProduction */,
 				435830BE1C33D42F0074D713 /* CJImageViewTests */,
 				435830C91C33D42F0074D713 /* CJImageViewUITests */,
 				5A5493A824BD539D00C49207 /* CJImageViewDebug */,
@@ -1498,6 +1684,7 @@
 				5AB1B8E1256530890083408B /* BaseData in Resources */,
 				435830B91C33D42F0074D713 /* LaunchScreen.storyboard in Resources */,
 				5AB1B8E8256530EA0083408B /* CharDoc in Resources */,
+				5AFDBBF12574A26F00235EAA /* IJK.bundle in Resources */,
 				5AB1B929256678D30083408B /* MJRefrshDoc in Resources */,
 				5AB1B8EF256531C70083408B /* DataDoc in Resources */,
 				5A17164824921914001CAADF /* MBProgressHUD.bundle in Resources */,
@@ -1505,8 +1692,10 @@
 				5AB1B8FD256533AC0083408B /* NSHomeDirectoryFile in Resources */,
 				5AB1B8D325652CD00083408B /* UDID in Resources */,
 				5AB1B8F62565329F0083408B /* SDWebImageFile in Resources */,
+				5AFDBCE12574DF4A00235EAA /* Main.xcassets in Resources */,
 				5AB1B9102565345E0083408B /* idStyle in Resources */,
 				8BE8769C256A2D5A00F7F143 /* HttpFile in Resources */,
+				5AFDBCD22574DAD100235EAA /* Public.xcassets in Resources */,
 				5AB1B9042565341E0083408B /* GCDQueue in Resources */,
 				5A39C2CA256E5CBB0052A133 /* RACFile in Resources */,
 				435830B61C33D42F0074D713 /* Assets.xcassets in Resources */,
@@ -1538,6 +1727,7 @@
 				5AB1B8E2256530890083408B /* BaseData in Resources */,
 				5A5493EC24BD539D00C49207 /* LaunchScreen.storyboard in Resources */,
 				5AB1B8E9256530EA0083408B /* CharDoc in Resources */,
+				5AFDBBF22574A26F00235EAA /* IJK.bundle in Resources */,
 				5AB1B92A256678D30083408B /* MJRefrshDoc in Resources */,
 				5AB1B8F0256531C70083408B /* DataDoc in Resources */,
 				5A5493ED24BD539D00C49207 /* MBProgressHUD.bundle in Resources */,
@@ -1545,8 +1735,10 @@
 				5AB1B8FE256533AC0083408B /* NSHomeDirectoryFile in Resources */,
 				5AB1B8D425652CD00083408B /* UDID in Resources */,
 				5AB1B8F72565329F0083408B /* SDWebImageFile in Resources */,
+				5AFDBCE22574DF4A00235EAA /* Main.xcassets in Resources */,
 				5AB1B9112565345E0083408B /* idStyle in Resources */,
 				8BE8769D256A2D5A00F7F143 /* HttpFile in Resources */,
+				5AFDBCD32574DAD100235EAA /* Public.xcassets in Resources */,
 				5AB1B9052565341E0083408B /* GCDQueue in Resources */,
 				5A39C2CB256E5CBB0052A133 /* RACFile in Resources */,
 				5A5493EF24BD539D00C49207 /* Assets.xcassets in Resources */,
@@ -1574,11 +1766,53 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CJImageViewDefault-CJImageView-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CJImageViewDebu-CJImageViewProduction-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DE20A423343A84667073D98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CJImageViewDebu-CJImageViewDebug/Pods-CJImageViewDebu-CJImageViewDebug-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/QBImagePickerController/QBImagePickerController.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
+				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
+				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QBImagePickerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CJImageViewDebu-CJImageViewDebug/Pods-CJImageViewDebu-CJImageViewDebug-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5A28829324A0B99C0059F96C /* ShellScript */ = {
@@ -1615,35 +1849,13 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
 		};
-		6984C68D1E601339BEBE6DCB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CJImageViewTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6DB9FDF274DF440A4A23A8DE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CJImageViewDefault-CJImageView/Pods-CJImageViewDefault-CJImageView-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CJImageViewDebu-CJImageViewProduction/Pods-CJImageViewDebu-CJImageViewProduction-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
@@ -1672,67 +1884,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CJImageViewDefault-CJImageView/Pods-CJImageViewDefault-CJImageView-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		918E41F9F6A4B04B69657B16 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CJImageViewTests/Pods-CJImageViewTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Kiwi/Kiwi.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kiwi.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CJImageViewTests/Pods-CJImageViewTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D507CA3D6950FB1A05F7DF9F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CJImageViewDefault-CJImageViewDebug/Pods-CJImageViewDefault-CJImageViewDebug-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/QBImagePickerController/QBImagePickerController.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
-				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
-				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
-				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
-				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QBImagePickerController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CJImageViewDefault-CJImageViewDebug/Pods-CJImageViewDefault-CJImageViewDebug-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CJImageViewDebu-CJImageViewProduction/Pods-CJImageViewDebu-CJImageViewProduction-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ED2273878E84267D473FB068 /* [CP] Check Pods Manifest.lock */ = {
@@ -1750,7 +1902,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CJImageViewDefault-CJImageViewDebug-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CJImageViewDebu-CJImageViewDebug-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1770,18 +1922,24 @@
 				5A28829624A19D100059F96C /* BaseViewController.m in Sources */,
 				5AE9BBC025075BB20010945B /* YTKChainRequestAgent.m in Sources */,
 				5A2882C424A343A10059F96C /* UINavigationController+BATransitions.m in Sources */,
+				5AFDBC012574A26F00235EAA /* LMLoadingView.m in Sources */,
 				5AF95B27257105EE00A03F02 /* GlobalDefault.m in Sources */,
 				5AF95AD82570FAE100A03F02 /* imageCompressHelper.m in Sources */,
 				5A6694F025358B570073FDF6 /* MainTabBarController.m in Sources */,
 				5A28829D24A19D880059F96C /* BaseTabBarController.m in Sources */,
+				5AFDBBF32574A26F00235EAA /* LMPlayerStatusModel.m in Sources */,
 				5AE1DEDF2501EC4B00F511A6 /* TestViewModel.m in Sources */,
 				5A66952D25358D810073FDF6 /* AppDelegate+AppService.m in Sources */,
+				5AFDBBFF2574A26F00235EAA /* LMCoverControlView.m in Sources */,
 				5A38B481250F3DFE0077F6DE /* UIBezierPath+BasicShapes.m in Sources */,
+				5AFDBBFD2574A26F00235EAA /* LMVideoPlayerView.m in Sources */,
 				5A39C23C256BB54A0052A133 /* NSBundle+Path.m in Sources */,
 				5A729A8725208210007A7136 /* NSString+Encrypt.m in Sources */,
+				5AFDBC032574A26F00235EAA /* MMMaterialDesignSpinner.m in Sources */,
 				5AE9BBBE25075BB20010945B /* YTKNetworkAgent.m in Sources */,
 				5A685EA824D036EE00BF9737 /* NSDictionary+JSONString.m in Sources */,
 				5A2E8ADB24B9A9C600B859AB /* MPTagCollectionViewFlowLayout.m in Sources */,
+				5AFDBC072574A26F00235EAA /* IJKPlayerController.m in Sources */,
 				5A39C233256BA7590052A133 /* UIView+Nib.m in Sources */,
 				5A669492253557D70073FDF6 /* RootWebViewController.m in Sources */,
 				5A685ED624D2E7B200BF9737 /* NSData+Hash.m in Sources */,
@@ -1789,9 +1947,11 @@
 				5A2E8A9C24B7298E00B859AB /* UIView+ViewController.m in Sources */,
 				5A2882C524A343A10059F96C /* UINavigationItem+Lock.m in Sources */,
 				5A2E8A8324B6F37000B859AB /* SYSafeCategory.m in Sources */,
+				5AFDBC052574A26F00235EAA /* LMPlayerControlView.m in Sources */,
 				5A2E8A9924B7267900B859AB /* ImageUploadCell.m in Sources */,
 				5A6694EE25358B570073FDF6 /* UITabBar+CustomBadge.m in Sources */,
 				5A2882A424A1D30F0059F96C /* UIViewController+LL_Utils.m in Sources */,
+				5AFDBBF52574A26F00235EAA /* LMPlayerModel.m in Sources */,
 				5AE9BBB425075BB20010945B /* YTKChainRequest.m in Sources */,
 				5AE9BBB825075BB20010945B /* YTKBaseRequest.m in Sources */,
 				5AE9BB902507374B0010945B /* MPUploadImagesService.m in Sources */,
@@ -1820,6 +1980,8 @@
 				5A2882A124A1CE5B0059F96C /* UIViewController+Swizzle.m in Sources */,
 				5A38B498250F71610077F6DE /* UITableView+RadiusStyle.m in Sources */,
 				5A685EA424D034E200BF9737 /* NSDate+Extension.m in Sources */,
+				5AFDBBF72574A26F00235EAA /* LMLandScapeControlView.m in Sources */,
+				5AFDBBFB2574A26F00235EAA /* LMBrightnessView.m in Sources */,
 				5A0BC90D25135DD000426728 /* UIColor+Hex.m in Sources */,
 				5AE9BB96250737C00010945B /* MPUploadImagesHelper.m in Sources */,
 				5A685ED724D2E7B200BF9737 /* NSData+Encrypt.m in Sources */,
@@ -1849,8 +2011,10 @@
 				5A2882C624A343A10059F96C /* UINavigationItem+Loading.m in Sources */,
 				5A2882C124A343A10059F96C /* UINavigationController+JZExtension.m in Sources */,
 				5A2E8A8424B6F37000B859AB /* JRSwizzle.m in Sources */,
+				5AFDBC0D2574A26F00235EAA /* LMPlayerManager.m in Sources */,
 				5A685EAC24D037DB00BF9737 /* NSFileManager+Paths.m in Sources */,
 				5AE9BB83250731FC0010945B /* BaseRequestService.m in Sources */,
+				5AFDBBF92574A26F00235EAA /* LMPortraitControlView.m in Sources */,
 				5AE9BBE62508DFA20010945B /* UIViewController+Alert.m in Sources */,
 				5AE9BBB625075BB20010945B /* YTKNetworkPrivate.m in Sources */,
 				5A2E8AC724B8823D00B859AB /* UIImage+FX.m in Sources */,
@@ -1862,6 +2026,7 @@
 				5A1D45F024B2FCE5006CA3CF /* YYFPSLabel.m in Sources */,
 				5A2E8A8C24B71B2500B859AB /* UploadImagesViewController.m in Sources */,
 				5AE9BBBC25075BB20010945B /* YTKBatchRequest.m in Sources */,
+				5AFDBC0B2574A26F00235EAA /* LMVideoPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1886,6 +2051,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AFDBC062574A26F00235EAA /* LMPlayerControlView.m in Sources */,
 				5A729A8825208210007A7136 /* NSString+Encrypt.m in Sources */,
 				5A5493AD24BD539D00C49207 /* BaseViewController.m in Sources */,
 				5A5493AE24BD539D00C49207 /* UINavigationController+BATransitions.m in Sources */,
@@ -1913,6 +2079,7 @@
 				5A5493BB24BD539D00C49207 /* GCDSemaphore.m in Sources */,
 				5A5493BC24BD539D00C49207 /* ImageUploadHelper.m in Sources */,
 				5AE9BB97250737C00010945B /* MPUploadImagesHelper.m in Sources */,
+				5AFDBBFE2574A26F00235EAA /* LMVideoPlayerView.m in Sources */,
 				5A729AA325209A15007A7136 /* NSData+Hash.m in Sources */,
 				5AF95AD92570FAE100A03F02 /* imageCompressHelper.m in Sources */,
 				5A5493BE24BD539D00C49207 /* BaseNavigationController.m in Sources */,
@@ -1921,6 +2088,7 @@
 				5A5493C324BD539D00C49207 /* UINavigationItem+Margin.m in Sources */,
 				5A39C234256BA7590052A133 /* UIView+Nib.m in Sources */,
 				5A66952E25358D810073FDF6 /* AppDelegate+AppService.m in Sources */,
+				5AFDBBF82574A26F00235EAA /* LMLandScapeControlView.m in Sources */,
 				5A5493C424BD539D00C49207 /* UIView+EaseBlankPage.m in Sources */,
 				5AF95B012570FEDF00A03F02 /* Reachability.m in Sources */,
 				5AF95AC92570F9F400A03F02 /* cameraHelper.m in Sources */,
@@ -1929,6 +2097,7 @@
 				5A5493C724BD539D00C49207 /* DashLineView.m in Sources */,
 				5A5493C824BD539D00C49207 /* GCDGroup.m in Sources */,
 				5A5493CA24BD539D00C49207 /* UINavigationController+StackManager.m in Sources */,
+				5AFDBBF42574A26F00235EAA /* LMPlayerStatusModel.m in Sources */,
 				5AE9BB892507336A0010945B /* MPUploadImageItemService.m in Sources */,
 				5AE9BBCD250770F90010945B /* MPImageCollectionCell.m in Sources */,
 				5A5493CB24BD539D00C49207 /* UIViewController+Swizzle.m in Sources */,
@@ -1942,7 +2111,9 @@
 				5AE9BBC325075BB20010945B /* YTKBatchRequestAgent.m in Sources */,
 				5A5493CE24BD539D00C49207 /* UIImage+Tool.m in Sources */,
 				5A82CB2825554C3E0035F2D2 /* XLWebViewController.m in Sources */,
+				5AFDBBFC2574A26F00235EAA /* LMBrightnessView.m in Sources */,
 				5A55A96D2501E3760037DACF /* RACObserveController.m in Sources */,
+				5AFDBC002574A26F00235EAA /* LMCoverControlView.m in Sources */,
 				5A5493D024BD539D00C49207 /* BaseEntity.m in Sources */,
 				5A38B487250F4F130077F6DE /* UIView+AddSubView.m in Sources */,
 				5AE9BBB325075BB20010945B /* YTKNetworkConfig.m in Sources */,
@@ -1951,14 +2122,17 @@
 				5A0BC90E25135DD000426728 /* UIColor+Hex.m in Sources */,
 				5AE9BBC525075BB20010945B /* NetworkUnit.m in Sources */,
 				5AB1B8CC256520DF0083408B /* AppDelegate+Monitor.m in Sources */,
+				5AFDBC042574A26F00235EAA /* MMMaterialDesignSpinner.m in Sources */,
 				5AE9BBB525075BB20010945B /* YTKChainRequest.m in Sources */,
 				5AE9BBB725075BB20010945B /* YTKNetworkPrivate.m in Sources */,
+				5AFDBC022574A26F00235EAA /* LMLoadingView.m in Sources */,
 				5A5493D424BD539D00C49207 /* MBProgressHUD+JJ.m in Sources */,
 				5A6694F125358B570073FDF6 /* MainTabBarController.m in Sources */,
 				5A38B48D250F559B0077F6DE /* UITextField+Placthoder.m in Sources */,
 				5A5493D524BD539D00C49207 /* AppDelegate.m in Sources */,
 				5A5493D624BD539D00C49207 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				5AF95B2A257105EE00A03F02 /* DeviceTool.m in Sources */,
+				5AFDBBF62574A26F00235EAA /* LMPlayerModel.m in Sources */,
 				5AE9BB7B250615BC0010945B /* MPRequstFailedHelper.m in Sources */,
 				5A5493D824BD539D00C49207 /* ImageItemModel.m in Sources */,
 				5AE9BBBB25075BB20010945B /* NetWorkBaseUrlConfig.m in Sources */,
@@ -1966,6 +2140,8 @@
 				5A5493D924BD539D00C49207 /* EaseBlankPageView.m in Sources */,
 				5A5493DA24BD539D00C49207 /* LogInApi.m in Sources */,
 				5A5493DB24BD539D00C49207 /* GCDTimer.m in Sources */,
+				5AFDBC0E2574A26F00235EAA /* LMPlayerManager.m in Sources */,
+				5AFDBC082574A26F00235EAA /* IJKPlayerController.m in Sources */,
 				5A5493DC24BD539D00C49207 /* UINavigationItem+Loading.m in Sources */,
 				5A5493DD24BD539D00C49207 /* UINavigationController+JZExtension.m in Sources */,
 				5A5493DE24BD539D00C49207 /* JRSwizzle.m in Sources */,
@@ -1976,11 +2152,13 @@
 				5A5493E224BD539D00C49207 /* main.m in Sources */,
 				5AE9BBD5250784090010945B /* ClassifyModel.m in Sources */,
 				5AE9BBD1250783D90010945B /* ClassifyApi.m in Sources */,
+				5AFDBBFA2574A26F00235EAA /* LMPortraitControlView.m in Sources */,
 				5A6694FC25358B980073FDF6 /* HomeViewController.m in Sources */,
 				5A5493E524BD539D00C49207 /* YYFPSLabel.m in Sources */,
 				5A39C23D256BB54A0052A133 /* NSBundle+Path.m in Sources */,
 				5A5493E724BD539D00C49207 /* UploadImagesViewController.m in Sources */,
 				5A66951025358BE40073FDF6 /* ToolDemoViewController.m in Sources */,
+				5AFDBC0C2574A26F00235EAA /* LMVideoPlayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1989,12 +2167,12 @@
 /* Begin PBXTargetDependency section */
 		435830C11C33D42F0074D713 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 435830A51C33D42F0074D713 /* CJImageView */;
+			target = 435830A51C33D42F0074D713 /* CJImageViewProduction */;
 			targetProxy = 435830C01C33D42F0074D713 /* PBXContainerItemProxy */;
 		};
 		435830CC1C33D42F0074D713 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 435830A51C33D42F0074D713 /* CJImageView */;
+			target = 435830A51C33D42F0074D713 /* CJImageViewProduction */;
 			targetProxy = 435830CB1C33D42F0074D713 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -2055,7 +2233,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -2093,7 +2271,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2103,9 +2281,10 @@
 		};
 		435830D41C33D42F0074D713 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31860A404CBEE57C2AB66B48 /* Pods-CJImageViewDefault-CJImageView.debug.xcconfig */;
+			baseConfigurationReference = 4BB787D074AD0F4ECC127B15 /* Pods-CJImageViewDebu-CJImageViewProduction.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = W4RH45VSQ8;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2115,7 +2294,12 @@
 					"$(PROJECT_DIR)/CJImageView/Tool(工具类)/ijkPlayer",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CJImageView/Resources(资源)/PrefixHeader/PrefixHeader.pch";
-				INFOPLIST_FILE = CJImageView/Info.plist;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"COCOAPODS=1",
+					PRODUCT,
+					DEBUG,
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/CJImageView/Resources(资源)/LocalResource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -2131,9 +2315,10 @@
 		};
 		435830D51C33D42F0074D713 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B400EDD14C4BA6134FE6508 /* Pods-CJImageViewDefault-CJImageView.release.xcconfig */;
+			baseConfigurationReference = A096AD82ADA384886E183539 /* Pods-CJImageViewDebu-CJImageViewProduction.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				DEVELOPMENT_TEAM = W4RH45VSQ8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2142,7 +2327,12 @@
 					"$(PROJECT_DIR)/CJImageView/Tool(工具类)/ijkPlayer",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CJImageView/Resources(资源)/PrefixHeader/PrefixHeader.pch";
-				INFOPLIST_FILE = CJImageView/Info.plist;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					PRODUCT,
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/CJImageView/Resources(资源)/LocalResource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -2158,7 +2348,6 @@
 		};
 		435830D71C33D42F0074D713 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3175E2554BBD5222F9932B5 /* Pods-CJImageViewTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CJImageViewTests/Info.plist;
@@ -2171,7 +2360,6 @@
 		};
 		435830D81C33D42F0074D713 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DA15B1591896050AC882F6F /* Pods-CJImageViewTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CJImageViewTests/Info.plist;
@@ -2208,9 +2396,10 @@
 		};
 		5A5493F424BD539D00C49207 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 910612C4969EA109705B385E /* Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig */;
+			baseConfigurationReference = 423A6DC746E9A8E0BDC4BB18 /* Pods-CJImageViewDebu-CJImageViewDebug.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2223,11 +2412,11 @@
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CJImageView/Resources(资源)/PrefixHeader/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					DEBUGMARK,
 					"COCOAPODS=1",
+					LOCAL,
+					DEBUG,
 				);
-				INFOPLIST_FILE = CJImageView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CJImageView/Resources(资源)/LocalResource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2243,9 +2432,10 @@
 		};
 		5A5493F524BD539D00C49207 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 174461B9A157BA562CA1E8F0 /* Pods-CJImageViewDefault-CJImageViewDebug.release.xcconfig */;
+			baseConfigurationReference = 33E9A09BE424DD52D9064AB4 /* Pods-CJImageViewDebu-CJImageViewDebug.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2258,10 +2448,10 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CJImageView/Resources(资源)/PrefixHeader/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					DEBUGMARK,
 					"COCOAPODS=1",
+					LOCAL,
 				);
-				INFOPLIST_FILE = CJImageView/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CJImageView/Resources(资源)/LocalResource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2275,267 +2465,6 @@
 			};
 			name = Release;
 		};
-		8BC3A7E1257372330080ACCF /* Debug-ProductionEnv */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = "Debug-ProductionEnv";
-		};
-		8BC3A7E2257372330080ACCF /* Debug-ProductionEnv */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31860A404CBEE57C2AB66B48 /* Pods-CJImageViewDefault-CJImageView.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = W4RH45VSQ8;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
-					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer/Model",
-					"$(PROJECT_DIR)/CJImageView/Tool(工具类)/ijkPlayer",
-				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/CJImageView/Resources(资源)/PrefixHeader/PrefixHeader.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "COCOAPODS=1";
-				INFOPLIST_FILE = CJImageView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
-				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = "Debug-ProductionEnv";
-		};
-		8BC3A7E3257372330080ACCF /* Debug-ProductionEnv */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3175E2554BBD5222F9932B5 /* Pods-CJImageViewTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = CJImageViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageViewTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CJImageView.app/CJImageView";
-			};
-			name = "Debug-ProductionEnv";
-		};
-		8BC3A7E4257372330080ACCF /* Debug-ProductionEnv */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = CJImageViewUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageViewUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = CJImageView;
-				USES_XCTRUNNER = YES;
-			};
-			name = "Debug-ProductionEnv";
-		};
-		8BC3A7E5257372330080ACCF /* Debug-ProductionEnv */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 910612C4969EA109705B385E /* Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
-					"$(PROJECT_DIR)/CJImageView/Tool(工具类)/ijkPlayer",
-				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/CJImageView/Resources(资源)/PrefixHeader/PrefixHeader.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					DEBUGMARK,
-					"COCOAPODS=1",
-				);
-				INFOPLIST_FILE = CJImageView/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
-				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
-			};
-			name = "Debug-ProductionEnv";
-		};
-		8BC3A7E6257372800080ACCF /* Release-DebugEnv */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = "Release-DebugEnv";
-		};
-		8BC3A7E7257372800080ACCF /* Release-DebugEnv */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B400EDD14C4BA6134FE6508 /* Pods-CJImageViewDefault-CJImageView.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = W4RH45VSQ8;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
-					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer/Model",
-					"$(PROJECT_DIR)/CJImageView/Tool(工具类)/ijkPlayer",
-				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/CJImageView/Resources(资源)/PrefixHeader/PrefixHeader.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"DEBUG=1",
-				);
-				INFOPLIST_FILE = CJImageView/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
-				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = "Release-DebugEnv";
-		};
-		8BC3A7E8257372800080ACCF /* Release-DebugEnv */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DA15B1591896050AC882F6F /* Pods-CJImageViewTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = CJImageViewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageViewTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CJImageView.app/CJImageView";
-			};
-			name = "Release-DebugEnv";
-		};
-		8BC3A7E9257372800080ACCF /* Release-DebugEnv */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = CJImageViewUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageViewUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = CJImageView;
-				USES_XCTRUNNER = YES;
-			};
-			name = "Release-DebugEnv";
-		};
-		8BC3A7EA257372800080ACCF /* Release-DebugEnv */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 174461B9A157BA562CA1E8F0 /* Pods-CJImageViewDefault-CJImageViewDebug.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
-					"$(PROJECT_DIR)/CJImageView/Tool(工具类)/ijkPlayer",
-				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/CJImageView/Resources(资源)/PrefixHeader/PrefixHeader.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					DEBUGMARK,
-					"COCOAPODS=1",
-				);
-				INFOPLIST_FILE = CJImageView/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
-				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageView;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
-			};
-			name = "Release-DebugEnv";
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2543,20 +2472,16 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				435830D11C33D42F0074D713 /* Debug */,
-				8BC3A7E1257372330080ACCF /* Debug-ProductionEnv */,
 				435830D21C33D42F0074D713 /* Release */,
-				8BC3A7E6257372800080ACCF /* Release-DebugEnv */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		435830D31C33D42F0074D713 /* Build configuration list for PBXNativeTarget "CJImageView" */ = {
+		435830D31C33D42F0074D713 /* Build configuration list for PBXNativeTarget "CJImageViewProduction" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				435830D41C33D42F0074D713 /* Debug */,
-				8BC3A7E2257372330080ACCF /* Debug-ProductionEnv */,
 				435830D51C33D42F0074D713 /* Release */,
-				8BC3A7E7257372800080ACCF /* Release-DebugEnv */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2565,9 +2490,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				435830D71C33D42F0074D713 /* Debug */,
-				8BC3A7E3257372330080ACCF /* Debug-ProductionEnv */,
 				435830D81C33D42F0074D713 /* Release */,
-				8BC3A7E8257372800080ACCF /* Release-DebugEnv */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2576,9 +2499,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				435830DA1C33D42F0074D713 /* Debug */,
-				8BC3A7E4257372330080ACCF /* Debug-ProductionEnv */,
 				435830DB1C33D42F0074D713 /* Release */,
-				8BC3A7E9257372800080ACCF /* Release-DebugEnv */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2587,9 +2508,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A5493F424BD539D00C49207 /* Debug */,
-				8BC3A7E5257372330080ACCF /* Debug-ProductionEnv */,
 				5A5493F524BD539D00C49207 /* Release */,
-				8BC3A7EA257372800080ACCF /* Release-DebugEnv */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,6 +1,0 @@
-framework module Pods_CJImageViewDefault_CJImageViewDebug {
-  umbrella header "Pods-CJImageViewDefault-CJImageViewDebug-umbrella.h"
-
-  export *
-  module * { export * }
-}
