@@ -15,6 +15,8 @@
 //    };
 //}
 
-
++(void)initializeTestBegin{
+    Dlog(@"initializeTestBegin");
+}
 
 @end

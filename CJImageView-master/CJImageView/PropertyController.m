@@ -106,7 +106,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = [UITableViewCell registerCell:tableView];
     cell.accessoryType    = UITableViewCellAccessoryDisclosureIndicator;
-    [cell.imageView sd_setImageWithURL:self.muAry[indexPath.row] placeholderImage:nil options:SDWebImageProgressiveDownload];
+    [cell.imageView sd_setImageWithURL:self.muAry[indexPath.row] placeholderImage:[UIImage imageNamed:@"test_image_2"]options:SDWebImageLowPriority progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        Dlog(@"%ld----SDWebImageLowPriority-----%ld",receivedSize,expectedSize);
+    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        
+    }];
 //    cell.textLabel.text   = self.dataArray[indexPath.row];
     return cell;
 }

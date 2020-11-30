@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02B4F05EA5EF1CB8040EB821 /* Pods_CJImageViewDefault_CJImageViewDebug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA514D8CF96B42216947AF8A /* Pods_CJImageViewDefault_CJImageViewDebug.framework */; };
 		435830AB1C33D42F0074D713 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 435830AA1C33D42F0074D713 /* main.m */; };
 		435830AE1C33D42F0074D713 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 435830AD1C33D42F0074D713 /* AppDelegate.m */; };
 		435830B41C33D42F0074D713 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 435830B21C33D42F0074D713 /* Main.storyboard */; };
@@ -252,12 +251,13 @@
 		5AF95B28257105EE00A03F02 /* GlobalDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF95B21257105EE00A03F02 /* GlobalDefault.m */; };
 		5AF95B29257105EE00A03F02 /* DeviceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF95B22257105EE00A03F02 /* DeviceTool.m */; };
 		5AF95B2A257105EE00A03F02 /* DeviceTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF95B22257105EE00A03F02 /* DeviceTool.m */; };
+		61811E66E85E341A9011A058 /* Pods_CJImageViewDebu_CJImageViewProduction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C17743F1443E145C3E55A1 /* Pods_CJImageViewDebu_CJImageViewProduction.framework */; };
+		7F87C19F3AFD9BA262A73CFD /* Pods_CJImageViewDebu_CJImageViewDebug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A694FE8C9A91469EEB2A73CC /* Pods_CJImageViewDebu_CJImageViewDebug.framework */; };
 		8B2349A02565684C0083C7B4 /* RunloopDoc in Resources */ = {isa = PBXBuildFile; fileRef = 8B23499F2565684C0083C7B4 /* RunloopDoc */; };
 		8B2349A12565684C0083C7B4 /* RunloopDoc in Resources */ = {isa = PBXBuildFile; fileRef = 8B23499F2565684C0083C7B4 /* RunloopDoc */; };
+		8B2C8735257003C500C43812 /* LHY.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C8734257003C500C43812 /* LHY.m */; };
 		8BE8769C256A2D5A00F7F143 /* HttpFile in Resources */ = {isa = PBXBuildFile; fileRef = 8BE8769B256A2D5A00F7F143 /* HttpFile */; };
 		8BE8769D256A2D5A00F7F143 /* HttpFile in Resources */ = {isa = PBXBuildFile; fileRef = 8BE8769B256A2D5A00F7F143 /* HttpFile */; };
-		EBBF34E2E4D545EBD2B0902E /* Pods_CJImageViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 137C7CF9A3FB6AE76951D9DA /* Pods_CJImageViewTests.framework */; };
-		F040FCB469F550DED38D52D3 /* Pods_CJImageViewDefault_CJImageView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6868481593E21019F930C9EA /* Pods_CJImageViewDefault_CJImageView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -278,10 +278,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		137C7CF9A3FB6AE76951D9DA /* Pods_CJImageViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CJImageViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BBDCF0456EA257993FA1639 /* Pods-CJImageViewDebu-CJImageViewProduction.debug-productionenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageViewProduction.debug-productionenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageViewProduction/Pods-CJImageViewDebu-CJImageViewProduction.debug-productionenv.xcconfig"; sourceTree = "<group>"; };
+		1252A71763BAA67C965F1E80 /* Pods-CJImageViewDebu-CJImageView.debug-productionenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageView.debug-productionenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageView/Pods-CJImageViewDebu-CJImageView.debug-productionenv.xcconfig"; sourceTree = "<group>"; };
+		16D5A8D9081A9FE7815E38FA /* Pods-CJImageViewDebu-CJImageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageView.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageView/Pods-CJImageViewDebu-CJImageView.debug.xcconfig"; sourceTree = "<group>"; };
 		174461B9A157BA562CA1E8F0 /* Pods-CJImageViewDefault-CJImageViewDebug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDefault-CJImageViewDebug.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewDefault-CJImageViewDebug/Pods-CJImageViewDefault-CJImageViewDebug.release.xcconfig"; sourceTree = "<group>"; };
+		225E36B610B8AD17B81B8E86 /* Pods-CJImageViewDebug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebug.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebug/Pods-CJImageViewDebug.release.xcconfig"; sourceTree = "<group>"; };
+		2321AEF78444579260FD48CB /* Pods-CJImageViewDebug-CJImageViewProduction.debug-productionenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebug-CJImageViewProduction.debug-productionenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebug-CJImageViewProduction/Pods-CJImageViewDebug-CJImageViewProduction.debug-productionenv.xcconfig"; sourceTree = "<group>"; };
+		25AFB8DE10EF66043CC91B0C /* Pods-CJImageViewProduction.debug-productionenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewProduction.debug-productionenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewProduction/Pods-CJImageViewProduction.debug-productionenv.xcconfig"; sourceTree = "<group>"; };
+		2A2E710AFF156BC0DDB771A3 /* Pods-CJImageViewDebug-CJImageViewProduction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebug-CJImageViewProduction.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebug-CJImageViewProduction/Pods-CJImageViewDebug-CJImageViewProduction.debug.xcconfig"; sourceTree = "<group>"; };
+		2A5900EF5FCE1D1696207D48 /* Pods-CJImageViewDebug-CJImageViewProduction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebug-CJImageViewProduction.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebug-CJImageViewProduction/Pods-CJImageViewDebug-CJImageViewProduction.release.xcconfig"; sourceTree = "<group>"; };
+		300E6A7B4456C0AA279C982F /* Pods-CJImageViewDebu-CJImageView.release-debugenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageView.release-debugenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageView/Pods-CJImageViewDebu-CJImageView.release-debugenv.xcconfig"; sourceTree = "<group>"; };
 		31860A404CBEE57C2AB66B48 /* Pods-CJImageViewDefault-CJImageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDefault-CJImageView.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDefault-CJImageView/Pods-CJImageViewDefault-CJImageView.debug.xcconfig"; sourceTree = "<group>"; };
-		435830A61C33D42F0074D713 /* CJImageView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJImageView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33E9A09BE424DD52D9064AB4 /* Pods-CJImageViewDebu-CJImageViewDebug.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageViewDebug.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageViewDebug/Pods-CJImageViewDebu-CJImageViewDebug.release.xcconfig"; sourceTree = "<group>"; };
+		34C42835FCF7C01648A307BB /* Pods-CJImageViewDebu-CJImageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageView.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageView/Pods-CJImageViewDebu-CJImageView.release.xcconfig"; sourceTree = "<group>"; };
+		423A6DC746E9A8E0BDC4BB18 /* Pods-CJImageViewDebu-CJImageViewDebug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageViewDebug.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageViewDebug/Pods-CJImageViewDebu-CJImageViewDebug.debug.xcconfig"; sourceTree = "<group>"; };
+		4318EDD59C4604BF959B7B58 /* Pods-CJImageViewProduction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewProduction.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewProduction/Pods-CJImageViewProduction.debug.xcconfig"; sourceTree = "<group>"; };
+		435830A61C33D42F0074D713 /* CJImageViewProduction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJImageViewProduction.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		435830AA1C33D42F0074D713 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		435830AC1C33D42F0074D713 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		435830AD1C33D42F0074D713 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -295,8 +307,7 @@
 		435830CA1C33D42F0074D713 /* CJImageViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CJImageViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		435830CE1C33D42F0074D713 /* CJImageViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CJImageViewUITests.m; sourceTree = "<group>"; };
 		435830D01C33D42F0074D713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4DA15B1591896050AC882F6F /* Pods-CJImageViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewTests.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewTests/Pods-CJImageViewTests.release.xcconfig"; sourceTree = "<group>"; };
-		5A0169C72524251C004F8990 /* EncryptKeyDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EncryptKeyDefine.h; sourceTree = "<group>"; };
+		4BB787D074AD0F4ECC127B15 /* Pods-CJImageViewDebu-CJImageViewProduction.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageViewProduction.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageViewProduction/Pods-CJImageViewDebu-CJImageViewProduction.debug.xcconfig"; sourceTree = "<group>"; };
 		5A0BC8A8251304AD00426728 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		5A0BC8AA251304B800426728 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		5A0BC8AC251304C100426728 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -529,14 +540,24 @@
 		5AF95B23257105EE00A03F02 /* EncodeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncodeModel.h; sourceTree = "<group>"; };
 		5AF95B24257105EE00A03F02 /* GlobalDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalDefault.h; sourceTree = "<group>"; };
 		5B400EDD14C4BA6134FE6508 /* Pods-CJImageViewDefault-CJImageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDefault-CJImageView.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewDefault-CJImageView/Pods-CJImageViewDefault-CJImageView.release.xcconfig"; sourceTree = "<group>"; };
-		6868481593E21019F930C9EA /* Pods_CJImageViewDefault_CJImageView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CJImageViewDefault_CJImageView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D07F785DDEB15BE6404DA39 /* Pods-CJImageViewProduction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewProduction.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewProduction/Pods-CJImageViewProduction.release.xcconfig"; sourceTree = "<group>"; };
 		8B23499F2565684C0083C7B4 /* RunloopDoc */ = {isa = PBXFileReference; lastKnownFileType = text; path = RunloopDoc; sourceTree = "<group>"; };
+		8B2C8734257003C500C43812 /* LHY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHY.m; sourceTree = "<group>"; };
 		8BE8769B256A2D5A00F7F143 /* HttpFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = HttpFile; sourceTree = "<group>"; };
 		910612C4969EA109705B385E /* Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDefault-CJImageViewDebug/Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig"; sourceTree = "<group>"; };
+		95C153413DB822745F1621A2 /* Pods-CJImageViewDebug-CJImageViewProduction.release-debugenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebug-CJImageViewProduction.release-debugenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebug-CJImageViewProduction/Pods-CJImageViewDebug-CJImageViewProduction.release-debugenv.xcconfig"; sourceTree = "<group>"; };
+		A096AD82ADA384886E183539 /* Pods-CJImageViewDebu-CJImageViewProduction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageViewProduction.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageViewProduction/Pods-CJImageViewDebu-CJImageViewProduction.release.xcconfig"; sourceTree = "<group>"; };
 		A2EEC272AACE0C7BF5314D5D /* Pods-CJImageView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageView.debug.xcconfig"; path = "Target Support Files/Pods-CJImageView/Pods-CJImageView.debug.xcconfig"; sourceTree = "<group>"; };
-		AA514D8CF96B42216947AF8A /* Pods_CJImageViewDefault_CJImageViewDebug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CJImageViewDefault_CJImageViewDebug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A38DC7500ECA3EC9AD755F12 /* Pods-CJImageViewProduction.release-debugenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewProduction.release-debugenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewProduction/Pods-CJImageViewProduction.release-debugenv.xcconfig"; sourceTree = "<group>"; };
+		A3C17743F1443E145C3E55A1 /* Pods_CJImageViewDebu_CJImageViewProduction.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CJImageViewDebu_CJImageViewProduction.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A694FE8C9A91469EEB2A73CC /* Pods_CJImageViewDebu_CJImageViewDebug.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CJImageViewDebu_CJImageViewDebug.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B511DD0BCE1A3D01736992AE /* Pods-CJImageViewDebug.release-debugenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebug.release-debugenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebug/Pods-CJImageViewDebug.release-debugenv.xcconfig"; sourceTree = "<group>"; };
+		BA39F04D3C6077182203B114 /* Pods-CJImageViewDebu-CJImageViewDebug.release-debugenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageViewDebug.release-debugenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageViewDebug/Pods-CJImageViewDebu-CJImageViewDebug.release-debugenv.xcconfig"; sourceTree = "<group>"; };
+		C11A3AAD8FBB04C756415771 /* Pods-CJImageViewDebu-CJImageViewDebug.debug-productionenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageViewDebug.debug-productionenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageViewDebug/Pods-CJImageViewDebu-CJImageViewDebug.debug-productionenv.xcconfig"; sourceTree = "<group>"; };
+		C26C927BC48214C060597EE5 /* Pods-CJImageViewDebu-CJImageViewProduction.release-debugenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebu-CJImageViewProduction.release-debugenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebu-CJImageViewProduction/Pods-CJImageViewDebu-CJImageViewProduction.release-debugenv.xcconfig"; sourceTree = "<group>"; };
 		E31582D4A515E135904204A5 /* Pods-CJImageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageView.release.xcconfig"; path = "Target Support Files/Pods-CJImageView/Pods-CJImageView.release.xcconfig"; sourceTree = "<group>"; };
-		E3175E2554BBD5222F9932B5 /* Pods-CJImageViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewTests.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewTests/Pods-CJImageViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E5A56F06A2ED259A1D027C3B /* Pods-CJImageViewDebug.debug-productionenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebug.debug-productionenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebug/Pods-CJImageViewDebug.debug-productionenv.xcconfig"; sourceTree = "<group>"; };
+		F04DDD4621FE029F2871F84F /* Pods-CJImageViewDebug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebug.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebug/Pods-CJImageViewDebug.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -556,7 +577,7 @@
 				5A0BC8A9251304AD00426728 /* AudioToolbox.framework in Frameworks */,
 				5A2E8AE124BC0CE300B859AB /* SystemConfiguration.framework in Frameworks */,
 				5A6694C4253581070073FDF6 /* libbz2.1.0.tbd in Frameworks */,
-				F040FCB469F550DED38D52D3 /* Pods_CJImageViewDefault_CJImageView.framework in Frameworks */,
+				61811E66E85E341A9011A058 /* Pods_CJImageViewDebu_CJImageViewProduction.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,7 +585,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBBF34E2E4D545EBD2B0902E /* Pods_CJImageViewTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,8 +601,8 @@
 			files = (
 				5A6694DD2535832F0073FDF6 /* libbz2.1.0.tbd in Frameworks */,
 				5A5493E924BD539D00C49207 /* SystemConfiguration.framework in Frameworks */,
-				02B4F05EA5EF1CB8040EB821 /* Pods_CJImageViewDefault_CJImageViewDebug.framework in Frameworks */,
 				5A6694DC253583190073FDF6 /* AudioToolbox.framework in Frameworks */,
+				7F87C19F3AFD9BA262A73CFD /* Pods_CJImageViewDebu_CJImageViewDebug.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,9 +627,8 @@
 				5A0BC8A8251304AD00426728 /* AudioToolbox.framework */,
 				5A2E8AE224BC0F1600B859AB /* XCTest.framework */,
 				5A2E8AE024BC0CE300B859AB /* SystemConfiguration.framework */,
-				137C7CF9A3FB6AE76951D9DA /* Pods_CJImageViewTests.framework */,
-				6868481593E21019F930C9EA /* Pods_CJImageViewDefault_CJImageView.framework */,
-				AA514D8CF96B42216947AF8A /* Pods_CJImageViewDefault_CJImageViewDebug.framework */,
+				A694FE8C9A91469EEB2A73CC /* Pods_CJImageViewDebu_CJImageViewDebug.framework */,
+				A3C17743F1443E145C3E55A1 /* Pods_CJImageViewDebu_CJImageViewProduction.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -630,7 +649,7 @@
 		435830A71C33D42F0074D713 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				435830A61C33D42F0074D713 /* CJImageView.app */,
+				435830A61C33D42F0074D713 /* CJImageViewProduction.app */,
 				435830BF1C33D42F0074D713 /* CJImageViewTests.xctest */,
 				435830CA1C33D42F0074D713 /* CJImageViewUITests.xctest */,
 				5A5493F624BD539D00C49207 /* CJImageViewDebug.app */,
@@ -675,6 +694,7 @@
 			children = (
 				435830C31C33D42F0074D713 /* CJImageViewTests.m */,
 				435830C51C33D42F0074D713 /* Info.plist */,
+				8B2C8734257003C500C43812 /* LHY.m */,
 			);
 			path = CJImageViewTests;
 			sourceTree = "<group>";
@@ -733,7 +753,7 @@
 		5A109690249B4C54000398F5 /* Resources(资源) */ = {
 			isa = PBXGroup;
 			children = (
-				5AF95B1E257105EE00A03F02 /* Marcro */,
+				5AF95B1E257105EE00A03F02 /* GlobalDefault */,
 				5A685EC224D2E1A500BF9737 /* Const */,
 				5A109691249B4C54000398F5 /* PrefixHeader */,
 			);
@@ -1131,7 +1151,6 @@
 				5A66952525358CE60073FDF6 /* FontAndColorMacros.h */,
 				5A3557FC249CAEC6002DAD41 /* Marcros.h */,
 				5A38B49A250F7C9F0077F6DE /* ConstantString.h */,
-				5A0169C72524251C004F8990 /* EncryptKeyDefine.h */,
 				5A2ACCCC2538582D0023A55E /* BlockDefine.h */,
 			);
 			path = Const;
@@ -1331,7 +1350,7 @@
 			path = Permission;
 			sourceTree = "<group>";
 		};
-		5AF95B1E257105EE00A03F02 /* Marcro */ = {
+		5AF95B1E257105EE00A03F02 /* GlobalDefault */ = {
 			isa = PBXGroup;
 			children = (
 				5AF95B23257105EE00A03F02 /* EncodeModel.h */,
@@ -1341,20 +1360,42 @@
 				5AF95B24257105EE00A03F02 /* GlobalDefault.h */,
 				5AF95B21257105EE00A03F02 /* GlobalDefault.m */,
 			);
-			path = Marcro;
+			path = GlobalDefault;
 			sourceTree = "<group>";
 		};
 		953F6B6241D510F9F38C53F0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E3175E2554BBD5222F9932B5 /* Pods-CJImageViewTests.debug.xcconfig */,
-				4DA15B1591896050AC882F6F /* Pods-CJImageViewTests.release.xcconfig */,
 				A2EEC272AACE0C7BF5314D5D /* Pods-CJImageView.debug.xcconfig */,
 				E31582D4A515E135904204A5 /* Pods-CJImageView.release.xcconfig */,
 				31860A404CBEE57C2AB66B48 /* Pods-CJImageViewDefault-CJImageView.debug.xcconfig */,
 				5B400EDD14C4BA6134FE6508 /* Pods-CJImageViewDefault-CJImageView.release.xcconfig */,
 				910612C4969EA109705B385E /* Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig */,
 				174461B9A157BA562CA1E8F0 /* Pods-CJImageViewDefault-CJImageViewDebug.release.xcconfig */,
+				F04DDD4621FE029F2871F84F /* Pods-CJImageViewDebug.debug.xcconfig */,
+				E5A56F06A2ED259A1D027C3B /* Pods-CJImageViewDebug.debug-productionenv.xcconfig */,
+				225E36B610B8AD17B81B8E86 /* Pods-CJImageViewDebug.release.xcconfig */,
+				B511DD0BCE1A3D01736992AE /* Pods-CJImageViewDebug.release-debugenv.xcconfig */,
+				2A2E710AFF156BC0DDB771A3 /* Pods-CJImageViewDebug-CJImageViewProduction.debug.xcconfig */,
+				2321AEF78444579260FD48CB /* Pods-CJImageViewDebug-CJImageViewProduction.debug-productionenv.xcconfig */,
+				2A5900EF5FCE1D1696207D48 /* Pods-CJImageViewDebug-CJImageViewProduction.release.xcconfig */,
+				95C153413DB822745F1621A2 /* Pods-CJImageViewDebug-CJImageViewProduction.release-debugenv.xcconfig */,
+				4318EDD59C4604BF959B7B58 /* Pods-CJImageViewProduction.debug.xcconfig */,
+				25AFB8DE10EF66043CC91B0C /* Pods-CJImageViewProduction.debug-productionenv.xcconfig */,
+				7D07F785DDEB15BE6404DA39 /* Pods-CJImageViewProduction.release.xcconfig */,
+				A38DC7500ECA3EC9AD755F12 /* Pods-CJImageViewProduction.release-debugenv.xcconfig */,
+				16D5A8D9081A9FE7815E38FA /* Pods-CJImageViewDebu-CJImageView.debug.xcconfig */,
+				1252A71763BAA67C965F1E80 /* Pods-CJImageViewDebu-CJImageView.debug-productionenv.xcconfig */,
+				34C42835FCF7C01648A307BB /* Pods-CJImageViewDebu-CJImageView.release.xcconfig */,
+				300E6A7B4456C0AA279C982F /* Pods-CJImageViewDebu-CJImageView.release-debugenv.xcconfig */,
+				423A6DC746E9A8E0BDC4BB18 /* Pods-CJImageViewDebu-CJImageViewDebug.debug.xcconfig */,
+				C11A3AAD8FBB04C756415771 /* Pods-CJImageViewDebu-CJImageViewDebug.debug-productionenv.xcconfig */,
+				33E9A09BE424DD52D9064AB4 /* Pods-CJImageViewDebu-CJImageViewDebug.release.xcconfig */,
+				BA39F04D3C6077182203B114 /* Pods-CJImageViewDebu-CJImageViewDebug.release-debugenv.xcconfig */,
+				4BB787D074AD0F4ECC127B15 /* Pods-CJImageViewDebu-CJImageViewProduction.debug.xcconfig */,
+				0BBDCF0456EA257993FA1639 /* Pods-CJImageViewDebu-CJImageViewProduction.debug-productionenv.xcconfig */,
+				A096AD82ADA384886E183539 /* Pods-CJImageViewDebu-CJImageViewProduction.release.xcconfig */,
+				C26C927BC48214C060597EE5 /* Pods-CJImageViewDebu-CJImageViewProduction.release-debugenv.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1362,9 +1403,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		435830A51C33D42F0074D713 /* CJImageView */ = {
+		435830A51C33D42F0074D713 /* CJImageViewProduction */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 435830D31C33D42F0074D713 /* Build configuration list for PBXNativeTarget "CJImageView" */;
+			buildConfigurationList = 435830D31C33D42F0074D713 /* Build configuration list for PBXNativeTarget "CJImageViewProduction" */;
 			buildPhases = (
 				43608054DE20D0581E4EE3EC /* [CP] Check Pods Manifest.lock */,
 				435830A21C33D42F0074D713 /* Sources */,
@@ -1377,20 +1418,18 @@
 			);
 			dependencies = (
 			);
-			name = CJImageView;
+			name = CJImageViewProduction;
 			productName = CJImageView;
-			productReference = 435830A61C33D42F0074D713 /* CJImageView.app */;
+			productReference = 435830A61C33D42F0074D713 /* CJImageViewProduction.app */;
 			productType = "com.apple.product-type.application";
 		};
 		435830BE1C33D42F0074D713 /* CJImageViewTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 435830D61C33D42F0074D713 /* Build configuration list for PBXNativeTarget "CJImageViewTests" */;
 			buildPhases = (
-				6984C68D1E601339BEBE6DCB /* [CP] Check Pods Manifest.lock */,
 				435830BB1C33D42F0074D713 /* Sources */,
 				435830BC1C33D42F0074D713 /* Frameworks */,
 				435830BD1C33D42F0074D713 /* Resources */,
-				918E41F9F6A4B04B69657B16 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1429,7 +1468,7 @@
 				5A5493E824BD539D00C49207 /* Frameworks */,
 				5A5493EB24BD539D00C49207 /* Resources */,
 				5A5493F224BD539D00C49207 /* ShellScript */,
-				D507CA3D6950FB1A05F7DF9F /* [CP] Embed Pods Frameworks */,
+				4DE20A423343A84667073D98 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1480,7 +1519,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				435830A51C33D42F0074D713 /* CJImageView */,
+				435830A51C33D42F0074D713 /* CJImageViewProduction */,
 				435830BE1C33D42F0074D713 /* CJImageViewTests */,
 				435830C91C33D42F0074D713 /* CJImageViewUITests */,
 				5A5493A824BD539D00C49207 /* CJImageViewDebug */,
@@ -1573,11 +1612,51 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CJImageViewDefault-CJImageView-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CJImageViewDebu-CJImageViewProduction-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DE20A423343A84667073D98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CJImageViewDebu-CJImageViewDebug/Pods-CJImageViewDebu-CJImageViewDebug-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/QBImagePickerController/QBImagePickerController.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QBImagePickerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CJImageViewDebu-CJImageViewDebug/Pods-CJImageViewDebu-CJImageViewDebug-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5A28829324A0B99C0059F96C /* ShellScript */ = {
@@ -1614,36 +1693,15 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
 		};
-		6984C68D1E601339BEBE6DCB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CJImageViewTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6DB9FDF274DF440A4A23A8DE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CJImageViewDefault-CJImageView/Pods-CJImageViewDefault-CJImageView-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CJImageViewDebu-CJImageViewProduction/Pods-CJImageViewDebu-CJImageViewProduction-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
@@ -1658,6 +1716,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
@@ -1671,67 +1730,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CJImageViewDefault-CJImageView/Pods-CJImageViewDefault-CJImageView-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		918E41F9F6A4B04B69657B16 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CJImageViewTests/Pods-CJImageViewTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Kiwi/Kiwi.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kiwi.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CJImageViewTests/Pods-CJImageViewTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D507CA3D6950FB1A05F7DF9F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CJImageViewDefault-CJImageViewDebug/Pods-CJImageViewDefault-CJImageViewDebug-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
-				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
-				"${BUILT_PRODUCTS_DIR}/QBImagePickerController/QBImagePickerController.framework",
-				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
-				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
-				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
-				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
-				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QBImagePickerController.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CJImageViewDefault-CJImageViewDebug/Pods-CJImageViewDefault-CJImageViewDebug-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CJImageViewDebu-CJImageViewProduction/Pods-CJImageViewDebu-CJImageViewProduction-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ED2273878E84267D473FB068 /* [CP] Check Pods Manifest.lock */ = {
@@ -1749,7 +1748,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CJImageViewDefault-CJImageViewDebug-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CJImageViewDebu-CJImageViewDebug-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1869,6 +1868,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				435830C41C33D42F0074D713 /* CJImageViewTests.m in Sources */,
+				8B2C8735257003C500C43812 /* LHY.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1987,12 +1987,12 @@
 /* Begin PBXTargetDependency section */
 		435830C11C33D42F0074D713 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 435830A51C33D42F0074D713 /* CJImageView */;
+			target = 435830A51C33D42F0074D713 /* CJImageViewProduction */;
 			targetProxy = 435830C01C33D42F0074D713 /* PBXContainerItemProxy */;
 		};
 		435830CC1C33D42F0074D713 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 435830A51C33D42F0074D713 /* CJImageView */;
+			target = 435830A51C33D42F0074D713 /* CJImageViewProduction */;
 			targetProxy = 435830CB1C33D42F0074D713 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -2101,7 +2101,7 @@
 		};
 		435830D41C33D42F0074D713 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 31860A404CBEE57C2AB66B48 /* Pods-CJImageViewDefault-CJImageView.debug.xcconfig */;
+			baseConfigurationReference = 4BB787D074AD0F4ECC127B15 /* Pods-CJImageViewDebu-CJImageViewProduction.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -2129,7 +2129,7 @@
 		};
 		435830D51C33D42F0074D713 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B400EDD14C4BA6134FE6508 /* Pods-CJImageViewDefault-CJImageView.release.xcconfig */;
+			baseConfigurationReference = A096AD82ADA384886E183539 /* Pods-CJImageViewDebu-CJImageViewProduction.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W4RH45VSQ8;
@@ -2156,7 +2156,6 @@
 		};
 		435830D71C33D42F0074D713 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3175E2554BBD5222F9932B5 /* Pods-CJImageViewTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CJImageViewTests/Info.plist;
@@ -2169,7 +2168,6 @@
 		};
 		435830D81C33D42F0074D713 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DA15B1591896050AC882F6F /* Pods-CJImageViewTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = CJImageViewTests/Info.plist;
@@ -2206,7 +2204,7 @@
 		};
 		5A5493F424BD539D00C49207 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 910612C4969EA109705B385E /* Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig */;
+			baseConfigurationReference = 423A6DC746E9A8E0BDC4BB18 /* Pods-CJImageViewDebu-CJImageViewDebug.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -2241,7 +2239,7 @@
 		};
 		5A5493F524BD539D00C49207 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 174461B9A157BA562CA1E8F0 /* Pods-CJImageViewDefault-CJImageViewDebug.release.xcconfig */;
+			baseConfigurationReference = 33E9A09BE424DD52D9064AB4 /* Pods-CJImageViewDebu-CJImageViewDebug.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -2273,6 +2271,265 @@
 			};
 			name = Release;
 		};
+		8BC3A7E1257372330080ACCF /* Debug-ProductionEnv */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug-ProductionEnv";
+		};
+		8BC3A7E2257372330080ACCF /* Debug-ProductionEnv */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BBDCF0456EA257993FA1639 /* Pods-CJImageViewDebu-CJImageViewProduction.debug-productionenv.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = W4RH45VSQ8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
+					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer/Model",
+					"$(PROJECT_DIR)/CJImageView/Tool(工具类)/ijkPlayer",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CJImageView/Resources(资源)/PrefixHeader/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "COCOAPODS=1";
+				INFOPLIST_FILE = CJImageView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = "Debug-ProductionEnv";
+		};
+		8BC3A7E3257372330080ACCF /* Debug-ProductionEnv */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CJImageViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CJImageView.app/CJImageView";
+			};
+			name = "Debug-ProductionEnv";
+		};
+		8BC3A7E4257372330080ACCF /* Debug-ProductionEnv */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CJImageViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CJImageView;
+				USES_XCTRUNNER = YES;
+			};
+			name = "Debug-ProductionEnv";
+		};
+		8BC3A7E5257372330080ACCF /* Debug-ProductionEnv */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C11A3AAD8FBB04C756415771 /* Pods-CJImageViewDebu-CJImageViewDebug.debug-productionenv.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
+					"$(PROJECT_DIR)/CJImageView/Tool(工具类)/ijkPlayer",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CJImageView/Resources(资源)/PrefixHeader/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					DEBUGMARK,
+					"COCOAPODS=1",
+				);
+				INFOPLIST_FILE = CJImageView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = "Debug-ProductionEnv";
+		};
+		8BC3A7E6257372800080ACCF /* Release-DebugEnv */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release-DebugEnv";
+		};
+		8BC3A7E7257372800080ACCF /* Release-DebugEnv */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C26C927BC48214C060597EE5 /* Pods-CJImageViewDebu-CJImageViewProduction.release-debugenv.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = W4RH45VSQ8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
+					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer/Model",
+					"$(PROJECT_DIR)/CJImageView/Tool(工具类)/ijkPlayer",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CJImageView/Resources(资源)/PrefixHeader/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				INFOPLIST_FILE = CJImageView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = "Release-DebugEnv";
+		};
+		8BC3A7E8257372800080ACCF /* Release-DebugEnv */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CJImageViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CJImageView.app/CJImageView";
+			};
+			name = "Release-DebugEnv";
+		};
+		8BC3A7E9257372800080ACCF /* Release-DebugEnv */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CJImageViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = CJImageView;
+				USES_XCTRUNNER = YES;
+			};
+			name = "Release-DebugEnv";
+		};
+		8BC3A7EA257372800080ACCF /* Release-DebugEnv */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA39F04D3C6077182203B114 /* Pods-CJImageViewDebu-CJImageViewDebug.release-debugenv.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
+					"$(PROJECT_DIR)/CJImageView/Tool(工具类)/ijkPlayer",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/CJImageView/Resources(资源)/PrefixHeader/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					DEBUGMARK,
+					"COCOAPODS=1",
+				);
+				INFOPLIST_FILE = CJImageView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cj.CJImageView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = "Release-DebugEnv";
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2280,16 +2537,20 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				435830D11C33D42F0074D713 /* Debug */,
+				8BC3A7E1257372330080ACCF /* Debug-ProductionEnv */,
 				435830D21C33D42F0074D713 /* Release */,
+				8BC3A7E6257372800080ACCF /* Release-DebugEnv */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		435830D31C33D42F0074D713 /* Build configuration list for PBXNativeTarget "CJImageView" */ = {
+		435830D31C33D42F0074D713 /* Build configuration list for PBXNativeTarget "CJImageViewProduction" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				435830D41C33D42F0074D713 /* Debug */,
+				8BC3A7E2257372330080ACCF /* Debug-ProductionEnv */,
 				435830D51C33D42F0074D713 /* Release */,
+				8BC3A7E7257372800080ACCF /* Release-DebugEnv */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2298,7 +2559,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				435830D71C33D42F0074D713 /* Debug */,
+				8BC3A7E3257372330080ACCF /* Debug-ProductionEnv */,
 				435830D81C33D42F0074D713 /* Release */,
+				8BC3A7E8257372800080ACCF /* Release-DebugEnv */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2307,7 +2570,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				435830DA1C33D42F0074D713 /* Debug */,
+				8BC3A7E4257372330080ACCF /* Debug-ProductionEnv */,
 				435830DB1C33D42F0074D713 /* Release */,
+				8BC3A7E9257372800080ACCF /* Release-DebugEnv */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2316,7 +2581,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5A5493F424BD539D00C49207 /* Debug */,
+				8BC3A7E5257372330080ACCF /* Debug-ProductionEnv */,
 				5A5493F524BD539D00C49207 /* Release */,
+				8BC3A7EA257372800080ACCF /* Release-DebugEnv */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

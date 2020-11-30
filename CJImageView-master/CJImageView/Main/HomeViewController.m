@@ -24,11 +24,14 @@ typedef NSString * NSStringResourceKey NS_STRING_ENUM;
     Dlog(@"111111");
 }
 
-
+static NSString *base64_encode_data(NSData *data){
+    
+    return nil;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    CGFloat statuheight = KStatusBarHeight;
+//    CGFloat statuheight = KStatusBarHeight;
     
     
     CFArrayRef cfArray=CFRunLoopCopyAllModes(CFRunLoopGetMain());

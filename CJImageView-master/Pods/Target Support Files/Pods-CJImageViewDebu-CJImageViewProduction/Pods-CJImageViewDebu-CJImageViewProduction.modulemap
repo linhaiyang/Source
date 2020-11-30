@@ -1,0 +1,6 @@
+framework module Pods_CJImageViewDebu_CJImageViewProduction {
+  umbrella header "Pods-CJImageViewDebu-CJImageViewProduction-umbrella.h"
+
+  export *
+  module * { export * }
+}

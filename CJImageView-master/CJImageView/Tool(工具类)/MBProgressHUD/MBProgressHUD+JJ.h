@@ -4,7 +4,7 @@
  作者：Jonas
  **/
 
-#import "MBProgressHUD.h"
+#import "MBProgressHUD/MBProgressHUD.h"
 
 // 统一的显示时长
 #define kHudShowTime 1.5
