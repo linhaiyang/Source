@@ -10,10 +10,10 @@
 
 @implementation EaseBlankPageView
 
-- (instancetype)initWithFrame:(CGRect)frame{
-    self = [super initWithFrame:frame];
+- (instancetype)init{
+    self = [super init];
     if (self) {
-        self.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = [UIColor redColor];
     }
     return self;
 }
@@ -42,11 +42,11 @@
     }
     
     //    布局
-    [_monkeyView mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_monkeyView makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self);
         make.centerY.equalTo(self.top).with.offset(100);
     }];
-    [_tipLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    [_tipLabel makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.centerX.equalTo(self);
         make.top.equalTo(_monkeyView.mas_bottom);
         make.height.mas_equalTo(50);
@@ -60,7 +60,7 @@
         _reloadButton.adjustsImageWhenHighlighted = YES;
         [_reloadButton addTarget:self action:@selector(reloadButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_reloadButton];
-        [_reloadButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        [_reloadButton makeConstraints:^(MASConstraintMaker *make) {
             make.centerX.equalTo(self);
             make.top.equalTo(_tipLabel.mas_bottom);
             make.size.mas_equalTo(CGSizeMake(130, 40));

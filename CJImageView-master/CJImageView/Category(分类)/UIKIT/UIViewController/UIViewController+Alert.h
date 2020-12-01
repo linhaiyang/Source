@@ -14,6 +14,9 @@ typedef void(^UIAlertViewCallBackBlock)(NSInteger buttonIndex);
 //@property (nonatomic, copy) UIAlertViewCallBackBlock alertViewCallBackBlock;
 -(void)alertWithCallBackBlock:(UIAlertViewCallBackBlock)alertViewCallBackBlock title:(NSString *)title cancelButtonName:(NSString *)cancelButtonName defaultButtonTitle:(NSString *)otherButtonName;
 -(void)ActionSheetWithCallBackBlock:(UIAlertViewCallBackBlock)alertViewCallBackBlock  title:(NSString *)msg  cancelButtonName:(NSString *)cancelButtonName otherButtonTitles:(NSArray *)otherButtonTitles;
+
+CG_INLINE void
+BAKit_UITableViewAdaptatIOS11(UITableView *tableView);
 @end
 
 NS_ASSUME_NONNULL_END

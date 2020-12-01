@@ -32,24 +32,27 @@ static char BlankPageViewKey;
         }
     }else{
         if (!self.blankPageView) {
-            self.blankPageView = [[EaseBlankPageView alloc] initWithFrame:self.bounds];
-            Dlog(@"%@------bouns",self.bounds);
+//            self.blankPageView = [[EaseBlankPageView alloc] initWithFrame:self.bounds];
+//            Dlog(@"%@------bouns",self.bounds);
             self.blankPageView.backgroundColor = [UIColor orangeColor];
+            self.blankPageView = [[EaseBlankPageView alloc] init];
         }
         self.blankPageView.hidden = NO;
         [self.blankPageContainer addSubview:self.blankPageView];
-        
+        [self.blankPageView makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
+        }];
         [self.blankPageView configWithType:blankPageType hasData:hasData hasError:hasError reloadButtonBlock:block];
     }
 }
 
 - (UIView *)blankPageContainer{
     UIView *blankPageContainer = self;
-    for (UIView *aView in [self subviews]) {
-        if ([aView isKindOfClass:[UITableView class]]) {
-            blankPageContainer = aView;
-        }
-    }
+//    for (UIView *aView in [self subviews]) {
+//        if ([aView isKindOfClass:[UITableView class]]) {
+//            blankPageContainer = aView;
+//        }
+//    }
     return blankPageContainer;
 }
 @end
@@ -57,17 +60,18 @@ static char BlankPageViewKey;
 
 @implementation UITableView(EaseBlankPage)
 
-//- (void)configBlankPage:(EaseBlankPageType)blankPageType hasData:(BOOL)hasData hasError:(BOOL)hasError reloadButtonBlock:(void (^)(id))block{
-//    if (hasData){
-//        self.backgroundView = nil;
-//    }else{
-//        if (!self.blankPageView) {
-//            self.blankPageView = [[EaseBlankPageView alloc] initWithFrame:self.bounds];
-//            [self.blankPageView configWithType:blankPageType hasData:hasData hasError:hasError reloadButtonBlock:block];
-//        }
-//        self.backgroundView = self.blankPageView;
-//    }
-//}
+- (void)configBlankPage:(EaseBlankPageType)blankPageType hasData:(BOOL)hasData hasError:(BOOL)hasError reloadButtonBlock:(void (^)(id))block{
+    if (hasData){
+        self.backgroundView = nil;
+    }else{
+        if (!self.blankPageView) {
+            self.blankPageView = [[EaseBlankPageView alloc] init];
+            
+            [self.blankPageView configWithType:blankPageType hasData:hasData hasError:hasError reloadButtonBlock:block];
+        }
+        self.backgroundView = self.blankPageView;
+    }
+}
 @end
 
 

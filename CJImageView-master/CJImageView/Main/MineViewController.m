@@ -12,6 +12,7 @@
 #import "UITableViewCell+Tool.h"
 #import "RACObserveController.h"
 #import "UploadImagesViewController.h"
+
 //#import "IJKPlayerController.h"
 @interface MineViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic,strong) NSMutableArray             *dataArray;
@@ -24,35 +25,21 @@
 /**
  @throw [NSException exceptionWithName:@"YYDiskCache init error" reason:@"YYDiskCache must be initialized with a path. Use 'initWithPath:' or 'initWithPath:inlineThreshold:' instead." userInfo:nil];
  */
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.translucent = false;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.fd_prefersNavigationBarHidden = false;
     self.view.backgroundColor=[UIColor whiteColor];
     self.navigationItem.title=@"功能导航";
     if (!self.dataArray) {
-        self.dataArray = [NSMutableArray new];
-//        self.dataArray=[NSMutableArray arrayWithArray:@[@"WebViewController]",@"AfnRequest--SDwebImage",@"UploadImagesViewController",@"RACObserveController",@"IJKPlayerController"]];
+        self.dataArray=[NSMutableArray arrayWithArray:@[@"WebViewController]",@"AfnRequest--SDwebImage",@"UploadImagesViewController",@"RACObserveController",@"IJKPlayerController",@"JSPatch热更新[已被禁止]",@"LKDB数据库运用",@"百度地图",@"二维码",@"照片上传",@"照片上传附带进度",@"字体适配机型",@"日志记录",@"列表倒计时",@"H5交互WebViewJavascriptBridge",@"继承BaseViewController运用",@"列表空白页展现",@"省市区三级联动",@"自定义弹出窗",@"YYText富文本实例",@"列表行展开跟回收隐藏",@"常见表单行类型" ,@"人脸识别注册及验证",@"JavaScriptCore运用",@"Masonry布局实例",@"键盘处理操作",@"自定义导航栏动态显现效果",@"列表只加载显示时Cell的SDWebImage图",@"长按列表行拖动效果",@"关于FDFullscreenPopGesture的运用",@"可复用的滚动子视图",@"音视频功能集合",@"自定义日期选择控件",@"滚动视图"]];
     }
     self.tableV = [self.view addTableViewDelegate:self];
     [self.tableV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
-    }];
-//    self.tableV.backgroundColor = UIColor.redColor;
-//    if (@available(iOS 11.0, *)) {
-//        UIEdgeInsets insert =  [self.tableV adjustedContentInset];
-//    } else {
-//        // Fallback on earlier versions
-//    }
-//    self.tableV setContentOffset:<#(CGPoint)#>
-    if (@available(iOS 11.0, *)) {
-//        self.tableV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    } else {
-        // Fallback on earlier versions
-    }
-    [self.tableV configBlankPage:EaseBlankPageTypeView hasData:false hasError:false reloadButtonBlock:^(id sender) {
-
-    }];
-    self.tableV.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        
     }];
     if (!_fpsLabel) {
         _fpsLabel = [YYFPSLabel new];
@@ -61,9 +48,18 @@
         _fpsLabel.alpha = 0.6;
         [self.view addSubview:_fpsLabel];
     }
-    
-
-    
+//    [self.tableV configBlankPage:EaseBlankPageTypeView hasData:false hasError:false reloadButtonBlock:^(id sender) {
+//
+//    }];
+//    self.tableV.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+//
+//    }];
+//    [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+//
+//    }];
+    [self.tableV headerWithRefreshingBlock:^{
+            
+    } footerWithRefreshingBlock:nil refreshApi:[BaseRequestService new]];
 }
 
 

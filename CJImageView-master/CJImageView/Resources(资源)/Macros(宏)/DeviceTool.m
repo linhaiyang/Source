@@ -9,42 +9,30 @@
 #import "DeviceTool.h"
 @implementation DeviceTool
 +(BOOL)isIPhoneX{
-    if (@available(iOS 11.0, *)) {
-        if ([UIApplication sharedApplication].keyWindow.safeAreaInsets.top >= 34.0||[UIApplication sharedApplication].keyWindow.safeAreaInsets.bottom >= 34.0||[UIApplication sharedApplication].keyWindow.safeAreaInsets.right >= 34.0||[UIApplication sharedApplication].keyWindow.safeAreaInsets.left >= 34.0) {
-            return true;
-        }
-    }
-    return false;
+    return [self statusBarHeight]>20;
 }
 +(CGFloat )statusBarHeight{
     static CGFloat statusHeight;
     if (statusHeight == 0.f) {
+        statusHeight= 20.f;
         if (@available(iOS 11.0, *)) {
             statusHeight = [UIApplication sharedApplication].keyWindow.safeAreaInsets.top;
         }
-        statusHeight= 20.f;
     }
     return statusHeight;
 }
 
 +(CGFloat )NavBarHeight{
-    static CGFloat navBarHeight;
-    if (navBarHeight == 0.f) {
-        if (@available(iOS 11.0, *)) {
-            navBarHeight = [UIApplication sharedApplication].keyWindow.safeAreaInsets.top + 44;
-        }
-        navBarHeight =  64.f;
-    }
-    return navBarHeight;
+    return [self statusBarHeight] + 44;
 }
 
 +(CGFloat )safeBottomHeight{
     static CGFloat safeBottomHeight;
     if (safeBottomHeight == 0.f) {
+        safeBottomHeight = 0.f;
         if (@available(iOS 11.0, *)) {
             safeBottomHeight = [UIApplication sharedApplication].keyWindow.safeAreaInsets.bottom;
         }
-        return 0.f;
     }
     return safeBottomHeight;
 }

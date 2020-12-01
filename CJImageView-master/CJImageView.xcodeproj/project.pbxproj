@@ -189,6 +189,8 @@
 		5AB1B920256647170083408B /* AFNFile in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B91E256647170083408B /* AFNFile */; };
 		5AB1B929256678D30083408B /* MJRefrshDoc in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B928256678D30083408B /* MJRefrshDoc */; };
 		5AB1B92A256678D30083408B /* MJRefrshDoc in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B928256678D30083408B /* MJRefrshDoc */; };
+		5ADABE80257645920077B7C3 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADABE7F257645920077B7C3 /* UIScrollView+Refresh.m */; };
+		5ADABE81257645920077B7C3 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADABE7F257645920077B7C3 /* UIScrollView+Refresh.m */; };
 		5AE1DEDF2501EC4B00F511A6 /* TestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE1DEDE2501EC4B00F511A6 /* TestViewModel.m */; };
 		5AE1DEE1250227A000F511A6 /* TestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE1DEDE2501EC4B00F511A6 /* TestViewModel.m */; };
 		5AE1DEE825024A2000F511A6 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE1DEE725024A2000F511A6 /* LoginModel.m */; };
@@ -484,6 +486,8 @@
 		5AB1B90F2565345E0083408B /* idStyle */ = {isa = PBXFileReference; lastKnownFileType = text; path = idStyle; sourceTree = "<group>"; };
 		5AB1B91E256647170083408B /* AFNFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = AFNFile; sourceTree = "<group>"; };
 		5AB1B928256678D30083408B /* MJRefrshDoc */ = {isa = PBXFileReference; lastKnownFileType = text; path = MJRefrshDoc; sourceTree = "<group>"; };
+		5ADABE7E257645920077B7C3 /* UIScrollView+Refresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Refresh.h"; sourceTree = "<group>"; };
+		5ADABE7F257645920077B7C3 /* UIScrollView+Refresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Refresh.m"; sourceTree = "<group>"; };
 		5AE1DEDD2501EC4B00F511A6 /* TestViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewModel.h; sourceTree = "<group>"; };
 		5AE1DEDE2501EC4B00F511A6 /* TestViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewModel.m; sourceTree = "<group>"; };
 		5AE1DEE625024A2000F511A6 /* LoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
@@ -1016,6 +1020,8 @@
 		5A516F6125189B8C00C346CB /* UIScrollView */ = {
 			isa = PBXGroup;
 			children = (
+				5ADABE7E257645920077B7C3 /* UIScrollView+Refresh.h */,
+				5ADABE7F257645920077B7C3 /* UIScrollView+Refresh.m */,
 			);
 			path = UIScrollView;
 			sourceTree = "<group>";
@@ -1847,6 +1853,7 @@
 				5AF95B29257105EE00A03F02 /* DeviceTool.m in Sources */,
 				5A6694F225358B570073FDF6 /* XYTabBar.m in Sources */,
 				5A66950725358BCC0073FDF6 /* PersonListViewController.m in Sources */,
+				5ADABE80257645920077B7C3 /* UIScrollView+Refresh.m in Sources */,
 				5A66951725358BF40073FDF6 /* DraggingCardViewController.m in Sources */,
 				5A2C022924AC67E70098EC6C /* UIImage+Tool.m in Sources */,
 				5AE8AD9024C04AFD003C08BF /* UITableViewCell+Tool.m in Sources */,
@@ -1931,6 +1938,7 @@
 				5AE9BB912507374B0010945B /* MPUploadImagesService.m in Sources */,
 				5A729A9E25209A0E007A7136 /* NSData+Encrypt.m in Sources */,
 				5AE9BBC725075BB20010945B /* YTKRequest.m in Sources */,
+				5ADABE81257645920077B7C3 /* UIScrollView+Refresh.m in Sources */,
 				5A5493BB24BD539D00C49207 /* GCDSemaphore.m in Sources */,
 				5A5493BC24BD539D00C49207 /* ImageUploadHelper.m in Sources */,
 				5AE9BB97250737C00010945B /* MPUploadImagesHelper.m in Sources */,

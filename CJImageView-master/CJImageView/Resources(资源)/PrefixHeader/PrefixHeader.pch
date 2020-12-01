@@ -32,6 +32,8 @@
 #import "RootWebViewController.h"
 #import "UITableViewCell+Tool.h"
 #import "ConstantString.h"
+#import "UIScrollView+Refresh.h"
+
 /**Foundation*/
 #import "NSDictionary+JSONString.h"
 #import "NSDate+Extension.h"
