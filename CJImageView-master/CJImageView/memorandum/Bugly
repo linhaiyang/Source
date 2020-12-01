@@ -1,0 +1,29 @@
+bugly的卡顿监控原理:
+                  Runloop的两次source的监控
+                  渲染界面的频率来监控帧率
+Bugly符号表的配置 (自动配置：XCode + sh脚本)，直接上传dSYM文件（默认方式 ）
+什么是符号表？
+符号表是内存地址与函数名、文件名、行号的映射表。符号表元素如下所示：
+
+<起始地址> <结束地址> <函数> [<文件名:行号>]
+
+
+为了能快速并准确地定位用户APP发生Crash的代码位置，Bugly使用符号表对APP发生Crash的程序堆栈进行解析和还原。
+
+
+直接上传dSYM文件（默认方式 ）:
+打开工具包中的dSYM_upload.sh，复制所有内容，在新增的Run Scrpit Phase中粘贴
+
+修改新增的Run Scrpit中的 <YOUR_APP_ID> 为您的App ID，<YOUR_APP_KEY>为您的App Key，<YOUR_BUNDLE_ID> 为App的Bundle Id
+
+脚本默认在Debug模式及模拟器编译情况下不会上传符号表，在需要上传的时候，请修改下列选项
+
+Debug模式编译是否上传，1＝上传 0＝不上传，默认不上传
+
+UPLOAD_DEBUG_SYMBOLS=0
+
+模拟器编译是否上传，1＝上传 0＝不上传，默认不上传
+
+UPLOAD_SIMULATOR_SYMBOLS=0
+
+至此，自动上传符号表脚本配置完毕，Bugly 会在每次 Xcode 工程编译后自动完成符号表配置工作。

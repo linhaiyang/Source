@@ -22,7 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    NSArray * array = [NSArray new];
+    NSString * string = [array objectAtIndex:1];
     
     
 //    [loadAinitializeTest initializeTestBegin];

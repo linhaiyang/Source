@@ -33,6 +33,8 @@ static char BlankPageViewKey;
     }else{
         if (!self.blankPageView) {
             self.blankPageView = [[EaseBlankPageView alloc] initWithFrame:self.bounds];
+            Dlog(@"%@------bouns",self.bounds);
+            self.blankPageView.backgroundColor = [UIColor orangeColor];
         }
         self.blankPageView.hidden = NO;
         [self.blankPageContainer addSubview:self.blankPageView];
