@@ -68,12 +68,12 @@
 //    UIImage *image = [UIImage imageWithColor:color];//
 //    [navBar setBackgroundColor:[UIColor clearColor]];
 ////
-//    [navBar setBackgroundImage:[UIImage imageWithColor:[UIColor clearColor]] forBarMetrics:UIBarMetricsDefault];//UIViewController 从导航栏底部开始
+    [navBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];//UIViewController 从导航栏底部开始
     [navBar setBarTintColor:KColorNavDefault];//UIViewController 从导航栏顶部开始
     
-//    navBar.tintColor = [UIColor whiteColor];
+    navBar.tintColor = [UIColor clearColor];
     
-    navBar.translucent = false;
+    navBar.translucent = false;//不透明的
     
     
     [navBar setShadowImage:[UIImage imageWithColor:[UIColor clearColor]]];

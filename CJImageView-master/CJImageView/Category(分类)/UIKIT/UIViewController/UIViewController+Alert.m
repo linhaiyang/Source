@@ -43,4 +43,16 @@
     }]];
     [self presentViewController:alert animated:YES completion:nil];
 }
+
+
+CG_INLINE void
+BAKit_UITableViewAdaptatIOS11(UITableView *tableView)
+{
+    if (@available(iOS 11.0, *))
+    {
+        tableView.estimatedRowHeight = 0.f;
+        tableView.estimatedSectionHeaderHeight = 0.f;
+        tableView.estimatedSectionFooterHeight = 0.f;
+    }
+}
 @end

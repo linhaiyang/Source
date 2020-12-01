@@ -109,12 +109,12 @@ typedef void (^_FDViewControllerWillAppearInjectBlock)(UIViewController *viewCon
         self.fd_willAppearInjectBlock(self, animated);
     }
     if (self.fd_prefersBarTintColor) {
-//        [self.navigationController.navigationBar setBarTintColor:self.fd_prefersBarTintColor];
+        [self.navigationController.navigationBar setBarTintColor:self.fd_prefersBarTintColor];
 //        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:self.fd_prefersBarTintColor] forBarMetrics:UIBarMetricsDefault];
     }else{
 //        [self.navigationController.navigationBar setBackgroundImage:[UIImage imageWithColor:KColorNavDefault] forBarMetrics:UIBarMetricsDefault];
-
-//        [self.navigationController.navigationBar setBarTintColor:KColorNavDefault];
+//        self.navigationController.navigationBar.translucent = false;//不透明的
+        [self.navigationController.navigationBar setBarTintColor:KColorNavDefault];
     }
 }
 

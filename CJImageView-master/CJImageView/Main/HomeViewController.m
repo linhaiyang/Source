@@ -30,10 +30,6 @@ static NSString *base64_encode_data(NSData *data){
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    CGFloat statuheight = KStatusBarHeight;
-    
-    
     CFArrayRef cfArray=CFRunLoopCopyAllModes(CFRunLoopGetMain());
     /**
      <__NSArrayM 0x60000015e400>(
@@ -46,16 +42,11 @@ static NSString *base64_encode_data(NSData *data){
     
     
     UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, KScreen_Height)];
-            bgView.backgroundColor = [UIColor orangeColor];
+    bgView.backgroundColor = [UIColor orangeColor];
     bgView.autoresizingMask = UIViewAutoresizingFlexibleWidth;//横屏后 屏幕宽度 变化，子视图跟着变化
-    
-//            [self.tableV insertSubview:bgView atIndex:0];
+//  [self.tableV insertSubview:bgView atIndex:0];
     [self.view addSubview:bgView];
-
     Dlog(@"%f-------%f",KScreen_Width,bgView);
-   
-
-
 }
 
 /*

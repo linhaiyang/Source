@@ -1,6 +1,6 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '10.0'
-abstract_target 'CJImageViewDebu' do
+abstract_target 'CJImageViewDebu' do#多个target，模拟一个抽象的target
 # Comment the next line if you don't want to use dynamic frameworks Add this if you are targeting iOS 8+ or using Swift
   use_frameworks!
 

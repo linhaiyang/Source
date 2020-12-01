@@ -14,6 +14,11 @@
 #import "MPRequstFailedHelper.h"
 #import "NSString+hash.h"
 
+int const Default_pageSize = 20;
+@interface BaseRequestService()
+@end
+
+
 @implementation BaseRequestService
 //公共头部设置
 - (NSDictionary *)requestHeaderFieldValueDictionary
@@ -78,6 +83,13 @@ failure:(void (^)(YTKBaseRequest *batchRequest))failure{
         NSString *key = @"Asus!@#$%^&*()Store";
         NSString *signature = [NSString stringWithFormat:@"%@%@%@", nonce, timestamp, key].md5String;
         [dic setObject:signature forKey:@"signature"];
+    if (self.page > 0) {
+        [dic setObject:[NSString stringWithFormat:@"%d",self.page] forKey:@"page"];
+        if (self.page_size == 0) {
+            self.page_size = Default_pageSize;
+        }
+        [dic setObject:[NSString stringWithFormat:@"%d",self.page_size] forKey:@"page_size"];
+    }
         return dic;
 }
 

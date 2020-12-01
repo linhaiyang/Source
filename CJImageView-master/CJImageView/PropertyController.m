@@ -34,15 +34,28 @@
 +(void)initialize{
     Dlog(@"initialize调用");
 }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.translucent = true;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor =[UIColor whiteColor];
+//    self.navigationController.navigationBar.translucent = true;
+    self.fd_prefersBarTintColor = UIColor.clearColor;
+    if (@available(iOS 11.0, *)) {
+        self.tableV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        //适用uiviewcontroller从导航以下开始 到 tabbarController上方
+        //加上这两句话，会让tableview的内容视图就是frame的大小。
+        //默认情况下tableview会自动计算出安全区域，也就是内容视图会从64或20(隐藏导航栏时)开始。适用视图控制器从导航底部开始的情况
+    } else {
+//        self.automaticallyAdjustsScrollViewInsets = NO; //默认是YES  iOS 11以下适配
+    }
     LogInApi*request = [[LogInApi alloc] init];
     NSError *loadCacheError = nil;
     if ([request loadCacheWithError:&loadCacheError]) {
         id obj = [NSJSONSerialization JSONObjectWithData:[request responseData] options:NSJSONReadingMutableContainers error:nil];
-        Dlog(@"json loadCacheWithError = %@", obj);
-        }
+    }
     [request startRequestWithCompletionBlockWithSuccess:^(BaseRequestService * _Nonnull batchRequest) {
         LoginModel * model = batchRequest.paraData;
 //        [batchRequest saveResponseDataToCacheFile:batchRequest.responseData];
@@ -87,15 +100,29 @@
                         @"http://img.daimg.com/uploads/allimg/201029/1-201029162106.jpg"
     ];
     [self addTableView];
+    @weakify(self);
     
-    
-    
+    [[RACObserve(self.tableV, contentOffset) filter:^BOOL(id  _Nullable value) {
+            return true;
+    }] subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        CGFloat offset = (CGFloat)[x CGSizeValue].height;
+//        if (offset>100) {
+//            self.navigationController.navigationBar.translucent = false;
+//            [self.navigationController.navigationBar setBarTintColor:KColorNavDefault];
+//        }else{
+//            self.navigationController.navigationBar.translucent = true;
+//            [self.navigationController.navigationBar setBarTintColor: UIColor.clearColor];
+////            self.fd_prefersBarTintColor = UIColor.clearColor;
+//        }
+    }];
+//    RAC(self.tableV,)
     
 }
 -(void)addTableView{
     self.tableV = [self.view addTableViewDelegate:self];
     [self.tableV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
+        make.edges.equalTo(UIEdgeInsetsMake(-KNavHeight, 0, 0, 0));
     }];
     self.tableV.rowHeight = 50.f;
 }
@@ -114,4 +141,5 @@
 //    cell.textLabel.text   = self.dataArray[indexPath.row];
     return cell;
 }
+
 @end
