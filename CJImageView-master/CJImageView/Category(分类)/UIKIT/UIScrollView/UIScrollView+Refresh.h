@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseRequestService.h"
-
+#import <MJRefresh/MJRefreshComponent.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIScrollView (Refresh)

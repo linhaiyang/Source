@@ -13,7 +13,7 @@
 -(void)headerWithRefreshingBlock:(MJRefreshComponentRefreshingBlock)refreshingBlock footerWithRefreshingBlock:(MJRefreshComponentRefreshingBlock)refreshingFootBlock  refreshApi:(BaseRequestService*)api{
     @weakify(self);
     if (refreshingBlock) {
-        self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        MJRefreshStateHeader * head =[MJRefreshNormalHeader headerWithRefreshingBlock:^{
             @strongify(self);
             if (refreshingFootBlock) {
                 api.page = 1;
@@ -21,6 +21,9 @@
             }
             refreshingBlock();
         }];
+        head.lastUpdatedTimeLabel.hidden = true;
+        head.stateLabel.hidden = true;
+        self.mj_header = head;
         [RACObserve(api, page)subscribeNext:^(id  _Nullable x) {//在数据加载完后/加载失败，监听某个属性变化，停止刷新
             @strongify(self);
             [self.mj_header endRefreshing];

@@ -12,6 +12,7 @@
 #import "UITableViewCell+Tool.h"
 #import "RACObserveController.h"
 #import "UploadImagesViewController.h"
+
 //#import "IJKPlayerController.h"
 @interface MineViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic,strong) NSMutableArray             *dataArray;
@@ -50,12 +51,15 @@
 //    [self.tableV configBlankPage:EaseBlankPageTypeView hasData:false hasError:false reloadButtonBlock:^(id sender) {
 //
 //    }];
-    self.tableV.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        
-    }];
-    [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+//    self.tableV.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+//
+//    }];
+//    [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+//
+//    }];
+    [self.tableV headerWithRefreshingBlock:^{
             
-    }];
+    } footerWithRefreshingBlock:nil refreshApi:[BaseRequestService new]];
 }
 
 
