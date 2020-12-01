@@ -29,7 +29,6 @@
 		5A10967E249B417B000398F5 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109676249B417B000398F5 /* GCDTimer.m */; };
 		5A10967F249B417B000398F5 /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109677249B417B000398F5 /* GCDGroup.m */; };
 		5A109680249B417B000398F5 /* GCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109679249B417B000398F5 /* GCDSemaphore.m */; };
-		5A17163924907D8D001CAADF /* DashLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A17163824907D8D001CAADF /* DashLineView.m */; };
 		5A17164624921914001CAADF /* MBProgressHUD+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A17164024921914001CAADF /* MBProgressHUD+JJ.m */; };
 		5A17164824921914001CAADF /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5A17164424921914001CAADF /* MBProgressHUD.bundle */; };
 		5A1D45F024B2FCE5006CA3CF /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D45EF24B2FCE4006CA3CF /* YYFPSLabel.m */; };
@@ -96,7 +95,6 @@
 		5A5493C324BD539D00C49207 /* UINavigationItem+Margin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2882BB24A343A10059F96C /* UINavigationItem+Margin.m */; };
 		5A5493C424BD539D00C49207 /* UIView+EaseBlankPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A355806249CC03A002DAD41 /* UIView+EaseBlankPage.m */; };
 		5A5493C624BD539D00C49207 /* PropertyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2882A924A1FB970059F96C /* PropertyController.m */; };
-		5A5493C724BD539D00C49207 /* DashLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A17163824907D8D001CAADF /* DashLineView.m */; };
 		5A5493C824BD539D00C49207 /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109677249B417B000398F5 /* GCDGroup.m */; };
 		5A5493CA24BD539D00C49207 /* UINavigationController+StackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2882B124A343A10059F96C /* UINavigationController+StackManager.m */; };
 		5A5493CB24BD539D00C49207 /* UIViewController+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A28829F24A1CE5B0059F96C /* UIViewController+Swizzle.m */; };
@@ -262,8 +260,6 @@
 		5AFDBC1F2574A32600235EAA /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A0BC8BA2513050800426728 /* VideoToolbox.framework */; };
 		5AFDBCD22574DAD100235EAA /* Public.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFDBCD12574DAD100235EAA /* Public.xcassets */; };
 		5AFDBCD32574DAD100235EAA /* Public.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFDBCD12574DAD100235EAA /* Public.xcassets */; };
-		5AFDBCE12574DF4A00235EAA /* Main.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFDBCE02574DF4A00235EAA /* Main.xcassets */; };
-		5AFDBCE22574DF4A00235EAA /* Main.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AFDBCE02574DF4A00235EAA /* Main.xcassets */; };
 		61811E66E85E341A9011A058 /* Pods_CJImageViewDebu_CJImageViewProduction.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C17743F1443E145C3E55A1 /* Pods_CJImageViewDebu_CJImageViewProduction.framework */; };
 		7F87C19F3AFD9BA262A73CFD /* Pods_CJImageViewDebu_CJImageViewDebug.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A694FE8C9A91469EEB2A73CC /* Pods_CJImageViewDebu_CJImageViewDebug.framework */; };
 		8B2349A02565684C0083C7B4 /* RunloopDoc in Resources */ = {isa = PBXBuildFile; fileRef = 8B23499F2565684C0083C7B4 /* RunloopDoc */; };
@@ -343,8 +339,6 @@
 		5A10967B249B417B000398F5 /* GCDGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDGroup.h; sourceTree = "<group>"; };
 		5A10967C249B417B000398F5 /* GCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDTimer.h; sourceTree = "<group>"; };
 		5A109692249B4C54000398F5 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		5A17163724907D8D001CAADF /* DashLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DashLineView.h; sourceTree = "<group>"; };
-		5A17163824907D8D001CAADF /* DashLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DashLineView.m; sourceTree = "<group>"; };
 		5A17164024921914001CAADF /* MBProgressHUD+JJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+JJ.m"; sourceTree = "<group>"; };
 		5A17164324921914001CAADF /* MBProgressHUD+JJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+JJ.h"; sourceTree = "<group>"; };
 		5A17164424921914001CAADF /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
@@ -554,7 +548,6 @@
 		5AFDBCC72574D2B900235EAA /* TargetConfigContants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TargetConfigContants.h; sourceTree = "<group>"; };
 		5AFDBCD02574DA3400235EAA /* NotificationContants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationContants.h; sourceTree = "<group>"; };
 		5AFDBCD12574DAD100235EAA /* Public.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Public.xcassets; sourceTree = "<group>"; };
-		5AFDBCE02574DF4A00235EAA /* Main.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Main.xcassets; sourceTree = "<group>"; };
 		5B400EDD14C4BA6134FE6508 /* Pods-CJImageViewDefault-CJImageView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDefault-CJImageView.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewDefault-CJImageView/Pods-CJImageViewDefault-CJImageView.release.xcconfig"; sourceTree = "<group>"; };
 		7D07F785DDEB15BE6404DA39 /* Pods-CJImageViewProduction.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewProduction.release.xcconfig"; path = "Target Support Files/Pods-CJImageViewProduction/Pods-CJImageViewProduction.release.xcconfig"; sourceTree = "<group>"; };
 		8B23499F2565684C0083C7B4 /* RunloopDoc */ = {isa = PBXFileReference; lastKnownFileType = text; path = RunloopDoc; sourceTree = "<group>"; };
@@ -794,8 +787,6 @@
 			children = (
 				5A17164324921914001CAADF /* MBProgressHUD+JJ.h */,
 				5A17164024921914001CAADF /* MBProgressHUD+JJ.m */,
-				5A17163724907D8D001CAADF /* DashLineView.h */,
-				5A17163824907D8D001CAADF /* DashLineView.m */,
 				5A17164424921914001CAADF /* MBProgressHUD.bundle */,
 			);
 			path = MBProgressHUD;
@@ -1384,7 +1375,6 @@
 				435830B21C33D42F0074D713 /* Main.storyboard */,
 				435830B51C33D42F0074D713 /* Assets.xcassets */,
 				5AFDBCD12574DAD100235EAA /* Public.xcassets */,
-				5AFDBCE02574DF4A00235EAA /* Main.xcassets */,
 				435830B71C33D42F0074D713 /* LaunchScreen.storyboard */,
 				435830BA1C33D42F0074D713 /* Info.plist */,
 			);
@@ -1571,7 +1561,6 @@
 				5AB1B8FD256533AC0083408B /* NSHomeDirectoryFile in Resources */,
 				5AB1B8D325652CD00083408B /* UDID in Resources */,
 				5AB1B8F62565329F0083408B /* SDWebImageFile in Resources */,
-				5AFDBCE12574DF4A00235EAA /* Main.xcassets in Resources */,
 				5AB1B9102565345E0083408B /* idStyle in Resources */,
 				8BE8769C256A2D5A00F7F143 /* HttpFile in Resources */,
 				5AFDBCD22574DAD100235EAA /* Public.xcassets in Resources */,
@@ -1613,7 +1602,6 @@
 				5AB1B8FE256533AC0083408B /* NSHomeDirectoryFile in Resources */,
 				5AB1B8D425652CD00083408B /* UDID in Resources */,
 				5AB1B8F72565329F0083408B /* SDWebImageFile in Resources */,
-				5AFDBCE22574DF4A00235EAA /* Main.xcassets in Resources */,
 				5AB1B9112565345E0083408B /* idStyle in Resources */,
 				8BE8769D256A2D5A00F7F143 /* HttpFile in Resources */,
 				5AFDBCD32574DAD100235EAA /* Public.xcassets in Resources */,
@@ -1841,7 +1829,6 @@
 				5A35580D249CC03A002DAD41 /* UIView+EaseBlankPage.m in Sources */,
 				5A2882AA24A1FB970059F96C /* PropertyController.m in Sources */,
 				5A4815362559268E001DC006 /* loadAinitializeTest.m in Sources */,
-				5A17163924907D8D001CAADF /* DashLineView.m in Sources */,
 				5A25BA2825148F6400E49ACD /* UIView+Frame.m in Sources */,
 				5A10967F249B417B000398F5 /* GCDGroup.m in Sources */,
 				5A2882C224A343A10059F96C /* UINavigationController+StackManager.m in Sources */,
@@ -1956,7 +1943,6 @@
 				5AF95AC92570F9F400A03F02 /* cameraHelper.m in Sources */,
 				5A5493C624BD539D00C49207 /* PropertyController.m in Sources */,
 				5AF95B28257105EE00A03F02 /* GlobalDefault.m in Sources */,
-				5A5493C724BD539D00C49207 /* DashLineView.m in Sources */,
 				5A5493C824BD539D00C49207 /* GCDGroup.m in Sources */,
 				5A5493CA24BD539D00C49207 /* UINavigationController+StackManager.m in Sources */,
 				5AE9BB892507336A0010945B /* MPUploadImageItemService.m in Sources */,
@@ -2151,7 +2137,7 @@
 					PRODUCT,
 					DEBUG,
 				);
-				INFOPLIST_FILE = "/Users/shengkaili/Downloads/互联网下载文件/project/Source/CJImageView-master/CJImageView/Resources(资源)/LocalResource/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CJImageView/Resources(资源)/LocalResource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -2184,7 +2170,7 @@
 					"COCOAPODS=1",
 					PRODUCT,
 				);
-				INFOPLIST_FILE = "/Users/shengkaili/Downloads/互联网下载文件/project/Source/CJImageView-master/CJImageView/Resources(资源)/LocalResource/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/CJImageView/Resources(资源)/LocalResource/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
