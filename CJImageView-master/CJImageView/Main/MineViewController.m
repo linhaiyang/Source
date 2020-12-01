@@ -31,7 +31,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.fd_prefersNavigationBarHidden = false;
+//    self.fd_prefersNavigationBarHidden = false;
     self.view.backgroundColor=[UIColor whiteColor];
     self.navigationItem.title=@"功能导航";
     if (!self.dataArray) {
@@ -41,12 +41,18 @@
     [self.tableV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
+//    self.fd_prefersNavigationBarHidden = true;
     if (!_fpsLabel) {
         _fpsLabel = [YYFPSLabel new];
         _fpsLabel.frame=CGRectMake(20, 80, 30, 30);
         [_fpsLabel sizeToFit];
         _fpsLabel.alpha = 0.6;
         [self.view addSubview:_fpsLabel];
+    }
+    if (@available(iOS 11.0, *)) {
+//        self.tableV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        // Fallback on earlier versions
     }
 //    [self.tableV configBlankPage:EaseBlankPageTypeView hasData:false hasError:false reloadButtonBlock:^(id sender) {
 //
@@ -84,11 +90,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    if ([self.tableV.mj_header isRefreshing]) {
-        [self.tableV.mj_header endRefreshing];
-    }else{
-        [self.tableV.mj_header beginRefreshing];
-    }
     NSString * title = [self.dataArray objectAtIndex:indexPath.row];
     if ([title containsString:@"WebViewController"]) {
         RootWebViewController * controller = [[RootWebViewController alloc]initWithUrl:@"https://storetest.quyibao.com/store/activity/cut/index.html?id=51"];
@@ -106,7 +107,13 @@
     }else if ([title containsString:@"IJKPlayerController"]){
 //        IJKPlayerController * controller = [IJKPlayerController new];
 //        [self.navigationController pushViewController:controller animated:YES];
-    }
+    }else{
+        if ([self.tableV.mj_header isRefreshing]) {
+            [self.tableV.mj_header endRefreshing];
+        }else{
+            [self.tableV.mj_header beginRefreshing];
+        }
+}
     
 }
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{

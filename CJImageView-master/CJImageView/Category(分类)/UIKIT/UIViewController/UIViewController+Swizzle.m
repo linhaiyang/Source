@@ -108,10 +108,14 @@
     return false;
 }
 
--(void)setRequest:(BaseRequestService *)request{
-    objc_setAssociatedObject(self, @selector(request), request, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
--(BaseRequestService *)request{
-    return objc_getAssociatedObject(self, _cmd);
+//-(void)setRequest:(BaseRequestService *)request{
+//    objc_setAssociatedObject(self, @selector(request), request, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+//}
+//-(BaseRequestService *)request{
+//    return objc_getAssociatedObject(self, _cmd);
+//}
+
+-(void)dealloc{
+    Dlog(@"%@---dealloc",NSStringFromClass([self class]));
 }
 @end

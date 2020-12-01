@@ -12,5 +12,5 @@
 @interface UIViewController (Swizzle)
 /// Whether the interactive pop gesture is disabled when contained in a navigation
 /// stack.
-@property (nonatomic, strong) BaseRequestService * request;
+//@property (nonatomic, strong) BaseRequestService * request;
 @end

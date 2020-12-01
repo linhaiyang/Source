@@ -32,7 +32,7 @@
     UITableView*tableV = [[UITableView alloc] initWithFrame:CGRectZero style:(UITableViewStylePlain)];
     tableV.showsVerticalScrollIndicator = NO;
     tableV.showsHorizontalScrollIndicator = NO;
-    tableV.alwaysBounceVertical = YES;
+//    tableV.alwaysBounceVertical = YES;
     tableV.delegate = delegate;
     tableV.tableHeaderView = [[UIView alloc]initWithFrame:CGRectZero];
     tableV.dataSource = delegate;

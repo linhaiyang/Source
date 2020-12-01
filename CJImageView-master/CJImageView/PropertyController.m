@@ -37,15 +37,17 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.translucent = true;
+    [self.navigationController.navigationBar setBarTintColor: UIColor.clearColor];
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.fd_prefersNavigationBarHidden = true;
     self.view.backgroundColor =[UIColor whiteColor];
-//    self.navigationController.navigationBar.translucent = true;
+    self.navigationController.navigationBar.translucent = true;
     self.fd_prefersBarTintColor = UIColor.clearColor;
+    [self addTableView];
     if (@available(iOS 11.0, *)) {
         self.tableV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-        //适用uiviewcontroller从导航以下开始 到 tabbarController上方
         //加上这两句话，会让tableview的内容视图就是frame的大小。
         //默认情况下tableview会自动计算出安全区域，也就是内容视图会从64或20(隐藏导航栏时)开始。适用视图控制器从导航底部开始的情况
     } else {
@@ -99,7 +101,6 @@
                         @"http://img.daimg.com/uploads/allimg/201029/1-2010291F401.jpg",
                         @"http://img.daimg.com/uploads/allimg/201029/1-201029162106.jpg"
     ];
-    [self addTableView];
     @weakify(self);
     
     [[RACObserve(self.tableV, contentOffset) filter:^BOOL(id  _Nullable value) {
@@ -107,14 +108,14 @@
     }] subscribeNext:^(id  _Nullable x) {
         @strongify(self);
         CGFloat offset = (CGFloat)[x CGSizeValue].height;
-//        if (offset>100) {
-//            self.navigationController.navigationBar.translucent = false;
-//            [self.navigationController.navigationBar setBarTintColor:KColorNavDefault];
-//        }else{
-//            self.navigationController.navigationBar.translucent = true;
-//            [self.navigationController.navigationBar setBarTintColor: UIColor.clearColor];
-////            self.fd_prefersBarTintColor = UIColor.clearColor;
-//        }
+        if (offset>150) {
+            self.navigationController.navigationBar.translucent = false;
+            [self.navigationController.navigationBar setBarTintColor:KColorNavDefault];
+        }else{
+            self.navigationController.navigationBar.translucent = true;
+            [self.navigationController.navigationBar setBarTintColor: UIColor.clearColor];
+//            self.fd_prefersBarTintColor = UIColor.clearColor;
+        }
     }];
 //    RAC(self.tableV,)
     
@@ -122,7 +123,7 @@
 -(void)addTableView{
     self.tableV = [self.view addTableViewDelegate:self];
     [self.tableV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(UIEdgeInsetsMake(-KNavHeight, 0, 0, 0));
+        make.edges.equalTo(UIEdgeInsetsMake(-0, 0, 0, 0));
     }];
     self.tableV.rowHeight = 50.f;
 }
