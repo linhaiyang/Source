@@ -54,7 +54,7 @@
     } else {
         // Fallback on earlier versions
     }
-//    [self.tableV configBlankPage:EaseBlankPageTypeView hasData:false hasError:false reloadButtonBlock:^(id sender) {
+//    [self.view configBlankPage:EaseBlankPageTypeView hasData:false hasError:false reloadButtonBlock:^(id sender) {
 //
 //    }];
 //    self.tableV.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{

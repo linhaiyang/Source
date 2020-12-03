@@ -7,6 +7,8 @@
 //
 
 #import "XLWebViewController.h"
+#import "UIWebVIew+SwipeGesture.h"
+
 //#import "XLJSHandler.h"
 //#import "HeaderModel.h"
 //#import "AESCipher.h"
@@ -53,6 +55,7 @@ static NSString * const estimatedProgressKeyPath = @"estimatedProgress";
     else{
         self.automaticallyAdjustsScrollViewInsets = NO;
     }
+    [self.webView useSwipeGesture];
 }
 
 #pragma mark 初始化webview
@@ -106,12 +109,6 @@ static NSString * const estimatedProgressKeyPath = @"estimatedProgress";
     Dlog(@"%@-----",keyPath);
     if (object == self.webView && [keyPath isEqualToString:canGoBackKeyPath]) {
         BOOL cangoBack = [[change objectForKey:NSKeyValueChangeNewKey] boolValue];
-        if (cangoBack) {
-            self.fd_interactivePopDisabled = true;
-        }else{
-            self.fd_interactivePopDisabled = false;
-        }
-        
     }else{
         [self updateProgress:_webView.estimatedProgress];
     }
