@@ -1,0 +1,58 @@
+
+1.UIViewControllerContextTransitioning  转场动画，就是控制器切换过程中的过渡动画。
+
+<UIViewControllerAnimatedTransitioning>
+ //返回过度时间
+ - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext;
+ //所有的过渡动画事务都在这个方法里面完成
+ - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext;
+
+
+
+
+
+
+
+
+UIViewAnimationTransition------做uiview动画时候用
+
+
+
+
+
+
+Layer---->CAAnimation
+
+            CATransition *anima = [CATransition animation];
+            anima.type = @"cube";//设置动画的类型
+            anima.subtype = kCATransitionFromRight; //设置动画的方向
+            anima.duration = 0.3f;
+            
+            self.window.rootViewController = self.mainTabBar;
+            
+            [kAppWindow.layer addAnimation:anima forKey:@"revealAnimation"];
+
+
+
+
+//画动画效果的圆
+    CAShapeLayer *layer = [CAShapeLayer layer];
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(260, 170, 60, 60) cornerRadius:30];
+    
+    layer.path = path.CGPath;
+    layer.lineWidth=5;
+    layer.fillColor = [UIColor clearColor].CGColor;
+    layer.strokeColor = [UIColor purpleColor].CGColor;
+    
+    [self.view.layer addSublayer:layer];
+    
+    CABasicAnimation *checkAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    checkAnimation.duration = 5;
+    checkAnimation.fromValue = @(0.0f);
+    checkAnimation.toValue = @(1.0f);
+    checkAnimation.delegate = self;
+    [checkAnimation setValue:@"checkAnimation" forKey:@"animationName"];
+    [layer addAnimation:checkAnimation forKey:nil];
+
+
+Transitioning

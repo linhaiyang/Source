@@ -95,6 +95,8 @@
     [UIView setAnimationBeginsFromCurrentState:YES];
     [UIView setAnimationTransition:transition forView:self.view cache:YES];
     [UIView commitAnimations];
+//    [UIView animateKeyframesWithDuration:<#(NSTimeInterval)#> delay:<#(NSTimeInterval)#> options:(UIViewKeyframeAnimationOptions) animations:<#^(void)animations#> completion:<#^(BOOL finished)completion#>]
+//    [UIView animateWithDuration:<#(NSTimeInterval)#> delay:<#(NSTimeInterval)#> options:<#(UIViewAnimationOptions)#> animations:<#^(void)animations#> completion:<#^(BOOL finished)completion#>]
 }
 
 - (UIViewController *)popViewControllerWithTransition:(UIViewAnimationTransition)transition {
