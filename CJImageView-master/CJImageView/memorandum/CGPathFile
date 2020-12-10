@@ -1,5 +1,52 @@
 
 CGContextRef：类似于画布 你在上面操作你想绘制的东西。
+// 覆盖drawRect方法，你可以在此自定义绘画和动画
+- (void)drawRect:(CGRect)rect
+{
+    //An opaque type that represents a Quartz 2D drawing environment.
+    //一个不透明类型的Quartz 2D绘画环境,相当于一个画布,你可以在上面任意绘画
+    CGContextRef context = UIGraphicsGetCurrentContext();
+}
+
+-(void)drawRect:(CGRect)rect{
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextAddArc(context, 100, 20, 15, 0, 2*M_PI, 0);
+    CGContextSetLineWidth(context, 1.f);
+    CGContextDrawPath(context, kCGPathFill);//绘制填充
+    
+    CGContextStrokePath(context);
+    
+    
+    /**
+     
+     UIGraphicsBeginImageContext(rect.size);
+     CGContextRef context = UIGraphicsGetCurrentContext();
+     
+     CGContextSetFillColorWithColor(context, [color CGColor]);
+     CGContextFillRect(context, rect);
+     
+     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+     UIGraphicsEndImageContext();
+     
+     */
+    
+    /** 图片圆角
+     CGRect rect = CGRectMake(0, 0, size.width, size.height);
+     
+     UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
+     CGContextRef ctx = UIGraphicsGetCurrentContext();
+     UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(radius, radius)];
+     CGContextAddPath(ctx,path.CGPath);
+     CGContextClip(ctx);
+     [self drawInRect:rect];
+     CGContextDrawPath(ctx, kCGPathFillStroke);
+     UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
+     UIGraphicsEndImageContext();
+     return newImage;
+     
+     */
+}
+
 
 UIBezierPath：类似于画笔 配置需要绘制的参数就能画出想要到额东西。
 

@@ -6,11 +6,11 @@
 //  Copyright © 2020 C.K.Lian. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface loadAinitializeTest : NSObject
+@interface loadAinitializeTest : UIView
 +(void)initializeTestBegin __attribute__((unavailable("已取消")));
 
 @property(nonatomic,copy)NSString * (^didSelecBlock)(NSString*blockT);
