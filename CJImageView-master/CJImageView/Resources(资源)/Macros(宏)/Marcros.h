@@ -35,6 +35,24 @@
 || [_object isKindOfClass:[NSNull class]] \
 || ([_object respondsToSelector:@selector(length)] && [(NSData *)_object length] == 0) \
 || ([_object respondsToSelector:@selector(count)] && [(NSArray *)_object count] == 0))
+
+
+
+//单例化一个类
+#define SINGLETON_FOR_HEADER(className) \
+\
++ (className *)shared##className;
+
+#define SINGLETON_FOR_CLASS(className) \
+\
++ (className *)shared##className { \
+static className *shared##className = nil; \
+static dispatch_once_t onceToken; \
+dispatch_once(&onceToken, ^{ \
+shared##className = [[self alloc] init]; \
+}); \
+return shared##className; \
+}
 /**
  const
 这个单词翻译成中文是“常量”的意思

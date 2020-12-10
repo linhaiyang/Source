@@ -1,0 +1,141 @@
+
+CGContextRef：类似于画布 你在上面操作你想绘制的东西。
+// 覆盖drawRect方法，你可以在此自定义绘画和动画
+- (void)drawRect:(CGRect)rect
+{
+    //An opaque type that represents a Quartz 2D drawing environment.
+    //一个不透明类型的Quartz 2D绘画环境,相当于一个画布,你可以在上面任意绘画
+    CGContextRef context = UIGraphicsGetCurrentContext();
+}
+
+-(void)drawRect:(CGRect)rect{
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextAddArc(context, 100, 20, 15, 0, 2*M_PI, 0);
+    CGContextSetLineWidth(context, 1.f);
+    CGContextDrawPath(context, kCGPathFill);//绘制填充
+    
+    CGContextStrokePath(context);
+    
+    
+    /**
+     
+     UIGraphicsBeginImageContext(rect.size);
+     CGContextRef context = UIGraphicsGetCurrentContext();
+     
+     CGContextSetFillColorWithColor(context, [color CGColor]);
+     CGContextFillRect(context, rect);
+     
+     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+     UIGraphicsEndImageContext();
+     
+     */
+    
+    /** 图片圆角
+     CGRect rect = CGRectMake(0, 0, size.width, size.height);
+     
+     UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
+     CGContextRef ctx = UIGraphicsGetCurrentContext();
+     UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(radius, radius)];
+     CGContextAddPath(ctx,path.CGPath);
+     CGContextClip(ctx);
+     [self drawInRect:rect];
+     CGContextDrawPath(ctx, kCGPathFillStroke);
+     UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
+     UIGraphicsEndImageContext();
+     return newImage;
+     
+     */
+}
+
+
+UIBezierPath：类似于画笔 配置需要绘制的参数就能画出想要到额东西。
+
+CGPath：这个东西没用过 ，和CGContextRef类似，只是调用接口的差别。
+
+
+-(void)drawRect:(CGRect)rect{
+    UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(10, 10)];
+    CAShapeLayer * layer = [CAShapeLayer new];
+    layer.path = path.CGPath;
+    layer.fillColor = UIColor.whiteColor.CGColor;
+    layer.lineWidth = 1.f;
+    layer.strokeColor=[UIColor clearColor].CGColor;
+    [self.contentView.layer insertSublayer:layer atIndex:0];
+    
+    
+    
+    UIBezierPath *aPath=[UIBezierPath bezierPath];
+    [aPath moveToPoint:CGPointMake(50, 170)];
+    [aPath addLineToPoint:CGPointMake(80, 130)];
+    [aPath addLineToPoint:CGPointMake(80, 200)];
+    [aPath stroke];
+    [aPath closePath];
+}
+    
+    
+//画虚线
+-(void)drawDottedLine
+{
+    UIBezierPath* aPath = [UIBezierPath bezierPath];
+    //两点
+    [aPath moveToPoint:CGPointMake(200, 130)];
+    [aPath addLineToPoint:CGPointMake(320, 130)];
+    
+    CAShapeLayer *layer = [CAShapeLayer layer];
+    layer.lineWidth=1;
+    layer.strokeColor=[UIColor blackColor].CGColor;
+    layer.path=aPath.CGPath;
+    layer.lineDashPattern=@[@3,@1]; //3=线的宽度 1=每条线的间距
+    [self.view.layer addSublayer:layer];
+}
+
+
+
+
+-------CGContextRef-----------
+
+//操作说明：
+//CGContextRef context = UIGraphicsGetCurrentContext();    设置上下文
+//CGContextMoveToPoint    开始画线
+//CGContextAddLineToPoint    画直线
+//CGContextAddEllipseInRect    画一椭圆
+//CGContextSetLineCap    设置线条终点形状
+//CGContextSetLineDash    画虚线
+//CGContextAddRect    画一方框
+//CGContextStrokeRect    指定矩形
+//CGContextStrokeRectWithWidth    指定矩形线宽度
+//CGContextStrokeLineSegments    一些直线
+//CGContextAddArc    画已曲线 前俩店为中心 中间俩店为起始弧度 最后一数据为0则顺时针画 1则逆时针
+//CGContextAddArcToPoint(context,0,0, 2, 9, 40);    先画俩条线从point 到 第1点 ， 从第1点到第2点的线 切割里面的圆
+//CGContextSetShadowWithColor    设置阴影
+//CGContextSetRGBFillColor    这只填充颜色
+//CGContextSetRGBStrokeColor    画笔颜色设置
+//CGContextSetFillColorSpace    颜色空间填充
+//CGConextSetStrokeColorSpace    颜色空间画笔设置
+//CGContextFillRect    补充当前填充颜色的rect
+//CGContextSetAlaha    透明度
+//CGContextTranslateCTM    改变画布位置
+//CGContextSetLineWidth    设置线的宽度
+//CGContextAddRects    画多个线
+//CGContextAddQuadCurveToPoint    画曲线
+//CGContextStrokePath    开始绘制图片
+//CGContextDrawPath    设置绘制模式
+//CGContextClosePath    封闭当前线路
+//CGContextTranslateCTM(context, 0, rect.size.height); CGContextScaleCTM(context, 1.0, -1.0);    反转画布
+//CGContextSetInterpolationQuality    背景内置颜色质量等级
+//CGImageCreateWithImageInRect    从原图片中取小图
+//CGColorGetComponents（）    返回颜色的各个直 以及透明度 可用只读const float 来接收 是个数组
+//CGContextEOFillPath    使用奇偶规则填充当前路径
+//CGContextFillPath    使用非零绕数规则填充当前路径
+//CGContextFillRect    填充指定的矩形
+//CGContextFillRects    填充指定的一些矩形
+//CGContextFillEllipseInRect    填充指定矩形中的椭圆
+//CGContextDrawPath    两个参数决定填充规则，
+//kCGPathFill    表示用非零绕数规则，
+//kCGPathEOFill    表示用奇偶规则，
+//kCGPathFillStroke    表示填充
+//kCGPathEOFillStroke    表示描线，不是填充
+//CGContextSetBlendMode    设置blend mode.
+//CGContextSaveGState    保存blend mode.
+//CGContextRestoreGState    在没有保存之前，用这个函数还原blend mode.
+//CGContextSetBlendMode    混合俩种颜色

@@ -1,5 +1,5 @@
 NSData为二进制数据，在文件操作（如保存到本地）、网络、以及核心图形图像中使用较广泛
-[[NSString alloc] initWithData:self encoding:NSUTF8StringEncoding];
+[[NSString alloc] initWithData:self encoding:NSUTF8StringEncoding];//NSUTF8StringEncoding中文编码
 
 const Byte ivbyte[] = {1,2,3,4,5,6,7,8};
 unsigned char buffer[1024];

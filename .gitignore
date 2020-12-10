@@ -22,7 +22,7 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 *.xcuserstate
-
+ijkPlayer/
 ## Obj-C/Swift specific
 *.hmap
 
