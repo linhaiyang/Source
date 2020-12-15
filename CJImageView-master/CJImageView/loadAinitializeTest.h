@@ -11,8 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface loadAinitializeTest : UIView
-+(void)initializeTestBegin __attribute__((unavailable("已取消")));
-
++(void)initializeTestBegin ;//__attribute__((unavailable("已取消")))
++ (instancetype)dataWithBytesNoCopy:(void *)bytes;
 @property(nonatomic,copy)NSString * (^didSelecBlock)(NSString*blockT);
 
 @end

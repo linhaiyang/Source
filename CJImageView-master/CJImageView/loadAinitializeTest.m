@@ -14,11 +14,19 @@
 //        return @"1";
 //    };
 //}
-
++ (void)dataWithBytesNoCopy:(void *)bytes{
+    
+}
 +(void)initializeTestBegin{
     
+    NSString * string = @"loadAinitializeTest";
+    NSData * data = [string dataUsingEncoding:NSUTF8StringEncoding];
     
+    Byte byte[] = {1,2,3,4,5,6,7,8,9,10};
+    NSData *byteData = [[NSData alloc] initWithBytes:byte length:10];
     
+    //NSData 转换成 Byte
+    Byte *testByte = (Byte *)[data bytes];//\x01\x02\x03\x04\x05\x06\a\b\t\n
     
     
     /**

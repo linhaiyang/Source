@@ -7,7 +7,7 @@
 //
 
 #import "HomeViewController.h"
-
+#import "loadAinitializeTest.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
 
@@ -33,8 +33,15 @@ static NSString *base64_encode_data(NSData *data){
 //    CGFloat statuheight = KStatusBarHeight;
     
 
+//    const char c [4] = "ccc";
+    
     
     CFArrayRef cfArray=CFRunLoopCopyAllModes(CFRunLoopGetMain());
+    
+    [loadAinitializeTest initializeTestBegin];
+    
+    [loadAinitializeTest dataWithBytesNoCopy:(__bridge void * _Nonnull)(self)];
+    
     /**
      <__NSArrayM 0x60000015e400>(
      UITrackingRunLoopMode,
