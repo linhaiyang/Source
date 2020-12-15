@@ -13,6 +13,8 @@
 #import "BaseNavigationController.h"
 #import "SYSafeCategory.h"
 #import "MainTabBarController.h"
+#import "AppDelegate+AppService.h"
+
 @interface AppDelegate ()
 
 @end
@@ -38,6 +40,7 @@
 //    self.window.rootViewController = vc;
     [self initRootViewController];
     [self.window makeKeyAndVisible];
+    [self registKeyBoradManager];
     return YES;
 }
 -(void)initRootViewController{

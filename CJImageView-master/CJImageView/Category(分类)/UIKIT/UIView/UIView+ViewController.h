@@ -12,7 +12,7 @@
 /**
  *  @brief  找到当前view所在的viewcontroler
  */
-@property (readonly) UIViewController *viewController;
+//@property (readonly) UIViewController *viewController;
 
 
 

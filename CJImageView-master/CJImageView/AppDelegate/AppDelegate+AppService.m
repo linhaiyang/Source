@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate+AppService.h"
+#import <IQKeyboardManager/KeyboardManager.h>
 @implementation AppDelegate (AppService)
 
 
@@ -17,11 +18,16 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     [[UIButton appearance] setExclusiveTouch:YES];
+//    self.window.rootViewController = 
 //    [[UIButton appearance] setShowsTouchWhenHighlighted:YES];
 //    [UIActivityIndicatorView appearanceWhenContainedInInstancesOfClasses:[MBProgressHUD class], nil].color = [UIColor whiteColor];
     [UIActivityIndicatorView appearanceWhenContainedInInstancesOfClasses:@[[MBProgressHUD class]]].color = [UIColor whiteColor];
-    if (@available(iOS 11.0, *)){
-        [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
-    }
+//    if (@available(iOS 11.0, *)){
+//        [[UIScrollView appearance] setContentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentNever];
+//    }
+}
+
+-(void)registKeyBoradManager{
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = true;//Resigns Keyboard on touching outside of UITextField/View.
 }
 @end

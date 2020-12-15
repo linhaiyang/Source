@@ -8,12 +8,13 @@
 
 #import "loadAinitializeTest.h"
 @implementation loadAinitializeTest
-//- (void)initCSocket{
-//    self.didSelecBlock = ^NSString * _Nonnull(NSString * _Nonnull blockT) {
-//
-//        return @"1";
-//    };
-//}
+- (void)initCSocket{
+    UIViewController * controller=self.viewController;
+    self.didSelecBlock = ^NSString * _Nonnull(NSString * _Nonnull blockT) {
+
+        return @"1";
+    };
+}
 
 +(void)initializeTestBegin{
     
