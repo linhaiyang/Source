@@ -139,4 +139,3 @@ CGPath：这个东西没用过 ，和CGContextRef类似，只是调用接口的�
 //CGContextSaveGState    保存blend mode.
 //CGContextRestoreGState    在没有保存之前，用这个函数还原blend mode.
 //CGContextSetBlendMode    混合俩种颜色
-
