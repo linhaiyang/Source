@@ -17,6 +17,14 @@
 + (void)dataWithBytesNoCopy:(void *)bytes{
     
 }
+- (void)initCSocket{
+    UIViewController * controller=self.viewController;
+    self.didSelecBlock = ^NSString * _Nonnull(NSString * _Nonnull blockT) {
+
+        return @"1";
+    };
+}
+
 +(void)initializeTestBegin{
     
     NSString * string = @"loadAinitializeTest";

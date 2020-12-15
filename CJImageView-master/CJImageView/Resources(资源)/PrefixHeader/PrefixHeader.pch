@@ -20,7 +20,6 @@
 #import "UINavigationController+BATransitions.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
 #import "UIImage+Tool.h"
-#import "UIView+ViewController.h"
 #import "UINavigationController+JZExtension.h"
 #import "UIImage+FX.h"
 #import "UIViewController+Swizzle.h"
@@ -62,5 +61,5 @@
 #import <ReactiveObjC/RACEXTScope.h>
 #import <UIImageView+WebCache.h>
 #import <MJRefresh/MJRefresh.h>
-
+#import <KeyboardManager.h>
 #endif /* PrefixHeader_pch */

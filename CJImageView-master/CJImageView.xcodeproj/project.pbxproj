@@ -86,6 +86,8 @@
 		5A39C23D256BB54A0052A133 /* NSBundle+Path.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A39C23B256BB54A0052A133 /* NSBundle+Path.m */; };
 		5A39C2CA256E5CBB0052A133 /* RACFile in Resources */ = {isa = PBXBuildFile; fileRef = 5A39C2C9256E5CBB0052A133 /* RACFile */; };
 		5A39C2CB256E5CBB0052A133 /* RACFile in Resources */ = {isa = PBXBuildFile; fileRef = 5A39C2C9256E5CBB0052A133 /* RACFile */; };
+		5A4365872583187F0033B521 /* KeyBoardManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4365862583187F0033B521 /* KeyBoardManagerController.m */; };
+		5A4365882583187F0033B521 /* KeyBoardManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4365862583187F0033B521 /* KeyBoardManagerController.m */; };
 		5A4815362559268E001DC006 /* loadAinitializeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4815352559268E001DC006 /* loadAinitializeTest.m */; };
 		5A4815372559268E001DC006 /* loadAinitializeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4815352559268E001DC006 /* loadAinitializeTest.m */; };
 		5A4DA3EF24A9E56000DB175A /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4DA3EE24A9E56000DB175A /* BaseEntity.m */; };
@@ -199,6 +201,8 @@
 		5AB1B920256647170083408B /* AFNFile in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B91E256647170083408B /* AFNFile */; };
 		5AB1B929256678D30083408B /* MJRefrshDoc in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B928256678D30083408B /* MJRefrshDoc */; };
 		5AB1B92A256678D30083408B /* MJRefrshDoc in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B928256678D30083408B /* MJRefrshDoc */; };
+		5AB821202588B783003560A9 /* git in Resources */ = {isa = PBXBuildFile; fileRef = 5AB8211F2588B783003560A9 /* git */; };
+		5AB821212588B783003560A9 /* git in Resources */ = {isa = PBXBuildFile; fileRef = 5AB8211F2588B783003560A9 /* git */; };
 		5ADABE80257645920077B7C3 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADABE7F257645920077B7C3 /* UIScrollView+Refresh.m */; };
 		5ADABE81257645920077B7C3 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADABE7F257645920077B7C3 /* UIScrollView+Refresh.m */; };
 		5ADABE8C257743950077B7C3 /* NSString+AttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADABE8B257743950077B7C3 /* NSString+AttributedString.m */; };
@@ -449,6 +453,8 @@
 		5A39C23A256BB54A0052A133 /* NSBundle+Path.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+Path.h"; sourceTree = "<group>"; };
 		5A39C23B256BB54A0052A133 /* NSBundle+Path.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+Path.m"; sourceTree = "<group>"; };
 		5A39C2C9256E5CBB0052A133 /* RACFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = RACFile; sourceTree = "<group>"; };
+		5A4365852583187F0033B521 /* KeyBoardManagerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyBoardManagerController.h; sourceTree = "<group>"; };
+		5A4365862583187F0033B521 /* KeyBoardManagerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyBoardManagerController.m; sourceTree = "<group>"; };
 		5A4815342559268E001DC006 /* loadAinitializeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = loadAinitializeTest.h; sourceTree = "<group>"; };
 		5A4815352559268E001DC006 /* loadAinitializeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = loadAinitializeTest.m; sourceTree = "<group>"; };
 		5A4DA3ED24A9E56000DB175A /* BaseEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
@@ -514,6 +520,7 @@
 		5AB1B90F2565345E0083408B /* idStyle */ = {isa = PBXFileReference; lastKnownFileType = text; path = idStyle; sourceTree = "<group>"; };
 		5AB1B91E256647170083408B /* AFNFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = AFNFile; sourceTree = "<group>"; };
 		5AB1B928256678D30083408B /* MJRefrshDoc */ = {isa = PBXFileReference; lastKnownFileType = text; path = MJRefrshDoc; sourceTree = "<group>"; };
+		5AB8211F2588B783003560A9 /* git */ = {isa = PBXFileReference; lastKnownFileType = text; path = git; sourceTree = "<group>"; };
 		5ADABE7E257645920077B7C3 /* UIScrollView+Refresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Refresh.h"; sourceTree = "<group>"; };
 		5ADABE7F257645920077B7C3 /* UIScrollView+Refresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Refresh.m"; sourceTree = "<group>"; };
 		5ADABE8A257743950077B7C3 /* NSString+AttributedString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+AttributedString.h"; sourceTree = "<group>"; };
@@ -728,6 +735,8 @@
 				5A2882A924A1FB970059F96C /* PropertyController.m */,
 				5A55A96A2500F27A0037DACF /* RACObserveController.h */,
 				5A55A96B2500F27A0037DACF /* RACObserveController.m */,
+				5A4365852583187F0033B521 /* KeyBoardManagerController.h */,
+				5A4365862583187F0033B521 /* KeyBoardManagerController.m */,
 				5A4815342559268E001DC006 /* loadAinitializeTest.h */,
 				5A4815352559268E001DC006 /* loadAinitializeTest.m */,
 				5AB1B8D125652CAA0083408B /* memorandum */,
@@ -1268,6 +1277,7 @@
 				5ADABED2257889360077B7C3 /* AnalyzeFile */,
 				5A0E8C032579D761002F8708 /* AnimationFile */,
 				5A5DDC7C257F872400DC17D1 /* CGPathFile */,
+				5AB8211F2588B783003560A9 /* git */,
 			);
 			path = memorandum;
 			sourceTree = "<group>";
@@ -1635,6 +1645,7 @@
 				5AB1B8E8256530EA0083408B /* CharDoc in Resources */,
 				5A0E8C042579D761002F8708 /* AnimationFile in Resources */,
 				5A0E8C17257A0A5A002F8708 /* TransitionFile in Resources */,
+				5AB821202588B783003560A9 /* git in Resources */,
 				5AB1B929256678D30083408B /* MJRefrshDoc in Resources */,
 				5AB1B8EF256531C70083408B /* DataDoc in Resources */,
 				5ADABED3257889360077B7C3 /* AnalyzeFile in Resources */,
@@ -1682,6 +1693,7 @@
 				5AB1B8E9256530EA0083408B /* CharDoc in Resources */,
 				5A0E8C052579D761002F8708 /* AnimationFile in Resources */,
 				5A0E8C18257A0A5A002F8708 /* TransitionFile in Resources */,
+				5AB821212588B783003560A9 /* git in Resources */,
 				5AB1B92A256678D30083408B /* MJRefrshDoc in Resources */,
 				5AB1B8F0256531C70083408B /* DataDoc in Resources */,
 				5ADABED4257889360077B7C3 /* AnalyzeFile in Resources */,
@@ -1875,6 +1887,7 @@
 				5AE9BBC625075BB20010945B /* YTKRequest.m in Sources */,
 				5A0E8C0E2579DB6E002F8708 /* XYTransition.m in Sources */,
 				5AE9BBD4250784090010945B /* ClassifyModel.m in Sources */,
+				5A4365872583187F0033B521 /* KeyBoardManagerController.m in Sources */,
 				5A38B486250F4F130077F6DE /* UIView+AddSubView.m in Sources */,
 				5A28829624A19D100059F96C /* BaseViewController.m in Sources */,
 				5AE9BBC025075BB20010945B /* YTKChainRequestAgent.m in Sources */,
@@ -2084,6 +2097,7 @@
 				5A5493DA24BD539D00C49207 /* LogInApi.m in Sources */,
 				5A5493DB24BD539D00C49207 /* GCDTimer.m in Sources */,
 				5A5493DC24BD539D00C49207 /* UINavigationItem+Loading.m in Sources */,
+				5A4365882583187F0033B521 /* KeyBoardManagerController.m in Sources */,
 				5A5493DD24BD539D00C49207 /* UINavigationController+JZExtension.m in Sources */,
 				5A5493DE24BD539D00C49207 /* JRSwizzle.m in Sources */,
 				5A4815372559268E001DC006 /* loadAinitializeTest.m in Sources */,

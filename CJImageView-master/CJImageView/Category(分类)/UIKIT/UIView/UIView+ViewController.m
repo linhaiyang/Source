@@ -12,15 +12,15 @@
 /**
  *  @brief  找到当前view所在的viewcontroler
  */
-- (UIViewController *)viewController
-{
-    UIResponder *responder = self.nextResponder;
-    do {
-        if ([responder isKindOfClass:[UIViewController class]]) {
-            return (UIViewController *)responder;
-        }
-        responder = responder.nextResponder;
-    } while (responder);
-    return nil;
-}
+//- (UIViewController *)viewController
+//{
+//    UIResponder *responder = self.nextResponder;
+//    do {
+//        if ([responder isKindOfClass:[UIViewController class]]) {
+//            return (UIViewController *)responder;
+//        }
+//        responder = responder.nextResponder;
+//    } while (responder);
+//    return nil;
+//}
 @end

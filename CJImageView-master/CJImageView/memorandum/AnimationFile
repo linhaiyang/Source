@@ -17,6 +17,13 @@
 UIViewAnimationTransition------做uiview动画时候用
 
 
+    [UIView beginAnimations:nil context:NULL];
+    [self pushViewController:controller animated:NO];
+    [UIView setAnimationDuration:0.5];
+    [UIView setAnimationCurve:UIViewAnimationTransitionCurlUp];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [UIView setAnimationTransition:transition forView:self.view cache:YES];
+    [UIView commitAnimations];
 
 
 

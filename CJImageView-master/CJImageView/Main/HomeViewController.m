@@ -58,6 +58,9 @@ static NSString *base64_encode_data(NSData *data){
 //  [self.tableV insertSubview:bgView atIndex:0];
     [self.view addSubview:bgView];
     Dlog(@"%f-------%f",KScreen_Width,bgView);
+    
+    IQTextView * textView = [[IQTextView alloc]init];
+    
 }
 
 /*
