@@ -55,7 +55,7 @@
     CGFloat endAngle = (CGFloat)(2*M_PI);
     UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:center radius:radius startAngle:startAngle endAngle:endAngle clockwise:YES];
     _layer.path = path.CGPath;
-//    _layer.transform = cgaff
+
     _layer.strokeStart = 0.f;
     _layer.strokeEnd = 1.f;
 //    _layer.backgroundColor=[UIColor redColor].CGColor;
