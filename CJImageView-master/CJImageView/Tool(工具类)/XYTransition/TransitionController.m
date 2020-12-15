@@ -29,7 +29,7 @@
     self.view.backgroundColor = UIColor.whiteColor;
     _timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     self.duration = 1.5f;
-    self.view.backgroundColor = UIColor.lightGrayColor;
+    
     self.progressLayer.frame = CGRectMake(0, 0, KScreen_Width, KScreen_Height);
     [self updatePath];
     [self.view.layer addSublayer:self.progressLayer];
