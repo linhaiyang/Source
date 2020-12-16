@@ -47,13 +47,13 @@
     self.navigationController.navigationBar.translucent = true;
     self.fd_prefersBarTintColor = UIColor.clearColor;
     [self addTableView];
-    if (@available(iOS 11.0, *)) {
-        self.tableV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-        //加上这两句话，会让tableview的内容视图就是frame的大小。
-        //默认情况下tableview会自动计算出安全区域，也就是内容视图会从64或20(隐藏导航栏时)开始。适用视图控制器从导航底部开始的情况
-    } else {
-//        self.automaticallyAdjustsScrollViewInsets = NO; //默认是YES  iOS 11以下适配
-    }
+//    if (@available(iOS 11.0, *)) {
+//        self.tableV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+//        //加上这两句话，会让tableview的内容视图就是frame的大小。
+//        //默认情况下tableview会自动计算出安全区域，也就是内容视图会从64或20(隐藏导航栏时)开始。适用视图控制器从导航底部开始的情况
+//    } else {
+////        self.automaticallyAdjustsScrollViewInsets = NO; //默认是YES  iOS 11以下适配
+//    }
     LogInApi*request = [[LogInApi alloc] init];
     NSError *loadCacheError = nil;
     if ([request loadCacheWithError:&loadCacheError]) {

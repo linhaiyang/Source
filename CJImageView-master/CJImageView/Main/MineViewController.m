@@ -52,7 +52,7 @@
         [self.view addSubview:_fpsLabel];
     }
     if (@available(iOS 11.0, *)) {
-//        self.tableV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        self.tableV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     } else {
         // Fallback on earlier versions
     }
