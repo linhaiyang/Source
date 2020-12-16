@@ -14,7 +14,7 @@
 
 
 
-2.UIViewAnimationTransition------做uiview动画时候用
+UIViewAnimationTransition------做uiview动画时候用
 
 
     [UIView beginAnimations:nil context:NULL];
@@ -28,7 +28,7 @@
 
 
 
-3.Layer---->CAAnimation
+Layer---->CAAnimation
 
             CATransition *anima = [CATransition animation];
             anima.type = @"cube";//设置动画的类型
