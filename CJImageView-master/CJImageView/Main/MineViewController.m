@@ -54,7 +54,7 @@
     if (@available(iOS 11.0, *)) {
 //        self.tableV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     } else {
-        // Fallback on earlier versions
+        // Fallback on earlier versions table
     }
 //    [self.view configBlankPage:EaseBlankPageTypeView hasData:false hasError:false reloadButtonBlock:^(id sender) {
 //
