@@ -41,6 +41,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    CATransition
 //    self.fd_prefersNavigationBarHidden = true;
     self.view.backgroundColor =[UIColor whiteColor];
     self.navigationController.navigationBar.translucent = true;

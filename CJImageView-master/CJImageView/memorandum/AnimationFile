@@ -62,4 +62,5 @@
     [layer addAnimation:checkAnimation forKey:nil];
 
 
-Transitioning
+CATransition: CAAnimation
+//CATransaction
