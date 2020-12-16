@@ -8,7 +8,10 @@
 
 #import "TransitionController.h"
 #import "XYTransitionProtocol.h"
-@interface TransitionController ()<XYTransitionProtocol>
+#import "XYTransition.h"
+#import "TransitionToController.h"
+
+@interface TransitionController ()<XYTransitionProtocol,UINavigationControllerDelegate>
 @property(nonatomic,strong)UIImageView * baseImage;
 @property (nonatomic, readonly) CAShapeLayer *progressLayer;
 @property (nonatomic, strong) CAMediaTimingFunction *timingFunction;
@@ -23,9 +26,21 @@
 @synthesize layer=_layer;
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.baseImage = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"test_image_2"]];
-//    self.baseImage.frame = CGRectMake(10, 100, 100, 100);
-//    [self.view addSubview:_baseImage];
+    
+    self.navigationController.delegate = self;
+    
+    
+    UIImage * testImage = [UIImage imageNamed:@"test_image_2"];
+    self.baseImage = [[UIImageView alloc]initWithImage:testImage];
+    self.baseImage.frame = CGRectMake(0, KNavHeight+100, testImage.size.width/4, testImage.size.height/4);
+    [self.view addSubview:_baseImage];
+    self.baseImage.userInteractionEnabled = true;
+    @weakify(self);
+    [self.baseImage addTapGestureRecognizer:^(UITapGestureRecognizer *recognizer, NSString *gestureId) {
+        @strongify(self);
+        TransitionToController * controller = [TransitionToController new];
+        [self.navigationController pushViewController:controller animated:YES];
+    }];
     self.view.backgroundColor = UIColor.whiteColor;
     _timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     self.duration = 1.5f;
@@ -185,7 +200,17 @@ cameraIrisHollowClose //相机镜头关上效果(不支持过渡方向)
     
     
 }
-
+- (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                   animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                fromViewController:(UIViewController *)fromVC
+                                                           toViewController:(UIViewController *)toVC{
+    XYTransition * transition = [XYTransition new];
+    transition.isPush = true;
+    if (operation == UINavigationControllerOperationPop) {
+        return nil;
+    }
+    return transition;
+}
 
 /**
  转场动画的目标View 需要转场动画的对象必须实现该方法并返回要做动画的View

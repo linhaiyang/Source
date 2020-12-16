@@ -37,6 +37,7 @@
 #import "NSFileManager+Paths.h"
 #import "NSString+Size.h"
 #import "NSSet+Block.h"
+#import "UIView+GestureCallback.h"
 
 /**Resources(资源)*/
 #import "GlobalDefault.h"

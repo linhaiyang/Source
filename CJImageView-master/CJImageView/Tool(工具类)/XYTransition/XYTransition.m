@@ -35,7 +35,9 @@
     if (_isPush) {
         [self pushAnimateTransition:transitionContext];
     }else{
-        [self popAnimateTransition:transitionContext];
+        UIViewController<XYTransitionProtocol> * toVC = (UIViewController <XYTransitionProtocol> * )[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+        [toVC.navigationController popViewControllerAnimated:true];
+//        [self popAnimateTransition:transitionContext];
     }
 }
 /**
@@ -73,37 +75,37 @@
     
     
 //    //复制一个Cell用于显示动画效果
-//    __block UIImageView * snapShot =[[UIImageView alloc] initWithImage:[fromCellView snapshotImage]];
-//    snapShot.backgroundColor = [UIColor clearColor];
-//    [containerView addSubview:snapShot];
+    __block UIImageView * snapShot =[[UIImageView alloc] initWithImage:[self snapshotImage:fromCellView]];
+    snapShot.backgroundColor = [UIColor clearColor];
+    [containerView addSubview:snapShot];
 //
-//    [snapShot setOrigin:nowViewPoint];
+    [snapShot setUi_origin:nowViewPoint];
 //    //计算缩放比例
-//    _animationScale = MAX([toVC targetTransitionView].width, snapShot.width) / MIN([toVC targetTransitionView].width, snapShot.width);
-//    CGRect originFrame = fromView.frame;
-//    [UIView animateWithDuration:self.animationDuration animations:^{
-//        //设置缩放变换 x,y分别放大多少倍
-//        snapShot.transform =  CGAffineTransformMakeScale(_animationScale,_animationScale);
-//        [snapShot setOrigin:toViewPoint];
-//
-//        fromView.alpha = 0;
-//        fromView.transform = snapShot.transform;
-//        fromView.frame = CGRectMake(-(nowViewPoint.x)*_animationScale,
-//                                    -(nowViewPoint.y)*_animationScale + toViewPoint.y,
-//                                    fromVC.view.frame.size.width,
-//                                    fromVC.view.frame.size.height);
+    _animationScale = MAX([toVC targetTransitionView].ui_width, snapShot.ui_width) / MIN([toVC targetTransitionView].ui_width, snapShot.ui_width);
+    CGRect originFrame = fromView.frame;
+    [UIView animateWithDuration:self.animationDuration animations:^{
+        //设置缩放变换 x,y分别放大多少倍
+        snapShot.transform =  CGAffineTransformMakeScale(_animationScale,_animationScale);
+        [snapShot setUi_origin:toViewPoint];
+
+        fromView.alpha = 0;
+        fromView.transform = snapShot.transform;
+        fromView.frame = CGRectMake(-(nowViewPoint.x)*_animationScale,
+                                    -(nowViewPoint.y)*_animationScale + toViewPoint.y,
+                                    fromVC.view.frame.size.width,
+                                    fromVC.view.frame.size.height);
 //        kAppDelegate.mainTabBar.tabBar.alpha = 0;
-//    } completion:^(BOOL finished) {
-//        if (finished) {
-//            //没有这句过滤动画就不会结束
-//            [snapShot removeFromSuperview];
-//            toView.hidden = NO;
-//            fromView.alpha = 1;
-//            fromVC.view.transform = CGAffineTransformIdentity;
-//            fromVC.view.frame = originFrame;
-//            [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
-//        }
-//    }];
+    } completion:^(BOOL finished) {
+        if (finished) {
+            //没有这句过滤动画就不会结束
+            [snapShot removeFromSuperview];
+            toView.hidden = NO;
+            fromView.alpha = 1;
+            fromVC.view.transform = CGAffineTransformIdentity;
+            fromVC.view.frame = originFrame;
+            [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
+        }
+    }];
     
 }
 
@@ -135,7 +137,7 @@
     //计算cell偏移量 为了更好的现实动画
 //    CGFloat offsetY = fromVC.navigationController.navigationBarHidden ? 0.0 : 64;
 //    //复制一份截图用于动画过程
-//    __block UIImageView * snapShot =[[UIImageView alloc] initWithImage:[toCellView snapshotImage]];
+    __block UIImageView * snapShot =[[UIImageView alloc] initWithImage:[self snapshotImage:toCellView]];
 //
 //    //计算缩放比例
 //    _animationScale = MAX(fromCellView.width, snapShot.width) / MIN(fromCellView.width, snapShot.width);
@@ -189,4 +191,14 @@
 //        //        }
 //    }];
 }
+
+
+-(UIImage*)snapshotImage:(UIView*)supView{
+    UIGraphicsBeginImageContextWithOptions(supView.bounds.size, supView.opaque, 0);
+    [supView.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *snap = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return snap;
+}
+
 @end

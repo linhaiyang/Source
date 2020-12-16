@@ -90,6 +90,8 @@
 		5A4365882583187F0033B521 /* KeyBoardManagerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4365862583187F0033B521 /* KeyBoardManagerController.m */; };
 		5A4815362559268E001DC006 /* loadAinitializeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4815352559268E001DC006 /* loadAinitializeTest.m */; };
 		5A4815372559268E001DC006 /* loadAinitializeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4815352559268E001DC006 /* loadAinitializeTest.m */; };
+		5A483F41258A10B4004A49C5 /* UIView+GestureCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A483F40258A10B4004A49C5 /* UIView+GestureCallback.m */; };
+		5A483F42258A10B4004A49C5 /* UIView+GestureCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A483F40258A10B4004A49C5 /* UIView+GestureCallback.m */; };
 		5A4DA3EF24A9E56000DB175A /* BaseEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A4DA3EE24A9E56000DB175A /* BaseEntity.m */; };
 		5A5493AD24BD539D00C49207 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A28829524A19D100059F96C /* BaseViewController.m */; };
 		5A5493AE24BD539D00C49207 /* UINavigationController+BATransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2882B524A343A10059F96C /* UINavigationController+BATransitions.m */; };
@@ -457,6 +459,8 @@
 		5A4365862583187F0033B521 /* KeyBoardManagerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyBoardManagerController.m; sourceTree = "<group>"; };
 		5A4815342559268E001DC006 /* loadAinitializeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = loadAinitializeTest.h; sourceTree = "<group>"; };
 		5A4815352559268E001DC006 /* loadAinitializeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = loadAinitializeTest.m; sourceTree = "<group>"; };
+		5A483F3F258A10B4004A49C5 /* UIView+GestureCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GestureCallback.h"; sourceTree = "<group>"; };
+		5A483F40258A10B4004A49C5 /* UIView+GestureCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GestureCallback.m"; sourceTree = "<group>"; };
 		5A4DA3ED24A9E56000DB175A /* BaseEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
 		5A4DA3EE24A9E56000DB175A /* BaseEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
 		5A5493F624BD539D00C49207 /* CJImageViewDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJImageViewDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -970,6 +974,8 @@
 		5A2E8AE924BC2FF700B859AB /* UIView */ = {
 			isa = PBXGroup;
 			children = (
+				5A483F3F258A10B4004A49C5 /* UIView+GestureCallback.h */,
+				5A483F40258A10B4004A49C5 /* UIView+GestureCallback.m */,
 				5A25BA2725148F6400E49ACD /* UIView+Frame.h */,
 				5A25BA2625148F6400E49ACD /* UIView+Frame.m */,
 				5A39C231256BA7590052A133 /* UIView+Nib.h */,
@@ -1956,6 +1962,7 @@
 				5A4DA3EF24A9E56000DB175A /* BaseEntity.m in Sources */,
 				5A685EB824D03C9800BF9737 /* NSString+Size.m in Sources */,
 				5AE9BBC425075BB20010945B /* NetworkUnit.m in Sources */,
+				5A483F41258A10B4004A49C5 /* UIView+GestureCallback.m in Sources */,
 				5A10967D249B417B000398F5 /* GCDQueue.m in Sources */,
 				5AE9BB882507336A0010945B /* MPUploadImageItemService.m in Sources */,
 				5ADABEAB25779DDB0077B7C3 /* UIWebVIew+SwipeGesture.m in Sources */,
@@ -2033,6 +2040,7 @@
 				5A729AA825209A1C007A7136 /* NSData+Base64.m in Sources */,
 				5A66952025358C000073FDF6 /* MineViewController.m in Sources */,
 				5A6694A925357CE40073FDF6 /* UITableViewCell+Tool.m in Sources */,
+				5A483F42258A10B4004A49C5 /* UIView+GestureCallback.m in Sources */,
 				5A25BA2925148F6400E49ACD /* UIView+Frame.m in Sources */,
 				5AE9BB912507374B0010945B /* MPUploadImagesService.m in Sources */,
 				5A729A9E25209A0E007A7136 /* NSData+Encrypt.m in Sources */,

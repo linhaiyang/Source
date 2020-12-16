@@ -6,3 +6,7 @@
     //每次调用CFUUIDCreate，系统都会返回一个新的唯一标示符。如果你希望存储这个标示符，那么需要自己将其存储到NSUserDefaults, Keychain, Pasteboard或其它地方。
 //    CFUUIDRef cfuuid = CFUUIDCreate(kCFAllocatorDefault);
 //    NSString *cfuuidString = (NSString*)CFBridgingRelease(CFUUIDCreateString(kCFAllocatorDefault, cfuuid));
+
+
+
+1.webView版本更新  弹起更新链接
