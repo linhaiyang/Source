@@ -170,6 +170,8 @@
 		5A685ED524D2E7B200BF9737 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A685ECF24D2E7B200BF9737 /* NSData+Base64.m */; };
 		5A685ED624D2E7B200BF9737 /* NSData+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A685ED324D2E7B200BF9737 /* NSData+Hash.m */; };
 		5A685ED724D2E7B200BF9737 /* NSData+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A685ED424D2E7B200BF9737 /* NSData+Encrypt.m */; };
+		5A6A5B622591C59E00E3D925 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A5B602591C59E00E3D925 /* UIViewController+MJPopupViewController.m */; };
+		5A6A5B632591C59E00E3D925 /* UIViewController+MJPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6A5B602591C59E00E3D925 /* UIViewController+MJPopupViewController.m */; };
 		5A729A8725208210007A7136 /* NSString+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A729A8625208210007A7136 /* NSString+Encrypt.m */; };
 		5A729A8825208210007A7136 /* NSString+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A729A8625208210007A7136 /* NSString+Encrypt.m */; };
 		5A729A8F2520829A007A7136 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A729A8D2520829A007A7136 /* NSString+Hash.m */; };
@@ -205,6 +207,10 @@
 		5AB1B92A256678D30083408B /* MJRefrshDoc in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B928256678D30083408B /* MJRefrshDoc */; };
 		5AB821202588B783003560A9 /* git in Resources */ = {isa = PBXBuildFile; fileRef = 5AB8211F2588B783003560A9 /* git */; };
 		5AB821212588B783003560A9 /* git in Resources */ = {isa = PBXBuildFile; fileRef = 5AB8211F2588B783003560A9 /* git */; };
+		5AC1C462258C98A600D95FCD /* CAShapeLayer+UIBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC1C461258C98A600D95FCD /* CAShapeLayer+UIBezierPath.m */; };
+		5AC1C463258C98A600D95FCD /* CAShapeLayer+UIBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC1C461258C98A600D95FCD /* CAShapeLayer+UIBezierPath.m */; };
+		5AC1C46B258C996300D95FCD /* CAGradientLayer+Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC1C46A258C996300D95FCD /* CAGradientLayer+Layer.m */; };
+		5AC1C46C258C996300D95FCD /* CAGradientLayer+Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC1C46A258C996300D95FCD /* CAGradientLayer+Layer.m */; };
 		5ADABE80257645920077B7C3 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADABE7F257645920077B7C3 /* UIScrollView+Refresh.m */; };
 		5ADABE81257645920077B7C3 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADABE7F257645920077B7C3 /* UIScrollView+Refresh.m */; };
 		5ADABE8C257743950077B7C3 /* NSString+AttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADABE8B257743950077B7C3 /* NSString+AttributedString.m */; };
@@ -507,6 +513,8 @@
 		5A685ED224D2E7B200BF9737 /* NSData+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Hash.h"; sourceTree = "<group>"; };
 		5A685ED324D2E7B200BF9737 /* NSData+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Hash.m"; sourceTree = "<group>"; };
 		5A685ED424D2E7B200BF9737 /* NSData+Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encrypt.m"; sourceTree = "<group>"; };
+		5A6A5B602591C59E00E3D925 /* UIViewController+MJPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJPopupViewController.m"; sourceTree = "<group>"; };
+		5A6A5B612591C59E00E3D925 /* UIViewController+MJPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJPopupViewController.h"; sourceTree = "<group>"; };
 		5A729A8525208210007A7136 /* NSString+Encrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Encrypt.h"; sourceTree = "<group>"; };
 		5A729A8625208210007A7136 /* NSString+Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encrypt.m"; sourceTree = "<group>"; };
 		5A729A8D2520829A007A7136 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
@@ -525,6 +533,10 @@
 		5AB1B91E256647170083408B /* AFNFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = AFNFile; sourceTree = "<group>"; };
 		5AB1B928256678D30083408B /* MJRefrshDoc */ = {isa = PBXFileReference; lastKnownFileType = text; path = MJRefrshDoc; sourceTree = "<group>"; };
 		5AB8211F2588B783003560A9 /* git */ = {isa = PBXFileReference; lastKnownFileType = text; path = git; sourceTree = "<group>"; };
+		5AC1C460258C98A600D95FCD /* CAShapeLayer+UIBezierPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CAShapeLayer+UIBezierPath.h"; sourceTree = "<group>"; };
+		5AC1C461258C98A600D95FCD /* CAShapeLayer+UIBezierPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CAShapeLayer+UIBezierPath.m"; sourceTree = "<group>"; };
+		5AC1C469258C996300D95FCD /* CAGradientLayer+Layer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CAGradientLayer+Layer.h"; sourceTree = "<group>"; };
+		5AC1C46A258C996300D95FCD /* CAGradientLayer+Layer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CAGradientLayer+Layer.m"; sourceTree = "<group>"; };
 		5ADABE7E257645920077B7C3 /* UIScrollView+Refresh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Refresh.h"; sourceTree = "<group>"; };
 		5ADABE7F257645920077B7C3 /* UIScrollView+Refresh.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Refresh.m"; sourceTree = "<group>"; };
 		5ADABE8A257743950077B7C3 /* NSString+AttributedString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+AttributedString.h"; sourceTree = "<group>"; };
@@ -888,6 +900,8 @@
 		5A28829E24A1CE440059F96C /* UIViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5A6A5B612591C59E00E3D925 /* UIViewController+MJPopupViewController.h */,
+				5A6A5B602591C59E00E3D925 /* UIViewController+MJPopupViewController.m */,
 				5A2882A024A1CE5B0059F96C /* UIViewController+Swizzle.h */,
 				5A28829F24A1CE5B0059F96C /* UIViewController+Swizzle.m */,
 				5A2882A224A1D30F0059F96C /* UIViewController+LL_Utils.h */,
@@ -1234,6 +1248,8 @@
 		5A685EBD24D03E0800BF9737 /* QuartzCore */ = {
 			isa = PBXGroup;
 			children = (
+				5AC1C468258C994B00D95FCD /* CAGradientLayer */,
+				5AC1C45F258C988500D95FCD /* CAShapeLayer */,
 			);
 			path = QuartzCore;
 			sourceTree = "<group>";
@@ -1286,6 +1302,24 @@
 				5AB8211F2588B783003560A9 /* git */,
 			);
 			path = memorandum;
+			sourceTree = "<group>";
+		};
+		5AC1C45F258C988500D95FCD /* CAShapeLayer */ = {
+			isa = PBXGroup;
+			children = (
+				5AC1C460258C98A600D95FCD /* CAShapeLayer+UIBezierPath.h */,
+				5AC1C461258C98A600D95FCD /* CAShapeLayer+UIBezierPath.m */,
+			);
+			path = CAShapeLayer;
+			sourceTree = "<group>";
+		};
+		5AC1C468258C994B00D95FCD /* CAGradientLayer */ = {
+			isa = PBXGroup;
+			children = (
+				5AC1C469258C996300D95FCD /* CAGradientLayer+Layer.h */,
+				5AC1C46A258C996300D95FCD /* CAGradientLayer+Layer.m */,
+			);
+			path = CAGradientLayer;
 			sourceTree = "<group>";
 		};
 		5ADABE9625776A270077B7C3 /* NSSet */ = {
@@ -1890,6 +1924,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AC1C46B258C996300D95FCD /* CAGradientLayer+Layer.m in Sources */,
 				5AE9BBC625075BB20010945B /* YTKRequest.m in Sources */,
 				5A0E8C0E2579DB6E002F8708 /* XYTransition.m in Sources */,
 				5AE9BBD4250784090010945B /* ClassifyModel.m in Sources */,
@@ -1917,6 +1952,7 @@
 				5A2E8A9C24B7298E00B859AB /* UIView+ViewController.m in Sources */,
 				5A2882C524A343A10059F96C /* UINavigationItem+Lock.m in Sources */,
 				5A2E8A8324B6F37000B859AB /* SYSafeCategory.m in Sources */,
+				5AC1C462258C98A600D95FCD /* CAShapeLayer+UIBezierPath.m in Sources */,
 				5A2E8A9924B7267900B859AB /* ImageUploadCell.m in Sources */,
 				5A6694EE25358B570073FDF6 /* UITabBar+CustomBadge.m in Sources */,
 				5A2882A424A1D30F0059F96C /* UIViewController+LL_Utils.m in Sources */,
@@ -1977,6 +2013,7 @@
 				5A2E8A8824B70D1400B859AB /* LogInApi.m in Sources */,
 				5AE9BBC225075BB20010945B /* YTKBatchRequestAgent.m in Sources */,
 				5A10967E249B417B000398F5 /* GCDTimer.m in Sources */,
+				5A6A5B622591C59E00E3D925 /* UIViewController+MJPopupViewController.m in Sources */,
 				5ADABE9925776A430077B7C3 /* NSSet+Block.m in Sources */,
 				5A2882C624A343A10059F96C /* UINavigationItem+Loading.m in Sources */,
 				5A2882C124A343A10059F96C /* UINavigationController+JZExtension.m in Sources */,
@@ -2071,6 +2108,7 @@
 				5AE9BBCD250770F90010945B /* MPImageCollectionCell.m in Sources */,
 				5A5493CB24BD539D00C49207 /* UIViewController+Swizzle.m in Sources */,
 				5AE9BBC125075BB20010945B /* YTKChainRequestAgent.m in Sources */,
+				5AC1C463258C98A600D95FCD /* CAShapeLayer+UIBezierPath.m in Sources */,
 				5AE9BB84250731FC0010945B /* BaseRequestService.m in Sources */,
 				5A66951825358BF40073FDF6 /* DraggingCardViewController.m in Sources */,
 				5A729A902520829A007A7136 /* NSString+Hash.m in Sources */,
@@ -2115,9 +2153,11 @@
 				5A5493E224BD539D00C49207 /* main.m in Sources */,
 				5A0E8C24257A0CAB002F8708 /* TransitionController.m in Sources */,
 				5AE9BBD5250784090010945B /* ClassifyModel.m in Sources */,
+				5AC1C46C258C996300D95FCD /* CAGradientLayer+Layer.m in Sources */,
 				5AE9BBD1250783D90010945B /* ClassifyApi.m in Sources */,
 				5A6694FC25358B980073FDF6 /* HomeViewController.m in Sources */,
 				5A5493E524BD539D00C49207 /* YYFPSLabel.m in Sources */,
+				5A6A5B632591C59E00E3D925 /* UIViewController+MJPopupViewController.m in Sources */,
 				5A39C23D256BB54A0052A133 /* NSBundle+Path.m in Sources */,
 				5A5493E724BD539D00C49207 /* UploadImagesViewController.m in Sources */,
 				5A66951025358BE40073FDF6 /* ToolDemoViewController.m in Sources */,

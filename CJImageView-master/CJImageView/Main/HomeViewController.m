@@ -52,14 +52,21 @@ static NSString *base64_encode_data(NSData *data){
      */
     
     
-    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, KScreen_Height)];
-    bgView.backgroundColor = [UIColor orangeColor];
-    bgView.autoresizingMask = UIViewAutoresizingFlexibleWidth;//横屏后 屏幕宽度 变化，子视图跟着变化
-//  [self.tableV insertSubview:bgView atIndex:0];
-    [self.view addSubview:bgView];
-    Dlog(@"%f-------%f",KScreen_Width,bgView);
+//    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, KScreen_Height)];
+//    bgView.backgroundColor = [UIColor orangeColor];
+//    bgView.autoresizingMask = UIViewAutoresizingFlexibleWidth;//横屏后 屏幕宽度 变化，子视图跟着变化
+////  [self.tableV insertSubview:bgView atIndex:0];
+//    [self.view addSubview:bgView];
+//    Dlog(@"%f-------%f",KScreen_Width,bgView);
+//
+//    IQTextView * textView = [[IQTextView alloc]init];
     
-    IQTextView * textView = [[IQTextView alloc]init];
+    YYLabel * label = [[YYLabel alloc]initWithFrame:CGRectMake(10, 100, 100, 20)];
+    label.backgroundColor = UIColor.cyanColor;
+    label.text = @"YYLabel";
+    [self.view addSubview:label];
+    
+    CATextLayer * textLayer = [CATextLayer layer];
     
 }
 

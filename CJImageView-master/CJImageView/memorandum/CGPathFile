@@ -88,7 +88,26 @@ CGPath：这个东西没用过 ，和CGContextRef类似，只是调用接口的�
     layer.lineDashPattern=@[@3,@1]; //3=线的宽度 1=每条线的间距
     [self.view.layer addSublayer:layer];
 }
-
+//渐变颜色
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    size_t locationsCount = 2;
+    CGFloat locations[2] = {0.0f, 1.0f};
+    CGFloat colors[8] = {1.0, 0.5, 0.4, 1.0,            //开始颜色(RGB)
+        0.8, 0.8, 0.3, 1.0};;
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGGradientRef gradient = CGGradientCreateWithColorComponents(colorSpace, colors, locations, locationsCount);
+    CGColorSpaceRelease(colorSpace);
+    
+    CGPoint myStartPoint, myEndPoint;
+    myStartPoint.x = 0.0;
+    myStartPoint.y = 0.0;
+    myEndPoint.x = 0;
+    myEndPoint.y = rect.size.height;
+//    CGPoint center = CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2);
+//    float radius = 10.f ;
+//    CGContextDrawRadialGradient (context, gradient, center, 0, center, radius, kCGGradientDrawsAfterEndLocation);
+    CGContextDrawLinearGradient(context, gradient, myStartPoint, myEndPoint, 0);
+    CGGradientRelease(gradient);
 
 
 

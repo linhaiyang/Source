@@ -15,6 +15,7 @@
 //#import "IJKPlayerController.h"
 #import "TransitionController.h"
 #import "KeyBoardManagerController.h"
+#import "UIViewController+MJPopupViewController.h"
 
 @interface MineViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic,strong) NSMutableArray             *dataArray;
@@ -114,7 +115,10 @@
         [self.navigationController pushViewController:controller animated:YES];
     }else if ([title containsString:@"TransitionController"]){
         TransitionController * controller = [TransitionController new];
-        [self.navigationController pushViewController:controller animated:YES];
+        [self presentPopupViewController:controller animationType:MJPopupViewAnimationSlideRightRight backgroundTouch:YES dismissed:^{
+                    
+        }];
+//        [self.navigationController pushViewController:controller animated:YES];
     }else{
         if ([self.tableV.mj_header isRefreshing]) {
             [self.tableV.mj_header endRefreshing];
