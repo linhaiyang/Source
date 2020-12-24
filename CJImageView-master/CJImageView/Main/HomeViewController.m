@@ -31,7 +31,8 @@ static NSString *base64_encode_data(NSData *data){
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    CGFloat statuheight = KStatusBarHeight;
-    
+
+    //拉取数据
 
 //    const char c [4] = "ccc";
     
