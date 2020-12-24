@@ -181,6 +181,8 @@
 		5A729AA825209A1C007A7136 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A685ECF24D2E7B200BF9737 /* NSData+Base64.m */; };
 		5A82CB2325554C2C0035F2D2 /* RootWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66948E253557D70073FDF6 /* RootWebViewController.m */; };
 		5A82CB2825554C3E0035F2D2 /* XLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A669491253557D70073FDF6 /* XLWebViewController.m */; };
+		5A944BB125949A970087DD9A /* YYText in Resources */ = {isa = PBXBuildFile; fileRef = 5A944BB025949A970087DD9A /* YYText */; };
+		5A944BB225949A970087DD9A /* YYText in Resources */ = {isa = PBXBuildFile; fileRef = 5A944BB025949A970087DD9A /* YYText */; };
 		5AB1B8CB256520DF0083408B /* AppDelegate+Monitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB1B8CA256520DF0083408B /* AppDelegate+Monitor.m */; };
 		5AB1B8CC256520DF0083408B /* AppDelegate+Monitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB1B8CA256520DF0083408B /* AppDelegate+Monitor.m */; };
 		5AB1B8D325652CD00083408B /* UDID in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B8D225652CD00083408B /* UDID */; };
@@ -519,6 +521,7 @@
 		5A729A8625208210007A7136 /* NSString+Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encrypt.m"; sourceTree = "<group>"; };
 		5A729A8D2520829A007A7136 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
 		5A729A8E2520829A007A7136 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		5A944BB025949A970087DD9A /* YYText */ = {isa = PBXFileReference; lastKnownFileType = text; path = YYText; sourceTree = "<group>"; };
 		5AB1B8C9256520DF0083408B /* AppDelegate+Monitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Monitor.h"; sourceTree = "<group>"; };
 		5AB1B8CA256520DF0083408B /* AppDelegate+Monitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Monitor.m"; sourceTree = "<group>"; };
 		5AB1B8D225652CD00083408B /* UDID */ = {isa = PBXFileReference; lastKnownFileType = text; path = UDID; sourceTree = "<group>"; };
@@ -1300,6 +1303,7 @@
 				5A0E8C032579D761002F8708 /* AnimationFile */,
 				5A5DDC7C257F872400DC17D1 /* CGPathFile */,
 				5AB8211F2588B783003560A9 /* git */,
+				5A944BB025949A970087DD9A /* YYText */,
 			);
 			path = memorandum;
 			sourceTree = "<group>";
@@ -1695,6 +1699,7 @@
 				5A5DDC7D257F872400DC17D1 /* CGPathFile in Resources */,
 				5AB1B8D325652CD00083408B /* UDID in Resources */,
 				5AB1B8F62565329F0083408B /* SDWebImageFile in Resources */,
+				5A944BB125949A970087DD9A /* YYText in Resources */,
 				5AB1B9102565345E0083408B /* idStyle in Resources */,
 				8BE8769C256A2D5A00F7F143 /* HttpFile in Resources */,
 				5AFDBCD22574DAD100235EAA /* Public.xcassets in Resources */,
@@ -1743,6 +1748,7 @@
 				5A5DDC7E257F872400DC17D1 /* CGPathFile in Resources */,
 				5AB1B8D425652CD00083408B /* UDID in Resources */,
 				5AB1B8F72565329F0083408B /* SDWebImageFile in Resources */,
+				5A944BB225949A970087DD9A /* YYText in Resources */,
 				5AB1B9112565345E0083408B /* idStyle in Resources */,
 				8BE8769D256A2D5A00F7F143 /* HttpFile in Resources */,
 				5AFDBCD32574DAD100235EAA /* Public.xcassets in Resources */,

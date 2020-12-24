@@ -53,25 +53,36 @@ UIBezierPath：类似于画笔 配置需要绘制的参数就能画出想要到�
 CGPath：这个东西没用过 ，和CGContextRef类似，只是调用接口的差别。
 
 
--(void)drawRect:(CGRect)rect{
-    UIBezierPath * path = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(10, 10)];
-    CAShapeLayer * layer = [CAShapeLayer new];
-    layer.path = path.CGPath;
-    layer.fillColor = UIColor.whiteColor.CGColor;
-    layer.lineWidth = 1.f;
-    layer.strokeColor=[UIColor clearColor].CGColor;
-    [self.contentView.layer insertSublayer:layer atIndex:0];
+    - (void)drawRect:(CGRect)rect {
+    // Drawing code
+    [RGB_HEX(0xE8BA8E, 1) setFill];
+    [[UIBezierPath bezierPathWithRect:CGRectMake(0, 0, rect.size.width*self.layerPer, rect.size.height)] fill];
+//    if (!_shapeLayer) {
+//        [self.layer addSublayer:self.shapeLayer];
+//    }
+//    CAShapeLayer * layer = [CAShapeLayer layer];
+//    self.shapeLayer.frame = rect;
+//
+//    UIBezierPath * path = [UIBezierPath bezierPath];
+//    [path moveToPoint:CGPointMake(0, rect.size.height/2)];
+//    [path addLineToPoint:CGPointMake(rect.size.width*self.layerPer, rect.size.height/2)];
+//    self.shapeLayer.path = path.CGPath;
+//    self.shapeLayer.lineWidth = rect.size.height;
+//    self.shapeLayer.strokeColor = RGB_HEX(0xE8BA8E, 1).CGColor;
+//    self.shapeLayer.fillColor = RGB_HEX(0xE8BA8E, 1).CGColor;
+//    self.shapeLayer.strokeStart = 0.f;
+//    self.shapeLayer.strokeEnd = 0.f;
+//
+//    CABasicAnimation * tailAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+//    tailAnimation.duration = 1;
+//    tailAnimation.fromValue = @(0.f);
+//    tailAnimation.toValue = @(1.f);
+//    tailAnimation.removedOnCompletion = false;
+//    tailAnimation.fillMode =kCAFillModeForwards;
+//    [self.shapeLayer addAnimation:tailAnimation forKey:@"Stroke"];
     
-    
-    
-    UIBezierPath *aPath=[UIBezierPath bezierPath];
-    [aPath moveToPoint:CGPointMake(50, 170)];
-    [aPath addLineToPoint:CGPointMake(80, 130)];
-    [aPath addLineToPoint:CGPointMake(80, 200)];
-    [aPath stroke];
-    [aPath closePath];
-}
-    
+//    [self.layer addSublayer:layer];
+}    
     
 //画虚线
 -(void)drawDottedLine
