@@ -27,7 +27,7 @@ CGContextRef：类似于画布 你在上面操作你想绘制的东西。
      
      UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
      UIGraphicsEndImageContext();
-     
+              self.layer.contents = newImage;
      */
     
     /** 图片圆角
@@ -43,7 +43,7 @@ CGContextRef：类似于画布 你在上面操作你想绘制的东西。
      UIImage * newImage = UIGraphicsGetImageFromCurrentImageContext();
      UIGraphicsEndImageContext();
      return newImage;
-     
+         
      */
 }
 

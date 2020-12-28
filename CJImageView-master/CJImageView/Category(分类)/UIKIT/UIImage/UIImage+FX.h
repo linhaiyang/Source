@@ -52,5 +52,12 @@
 
 - (UIImage *)maskImageFromImageAlpha;
 
-
+/**
+*  @brief  根据颜色生成纯色图片
+*
+*  @param color 颜色
+*
+*  @return 纯色图片
+*/
++ (UIImage *)imageWithColor:(UIColor *)color;
 @end
