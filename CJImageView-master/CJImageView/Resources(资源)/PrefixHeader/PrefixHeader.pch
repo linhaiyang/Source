@@ -19,7 +19,6 @@
 #import "UIView+EaseBlankPage.h"
 #import "UINavigationController+BATransitions.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
-#import "UIImage+Tool.h"
 #import "UINavigationController+JZExtension.h"
 #import "UIImage+FX.h"
 #import "UIViewController+Swizzle.h"

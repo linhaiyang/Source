@@ -71,7 +71,7 @@
     self.frame = frame;
 }
 
-- (CGFloat)height
+- (CGFloat)ui_height
 {
     return self.frame.size.height;
 }

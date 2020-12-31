@@ -1,0 +1,15 @@
+
+结构体
+    struct {
+        unsigned int layoutNeedUpdate : 1;
+        unsigned int showingHighlight : 1;
+        
+        unsigned int trackingTouch : 1;
+        unsigned int swallowTouch : 1;
+        unsigned int touchMoved : 1;
+        
+        unsigned int hasTapAction : 1;
+        unsigned int hasLongPressAction : 1;
+        
+        unsigned int contentsNeedFade : 1;
+    } _state;

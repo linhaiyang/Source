@@ -7,6 +7,14 @@
 //
 
 #import "loadAinitializeTest.h"
+
+@interface loadAinitializeTest()
+
+@property(nonatomic,strong)UILabel * yyLabel;
+
+@end
+
+
 @implementation loadAinitializeTest
 //- (void)initCSocket{
 //    self.didSelecBlock = ^NSString * _Nonnull(NSString * _Nonnull blockT) {
@@ -23,6 +31,49 @@
 
         return @"1";
     };
+}
+
+-(void)layoutSubviews{
+    [super layoutSubviews];
+    Dlog(@"%f---layoutSubviews",self.ui_width);
+    self.yyLabel.frame = CGRectMake(0, 0, self.ui_width, self.ui_height);
+//    [self.yyLabel sizeToFit];
+    /**
+     1、init初始化不会触发layoutSubviews
+     但是是用initWithFrame 进行初始化时，当rect的值不为CGRectZero时,也会触发
+     */
+}
+-(CGSize)intrinsicContentSize{
+    Dlog(@"intrinsicContentSize");
+    return CGSizeMake(100, 50);
+}
+
+-(void)drawRect:(CGRect)rect{
+    NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:14], NSFontAttributeName, UIColor.blueColor, NSForegroundColorAttributeName, nil];
+            
+//    [@"我的zzzzzzzzzzzzzzzzzz" drawAtPoint:CGPointZero withAttributes:attrs];//不会换行
+    [@"我的我的我的我的" drawInRect:CGRectMake(0, 10, rect.size.width, rect.size.height) withAttributes:attrs];
+}
+- (CGSize)sizeThatFits:(CGSize)size{
+    Dlog(@"sizeThatFits");
+    /**
+     sizeToFit:会计算出最优的 size 而且会改变自己的size
+     sizeThatFits:会计算出最优的 size 但是不会改变 自己的 size
+     
+     */
+    CGSize s = [super sizeThatFits:size];
+    s.height = s.height + 10.f;
+    return s;
+}
+
+
+-(instancetype)init{
+    self = [super init];
+    self.yyLabel = [[UILabel alloc]init];
+//    self.yyLabel.text = @"YYLabel 测试YYLabel 测试YYLabel 测试YYLabel 测试YYLabel 测试";
+    self.yyLabel.numberOfLines = 0;
+    [self addSubview:self.yyLabel];
+    return self;
 }
 
 +(void)initializeTestBegin{
