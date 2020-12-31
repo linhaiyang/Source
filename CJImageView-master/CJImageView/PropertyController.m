@@ -18,6 +18,7 @@
     @public
     int _no;
     int _age;
+    int page;
 }
 @property(copy,nonatomic)NSMutableString*aCopyMStr;
 @property(strong,nonatomic)NSMutableString*strongMStr;
