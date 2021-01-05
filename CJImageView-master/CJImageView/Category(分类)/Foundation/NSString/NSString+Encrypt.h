@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-//#define DesPublicKey @"Xo823-dl230df23r.&"
 @interface NSString (Encrypt)
 - (NSString*)encryptedWithAESUsingKey:(NSString*)key andIV:(NSData*)iv;
 - (NSString*)decryptedWithAESUsingKey:(NSString*)key andIV:(NSData*)iv;

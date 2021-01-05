@@ -129,6 +129,8 @@
 		5A5493EE24BD539D00C49207 /* NoData.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5A35580E249CC34A002DAD41 /* NoData.bundle */; };
 		5A5493EF24BD539D00C49207 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 435830B51C33D42F0074D713 /* Assets.xcassets */; };
 		5A5493F024BD539D00C49207 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 435830B21C33D42F0074D713 /* Main.storyboard */; };
+		5A558CBA259DB769008C3D43 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A558CB8259DB769008C3D43 /* NSString+Base64.m */; };
+		5A558CBB259DB769008C3D43 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A558CB8259DB769008C3D43 /* NSString+Base64.m */; };
 		5A55A96724FFB1900037DACF /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A685EB724D03C9800BF9737 /* NSString+Size.m */; };
 		5A55A96C2500F27A0037DACF /* RACObserveController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A55A96B2500F27A0037DACF /* RACObserveController.m */; };
 		5A55A96D2501E3760037DACF /* RACObserveController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A55A96B2500F27A0037DACF /* RACObserveController.m */; };
@@ -466,6 +468,8 @@
 		5A4DA3ED24A9E56000DB175A /* BaseEntity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseEntity.h; sourceTree = "<group>"; };
 		5A4DA3EE24A9E56000DB175A /* BaseEntity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseEntity.m; sourceTree = "<group>"; };
 		5A5493F624BD539D00C49207 /* CJImageViewDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJImageViewDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A558CB8259DB769008C3D43 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		5A558CB9259DB769008C3D43 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
 		5A55A96A2500F27A0037DACF /* RACObserveController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RACObserveController.h; sourceTree = "<group>"; };
 		5A55A96B2500F27A0037DACF /* RACObserveController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACObserveController.m; sourceTree = "<group>"; };
 		5A5DDC7C257F872400DC17D1 /* CGPathFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = CGPathFile; sourceTree = "<group>"; };
@@ -1221,6 +1225,8 @@
 		5A685EB524D03C6800BF9737 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
+				5A558CB9259DB769008C3D43 /* NSString+Base64.h */,
+				5A558CB8259DB769008C3D43 /* NSString+Base64.m */,
 				5A685EB624D03C9800BF9737 /* NSString+Size.h */,
 				5A685EB724D03C9800BF9737 /* NSString+Size.m */,
 				5A729A8E2520829A007A7136 /* NSString+Hash.h */,
@@ -1996,6 +2002,7 @@
 				5A66951F25358C000073FDF6 /* MineViewController.m in Sources */,
 				5A4DA3EF24A9E56000DB175A /* BaseEntity.m in Sources */,
 				5A685EB824D03C9800BF9737 /* NSString+Size.m in Sources */,
+				5A558CBA259DB769008C3D43 /* NSString+Base64.m in Sources */,
 				5AE9BBC425075BB20010945B /* NetworkUnit.m in Sources */,
 				5A483F41258A10B4004A49C5 /* UIView+GestureCallback.m in Sources */,
 				5A10967D249B417B000398F5 /* GCDQueue.m in Sources */,
@@ -2124,6 +2131,7 @@
 				5A5493D224BD539D00C49207 /* GCDQueue.m in Sources */,
 				5A0BC90E25135DD000426728 /* UIColor+Hex.m in Sources */,
 				5AE9BBC525075BB20010945B /* NetworkUnit.m in Sources */,
+				5A558CBB259DB769008C3D43 /* NSString+Base64.m in Sources */,
 				5AB1B8CC256520DF0083408B /* AppDelegate+Monitor.m in Sources */,
 				5AE9BBB525075BB20010945B /* YTKChainRequest.m in Sources */,
 				5AE9BBB725075BB20010945B /* YTKNetworkPrivate.m in Sources */,

@@ -107,9 +107,9 @@
     return [self base64EncodedStringWithWrapWidth:0];
 }
 
-static NSString *base64_encode_data(NSData *data){
-    data = [data base64EncodedDataWithOptions:0];
-    NSString *ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    return ret;
-}
+//static NSString *base64_encode_data(NSData *data){
+//    data = [data base64EncodedDataWithOptions:0];
+//    NSString *ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//    return ret;
+//}
 @end

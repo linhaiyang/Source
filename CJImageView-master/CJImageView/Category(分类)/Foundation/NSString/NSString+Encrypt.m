@@ -94,7 +94,7 @@ static NSData *base64_decode(NSString *str){
     if(!data || !pubKey){
         return nil;
     }
-    SecKeyRef keyRef = [self addPublicKey:pubKey];
+    SecKeyRef keyRef  = [self addPublicKey:pubKey];;
     if(!keyRef){
         return nil;
     }
@@ -131,7 +131,17 @@ static NSData *base64_decode(NSString *str){
     [publicKey setObject:(__bridge id) kSecAttrKeyTypeRSA forKey:(__bridge id)kSecAttrKeyType];
     [publicKey setObject:d_tag forKey:(__bridge id)kSecAttrApplicationTag];
     SecItemDelete((__bridge CFDictionaryRef)publicKey);
-    
+    /**
+     {
+         atag = {length = 14, bytes = 0x5253415574696c5f5075624b6579};
+         class = keys;
+         kcls = 0;
+         "r_PersistentRef" = 1;
+         type = 42;
+         "v_Data" = {length = 140, bytes = 0x30818902 818100b1 b96869e8 48107eba ... 12123502 03010001 };
+     }
+     
+     */
     // Add persistent version of the key to system keychain
     [publicKey setObject:data forKey:(__bridge id)kSecValueData];
     [publicKey setObject:(__bridge id) kSecAttrKeyClassPublic forKey:(__bridge id)

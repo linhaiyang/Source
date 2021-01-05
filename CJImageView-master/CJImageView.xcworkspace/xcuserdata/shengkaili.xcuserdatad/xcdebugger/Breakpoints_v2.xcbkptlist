@@ -5,15 +5,115 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A6586026-3564-4AA2-954A-EF82A9C82DB5"
+            uuid = "512735DC-15A4-4F96-871D-4EB9F4494704"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            breakpointStackSelectionBehavior = "1"
-            scope = "1"
-            stopOnStyle = "0">
+            filePath = "CJImageView/Public(&#x516c;&#x5171;)/Network/BaseNetworking/BaseRequestService.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "-startRequestWithCompletionBlockWithSuccess:failure:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "512735DC-15A4-4F96-871D-4EB9F4494704 - 6f363425d0bf209c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BaseRequestService startRequestWithCompletionBlockWithSuccess:failure:]"
+                  moduleName = "CJImageViewDebug"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shengkaili/Downloads/%E4%BA%92%E8%81%94%E7%BD%91%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/project/Source/CJImageView-master/CJImageView/Public(%E5%85%AC%E5%85%B1)/Network/BaseNetworking/BaseRequestService.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "512735DC-15A4-4F96-871D-4EB9F4494704 - 2b86f62426ab7e0a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__73-[BaseRequestService startRequestWithCompletionBlockWithSuccess:failure:]_block_invoke"
+                  moduleName = "CJImageViewDebug"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/shengkaili/Downloads/%E4%BA%92%E8%81%94%E7%BD%91%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/project/Source/CJImageView-master/CJImageView/Public(%E5%85%AC%E5%85%B1)/Network/BaseNetworking/BaseRequestService.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E317C250-2D59-4DAF-8AA3-07CBD1A80D8C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CJImageView/Public(&#x516c;&#x5171;)/Network/YTKRequest/YTKRequest.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "-start"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E4E2B203-B948-40C9-ACC3-12D3F91B64F5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CJImageView/Public(&#x516c;&#x5171;)/Network/YTKRequest/YTKRequest.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "-start"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "408D20CC-1CD5-45F9-AFC9-859B58595E3E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CJImageView/Public(&#x516c;&#x5171;)/Network/YTKRequest/YTKRequest.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "-start"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0794F8DF-9DE2-48CC-B42F-4B68A4F89BAE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CJImageView/Public(&#x516c;&#x5171;)/Network/YTKRequest/YTKRequest.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "-start"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

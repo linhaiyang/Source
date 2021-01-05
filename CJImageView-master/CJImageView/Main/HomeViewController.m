@@ -10,6 +10,10 @@
 #import "loadAinitializeTest.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
+#import "UIColor+Gradient.h"
+#import "NSString+Encrypt.h"
+#import "NSString+hash.h"
+#import "NSString+Base64.h"
 
 typedef NSString * NSStringResourceKey NS_STRING_ENUM;
 
@@ -68,20 +72,31 @@ static NSString *base64_encode_data(NSData *data){
 //    [self.view addSubview:label];
     
     CATextLayer * textLayer = [CATextLayer layer];
-    
+    textLayer.string = @"123456";
+//    textLayer.font = ;
+    textLayer.bounds = CGRectMake(0, 0, 100, 30);
+    textLayer.position = CGPointMake(0, 500);
+    [self.view.layer addSublayer:textLayer];
     
     
     loadAinitializeTest * test = [[loadAinitializeTest alloc]init];
     test.backgroundColor = [UIColor orangeColor];
-    test.frame = CGRectMake(0, 100, 100, 50);
+//    test.frame = CGRectMake(0, 100, 100, 50);
     [self.view addSubview:test];
     @weakify(self);
-//    [test makeConstraints:^(MASConstraintMaker *make) {
-//        make.height.equalTo(30);
-//        make.right.equalTo(10);
-//        make.top.left.equalTo(100);
-//    }];
+
+//    loadAinitializeTest * test2 = [test copy];
+//    [self.view addSubview:test2];
+    UIColor * color = [UIColor gradientFromColor:UIColor.blackColor toColor:UIColor.redColor withHeight:1];
+    test.backgroundColor = color;
+    CGSize  testsize = test.intrinsicContentSize;
 //
+    [test makeConstraints:^(MASConstraintMaker *make) {
+        make.height.equalTo(testsize.height);
+        make.width.equalTo(50);
+        make.left.equalTo(0);
+        make.top.equalTo(100);
+    }];
     __block loadAinitializeTest * blockTest = test;
     
     Dlog(@"%p  -------- %p",&test,&blockTest);
@@ -109,7 +124,27 @@ static NSString *base64_encode_data(NSData *data){
     [self.view addSubview:img];
     
     
+//    IQTextView * textView = [[IQTextView alloc]initWithFrame:CGRectMake(0, 500, 100, 50)];
+//    textView.placeholder = @"placehoder";
+//    [self.view addSubview:textView];
     
+    YYLabel * yyLabel = [[YYLabel alloc]initWithFrame:CGRectMake(30, 200+200, 150, 80)];
+    [self.view addSubview:yyLabel];
+    yyLabel.text = @"H";
+    
+//    NSString * encryStr=yyLabel.text.encryptedWithRSAPublicKeyEncodingString;
+//    Dlog(@"%@----------encryStr",encryStr);
+//
+//    NSString * encryStr0=@"blockTest".encryptedWithRSAPublicKeyEncodingString;
+//    NSString * md5Str = yyLabel.text.md5String;
+//    Dlog(@"%@----------encryStr",encryStr0);
+//    Dlog(@"%@----------md5",md5Str);
+    
+    NSString * baseStr = yyLabel.text.base64EncodedString;
+    Dlog(@"%@----------baseStr",baseStr);
+    
+    NSString * baseStr64 = [yyLabel.text base64EncodedStringWithWrapWidth:64];
+    Dlog(@"%@----------baseStr",baseStr64);
 }
 
 /*

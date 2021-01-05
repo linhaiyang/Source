@@ -42,10 +42,10 @@
 - (BOOL)writeCacheAsynchronously{
     return true;
 }
-///// 是否当前的数据从缓存获得
-//- (BOOL)isDataFromCache{
-//    return false;
-//}
+/// 是否当前的数据从缓存获得
+- (BOOL)isDataFromCache{
+    return true;
+}
 - (id)requestArgument {
     return [super requestArgument];
     return @{

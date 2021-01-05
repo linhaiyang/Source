@@ -21,6 +21,24 @@ weak 比 assign 多了一个功能就是当属性所指向的对象消失的时�
     Dlog(@"loadAinitializeTest-----load");
 }
 
+@protocol NSCopying  [object copy]
+
+- (id)copyWithZone:(nullable NSZone *)zone;
+
+@end
+
+@protocol NSMutableCopying
+
+- (id)mutableCopyWithZone:(nullable NSZone *)zone;
+
+@end
+
+@protocol NSCoding
+
+- (void)encodeWithCoder:(NSCoder *)coder;
+- (nullable instancetype)initWithCoder:(NSCoder *)coder; // NS_DESIGNATED_INITIALIZER
+
+@end
 
 /**
  该类的第一个方法执行之前调用

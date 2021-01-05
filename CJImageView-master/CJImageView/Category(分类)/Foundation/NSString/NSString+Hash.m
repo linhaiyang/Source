@@ -84,8 +84,11 @@
 - (NSString *)stringFromBytes:(unsigned char *)bytes length:(int)length
 {
     NSMutableString *mutableString = @"".mutableCopy;
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i < length; i++){
+        Dlog(@"%x---------stringFromBytes",bytes[i]);
         [mutableString appendFormat:@"%02x", bytes[i]];
-    return [NSString stringWithString:mutableString];
+
+    }
+    return [NSString stringWithString:mutableString];//29f13d6485513e157abfff8de0048592
 }
 @end
