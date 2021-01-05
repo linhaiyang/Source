@@ -132,7 +132,6 @@
 
 
 @implementation YYTextSelectionRect
-
 @synthesize rect = _rect;
 @synthesize writingDirection = _writingDirection;
 @synthesize containsStart = _containsStart;
