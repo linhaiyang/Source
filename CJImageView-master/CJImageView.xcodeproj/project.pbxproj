@@ -305,6 +305,8 @@
 		8B2C8735257003C500C43812 /* LHY.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B2C8734257003C500C43812 /* LHY.m */; };
 		8B32C70225753A240050A147 /* Bugly in Resources */ = {isa = PBXBuildFile; fileRef = 8B32C70125753A240050A147 /* Bugly */; };
 		8B32C70325753A240050A147 /* Bugly in Resources */ = {isa = PBXBuildFile; fileRef = 8B32C70125753A240050A147 /* Bugly */; };
+		8BAD990125AE02490031CE42 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8BAD990025AE02490031CE42 /* .gitignore */; };
+		8BAD990225AE02490031CE42 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8BAD990025AE02490031CE42 /* .gitignore */; };
 		8BE8769C256A2D5A00F7F143 /* HttpFile in Resources */ = {isa = PBXBuildFile; fileRef = 8BE8769B256A2D5A00F7F143 /* HttpFile */; };
 		8BE8769D256A2D5A00F7F143 /* HttpFile in Resources */ = {isa = PBXBuildFile; fileRef = 8BE8769B256A2D5A00F7F143 /* HttpFile */; };
 /* End PBXBuildFile section */
@@ -624,6 +626,7 @@
 		8B23499F2565684C0083C7B4 /* RunloopDoc */ = {isa = PBXFileReference; lastKnownFileType = text; path = RunloopDoc; sourceTree = "<group>"; };
 		8B2C8734257003C500C43812 /* LHY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHY.m; sourceTree = "<group>"; };
 		8B32C70125753A240050A147 /* Bugly */ = {isa = PBXFileReference; lastKnownFileType = text; path = Bugly; sourceTree = "<group>"; };
+		8BAD990025AE02490031CE42 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8BE8769B256A2D5A00F7F143 /* HttpFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = HttpFile; sourceTree = "<group>"; };
 		910612C4969EA109705B385E /* Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDefault-CJImageViewDebug/Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig"; sourceTree = "<group>"; };
 		95C153413DB822745F1621A2 /* Pods-CJImageViewDebug-CJImageViewProduction.release-debugenv.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDebug-CJImageViewProduction.release-debugenv.xcconfig"; path = "Target Support Files/Pods-CJImageViewDebug-CJImageViewProduction/Pods-CJImageViewDebug-CJImageViewProduction.release-debugenv.xcconfig"; sourceTree = "<group>"; };
@@ -1295,6 +1298,7 @@
 				5AB1B8F52565329F0083408B /* SDWebImageFile */,
 				5AB1B8FC256533AC0083408B /* NSHomeDirectoryFile */,
 				5AB1B9032565341E0083408B /* GCDQueue */,
+				8BAD990025AE02490031CE42 /* .gitignore */,
 				5AB1B90F2565345E0083408B /* idStyle */,
 				8B23499F2565684C0083C7B4 /* RunloopDoc */,
 				5AB1B91E256647170083408B /* AFNFile */,
@@ -1689,6 +1693,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AB1B91F256647170083408B /* AFNFile in Resources */,
+				8BAD990125AE02490031CE42 /* .gitignore in Resources */,
 				5AB1B8E1256530890083408B /* BaseData in Resources */,
 				435830B91C33D42F0074D713 /* LaunchScreen.storyboard in Resources */,
 				8B32C70225753A240050A147 /* Bugly in Resources */,
@@ -1738,6 +1743,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AB1B920256647170083408B /* AFNFile in Resources */,
+				8BAD990225AE02490031CE42 /* .gitignore in Resources */,
 				5AB1B8E2256530890083408B /* BaseData in Resources */,
 				5A5493EC24BD539D00C49207 /* LaunchScreen.storyboard in Resources */,
 				8B32C70325753A240050A147 /* Bugly in Resources */,
