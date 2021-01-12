@@ -149,3 +149,16 @@ entries =>
     21 : <CFRunLoopSource 0x60000277c000 [0x102959b80]>{signalled = Yes, valid = Yes, order = 0, context = <CFRunLoopSource context>{version = 0, info = 0x6000036544e0, callout = FBSSerialQueueRunLoopSourceHandler (0x1111a1e2a)}}
     22 : <CFRunLoopObserver 0x600002370320 [0x102959b80]>{valid = Yes, activities = 0x20, repeats = Yes, order = 0, callout = _UIGestureRecognizerUpdateObserver (0x10c153d38), context = <CFRunLoopObserver context 0x6000039759d0>}
 }
+
+
+
+
+
+主线程的RunLoop有两种预设的模式，RunLoopDefaultMode和TrackingRunLoopMode。
+当定时器被添加到主线程中且无指定模式时，会被默认添加到DefaultMode中，一般情况下定时器会正常触发定时任务。但是当用户进行UI交互操作时（比如滑动tableview），主线程会切换到TrackingRunLoopMode，在此模式下定时器并不会被触发。
+解决方法：
+
+添加定时器到主线程的CommonMode中或者子线程中
+
+scheduledTimerWithTimeInterval方法将target设为A对象时，A对象会被这个timer所持有，也就是会被retain一次，timer会被当前的runloop所持有。performSelector:withObject:afterDelay:方法实际上是在当前线程的runloop里帮你创建的一个timer去执行任务，所以和scheduledTimerWithTimeInterval方法一样会retain其调用对象。但是，我们往往不希望因为这些延迟操作而影响对象的生命周期，更甚至是，导致对象无法释放。
+当invalidate被调用时，NSRunLoop对象会释放对timer的持有，timer会释放对target的持有

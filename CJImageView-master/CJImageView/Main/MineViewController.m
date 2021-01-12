@@ -52,11 +52,11 @@
         _fpsLabel.alpha = 0.6;
         [self.view addSubview:_fpsLabel];
     }
-    if (@available(iOS 11.0, *)) {
-        self.tableV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    } else {
-        // Fallback on earlier versions table
-    }
+//    if (@available(iOS 11.0, *)) {
+//        self.tableV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+//    } else {
+//        // Fallback on earlier versions table
+//    }
 //    [self.view configBlankPage:EaseBlankPageTypeView hasData:false hasError:false reloadButtonBlock:^(id sender) {
 //
 //    }];

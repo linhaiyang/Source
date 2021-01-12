@@ -47,6 +47,13 @@ static NSString *base64_encode_data(NSData *data){
     
     [loadAinitializeTest dataWithBytesNoCopy:(__bridge void * _Nonnull)(self)];
     
+    
+    NSDictionary *userInfo1 = [NSDictionary dictionaryWithObjectsAndKeys:@"由于文件不存在，无法打开", NSLocalizedDescriptionKey, @"失败原因：文件不存在", NSLocalizedFailureReasonErrorKey, @"恢复建议：请创建该文件",NSLocalizedRecoverySuggestionErrorKey,nil];
+        
+        NSError *error = [[NSError alloc] initWithDomain:NSURLErrorDomain code:4 userInfo:userInfo1];//此处code是4，对照下面对照表4代表文件不存在。userinfo传userinfo1 查看自定义打印。userinfo传nil，查看本地化描述。
+    NSLog(@"========%@",[error localizedDescription]);
+      NSLog(@"========%@",[error localizedFailureReason]);
+      NSLog(@"========%@",[error localizedRecoverySuggestion]);
     /**
      <__NSArrayM 0x60000015e400>(
      UITrackingRunLoopMode,
@@ -113,7 +120,7 @@ static NSString *base64_encode_data(NSData *data){
     }];
     
     
-    UIImage * crImage = [UIImage imageNamed:@"test_image_2"];
+    UIImage * crImage = [UIImage imageNamed:@"button_navibars_4w"];
     CGSize size = crImage.size;
     Dlog(@"%.f---%.f--crImage_size",size.width,size.height);
     UIImage * cropImage = [crImage imageCroppedToRect:CGRectMake(0, 0, 200, 200)];//CGSizeMake(200, 200)

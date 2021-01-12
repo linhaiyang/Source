@@ -26,7 +26,7 @@ int const Default_pageSize = 20;
     NSString * version = GlobalInstance.appVersion;
     NSString * systemVersion = GlobalInstance.systemVersion;
     NSString * deviveName = GlobalInstance.device_name;
-    NSString * token = GlobalUserInfo.token?GlobalUserInfo.token:@"cq2upymiMbnawoy-OaDpAi5MDJ8MTYwNTU4MDQ0MQO0O0OO0O0O";
+    NSString * token = GlobalUserInfo.token?GlobalUserInfo.token:@"";
     NSDictionary *headerDictionary=@{@"platform":@"ios",@"version":[NSString stringWithFormat:@"%@",version],@"device":[NSString stringWithFormat:@"%@-%@", deviveName, systemVersion],@"token":token};
     NSString * headStr = [headerDictionary JSONString];
     return headerDictionary;

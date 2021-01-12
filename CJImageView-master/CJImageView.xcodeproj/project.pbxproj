@@ -273,6 +273,8 @@
 		5AE9BBDE250795870010945B /* UIButton+JKImagePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBDC250795870010945B /* UIButton+JKImagePosition.m */; };
 		5AE9BBE62508DFA20010945B /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBE52508DFA20010945B /* UIViewController+Alert.m */; };
 		5AE9BBE72508DFA20010945B /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBE52508DFA20010945B /* UIViewController+Alert.m */; };
+		5AF2519625AD80A7003B7F25 /* UIScrollView+Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2519525AD80A7003B7F25 /* UIScrollView+Gesture.m */; };
+		5AF2519725AD80A7003B7F25 /* UIScrollView+Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2519525AD80A7003B7F25 /* UIScrollView+Gesture.m */; };
 		5AF95AC82570F9F400A03F02 /* cameraHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF95AC72570F9F400A03F02 /* cameraHelper.m */; };
 		5AF95AC92570F9F400A03F02 /* cameraHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF95AC72570F9F400A03F02 /* cameraHelper.m */; };
 		5AF95AD82570FAE100A03F02 /* imageCompressHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF95AD72570FAE100A03F02 /* imageCompressHelper.m */; };
@@ -600,6 +602,8 @@
 		5AE9BBDC250795870010945B /* UIButton+JKImagePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+JKImagePosition.m"; sourceTree = "<group>"; };
 		5AE9BBE42508DFA20010945B /* UIViewController+Alert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Alert.h"; sourceTree = "<group>"; };
 		5AE9BBE52508DFA20010945B /* UIViewController+Alert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alert.m"; sourceTree = "<group>"; };
+		5AF2519425AD80A7003B7F25 /* UIScrollView+Gesture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Gesture.h"; sourceTree = "<group>"; };
+		5AF2519525AD80A7003B7F25 /* UIScrollView+Gesture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Gesture.m"; sourceTree = "<group>"; };
 		5AF95AC62570F9F400A03F02 /* cameraHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cameraHelper.h; sourceTree = "<group>"; };
 		5AF95AC72570F9F400A03F02 /* cameraHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cameraHelper.m; sourceTree = "<group>"; };
 		5AF95AD62570FAE100A03F02 /* imageCompressHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageCompressHelper.h; sourceTree = "<group>"; };
@@ -1100,6 +1104,8 @@
 			children = (
 				5ADABE7E257645920077B7C3 /* UIScrollView+Refresh.h */,
 				5ADABE7F257645920077B7C3 /* UIScrollView+Refresh.m */,
+				5AF2519425AD80A7003B7F25 /* UIScrollView+Gesture.h */,
+				5AF2519525AD80A7003B7F25 /* UIScrollView+Gesture.m */,
 			);
 			path = UIScrollView;
 			sourceTree = "<group>";
@@ -1981,6 +1987,7 @@
 				5A35580D249CC03A002DAD41 /* UIView+EaseBlankPage.m in Sources */,
 				5A2882AA24A1FB970059F96C /* PropertyController.m in Sources */,
 				5A4815362559268E001DC006 /* loadAinitializeTest.m in Sources */,
+				5AF2519625AD80A7003B7F25 /* UIScrollView+Gesture.m in Sources */,
 				5A25BA2825148F6400E49ACD /* UIView+Frame.m in Sources */,
 				5A10967F249B417B000398F5 /* GCDGroup.m in Sources */,
 				5A2882C224A343A10059F96C /* UINavigationController+StackManager.m in Sources */,
@@ -2153,6 +2160,7 @@
 				5A5493DD24BD539D00C49207 /* UINavigationController+JZExtension.m in Sources */,
 				5A5493DE24BD539D00C49207 /* JRSwizzle.m in Sources */,
 				5A4815372559268E001DC006 /* loadAinitializeTest.m in Sources */,
+				5AF2519725AD80A7003B7F25 /* UIScrollView+Gesture.m in Sources */,
 				5A5493E024BD539D00C49207 /* UIImage+FX.m in Sources */,
 				5A6694EF25358B570073FDF6 /* UITabBar+CustomBadge.m in Sources */,
 				5A38B482250F3E020077F6DE /* UIBezierPath+BasicShapes.m in Sources */,

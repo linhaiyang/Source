@@ -1,4 +1,10 @@
   
+  
+  property  自动生成成员变量（_属性名）
+  {
+    int _UserAge;成员变量
+}
+  
    //创建一个类
         Class superClass = [NSObject class];
         newClass = objc_allocateClassPair(superClass, className, 0);
@@ -23,7 +29,9 @@ class_copyMethodList(Class _Nullable cls, unsigned int * _Nullable outCount)
 // 获取属性列表
 class_copyPropertyList(Class _Nullable cls, unsigned int * _Nullable outCount)
 iOS 消息机制(一)  runtime
-
+添加方法
+方法交换
+获取类名父类
 
 Runtime
 

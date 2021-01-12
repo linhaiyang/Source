@@ -50,7 +50,7 @@
 
 /**Tools*/
 #import "MBProgressHUD+JJ.h"
-#import "GCDQueue.h"
+#import "GCD.h"
 
 /**Pods*/
 //#import <YYLabel.h>

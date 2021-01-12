@@ -28,6 +28,9 @@
 @property(nonatomic,copy)NSArray * muAry;
 @property(nonatomic,strong)UIScrollView * srcollView;
 @property(nonatomic,strong)UIImageView * imageView;
+@property(nonatomic,strong)GCDTimer * timer;
+@property(nonatomic,assign)int y;
+@property(nonatomic,strong)NSTimer * tmr;
 @end
 
 @implementation PropertyController
@@ -42,19 +45,28 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _timer = [GCDTimer new];
+    @weakify(self);
+//    int y;
+    [_timer event:^{
+        
+    } timeIntervalWithSecs:1];
+    [_timer start];
+    
+    _tmr = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        @strongify(self);
+        self.y++;
+        Dlog(@"%d",self.y);
+    }];
+    [[NSRunLoop currentRunLoop] addTimer:_tmr forMode:UITrackingRunLoopMode];
 //    CATransition
 //    self.fd_prefersNavigationBarHidden = true;
     self.view.backgroundColor =[UIColor whiteColor];
     self.navigationController.navigationBar.translucent = true;
     self.fd_prefersBarTintColor = UIColor.clearColor;
     [self addTableView];
-//    if (@available(iOS 11.0, *)) {
-//        self.tableV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-//        //加上这两句话，会让tableview的内容视图就是frame的大小。
-//        //默认情况下tableview会自动计算出安全区域，也就是内容视图会从64或20(隐藏导航栏时)开始。适用视图控制器从导航底部开始的情况
-//    } else {
-////        self.automaticallyAdjustsScrollViewInsets = NO; //默认是YES  iOS 11以下适配
-//    }
+
     LogInApi*request = [[LogInApi alloc] init];
     NSError *loadCacheError = nil;
     if ([request loadCacheWithError:&loadCacheError]) {
@@ -103,7 +115,7 @@
                         @"http://img.daimg.com/uploads/allimg/201029/1-2010291F401.jpg",
                         @"http://img.daimg.com/uploads/allimg/201029/1-201029162106.jpg"
     ];
-    @weakify(self);
+//    @weakify(self);
     
     [[RACObserve(self.tableV, contentOffset) filter:^BOOL(id  _Nullable value) {
             return true;
@@ -144,5 +156,9 @@
 //    cell.textLabel.text   = self.dataArray[indexPath.row];
     return cell;
 }
-
+-(void)dealloc{
+    Dlog(@"_timer destroy");
+    [_tmr invalidate];
+    _tmr = nil;
+}
 @end
