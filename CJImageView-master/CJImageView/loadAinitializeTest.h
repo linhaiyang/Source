@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(void)initializeTestBegin ;//__attribute__((unavailable("已取消")))
 + (instancetype)dataWithBytesNoCopy:(void *)bytes;
 @property(nonatomic,copy)NSString * (^didSelecBlock)(NSString*blockT);
+- (void)initCSocket;
 
 @end
 

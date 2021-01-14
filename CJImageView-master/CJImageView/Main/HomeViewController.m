@@ -89,7 +89,7 @@ static NSString *base64_encode_data(NSData *data){
     loadAinitializeTest * test = [[loadAinitializeTest alloc]init];
     test.backgroundColor = [UIColor orangeColor];
 //    test.frame = CGRectMake(0, 100, 100, 50);
-    [self.view addSubview:test];
+//    [self.view addSubview:test];
     @weakify(self);
 
 //    loadAinitializeTest * test2 = [test copy];
@@ -98,12 +98,12 @@ static NSString *base64_encode_data(NSData *data){
     test.backgroundColor = color;
     CGSize  testsize = test.intrinsicContentSize;
 //
-    [test makeConstraints:^(MASConstraintMaker *make) {
-        make.height.equalTo(testsize.height);
-        make.width.equalTo(50);
-        make.left.equalTo(0);
-        make.top.equalTo(100);
-    }];
+//    [test makeConstraints:^(MASConstraintMaker *make) {
+//        make.height.equalTo(testsize.height);
+//        make.width.equalTo(50);
+//        make.left.equalTo(0);
+//        make.top.equalTo(100);
+//    }];
     __block loadAinitializeTest * blockTest = test;
     
     Dlog(@"%p  -------- %p",&test,&blockTest);
@@ -120,13 +120,20 @@ static NSString *base64_encode_data(NSData *data){
     }];
     
     
-    UIImage * crImage = [UIImage imageNamed:@"button_navibars_4w"];
+    UIImage * crImage = [UIImage imageNamed:@"test_image_2"];
     CGSize size = crImage.size;
     Dlog(@"%.f---%.f--crImage_size",size.width,size.height);
-    UIImage * cropImage = [crImage imageCroppedToRect:CGRectMake(0, 0, 200, 200)];//CGSizeMake(200, 200)
-    UIImageView * img = [[UIImageView alloc]initWithImage:cropImage];
-    Dlog(@"%.f---%.f--crImage_size",cropImage.size.width,cropImage.size.height);
-    img.frame = CGRectMake(0, 200, cropImage.size.width, cropImage.size.height);
+    UIImageView * img = [UIImageView new];
+    __block UIImageView * imageView = img;
+    [GCDQueue.globalQueue execute:^{
+        UIImage * cropImage = [crImage imageCroppedToRect:CGRectMake(0, 0, 200, 200)];//CGSizeMake(200, 200)
+        [GCDQueue.mainQueue execute:^{
+            imageView.image = cropImage;
+        }];
+    }];
+
+//    Dlog(@"%.f---%.f--crImage_size",cropImage.size.width,cropImage.size.height);
+    img.frame = CGRectMake(0, 200, 200, 200);
     
     [self.view addSubview:img];
     

@@ -1,6 +1,14 @@
 
----contentInsetAdjustmentBehavior  background modes
 
+1.4 Tagged Pointer
+
+从64bit开始，iOS引入了Tagged Pointer技术，用于优化NSNumber、NSDate、NSString等小对象的存储
+
+在没有使用Tagged Pointer之前， NSNumber等对象需要动态分配内存、维护引用计数等，NSNumber指针存储的是堆中NSNumber对象的地址值
+可见，当 8 字节可以承载用于表示的数值时，系统就会以Tagged Pointer的方式生成指针，如果 8 字节承载不了时，则又用以前的方式来生成普通的指针。
+
+---contentInsetAdjustmentBehavior  background modes
+当使用局部变量 str 指向这个对象时，这个对象的引用计数 +1 ，变成了 2 。
 //用copys修饰的生成的都是不可变的对象 ,如果调用可变类型方法的直接报错
 1.当copy的对象类型为不可变对象如NSString类型时，和Strong修饰作用是一样的
 由于指向可变的对象，用copy修饰的话就算对象的值发生改变也不会影响本身
@@ -34,12 +42,9 @@ weak 比 assign 多了一个功能就是当属性所指向的对象消失的时�
 
 - (void)encodeWithCoder:(NSCoder *)coder;
 - (nullable instancetype)initWithCoder:(NSCoder *)coder; // NS_DESIGNATED_INITIALIZER
-
 @end
-
 /**
  该类的第一个方法执行之前调用
- 
  */
 +(void)initialize{
     Dlog(@"loadAinitializeTest-----initialize");

@@ -275,6 +275,10 @@
 		5AE9BBE72508DFA20010945B /* UIViewController+Alert.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE9BBE52508DFA20010945B /* UIViewController+Alert.m */; };
 		5AF2519625AD80A7003B7F25 /* UIScrollView+Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2519525AD80A7003B7F25 /* UIScrollView+Gesture.m */; };
 		5AF2519725AD80A7003B7F25 /* UIScrollView+Gesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF2519525AD80A7003B7F25 /* UIScrollView+Gesture.m */; };
+		5AF251B025AEF715003B7F25 /* autoreleasepool in Resources */ = {isa = PBXBuildFile; fileRef = 5AF251AF25AEF715003B7F25 /* autoreleasepool */; };
+		5AF251B125AEF715003B7F25 /* autoreleasepool in Resources */ = {isa = PBXBuildFile; fileRef = 5AF251AF25AEF715003B7F25 /* autoreleasepool */; };
+		5AF251BD25B02D3C003B7F25 /* Tip in Resources */ = {isa = PBXBuildFile; fileRef = 5AF251BC25B02D3C003B7F25 /* Tip */; };
+		5AF251BE25B02D3C003B7F25 /* Tip in Resources */ = {isa = PBXBuildFile; fileRef = 5AF251BC25B02D3C003B7F25 /* Tip */; };
 		5AF95AC82570F9F400A03F02 /* cameraHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF95AC72570F9F400A03F02 /* cameraHelper.m */; };
 		5AF95AC92570F9F400A03F02 /* cameraHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF95AC72570F9F400A03F02 /* cameraHelper.m */; };
 		5AF95AD82570FAE100A03F02 /* imageCompressHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF95AD72570FAE100A03F02 /* imageCompressHelper.m */; };
@@ -606,6 +610,8 @@
 		5AE9BBE52508DFA20010945B /* UIViewController+Alert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Alert.m"; sourceTree = "<group>"; };
 		5AF2519425AD80A7003B7F25 /* UIScrollView+Gesture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Gesture.h"; sourceTree = "<group>"; };
 		5AF2519525AD80A7003B7F25 /* UIScrollView+Gesture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Gesture.m"; sourceTree = "<group>"; };
+		5AF251AF25AEF715003B7F25 /* autoreleasepool */ = {isa = PBXFileReference; lastKnownFileType = text; path = autoreleasepool; sourceTree = "<group>"; };
+		5AF251BC25B02D3C003B7F25 /* Tip */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tip; sourceTree = "<group>"; };
 		5AF95AC62570F9F400A03F02 /* cameraHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cameraHelper.h; sourceTree = "<group>"; };
 		5AF95AC72570F9F400A03F02 /* cameraHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cameraHelper.m; sourceTree = "<group>"; };
 		5AF95AD62570FAE100A03F02 /* imageCompressHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageCompressHelper.h; sourceTree = "<group>"; };
@@ -1312,6 +1318,8 @@
 				5A5DDC7C257F872400DC17D1 /* CGPathFile */,
 				5AB8211F2588B783003560A9 /* git */,
 				5A944BB025949A970087DD9A /* YYText */,
+				5AF251AF25AEF715003B7F25 /* autoreleasepool */,
+				5AF251BC25B02D3C003B7F25 /* Tip */,
 			);
 			path = memorandum;
 			sourceTree = "<group>";
@@ -1697,6 +1705,7 @@
 				5AB1B8E1256530890083408B /* BaseData in Resources */,
 				435830B91C33D42F0074D713 /* LaunchScreen.storyboard in Resources */,
 				8B32C70225753A240050A147 /* Bugly in Resources */,
+				5AF251BD25B02D3C003B7F25 /* Tip in Resources */,
 				5AB1B8E8256530EA0083408B /* CharDoc in Resources */,
 				5A0E8C042579D761002F8708 /* AnimationFile in Resources */,
 				5A0E8C17257A0A5A002F8708 /* TransitionFile in Resources */,
@@ -1709,6 +1718,7 @@
 				5AB1B8FD256533AC0083408B /* NSHomeDirectoryFile in Resources */,
 				5A5DDC7D257F872400DC17D1 /* CGPathFile in Resources */,
 				5AB1B8D325652CD00083408B /* UDID in Resources */,
+				5AF251B025AEF715003B7F25 /* autoreleasepool in Resources */,
 				5AB1B8F62565329F0083408B /* SDWebImageFile in Resources */,
 				5A944BB125949A970087DD9A /* YYText in Resources */,
 				5AB1B9102565345E0083408B /* idStyle in Resources */,
@@ -1747,6 +1757,7 @@
 				5AB1B8E2256530890083408B /* BaseData in Resources */,
 				5A5493EC24BD539D00C49207 /* LaunchScreen.storyboard in Resources */,
 				8B32C70325753A240050A147 /* Bugly in Resources */,
+				5AF251BE25B02D3C003B7F25 /* Tip in Resources */,
 				5AB1B8E9256530EA0083408B /* CharDoc in Resources */,
 				5A0E8C052579D761002F8708 /* AnimationFile in Resources */,
 				5A0E8C18257A0A5A002F8708 /* TransitionFile in Resources */,
@@ -1759,6 +1770,7 @@
 				5AB1B8FE256533AC0083408B /* NSHomeDirectoryFile in Resources */,
 				5A5DDC7E257F872400DC17D1 /* CGPathFile in Resources */,
 				5AB1B8D425652CD00083408B /* UDID in Resources */,
+				5AF251B125AEF715003B7F25 /* autoreleasepool in Resources */,
 				5AB1B8F72565329F0083408B /* SDWebImageFile in Resources */,
 				5A944BB225949A970087DD9A /* YYText in Resources */,
 				5AB1B9112565345E0083408B /* idStyle in Resources */,

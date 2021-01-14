@@ -22,6 +22,40 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //创建一个自动释放池
+     @autoreleasepool {
+         //模拟：宠物中心派出小狗
+         loadAinitializeTest * test = [[loadAinitializeTest alloc]init];
+//         loadAinitializeTest * test = [dog copy];
+         [test initCSocket];
+//         Dlog(@"%ld",[dog ]);
+//
+//         //模拟：xiaoming需要和小狗玩耍，需要将其引用计数加1
+//         [dog retain];
+//         NSLog(@"小狗的引用计数为 %ld",dog.retainCount);
+//
+//         //模拟：xiaohong需要和小狗玩耍，需要将其引用计数加1
+//         [dog retain];
+//         NSLog(@"小狗的引用计数为 %ld",dog.retainCount);
+//
+//         //模拟：xiaoming确定不想和小狗玩耍了，需要将其引用计数减1
+//         [dog release];
+//         NSLog(@"小狗的引用计数为 %ld",dog.retainCount);
+//
+//         //模拟：xiaohong不确定何时不想和小狗玩耍了，将其设置为自动释放
+//         [dog autorelease];
+//         NSLog(@"小狗的引用计数为 %ld",dog.retainCount);
+//
+//         //没人需要和小狗玩耍了，将其引用计数减1
+//         [dog release];
+         
+//         NSLog(@"释放池子");
+     }
+    loadAinitializeTest * test = [[loadAinitializeTest alloc]init];
+//         loadAinitializeTest * test = [dog copy];
+    [test initCSocket];
+    
+    
 //    NSArray * array = [NSArray new];
 //    NSString * string = [array objectAtIndex:1];
     
@@ -78,7 +112,7 @@
     dispatch_queue_t queue = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_SERIAL);
     dispatch_queue_t queue2 = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_CONCURRENT);
 
-    Dlog(@"%@---1当前线程",[NSThread currentThread]);
+   
     
 //    dispatch_async(queue2, ^{
 //        [NSThread sleepForTimeInterval:2];
@@ -129,6 +163,7 @@
     
 //    self.dispatchSemaphore = dispatch_semaphore_create(5);
 //    [self testDispatchSemaphore];
+    
 }
 
 
@@ -204,6 +239,8 @@
 }
 
 -(void)addOperation{
+    
+    
     // 1.创建队列
    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
 
@@ -268,6 +305,9 @@
 //               NSLog(@"4---%@", [NSThread currentThread]); // 打印当前线程
 //           }
 //       }];
+    
+    Dlog(@"%@---1当前线程",[NSThread currentThread]);
+
 }
 -(void)operOnMainThread{
     @weakify(self);

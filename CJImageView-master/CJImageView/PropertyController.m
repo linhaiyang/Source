@@ -38,6 +38,10 @@
 +(void)initialize{
     Dlog(@"initialize调用");
 }
+-(void)timerEvent{
+    self.y++;
+    Dlog(@"%d",self.y);
+}
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.navigationController.navigationBar.translucent = true;
@@ -54,11 +58,12 @@
     } timeIntervalWithSecs:1];
     [_timer start];
     
-    _tmr = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        @strongify(self);
-        self.y++;
-        Dlog(@"%d",self.y);
-    }];
+    _tmr = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(timerEvent) userInfo:nil repeats:YES];
+//    _tmr = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//        @strongify(self);
+//        self.y++;
+//        Dlog(@"%d",self.y);
+//    }];
     [[NSRunLoop currentRunLoop] addTimer:_tmr forMode:UITrackingRunLoopMode];
 //    CATransition
 //    self.fd_prefersNavigationBarHidden = true;

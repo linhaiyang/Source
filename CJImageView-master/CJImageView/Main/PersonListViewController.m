@@ -16,12 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString * str = @"ssstr我";
-    const char *buffer= [str UTF8String];
-
-    
-    NSString * st = [str stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    Dlog(@"%@--ssss---%s",st,buffer);
+   
 }
 
 /*

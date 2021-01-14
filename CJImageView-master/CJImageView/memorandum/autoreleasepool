@@ -1,0 +1,21 @@
+
+什么时候用@autoreleasepool
+
+
+使用容器的block版本的枚举器时，内部会自动添加一个AutoreleasePool：
+
+
+根据Apple的文档，使用场景如下：
+
+写基于命令行的的程序时，就是没有UI框架，如AppKit等Cocoa框架时。
+写循环，循环里面包含了大量临时创建的对象。（本文的例子）
+创建了新的线程。（非Cocoa程序创建线程时才需要）
+长时间在后台运行的任务。
+
+{
+    __weak NSString *string_weak;对象没有强引用
+}
+
+出了 @autoreleasepool {}的作用域时，当前 autoreleasepool 被 drain ，其中的 autoreleased 对象被 release 。所以这个对象的引用计数变成了 0 ，对象最终被释放
+
+我们的iOS处理事件是以RunLoop一直循环执行的。viewDidLoad和viewWillAppear在同一个RunLoop循环中，所以在 viewWillAppear 方法中，我们仍然可以打印出这个对象的值，但是viewDidLoad的时候，那个RunLoop循环已经执行完了，这个对象才被彻底的释放。

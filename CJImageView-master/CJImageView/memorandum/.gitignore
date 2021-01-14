@@ -1,5 +1,6 @@
 # Xcode
-#
+#以斜杠/开头表示目录
+#以星号*通配多个字符；
 build/
 *.pbxuser
 !default.pbxuser

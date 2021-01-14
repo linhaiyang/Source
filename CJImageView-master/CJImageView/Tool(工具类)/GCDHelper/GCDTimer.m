@@ -34,7 +34,7 @@
 }
 
 - (instancetype)initInQueue:(GCDQueue *)queue {
-    
+    ////只要不是主队列,gcd定时器就在子线程执行任务
     self = [super init];
     
     if (self) {

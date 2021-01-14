@@ -9,6 +9,12 @@
 #import "UIBezierPath+BasicShapes.h"
 
 @implementation UIBezierPath (BasicShapes)
+/**
+ [UIColor.whiteColor setFill];
+ [[UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(10, 10)] fill];
+
+ */
+
 + (CGRect)maximumSquareFrameThatFits:(CGRect)frame;
 {
     CGFloat a = MIN(frame.size.width, frame.size.height);

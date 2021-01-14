@@ -16,6 +16,12 @@
 
 
 @implementation loadAinitializeTest
+
+-(void)dealloc{
+    Dlog(@"testDealloc");
+//    AutoreleasePoolPage
+}
+
 //- (void)initCSocket{
 //    self.didSelecBlock = ^NSString * _Nonnull(NSString * _Nonnull blockT) {
 //

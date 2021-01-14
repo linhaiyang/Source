@@ -1,0 +1,16 @@
+
+背景：WWDC在2019有session提出。到2020年4月，上架APP的启动页必须使用launchscreen.storyboard，不能再使用assert方式了，后面延迟到2020年6月，现在6月已过，就来说下launchscreen.storyboard的使用以及里面遇见的坑。
+
+
+如果你的应用使用了第三方或社交账号登录服务（如Facebook、Google、Twitter、LinkedIn、Amazon、微信等）来设置或验证用户的主账号，就必须把 Sign In With Apple 作为同等的选项添加到应用上。
+
+
+1. 私有方法 KVC 可能导致崩溃  // 崩溃 api
+UITextField *textField = [searchBar valueForKey:@"_searchField"];
+
+
+
+2. 推送的 deviceToken 获取到的格式发生变化
+
+
+UIWebView 将被禁止提交审核
