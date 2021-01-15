@@ -159,6 +159,14 @@ static NSString *base64_encode_data(NSData *data){
     
     NSString * baseStr64 = [yyLabel.text base64EncodedStringWithWrapWidth:64];
     Dlog(@"%@----------baseStr",baseStr64);
+    
+    
+    UIColor * color11 = [UIColor colorWithHexString:@"0x1B283A"];
+    CGFloat r = ((CGFloat)((0x1B283A & 0xFF0000) >> 16));
+    CGFloat g = ((CGFloat)((0x1B283A & 0xFF00) >> 8));
+    CGFloat b = ((CGFloat)(0x1B283A & 0xFF));
+
+    UIColor * color12 =[UIColor colorWithRed:((CGFloat)((0x1B283A & 0xFF0000) >> 16)) / 255.0 green:((CGFloat)((0x1B283A & 0xFF00) >> 8)) / 255.0 blue:((CGFloat)(0x1B283A & 0xFF)) / 255.0 alpha:(1)];
 }
 
 /*
