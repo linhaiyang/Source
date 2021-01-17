@@ -25,6 +25,34 @@
     Dlog(@"%@--ssss---%s",st,buffer);//ssstr%E6%88%91--ssss---ssstrÊàë
     
     
+    NSMutableCharacterSet *base = [NSMutableCharacterSet lowercaseLetterCharacterSet]; //字母
+
+      NSCharacterSet *decimalDigit = [NSCharacterSet decimalDigitCharacterSet];   //十进制数字
+
+      [base formUnionWithCharacterSet:decimalDigit];    //字母加十进制
+
+      NSString *string = @"ax@d5s#@sfn$5`SF$$%x^(#e{]e";
+
+    Dlog(@"%@---------------------",[string stringByTrimmingCharactersInSet:base]);
+    
+      //用上面的base隔开string然后组成一个数组，然后通过componentsJoinedByString，来连接成一个字符串
+    NSArray<NSString *> *  ary = [string componentsSeparatedByCharactersInSet:base];
+      NSLog(@"%@",[[string componentsSeparatedByCharactersInSet:base] componentsJoinedByString:@""]);//--@---#@---$-`SF$$%-^(#-{]-
+
+      [base invert];  //非 字母加十进制
+    NSArray<NSString *> *  ary2 = [string componentsSeparatedByCharactersInSet:base];
+
+      NSLog(@"%@",[[string componentsSeparatedByCharactersInSet:base] componentsJoinedByString:@"-"]);
+
+//    答应结果：ax-d5s--sfn-5------x---e--e
+//
+//
+//
+//     ax@d-s#@sfn$-`SF$$%x^(#e{]e
+
+
+    
+    
 }
 
 /*
