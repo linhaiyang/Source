@@ -48,7 +48,7 @@
     range.location = 4;
     NSString *bString = [cString substringWithRange:range];
     
-    // Scan values
+    // Scan values 1B283A  27 40 58
     unsigned int r, g, b;
     [[NSScanner scannerWithString:rString] scanHexInt:&r];
     [[NSScanner scannerWithString:gString] scanHexInt:&g];

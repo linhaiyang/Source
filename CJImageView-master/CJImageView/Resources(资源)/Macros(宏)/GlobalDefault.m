@@ -72,7 +72,10 @@ static GlobalDefault *instance = nil;
 }
 
 -(void)applicationEnterBackground{
-    [_Cache.diskCache setObject:_userInfo forKey:userInfoKey];
+    
+    [_Cache.diskCache setObject:_userInfo forKey:userInfoKey withBlock:^{
+        
+    }];
 }
 
 @end

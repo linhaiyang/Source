@@ -6,6 +6,8 @@
 
 在没有使用Tagged Pointer之前， NSNumber等对象需要动态分配内存、维护引用计数等，NSNumber指针存储的是堆中NSNumber对象的地址值
 可见，当 8 字节可以承载用于表示的数值时，系统就会以Tagged Pointer的方式生成指针，如果 8 字节承载不了时，则又用以前的方式来生成普通的指针。
+number1 pointer is 0xb000000000000012  ---8 字节  2个十六进制一个字节
+这是因为，字符串的abc采用的是Tagged Pointer技术，不是一个标准的OC对象。不存在说再堆上开辟空间存储对象什么的。
 
 ---contentInsetAdjustmentBehavior  background modes
 当使用局部变量 str 指向这个对象时，这个对象的引用计数 +1 ，变成了 2 。
