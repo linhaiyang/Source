@@ -34,7 +34,8 @@
       NSString *string = @"ax@d5s#@sfn$5`SF$$%x^(#e{]e";
 
     Dlog(@"%@---------------------",[string stringByTrimmingCharactersInSet:base]);
-    
+    NSString *encodedUrl = [string stringByAddingPercentEncodingWithAllowedCharacters:base];
+
       //用上面的base隔开string然后组成一个数组，然后通过componentsJoinedByString，来连接成一个字符串
     NSArray<NSString *> *  ary = [string componentsSeparatedByCharactersInSet:base];
       NSLog(@"%@",[[string componentsSeparatedByCharactersInSet:base] componentsJoinedByString:@""]);//--@---#@---$-`SF$$%-^(#-{]-
