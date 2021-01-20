@@ -7,12 +7,22 @@
 //
 
 #import "BaseViewController.h"
+#if __has_include(<FBMemoryProfiler/FBMemoryProfiler.h>)
+#import <FBRetainCycleDetector/FBRetainCycleDetector.h>
+#endif
 @interface BaseViewController ()
 
 @end
 
 @implementation BaseViewController
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+#ifdef DEBUG
+#ifdef LOCAL
+    [self testRetainCycle];
+#endif
+#endif
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = CViewBgColor;
@@ -32,4 +42,15 @@
 //-(void)dealloc{
 //    Dlog(@"%@---dealloc",NSStringFromClass([self class]));
 //}
+
+
+- (void)testRetainCycle {
+#if __has_include(<FBMemoryProfiler/FBMemoryProfiler.h>)
+    FBRetainCycleDetector *detector = [[FBRetainCycleDetector alloc] init];
+    [detector addCandidate:self];
+    NSSet *retainCycles = [detector findRetainCycles];
+    NSLog(@"------retainCycles----------%@", retainCycles);
+#endif
+
+}
 @end

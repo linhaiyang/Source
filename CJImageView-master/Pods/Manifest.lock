@@ -15,13 +15,15 @@ PODS:
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
   - Bugly (2.5.71)
+  - FBAllocationTracker (0.1.5)
+  - FBMemoryProfiler (0.1.3):
+    - FBAllocationTracker (~> 0.1)
+    - FBRetainCycleDetector (~> 0.1)
   - FBRetainCycleDetector (0.1.4)
   - IQKeyboardManager (3.3.7)
   - Masonry (0.6.4)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.1.17)
-  - MLeaksFinder (1.0.0):
-    - FBRetainCycleDetector
   - QBImagePickerController (3.4.0)
   - ReactiveObjC (3.1.1)
   - SDWebImage (3.7.6):
@@ -34,11 +36,11 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - Bugly
+  - FBMemoryProfiler
   - IQKeyboardManager (~> 3.3.7)
   - Masonry (~> 0.6.1)
   - MBProgressHUD (~> 1.2.0)
   - MJRefresh (~> 3.1.12)
-  - MLeaksFinder
   - QBImagePickerController
   - ReactiveObjC
   - SDWebImage (~> 3.7.5)
@@ -50,12 +52,13 @@ SPEC REPOS:
   trunk:
     - AFNetworking
     - Bugly
+    - FBAllocationTracker
+    - FBMemoryProfiler
     - FBRetainCycleDetector
     - IQKeyboardManager
     - Masonry
     - MBProgressHUD
     - MJRefresh
-    - MLeaksFinder
     - QBImagePickerController
     - ReactiveObjC
     - SDWebImage
@@ -66,12 +69,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Bugly: fd066c75c4a0eca1440f9b6a84bd37d51bfc85ac
+  FBAllocationTracker: dfdca3f71aceca6a85e95e3c6ec76a9785eba0f1
+  FBMemoryProfiler: 623fc5f8a61f7d02ec75c87e3b97c90f621d8b02
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
   IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: ee5b68f639775462faba4db0fd243baf4d42c2cf
-  MLeaksFinder: 8c435bd2f6d070af18cff082b503b21adc130fc0
   QBImagePickerController: d54cf93db6decf26baf6ed3472f336ef35cae022
   ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
@@ -79,6 +83,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 3fe4855fe34680d7595f5373b9c7dec69fc84b01
+PODFILE CHECKSUM: 6067c6cc1a07f5ef8f95809c85c0c6cb4c7c8cf9
 
 COCOAPODS: 1.9.0.beta.2

@@ -7,7 +7,6 @@
 //
 
 #import "MineViewController.h"
-#import "YYFPSLabel.h"
 #import "PropertyController.h"
 #import "UITableViewCell+Tool.h"
 #import "RACObserveController.h"
@@ -20,8 +19,7 @@
 @interface MineViewController ()<UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic,strong) NSMutableArray             *dataArray;
 @property (nonatomic,strong) UITableView         *myTableView;
-@property (nonatomic, strong) YYFPSLabel *fpsLabel;
-
+@property (nonatomic, strong) NSNumber * y;
 @end
 
 @implementation MineViewController
@@ -34,6 +32,11 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSNumber *number1 = @1;
+    NSLog(@"bigNumber pointer is %p", number1);
+    
+    NSString * x = @"可复用的滚动子视图可复用的滚动子视图可复用的滚动子视图可复用的滚动子视图可复用的滚动子视图";
+    NSLog(@"bigNumber pointer is-x %p", x);
 //    self.fd_prefersNavigationBarHidden = false;
     self.view.backgroundColor=[UIColor whiteColor];
     self.navigationItem.title=@"功能导航";
@@ -45,13 +48,6 @@
         make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
 //    self.fd_prefersNavigationBarHidden = true;
-    if (!_fpsLabel) {
-        _fpsLabel = [YYFPSLabel new];
-        _fpsLabel.frame=CGRectMake(20, 80, 30, 30);
-        [_fpsLabel sizeToFit];
-        _fpsLabel.alpha = 0.6;
-        [self.view addSubview:_fpsLabel];
-    }
 //    if (@available(iOS 11.0, *)) {
 //        self.tableV.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
 //    } else {

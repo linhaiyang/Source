@@ -14,3 +14,27 @@ UITextField *textField = [searchBar valueForKey:@"_searchField"];
 
 
 UIWebView 将被禁止提交审核
+
+
+卡顿：
+文本处理（尺寸计算、绘制）
+图片处理（解码、绘制）
+
+离屏渲染消耗性能的原因
+需要创建新的缓冲区
+离屏渲染的整个过程，需要多次切换上下文环境，先是从当前屏幕（On-Screen）切换到离屏（Off-Screen）；等到离屏渲染结束以后，将离屏缓冲区的渲染结果显示到屏幕上，又需要将上下文环境从离屏切换到当前屏幕
+图片加载
+1.加载小图片\使用频率比较高的图片
+1> 利用imageNamed:方法加载过的图片, 永远有缓存, 这个缓存是由系统管理的, 无法通过代码销毁缓存
+通过 imageNamed 创建 UIImage 时，系统实际上只是在 Bundle 内查找到文件名，然后把这个文件名放到 UIImage 里返回，并没有进行实际的文件读取和解码。当 UIImage 第一次显示到屏幕上时，其内部的解码方法才会被调用，同时解码结果会保存到一个全局缓存去。在图片解码后，App 第一次退到后台和收到内存警告时，该图片的缓存才会被清空，其他情况下缓存会一直存在。
+2.加载大图片\使用频率比较低的图片(一次性的图片, 比如版本新特性的图片)
+1> 利用initWithContentsOfFile:\imageWithContentsOfFile:等方法加载过的图片, 没有缓存, 只要用完了, 就会自动销毁
+
+
+
+
+App Store App申请审核加速
+1、Apple 提供了一个加速审核的通道：
+https://developer.apple.com/appstore/contact/appreviewteam/index.html
+
+https://github.com/facebook?q=&type=&language=objective-c%2B%2B

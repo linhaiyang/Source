@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+
 #if __has_include(<Bugly/Bugly.h>)
 #import <Bugly/Bugly.h>
 #endif
@@ -15,16 +16,40 @@
 #import "MainTabBarController.h"
 #import "AppDelegate+AppService.h"
 
+#if __has_include(<FBMemoryProfiler/FBMemoryProfiler.h>)
+#import <FBMemoryProfiler/FBMemoryProfiler.h>
+#import <FBRetainCycleDetector/FBRetainCycleDetector.h>
+#import "CacheCleanerPlugin.h"
+#import "RetainCycleLoggerPlugin.h"
+#endif
+
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
+{
+#if __has_include(<FBMemoryProfiler/FBMemoryProfiler.h>)
+    FBMemoryProfiler *memoryProfiler;
+#endif
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+#if __has_include(<FBMemoryProfiler/FBMemoryProfiler.h>)
+//    [self addFBMemoryProfiler:memoryProfiler];
+    NSArray *filters = @[FBFilterBlockWithObjectIvarRelation([UIView class], @"_subviewCache"),
+                         FBFilterBlockWithObjectIvarRelation([UIPanGestureRecognizer class], @"_internalActiveTouches")];
     
+    FBObjectGraphConfiguration *configuration =
+    [[FBObjectGraphConfiguration alloc] initWithFilterBlocks:filters
+                                         shouldInspectTimers:NO];
+    
+    memoryProfiler = [[FBMemoryProfiler alloc] initWithPlugins:@[[CacheCleanerPlugin new],
+                                                                  [RetainCycleLoggerPlugin new]]
+                               retainCycleDetectorConfiguration:configuration];
+    [memoryProfiler enable];
+#endif
 #if __has_include(<Bugly/Bugly.h>)
     [Bugly startWithAppId:@"e8b5d2256e"];
 #endif
@@ -41,6 +66,9 @@
     [self initRootViewController];
     [self.window makeKeyAndVisible];
     [self registKeyBoradManager];
+    
+    
+    
     return YES;
 }
 -(void)initRootViewController{
@@ -56,4 +84,8 @@
     self.window.rootViewController = mainTabBar;
     [[[UIApplication sharedApplication] delegate].window.layer addAnimation:anima forKey:@"revealAnimation"];
 }
+
+
+
+
 @end

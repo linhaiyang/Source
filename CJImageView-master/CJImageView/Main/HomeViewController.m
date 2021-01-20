@@ -121,12 +121,20 @@ static NSString *base64_encode_data(NSData *data){
     
     
     UIImage * crImage = [UIImage imageNamed:@"test_image_2"];
+    
+    UIImageView * img2 = [UIImageView new];
+    img2.frame = CGRectMake(150, 400, 200, 200);
+    img2.contentMode = UIViewContentModeScaleToFill;//UIViewContentModeScaleToFill属性会导致形变
+    img2.image = crImage;
+    [self.view addSubview:img2];
     CGSize size = crImage.size;
     Dlog(@"%.f---%.f--crImage_size",size.width,size.height);
     UIImageView * img = [UIImageView new];
     __block UIImageView * imageView = img;
+//    img.image = crImage;
+    img.contentMode = UIViewContentModeScaleAspectFill;//UIViewContentModeScaleAspectFill导致内容不能完全展示
     [GCDQueue.globalQueue execute:^{
-        UIImage * cropImage = [crImage imageCroppedToRect:CGRectMake(0, 0, 200, 200)];//CGSizeMake(200, 200)
+        UIImage * cropImage = [crImage imageScaledToSize:CGSizeMake( 200, 200)];//CGSizeMake(200, 200)
         [GCDQueue.mainQueue execute:^{
             imageView.image = cropImage;
         }];

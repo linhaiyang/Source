@@ -7,6 +7,7 @@
 //
 
 #import "MainTabBarController.h"
+#import "YYFPSLabel.h"
 
 #import "BaseNavigationController.h"
 #import "HomeViewController.h"
@@ -23,6 +24,7 @@
 @interface MainTabBarController ()<UITabBarControllerDelegate>
 
 @property (nonatomic,strong) NSMutableArray * VCS;//tabbar root VC
+@property (nonatomic, strong) YYFPSLabel *fpsLabel;
 
 @end
 
@@ -36,6 +38,18 @@
     [self setUpTabBar];
     //添加子控制器
     [self setUpAllChildViewController];
+    
+#ifdef LOCAL //LOCAL
+#ifdef DEBUG
+    if (!_fpsLabel) {
+        _fpsLabel = [YYFPSLabel new];
+        _fpsLabel.frame=CGRectMake(20, 80, 30, 30);
+        [_fpsLabel sizeToFit];
+        _fpsLabel.alpha = 0.6;
+        [self.view addSubview:_fpsLabel];
+    }
+#endif
+#endif
 }
 
 - (void)viewWillAppear:(BOOL)animated {

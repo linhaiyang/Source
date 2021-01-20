@@ -179,6 +179,8 @@
 		5A729AA825209A1C007A7136 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A685ECF24D2E7B200BF9737 /* NSData+Base64.m */; };
 		5A82CB2325554C2C0035F2D2 /* RootWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66948E253557D70073FDF6 /* RootWebViewController.m */; };
 		5A82CB2825554C3E0035F2D2 /* XLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A669491253557D70073FDF6 /* XLWebViewController.m */; };
+		5A938A6325B7C888002B5169 /* RetainCycleLoggerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A938A5F25B7C888002B5169 /* RetainCycleLoggerPlugin.m */; };
+		5A938A7225B7DE46002B5169 /* CacheCleanerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A938A5D25B7C888002B5169 /* CacheCleanerPlugin.m */; };
 		5A944BB125949A970087DD9A /* YYText in Resources */ = {isa = PBXBuildFile; fileRef = 5A944BB025949A970087DD9A /* YYText */; };
 		5A944BB225949A970087DD9A /* YYText in Resources */ = {isa = PBXBuildFile; fileRef = 5A944BB025949A970087DD9A /* YYText */; };
 		5A9C02E22599F0A20045F0F4 /* UIColor+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9C02E12599F0A10045F0F4 /* UIColor+Gradient.m */; };
@@ -527,6 +529,10 @@
 		5A729A8625208210007A7136 /* NSString+Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encrypt.m"; sourceTree = "<group>"; };
 		5A729A8D2520829A007A7136 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
 		5A729A8E2520829A007A7136 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		5A938A5C25B7C887002B5169 /* CacheCleanerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheCleanerPlugin.h; sourceTree = "<group>"; };
+		5A938A5D25B7C888002B5169 /* CacheCleanerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheCleanerPlugin.m; sourceTree = "<group>"; };
+		5A938A5E25B7C888002B5169 /* RetainCycleLoggerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetainCycleLoggerPlugin.h; sourceTree = "<group>"; };
+		5A938A5F25B7C888002B5169 /* RetainCycleLoggerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RetainCycleLoggerPlugin.m; sourceTree = "<group>"; };
 		5A944BB025949A970087DD9A /* YYText */ = {isa = PBXFileReference; lastKnownFileType = text; path = YYText; sourceTree = "<group>"; };
 		5A9C02E02599F0A10045F0F4 /* UIColor+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Gradient.h"; sourceTree = "<group>"; };
 		5A9C02E12599F0A10045F0F4 /* UIColor+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Gradient.m"; sourceTree = "<group>"; };
@@ -822,6 +828,7 @@
 		5A109670249B3FA9000398F5 /* Public(公共) */ = {
 			isa = PBXGroup;
 			children = (
+				5A938A6925B7DCD8002B5169 /* FBRetainCycle */,
 				5A66952A25358D5F0073FDF6 /* AppDelegate */,
 				5A2E8A8524B70D0000B859AB /* Network */,
 				5A66948D253557AA0073FDF6 /* WebViewController */,
@@ -1291,6 +1298,17 @@
 				5A685ED324D2E7B200BF9737 /* NSData+Hash.m */,
 			);
 			path = NSData;
+			sourceTree = "<group>";
+		};
+		5A938A6925B7DCD8002B5169 /* FBRetainCycle */ = {
+			isa = PBXGroup;
+			children = (
+				5A938A5C25B7C887002B5169 /* CacheCleanerPlugin.h */,
+				5A938A5D25B7C888002B5169 /* CacheCleanerPlugin.m */,
+				5A938A5E25B7C888002B5169 /* RetainCycleLoggerPlugin.h */,
+				5A938A5F25B7C888002B5169 /* RetainCycleLoggerPlugin.m */,
+			);
+			path = FBRetainCycle;
 			sourceTree = "<group>";
 		};
 		5AB1B8D125652CAA0083408B /* memorandum */ = {
@@ -1829,8 +1847,9 @@
 				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
+				"${BUILT_PRODUCTS_DIR}/FBAllocationTracker/FBAllocationTracker.framework",
+				"${BUILT_PRODUCTS_DIR}/FBMemoryProfiler/FBMemoryProfiler.framework",
 				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
-				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1845,8 +1864,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBAllocationTracker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBMemoryProfiler.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2171,6 +2191,7 @@
 				5AE9BBBB25075BB20010945B /* NetWorkBaseUrlConfig.m in Sources */,
 				5AF95B26257105EE00A03F02 /* EncodeModel.m in Sources */,
 				5A5493D924BD539D00C49207 /* EaseBlankPageView.m in Sources */,
+				5A938A7225B7DE46002B5169 /* CacheCleanerPlugin.m in Sources */,
 				5A5493DA24BD539D00C49207 /* LogInApi.m in Sources */,
 				5A5493DB24BD539D00C49207 /* GCDTimer.m in Sources */,
 				5A5493DC24BD539D00C49207 /* UINavigationItem+Loading.m in Sources */,
@@ -2180,6 +2201,7 @@
 				5A4815372559268E001DC006 /* loadAinitializeTest.m in Sources */,
 				5AF2519725AD80A7003B7F25 /* UIScrollView+Gesture.m in Sources */,
 				5A5493E024BD539D00C49207 /* UIImage+FX.m in Sources */,
+				5A938A6325B7C888002B5169 /* RetainCycleLoggerPlugin.m in Sources */,
 				5A6694EF25358B570073FDF6 /* UITabBar+CustomBadge.m in Sources */,
 				5A38B482250F3E020077F6DE /* UIBezierPath+BasicShapes.m in Sources */,
 				5A5493E224BD539D00C49207 /* main.m in Sources */,
@@ -2456,7 +2478,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CJImageView/Resources(资源)/PrefixHeader/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"COCOAPODS=1",
-					LOCAL,
+					"LOCAL=1",
 					DEBUG,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/CJImageView/Resources(资源)/LocalResource/Info.plist";
@@ -2495,8 +2517,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/CJImageView/Resources(资源)/PrefixHeader/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
-					"COCOAPODS=1",
-					LOCAL,
+					"LOCAL=1",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/CJImageView/Resources(资源)/LocalResource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
