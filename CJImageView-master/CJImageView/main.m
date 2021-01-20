@@ -8,11 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#if __has_include(<FBMemoryProfiler/FBMemoryProfiler.h>)
+#import <FBAllocationTracker/FBAllocationTrackerManager.h>
+#import <FBRetainCycleDetector/FBRetainCycleDetector.h>
 
+#endif
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-        //结构体   框架
-//    [[UIApplication sharedApplication]delegate].window;
+#if __has_include(<FBMemoryProfiler/FBMemoryProfiler.h>)
+      [FBAssociationManager hook];
+      [[FBAllocationTrackerManager sharedManager] startTrackingAllocations];
+      [[FBAllocationTrackerManager sharedManager] enableGenerations];
+      #endif
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

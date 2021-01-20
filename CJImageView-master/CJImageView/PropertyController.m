@@ -10,7 +10,6 @@
 #import "LogInApi.h"
 #import "RACObserveController.h"
 #import "ClassifyApi.h"
-
 #define  MRScreenWidth [UIScreen mainScreen].bounds.size.width
 #define  MRScreenHeight [UIScreen mainScreen].bounds.size.height
 @interface PropertyController ()<UIScrollViewDelegate,UITableViewDataSource, UITableViewDelegate>
@@ -145,7 +144,10 @@
         make.edges.equalTo(UIEdgeInsetsMake(-0, 0, 0, 0));
     }];
     self.tableV.rowHeight = 50.f;
+//    [self testRetainCycle];
+    
 }
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.muAry.count;
 }

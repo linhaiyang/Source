@@ -32,7 +32,7 @@ target 'CJImageViewProduction' do
 end
 #end
 target 'CJImageViewDebug' do
-  pod 'MLeaksFinder'
+  pod 'FBMemoryProfiler'
       #pod 'MLeaksFinder'  #可以把它放在MobileProject_Local的target中 这样就不会影响到产品环境
 end
 end

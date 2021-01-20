@@ -429,17 +429,22 @@
  *
  *  @return 纯色图片
  */
-+ (UIImage *)imageWithColor:(UIColor *)color {
-    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGContextSetFillColorWithColor(context, [color CGColor]);
-    CGContextFillRect(context, rect);
-    
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return image;
++ (void)imageWithColor:(UIColor *)color completion:(void (^)(UIImage *img))completion{//:(^complete)(UIImage *)completeBlock
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+        UIGraphicsBeginImageContext(rect.size);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        
+        CGContextSetFillColorWithColor(context, [color CGColor]);
+        CGContextFillRect(context, rect);
+        
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        dispatch_async(dispatch_get_main_queue(), ^{
+                if (completion != nil) {
+                    completion(image);
+                }
+        });
+    });
 }
 @end

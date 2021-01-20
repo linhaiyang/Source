@@ -59,5 +59,5 @@
 *
 *  @return 纯色图片
 */
-+ (UIImage *)imageWithColor:(UIColor *)color;
++ (void)imageWithColor:(UIColor *)color completion:(void (^)(UIImage *img))completion;
 @end

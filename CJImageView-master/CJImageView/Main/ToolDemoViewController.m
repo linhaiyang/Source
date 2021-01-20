@@ -313,6 +313,15 @@
     @weakify(self);
 //    dispatch_semaphore_wait(self.dispatchSemaphore, DISPATCH_TIME_FOREVER);
     dispatch_async(dispatch_get_main_queue(), ^{
+        
+        [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+            
+        } completion:^(BOOL finished) {
+            
+        }];
+        
+//        [UIView anima]
+        
         [UIView animateWithDuration:0.3 animations:^{
             @strongify(self);
 //            dispatch_async(dispatch_get_main_queue(), ^{

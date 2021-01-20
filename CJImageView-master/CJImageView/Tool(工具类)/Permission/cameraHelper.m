@@ -7,6 +7,7 @@
 //
 
 #import "cameraHelper.h"
+#import <Photos/Photos.h>
 #import <AssetsLibrary/ALAsset.h>
 #import <AssetsLibrary/ALAssetsLibrary.h>
 #import <AssetsLibrary/ALAssetsGroup.h>
@@ -18,15 +19,39 @@
 
 + (BOOL)checkPhotoLibraryAuthorizationStatus
 {
-    if ([ALAssetsLibrary respondsToSelector:@selector(authorizationStatus)]) {
-        ALAuthorizationStatus authStatus = [ALAssetsLibrary authorizationStatus];
-            if (ALAuthorizationStatusDenied == authStatus ||
-                ALAuthorizationStatusRestricted == authStatus) {
-                [MBProgressHUD showMessage:@"请在iPhone的“设置->隐私->照片”中打开本应用的访问权限" toView:nil];
-                return NO;
-            }
+    PHAuthorizationStatus authStatus;
+    // 查询权限
+    if (@available(iOS 14, *)) {
+        PHAccessLevel level = PHAccessLevelReadWrite;
+        authStatus = [PHPhotoLibrary authorizationStatusForAccessLevel:level];
+    } else {
+        if ([PHPhotoLibrary respondsToSelector:@selector(authorizationStatus)]) {
+            authStatus = [PHPhotoLibrary authorizationStatus];
+        }else{
+            return false;
         }
-    return YES;
+    }
+    switch (authStatus) {
+        case PHAuthorizationStatusLimited:
+            NSLog(@"limited");
+            break;
+        case PHAuthorizationStatusDenied:
+            NSLog(@"denied");
+            break;
+        case PHAuthorizationStatusAuthorized:
+            return true;
+            break;
+        default:
+            break;
+  }
+//    if (PHAuthorizationStatusNotDetermined == authStatus ||
+//        PHAuthorizationStatusRestricted == authStatus||
+//        PHAuthorizationStatusDenied == authStatus) {
+//
+//        return NO;
+//    }
+    [MBProgressHUD showMessage:@"请在iPhone的“设置->隐私->照片”中打开本应用的访问权限" toView:nil];
+    return false;
 }
 
 + (BOOL)checkCameraAuthorizationStatus
