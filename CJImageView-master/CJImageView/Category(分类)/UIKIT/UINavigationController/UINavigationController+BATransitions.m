@@ -91,12 +91,14 @@
     [UIView beginAnimations:nil context:NULL];
     [self pushViewController:controller animated:NO];
     [UIView setAnimationDuration:0.5];
-    [UIView setAnimationCurve:UIViewAnimationTransitionCurlUp];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseInOut];
     [UIView setAnimationBeginsFromCurrentState:YES];
     [UIView setAnimationTransition:transition forView:self.view cache:YES];
     [UIView commitAnimations];
 //    [UIView animateKeyframesWithDuration:<#(NSTimeInterval)#> delay:<#(NSTimeInterval)#> options:(UIViewKeyframeAnimationOptions) animations:<#^(void)animations#> completion:<#^(BOOL finished)completion#>]
 //    [UIView animateWithDuration:<#(NSTimeInterval)#> delay:<#(NSTimeInterval)#> options:<#(UIViewAnimationOptions)#> animations:<#^(void)animations#> completion:<#^(BOOL finished)completion#>]
+//    [UIView animatewith];
+    
 }
 
 - (UIViewController *)popViewControllerWithTransition:(UIViewAnimationTransition)transition {

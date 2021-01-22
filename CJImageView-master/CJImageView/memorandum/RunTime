@@ -1,5 +1,138 @@
   
   
+
+  用来干什么 基本作用:
+在程序运行过程中，动态的创建类，动态添加、修改这个类的属性和方法；
+遍历一个类中所有的成员变量、属性、以及所有方法
+消息传递、转发
+
+
+用在哪些地方 Runtime的典型事例:
+给系统分类添加属性、方法
+方法交换
+获取对象的属性、私有属性
+字典转换模型
+KVC、KVO
+归档(编码、解码)
+NSClassFromString class<->字符串
+block
+类的自我检测
+
+@interface NSObject <NSObject> {
+    Class isa  OBJC_ISA_AVAILABILITY;
+}
+  
+/// An opaque type that represents an Objective-C class
+Class代表的是一个Objective-C的类
+typedef struct objc_class *Class;
+  struct objc_class {
+    Class _Nonnull isa  OBJC_ISA_AVAILABILITY;
+
+#if !__OBJC2__
+    Class _Nullable super_class                              OBJC2_UNAVAILABLE;
+    const char * _Nonnull name                               OBJC2_UNAVAILABLE;
+    long version                                             OBJC2_UNAVAILABLE;
+    long info                                                OBJC2_UNAVAILABLE;
+    long instance_size                                       OBJC2_UNAVAILABLE;
+    struct objc_ivar_list * _Nullable ivars                  OBJC2_UNAVAILABLE;
+    struct objc_method_list * _Nullable * _Nullable methodLists       // Class里定义了一些你可以给对象发送的方法。
+    struct objc_cache * _Nonnull cache                       OBJC2_UNAVAILABLE;
+    struct objc_protocol_list * _Nullable protocols          OBJC2_UNAVAILABLE;
+#endif
+  Class是一个指向结构体objc_class的指针，objc_class也有一个isa指针。既然上面说到NSObject对象的isa是代表着类（Class），那这个Class结构体里的isa指针又是代表什么呢？没错，就是我们要说的metaClass(元类)~
+  
+
+  struct objc_class //代表的是一个Objective-C的类
+typedef struct objc_object {//表示类的实例
+
+Class isa;
+
+} *id;//指向类实例的指针
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@interface Test: UIViewController
+
+@end
+ Test *testObj = [[Test alloc] init];
+NSLog(@"testObj address: %p.",testObj);
+
+Class currentClass = object_getClass(testObj);
+for (int i = 0; i < 5; i ++) {
+    NSLog(@"%d time isa points to address: %p",i+1,currentClass);
+    currentClass = object_getClass(currentClass);
+}
+NSLog(@"NSObject's class address: %p",[NSObject class]);
+NSLog(@"NSObject's metaClass address: %p",object_getClass([NSObject class]));
+
+NSLog(@"Test's class address: %p.",[Test class]);
+Class superClass = class_getSuperclass([Test class]);
+for (int i = 0; i < 5; i ++) {
+    NSLog(@"%d time super_class points to addrss: %p",i+1,superClass);
+    superClass = class_getSuperclass(superClass);
+}
+NSLog(@"NSObject's superClass address: %p",class_getSuperclass([NSObject class]));
+
+Test[3541:930356] testObj address: 0x104d0c0b0.
+Test[3541:930356] 1 time isa points to address: 0x10488cee8
+Test[3541:930356] 2 time isa points to address: 0x10488cf10
+Test[3541:930356] 3 time isa points to address: 0x22b3a4ec8
+Test[3541:930356] 4 time isa points to address: 0x22b3a4ec8
+Test[3541:930356] 5 time isa points to address: 0x22b3a4ec8
+Test[3541:930356] NSObject's class address: 0x22b3a4ea0
+Test[3541:930356] NSObject's metaClass address: 0x22b3a4ec8
+Test[3541:930356] Test's class address: 0x10488cee8.
+Test[3541:930356] 1 time super_class points to addrss: 0x22b53af30
+Test[3541:930356] 2 time super_class points to addrss: 0x22b53ae18
+Test[3541:930356] 3 time super_class points to addrss: 0x22b3a4ea0
+Test[3541:930356] 4 time super_class points to addrss: 0x0
+Test[3541:930356] 5 time super_class points to addrss: 0x0
+Test[3541:930356] NSObject's superClass address: 0x0
+
+可见：
+
+Test的class地址是0x10488cee8
+Test的metaClass地址是0x10488cf10
+Test的metaClass的父metaClass（metaClass的isa指针所指）地址是0x22b3a4ec8
+这时，已经到了根metaClass，而根metaClass的isa都是指向同一个地址，而且也是根metaClass的地址，正好也验证了上面示意图的isa的指向。
+
+Test的super_class(UIViewController的Class)地址是0x22b53af30
+Test的super_class的super_class(UIResponder的Class，因为UIViewController继承UIResponder)地址是0x22b53ae18
+Test的super_class的super_class的super_class（NSObject的Class，因为UIResponder继承NSObject）地址是0x22b3a4ea0
+到了后面的super_class都已经是0x0，都指向了nil，正好也验证了上面示意图的super_class的指向。
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   property  自动生成成员变量（_属性名）
   {
     int _UserAge;成员变量

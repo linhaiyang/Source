@@ -152,3 +152,17 @@ https://www.jianshu.com/p/1803bd950b90      iOS14 隐私适配及部分解决方
 2.NSConcreteStackBlock 保存在栈中的 block，当函数返回时会被销毁。这个block就是你声明的时候不用copy修饰，并且你的block访问了外部变量。
 
 3.NSConcreteMallocBlock 保存在堆中的block，当引用计数为 0 时会被销毁。好了，这个就是今天的主角 ，用copy修饰的block。
+
+
+
+
+  成员变量是定义在｛｝号中的变量，如果变量的数据类型是一个类则称这个变量为实例变量。
+  @synthesize myButton;
+　　这样写了之后，那么编译器会自动生成myButton的实例变量，以及相应的getter和setter方法。注意：_myButton这个实例变量是不存在的，因为自动生成的实例变量为myButton而不是_myButton，所以现在@synthesize的作用就相当于指定实例变量；
+　　如果.m文件中写了@synthesize myButton;那么生成的实例变量就是myButton；如果没写@synthesize myButton;那么生成的实例变量就是_myButton。所以跟以前的用法还是有点细微的区别。
+
+  {
+  int y;
+  UIButton * button;
+}
+  

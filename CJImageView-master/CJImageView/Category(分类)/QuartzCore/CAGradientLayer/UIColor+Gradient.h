@@ -18,5 +18,7 @@
  *
  *  @return 渐变颜色
  */
-+ (UIColor*)gradientFromColor:(UIColor*)c1 toColor:(UIColor*)c2 withHeight:(int)height;
++ (void)gradientFromColor:(UIColor*)c1 toColor:(UIColor*)c2 withHeight:(int)height completion:(void (^)(UIColor *color))completion;
+
++ (void)gradientFromColor:(UIColor*)c1 toColor:(UIColor*)c2 withWidth:(int)width completion:(void (^)(UIColor *color))completion;
 @end

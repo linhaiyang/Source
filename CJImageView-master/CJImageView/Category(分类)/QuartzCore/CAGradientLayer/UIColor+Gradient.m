@@ -20,24 +20,30 @@
  *
  *  @return 渐变颜色
  */
-+ (UIColor*)gradientFromColor:(UIColor*)c1 toColor:(UIColor*)c2 withHeight:(int)height
++ (void)gradientFromColor:(UIColor*)c1 toColor:(UIColor*)c2 withHeight:(int)height completion:(void (^)(UIColor *color))completion
 {
-    CGSize size = CGSizeMake(1, height);
-    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        CGSize size = CGSizeMake(1, height);
+        UIGraphicsBeginImageContextWithOptions(size, NO, 0);
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+        
+        NSArray* colors = [NSArray arrayWithObjects:(id)c1.CGColor, (id)c2.CGColor, nil];
+        CGGradientRef gradient = CGGradientCreateWithColors(colorspace, (__bridge CFArrayRef)colors, NULL);
+        CGContextDrawLinearGradient(context, gradient, CGPointMake(0, 0), CGPointMake(0, size.height), 0);
+        
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        CGGradientRelease(gradient);
+        CGColorSpaceRelease(colorspace);
+        UIGraphicsEndImageContext();
+        dispatch_async(dispatch_get_main_queue(), ^{
+                if (completion != nil) {
+                    completion([UIColor colorWithPatternImage:image]);
+                }
+        });
+    });
     
-    NSArray* colors = [NSArray arrayWithObjects:(id)c1.CGColor, (id)c2.CGColor, nil];
-    CGGradientRef gradient = CGGradientCreateWithColors(colorspace, (__bridge CFArrayRef)colors, NULL);
-    CGContextDrawLinearGradient(context, gradient, CGPointMake(0, 0), CGPointMake(0, size.height), 0);
     
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    
-    CGGradientRelease(gradient);
-    CGColorSpaceRelease(colorspace);
-    UIGraphicsEndImageContext();
-    
-    return [UIColor colorWithPatternImage:image];
 }
 
 /**
@@ -49,8 +55,9 @@
  *
  *  @return 渐变颜色
  */
-+ (UIColor*)gradientFromColor:(UIColor*)c1 toColor:(UIColor*)c2 withWidth:(int)width
++ (void)gradientFromColor:(UIColor*)c1 toColor:(UIColor*)c2 withWidth:(int)width completion:(void (^)(UIColor *color))completion
 {
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
     CGSize size = CGSizeMake(width, 1);
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);
     CGContextRef context = UIGraphicsGetCurrentContext();
@@ -65,7 +72,11 @@
     CGGradientRelease(gradient);
     CGColorSpaceRelease(colorspace);
     UIGraphicsEndImageContext();
-    
-    return [UIColor colorWithPatternImage:image];
+        dispatch_async(dispatch_get_main_queue(), ^{
+                if (completion != nil) {
+                    completion([UIColor colorWithPatternImage:image]);
+                }
+        });
+    });
 }
 @end

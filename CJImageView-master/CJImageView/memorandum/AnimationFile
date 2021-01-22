@@ -15,7 +15,10 @@
 
 
 UIViewAnimationTransition------做uiview动画时候用
-
+1.UIViewAnimationOptions  动画效果相关
+2.UIViewKeyframeAnimationOptions  关键帧动画
+3.UIViewAnimationTransition 转场动画
+4.UIViewAnimationCurve 时间函数曲线相关
 
     [UIView beginAnimations:nil context:NULL];
     [self pushViewController:controller animated:NO];
@@ -26,7 +29,11 @@ UIViewAnimationTransition------做uiview动画时候用
     [UIView commitAnimations];
 
 
-
+[UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionRepeat animations:^{
+//            self.operView.ui_left= self.operView.frame.origin.x + 100;
+//        } completion:^(BOOL finished) {
+//
+//        }];
 
 Layer---->CAAnimation
 /*右翻转*/CATransition: CAAnimation
@@ -44,6 +51,61 @@ Layer---->CAAnimation
 
 
 //画动画效果的圆
+
+如果一个属性被标记为Animatable，那么它具有以下两个特点：
+1、直接对它赋值可能产生隐式动画；
+2、我们的CAAnimation的keyPath可以设置为这个属性的名字。
+animationWithKeyPath的值：
+
+　 transform.scale = 比例轉換
+
+    transform.scale.x = 闊的比例轉換
+
+    transform.scale.y = 高的比例轉換
+
+    transform.rotation.z = 平面圖的旋轉
+
+    opacity = 透明度
+
+    margin
+
+    zPosition
+
+    backgroundColor    背景颜色
+
+    cornerRadius    圆角
+
+    borderWidth
+
+    bounds
+
+    contents
+
+    contentsRect
+
+    cornerRadius
+
+    frame
+
+    hidden
+
+    mask
+
+    masksToBounds
+
+    opacity
+
+    position
+
+    shadowColor
+
+    shadowOffset
+
+    shadowOpacity
+
+    shadowRadius
+
+
     CAShapeLayer *layer = [CAShapeLayer layer];
     UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(260, 170, 60, 60) cornerRadius:30];
     
