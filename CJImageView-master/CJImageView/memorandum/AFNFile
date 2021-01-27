@@ -1,3 +1,14 @@
+
+                    if (   error.code != NSURLErrorNotConnectedToInternet
+                        && error.code != NSURLErrorCancelled
+                        && error.code != NSURLErrorTimedOut
+                        && error.code != NSURLErrorInternationalRoamingOff
+                        && error.code != NSURLErrorDataNotAllowed
+                        && error.code != NSURLErrorCannotFindHost
+                        && error.code != NSURLErrorCannotConnectToHost)
+
+
+
 AFN
 .AFHttpRequest中的方法执行，其中当没有设置序列化方法时，会走默认的序列化方法，在此方法中最后序列化成为urlencode编码格式，问题也出在此处
 self.requestSerializer = [AFHTTPRequestSerializer serializer];

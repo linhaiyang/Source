@@ -41,6 +41,8 @@
 		5A109680249B417B000398F5 /* GCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109679249B417B000398F5 /* GCDSemaphore.m */; };
 		5A17164624921914001CAADF /* MBProgressHUD+JJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A17164024921914001CAADF /* MBProgressHUD+JJ.m */; };
 		5A17164824921914001CAADF /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5A17164424921914001CAADF /* MBProgressHUD.bundle */; };
+		5A19D20E25C13B5F00346ECA /* error in Resources */ = {isa = PBXBuildFile; fileRef = 5A19D20D25C13B5F00346ECA /* error */; };
+		5A19D20F25C13B5F00346ECA /* error in Resources */ = {isa = PBXBuildFile; fileRef = 5A19D20D25C13B5F00346ECA /* error */; };
 		5A1D45F024B2FCE5006CA3CF /* YYFPSLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A1D45EF24B2FCE4006CA3CF /* YYFPSLabel.m */; };
 		5A25BA2825148F6400E49ACD /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A25BA2625148F6400E49ACD /* UIView+Frame.m */; };
 		5A25BA2925148F6400E49ACD /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A25BA2625148F6400E49ACD /* UIView+Frame.m */; };
@@ -399,6 +401,7 @@
 		5A17164024921914001CAADF /* MBProgressHUD+JJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+JJ.m"; sourceTree = "<group>"; };
 		5A17164324921914001CAADF /* MBProgressHUD+JJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+JJ.h"; sourceTree = "<group>"; };
 		5A17164424921914001CAADF /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		5A19D20D25C13B5F00346ECA /* error */ = {isa = PBXFileReference; lastKnownFileType = text; path = error; sourceTree = "<group>"; };
 		5A1D45EE24B2FCE4006CA3CF /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
 		5A1D45EF24B2FCE4006CA3CF /* YYFPSLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFPSLabel.m; sourceTree = "<group>"; };
 		5A25BA2625148F6400E49ACD /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
@@ -1338,6 +1341,7 @@
 				5A944BB025949A970087DD9A /* YYText */,
 				5AF251AF25AEF715003B7F25 /* autoreleasepool */,
 				5AF251BC25B02D3C003B7F25 /* Tip */,
+				5A19D20D25C13B5F00346ECA /* error */,
 			);
 			path = memorandum;
 			sourceTree = "<group>";
@@ -1733,6 +1737,7 @@
 				5ADABED3257889360077B7C3 /* AnalyzeFile in Resources */,
 				5A17164824921914001CAADF /* MBProgressHUD.bundle in Resources */,
 				5A35580F249CC34A002DAD41 /* NoData.bundle in Resources */,
+				5A19D20E25C13B5F00346ECA /* error in Resources */,
 				5AB1B8FD256533AC0083408B /* NSHomeDirectoryFile in Resources */,
 				5A5DDC7D257F872400DC17D1 /* CGPathFile in Resources */,
 				5AB1B8D325652CD00083408B /* UDID in Resources */,
@@ -1785,6 +1790,7 @@
 				5ADABED4257889360077B7C3 /* AnalyzeFile in Resources */,
 				5A5493ED24BD539D00C49207 /* MBProgressHUD.bundle in Resources */,
 				5A5493EE24BD539D00C49207 /* NoData.bundle in Resources */,
+				5A19D20F25C13B5F00346ECA /* error in Resources */,
 				5AB1B8FE256533AC0083408B /* NSHomeDirectoryFile in Resources */,
 				5A5DDC7E257F872400DC17D1 /* CGPathFile in Resources */,
 				5AB1B8D425652CD00083408B /* UDID in Resources */,

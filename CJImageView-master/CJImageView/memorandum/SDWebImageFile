@@ -3,6 +3,9 @@ SDWebImage
 sd_cancelImageLoadOperationWithKey 取消当前UIView和键的所有操作
 
 
+        showActivityIndicatorView  显示加载框
+        
+        获取图片顺序
  /**
      * The image wasn't available the SDWebImage caches, but was downloaded from the web.该图像无法从SDWebImage缓存中获得，但是从网上下载的。
      */

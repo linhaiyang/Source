@@ -68,7 +68,7 @@ failure:(void (^)(YTKBaseRequest *batchRequest))failure{
     //    NSString *token = [GlobalUserDefault token] ? [GlobalUserDefault token] :
     //    [dic setObject: @"api-vt2s57b6fvli0i08o3bc5bet4j" forKey:@"token"];
         // 设备来源
-        [dic setObject:@"iOS" forKey:@"device"];
+        [dic setObject:@"iOS" forKey:@"dev#ice"];
         // 随机值
         int a = arc4random() % 100000;
         NSString *nonce = [NSString stringWithFormat:@"%06d", a];

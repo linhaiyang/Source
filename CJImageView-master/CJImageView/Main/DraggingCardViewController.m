@@ -23,9 +23,10 @@
 
       [base formUnionWithCharacterSet:decimalDigit];    //字母加十进制
 
-      NSString *string = @"ax@d5s#@sfn$5`SF$$%x^(#e{]e";
-    Dlog(@"%@---------------------",[string stringByTrimmingCharactersInSet:base]);
+      NSString *string = @"ax@d5s#@sfn$5`SF$$%x^(#e{]e2";
+    Dlog(@"%@---------------------",[string stringByTrimmingCharactersInSet:base]);//@d5s#@sfn$5`SF$$%x^(#e{]//这个方法 仅仅 去除了 开头 和 结尾 的指定字符集中连续字符
     NSString *encodedUrl = [string stringByAddingPercentEncodingWithAllowedCharacters:base];
+    Dlog(@"%@-----------r----------",encodedUrl);//ax%40d5s%23%40sfn%245%60%53%46%24%24%25x%5E%28%23e%7B%5De2
       //用上面的base隔开string然后组成一个数组，然后通过componentsJoinedByString，来连接成一个字符串
     NSArray<NSString *> *  ary = [string componentsSeparatedByCharactersInSet:base];
       NSLog(@"%@",[[string componentsSeparatedByCharactersInSet:base] componentsJoinedByString:@""]);//--@---#@---$-`SF$$%-^(#-{]-
@@ -49,7 +50,7 @@
     
     NSTimer*timer = [NSTimer scheduledTimerWithTimeInterval:1.0f repeats:true block:^(NSTimer * _Nonnull timer) {
     //        NSTimeInterval timerInter = [UIApplication sharedApplication].backgroundTimeRemaining;
-        NSLog(@"timer22222-----------------");
+//        NSLog(@"timer22222-----------------");
         }];
         [timer fire];
     
@@ -89,7 +90,7 @@
 static void YYRunLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info) //监听的代码 CFRunLoopActivity activity, void *info
 {
 //    Dlog(@"kCFRunLoopBeforeWaiting---kCFRunLoopExit");
-    NSLog(@"kCFRunLoopBeforeWaiting---kCFRunLoopExit");
+//    NSLog(@"kCFRunLoopBeforeWaiting---kCFRunLoopExit");
 }
 - (void) run1
 {

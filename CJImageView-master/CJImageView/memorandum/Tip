@@ -38,3 +38,99 @@ App Store App申请审核加速
 https://developer.apple.com/appstore/contact/appreviewteam/index.html
 
 https://github.com/facebook?q=&type=&language=objective-c%2B%2B
+
+
+
+
+
+
+
+
+
+NSPredicate:是预测的意思 但是我们常翻译成谓词
+使用NSPredicate可以定义模糊查询条件 根据一定的条件 我们就可以从一个数组中快速找出 符合一定条件的元素对象
+
+NSString *string = @"Lorem    ipsum dolar   sit  amet.";
+string = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+
+NSArray *components = [string componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+components = [components filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self <> ''"]];
+
+
+
+NSCharacterSet:其实是许多字符或者数字或者符号的组合，在网络处理的时候会用到
+    stringByTrimmingCharactersInSet//这个方法 仅仅 去除了 开头 和 结尾 的指定字符集中连续字符
+
+
+
+
+
+NSScanner是一个类，用于在字符串中扫描指定的字符，尤其是把它们翻译/转换为数字和别的字符串。
+{
+    NSString *bananas = @"t123.321abc137d efg/hij kl";
+     NSString *separatorString = @"fg";
+     BOOL result;
+
+     NSScanner *aScanner = [NSScanner scannerWithString:bananas];
+
+     //扫描字符串
+     //扫描到指定字符串时停止，返回结果为指定字符串之前的字符串
+     NSLog(@"扫描仪所在的位置：%lu", aScanner.scanLocation);
+    
+    
+    NSString *container;
+        result = [aScanner scanUpToString:separatorString intoString:&container];
+        NSLog(@"扫描成功：%@", result?@"YES":@"NO");
+        NSLog(@"扫描的返回结果：%@", container);
+        NSLog(@"扫描仪所在的位置：%lu", aScanner.scanLocation);
+    
+    
+    //扫描整数
+      //将会接着上一次扫描结束的位置继续扫描
+      NSLog(@"-------------------------------------1");
+      NSLog(@"扫描仪所在的位置：%lu", aScanner.scanLocation);
+      NSInteger anInteger;
+      result = [aScanner scanInteger:&anInteger];
+      NSLog(@"扫描成功：%@", result?@"YES":@"NO");
+      NSLog(@"扫描的返回结果：%ld", anInteger);
+      NSLog(@"扫描仪所在的位置：%lu", aScanner.scanLocation);
+    
+    
+    NSLog(@"-------------------------------------2");
+    aScanner.scanLocation = 1;      //将扫描仪的位置置为首位置
+    NSLog(@"扫描仪所在的位置：%lu", aScanner.scanLocation);
+    NSInteger anInteger2;
+    result = [aScanner scanInteger:&anInteger2];
+    NSLog(@"扫描成功：%@", result?@"YES":@"NO");
+    NSLog(@"扫描的返回结果：%ld", anInteger2);
+    NSLog(@"扫描仪所在的位置：%lu", aScanner.scanLocation);
+    
+    
+    NSLog(@"-------------------------------------5");
+    aScanner.scanLocation = 0;      //将扫描仪的位置置为首位置
+    NSLog(@"扫描仪所在的位置：%lu", aScanner.scanLocation);
+    NSString *str;
+    NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"/"];
+    result = [aScanner scanUpToCharactersFromSet:characterSet intoString:&str];
+    NSLog(@"扫描成功：%@", result?@"YES":@"NO");
+    NSLog(@"扫描的返回结果：%@", str);
+    NSLog(@"扫描仪所在的位置：%lu", aScanner.scanLocation);
+    
+    
+    NSLog(@"-------------------------------------6");
+    NSString * numStr = @"a 1 b 2 c 3 d 4 e 5 f 6 o";
+        NSScanner * bscanner = [NSScanner scannerWithString:numStr];
+        NSCharacterSet * numSet = [NSCharacterSet decimalDigitCharacterSet];
+        while ( NO == [bscanner isAtEnd]) {
+            NSString * intoStr2;
+            NSLog(@"----%ld",bscanner.scanLocation);
+            if ([bscanner scanUpToCharactersFromSet:numSet intoString:&intoStr2]) {
+//                NSLog(@"-----------%@",intoStr2);
+                NSLog(@"----%ld",bscanner.scanLocation);
+                int num;
+                if ([bscanner scanInt:&num]) {
+                    NSLog(@"num=%d, %ld",num, bscanner.scanLocation);
+                }
+            }
+        }
+}

@@ -105,7 +105,9 @@ NSString * AFPercentEscapedStringFromString(NSString *string) {
     if (!self.value || [self.value isEqual:[NSNull null]]) {
         return AFPercentEscapedStringFromString([self.field description]);
     } else {
-        return [NSString stringWithFormat:@"%@=%@", AFPercentEscapedStringFromString([self.field description]), AFPercentEscapedStringFromString([self.value description])];
+        NSString * path1 = AFPercentEscapedStringFromString([self.field description]);
+        NSString * path2 = AFPercentEscapedStringFromString([self.value description]);
+        return [NSString stringWithFormat:@"%@=%@", path1, path2];
     }
 }
 

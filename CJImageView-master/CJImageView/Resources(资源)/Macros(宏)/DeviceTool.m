@@ -43,6 +43,7 @@
         screenHeight = [UIScreen mainScreen].bounds.size.height;
     }
     return screenHeight;
+//    return YYTextScreenSize().height;
 }
 +(CGFloat)screen_Width{
     static CGFloat screenWidth;
@@ -50,5 +51,6 @@
         screenWidth = [UIScreen mainScreen].bounds.size.width;
     }
     return screenWidth;
+//    return YYTextScreenSize().width;
 }
 @end

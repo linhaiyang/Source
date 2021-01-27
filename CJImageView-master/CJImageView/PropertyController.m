@@ -57,6 +57,10 @@
     } timeIntervalWithSecs:1];
     [_timer start];
     
+    NSString * path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    Dlog(@"%@-------------path",path);
+//    NSArray * ary = [NSArray alloc]initWithArray:<#(nonnull NSArray *)#> copyItems:<#(BOOL)#>
+    
     _tmr = [NSTimer timerWithTimeInterval:1 target:self selector:@selector(timerEvent) userInfo:nil repeats:YES];
 //    _tmr = [NSTimer scheduledTimerWithTimeInterval:1 repeats:YES block:^(NSTimer * _Nonnull timer) {
 //        @strongify(self);
@@ -136,6 +140,9 @@
         }
     }];
 //    RAC(self.tableV,)
+    UILabel * label = [UILabel new];
+    CGSize siez = YYTextScreenSize();
+    NSCharacterSet * set = YYTextVerticalFormRotateCharacterSet();
     
 }
 -(void)addTableView{
