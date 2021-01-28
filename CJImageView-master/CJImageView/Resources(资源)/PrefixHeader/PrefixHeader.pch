@@ -62,4 +62,5 @@
 #import <UIImageView+WebCache.h>
 #import <MJRefresh/MJRefresh.h>
 #import <KeyboardManager.h>
+#import <YYCategories.h>
 #endif /* PrefixHeader_pch */

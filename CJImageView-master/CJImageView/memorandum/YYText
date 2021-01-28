@@ -16,3 +16,7 @@
 
 枚举：
 凡是需要以按位或操作来进行组合的枚举都需要用NS_OPTIONS定义，若不需要组合，则可以使用NS_ENUM。
+
+
+YYLabel:
+    _innerContainer = [YYTextContainer new];

@@ -10,82 +10,123 @@
 
 @interface DraggingCardViewController ()
 @property(nonatomic,strong)NSThread * thread;
+@property(nonatomic,strong)UIView * animateCube;
 @end
 
 @implementation DraggingCardViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    NSMutableCharacterSet *base = [NSMutableCharacterSet lowercaseLetterCharacterSet]; //字母
-
-      NSCharacterSet *decimalDigit = [NSCharacterSet decimalDigitCharacterSet];   //十进制数字
-
-      [base formUnionWithCharacterSet:decimalDigit];    //字母加十进制
-
-      NSString *string = @"ax@d5s#@sfn$5`SF$$%x^(#e{]e2";
-    Dlog(@"%@---------------------",[string stringByTrimmingCharactersInSet:base]);//@d5s#@sfn$5`SF$$%x^(#e{]//这个方法 仅仅 去除了 开头 和 结尾 的指定字符集中连续字符
-    NSString *encodedUrl = [string stringByAddingPercentEncodingWithAllowedCharacters:base];
-    Dlog(@"%@-----------r----------",encodedUrl);//ax%40d5s%23%40sfn%245%60%53%46%24%24%25x%5E%28%23e%7B%5De2
-      //用上面的base隔开string然后组成一个数组，然后通过componentsJoinedByString，来连接成一个字符串
-    NSArray<NSString *> *  ary = [string componentsSeparatedByCharactersInSet:base];
-      NSLog(@"%@",[[string componentsSeparatedByCharactersInSet:base] componentsJoinedByString:@""]);//--@---#@---$-`SF$$%-^(#-{]-
-
-      [base invert];  //非 字母加十进制
-    NSArray<NSString *> *  ary2 = [string componentsSeparatedByCharactersInSet:base];
-
-      NSLog(@"%@",[[string componentsSeparatedByCharactersInSet:base] componentsJoinedByString:@"-"]);
-
-//    答应结果：ax-d5s--sfn-5------x---e--e
-//
-//
-//
-//     ax@d-s#@sfn$-`SF$$%x^(#e{]e
-
-
-    // 创建线程，并调用run1方法执行任务
-       self.thread = [[NSThread alloc] initWithTarget:self selector:@selector(run1) object:nil];
-   // 开启线程
-       [self.thread start];
+    CGRect targetBounds = (CGRect){CGPointZero,CGSizeMake(200, 200)};
+       self.animateCube = [[UIView alloc] initWithFrame:targetBounds];
+       _animateCube.center = self.view.center;
+//    _animateCube.backgroundColor = UIColor.orangeColor;
+       [self.view addSubview:self.animateCube];
     
-    NSTimer*timer = [NSTimer scheduledTimerWithTimeInterval:1.0f repeats:true block:^(NSTimer * _Nonnull timer) {
-    //        NSTimeInterval timerInter = [UIApplication sharedApplication].backgroundTimeRemaining;
-//        NSLog(@"timer22222-----------------");
-        }];
-        [timer fire];
-    
-    CFRunLoopRef runloop = CFRunLoopGetMain();
-    CFRunLoopObserverRef observer;
-//        [NSNotificationCenter defaultCenter]add
-    observer = CFRunLoopObserverCreate(CFAllocatorGetDefault(),
-                                       kCFRunLoopBeforeWaiting | kCFRunLoopExit,//休眠或者退出的时候监听
-                                       true,      // repeat
-                                       0xFFFFFF,  // after CATransaction(2000000)
-                                       YYRunLoopObserverCallBack, NULL);
-    CFRunLoopAddObserver(runloop, observer, kCFRunLoopCommonModes);
-    
-    
-    
-    CFRunLoopSourceContext context = {0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL};
-
-       CFRunLoopSourceRef source = CFRunLoopSourceCreate(kCFAllocatorDefault, 0, &context);
-
-       CFRunLoopAddSource(CFRunLoopGetCurrent(), source, kCFRunLoopDefaultMode);
-
-//       while (pageStillLoading) {
+//    CALayer * layer = [[CALayer alloc]init];
+//    layer.transform = CATransform3DTranslate(layer.transform, 0, 0, 100);
+//    layer.bounds = targetBounds;
+//    layer.position = self.animateCube.center;
+//    layer.backgroundColor = UIColor.orangeColor.CGColor;
 //
-//           NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+//    CALayer * layer2 = [[CALayer alloc]init];
+//    layer2.transform = CATransform3DTranslate(layer2.transform, 0, 0, -100);
+//    layer2.bounds = targetBounds;
+//    layer2.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5].CGColor;
+//    layer2.position = self.animateCube.center;
 //
-//           CFRunLoopRun();
+//    CALayer * layer3 = [[CALayer alloc]init];
+//    layer3.transform = CATransform3DTranslate(layer3.transform, -100, 0, 0);
+//    layer3.transform = CATransform3DRotate(layer3.transform, M_PI_2, 0, 1, 0);
+//    layer3.bounds = targetBounds;
+//    layer3.position = self.animateCube.center;
 //
-//           [pool release];
 //
-//       }
+//    CALayer * layer4 = [[CALayer alloc]init];
+//    layer4.transform = CATransform3DTranslate(layer4.transform, 100, 0, 0);
+//    layer4.transform = CATransform3DRotate(layer4.transform, M_PI_2, 0, 1, 0);
+//    layer4.bounds = targetBounds;
+//    layer4.position = self.animateCube.center;
+//
+//
+//    CALayer * layer5 = [[CALayer alloc]init];
+//    layer5.transform = CATransform3DTranslate(layer5.transform, 0, 100, 0);
+//    layer5.transform = CATransform3DRotate(layer5.transform, M_PI_2, 1, 0, 0);
+//    layer5.bounds = targetBounds;
+//    layer5.position = self.animateCube.center;
+//
+//
+//    CALayer * layer6 = [[CALayer alloc]init];
+//    layer6.transform = CATransform3DTranslate(layer6.transform, 0, -100, 0);
+//    layer6.transform = CATransform3DRotate(layer6.transform, M_PI_2, -1, 0, 0);
+//    layer6.bounds = targetBounds;
+//    layer6.position = self.animateCube.center;
+//
+//
+//    [self.animateCube.layer addSublayer:layer];
+//    [self.animateCube.layer addSublayer:layer2];
+//    [self.animateCube.layer addSublayer:layer3];
+//    [self.animateCube.layer addSublayer:layer4];
+//    [self.animateCube.layer addSublayer:layer5];
+//    [self.animateCube.layer addSublayer:layer6];
 
-       CFRunLoopRemoveSource(CFRunLoopGetCurrent(), source, kCFRunLoopDefaultMode);
 
-       CFRelease(source);
+    UIView *test = [[UIView alloc] initWithFrame:targetBounds];// front
+    test.backgroundColor = [[UIColor blueColor] colorWithAlphaComponent:0.25];
+    test.layer.transform = CATransform3DTranslate(test.layer.transform, 0, 0, 100);
 
+    UIView *test1 = [[UIView alloc] initWithFrame:targetBounds];// back
+    test1.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+    test1.layer.transform = CATransform3DTranslate(test1.layer.transform, 0, 0, -100);
+
+    UIView *test2 = [[UIView alloc] initWithFrame:targetBounds];// left
+    test2.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.5];
+    test2.layer.transform = CATransform3DTranslate(test2.layer.transform, -100, 0, 0);
+    test2.layer.transform = CATransform3DRotate(test2.layer.transform, M_PI_2, 0, 1, 0);
+
+    UIView *test3 = [[UIView alloc] initWithFrame:targetBounds];// right
+    test3.backgroundColor = [[UIColor purpleColor] colorWithAlphaComponent:0.5];
+    test3.layer.transform = CATransform3DTranslate(test3.layer.transform, 100, 0, 0);
+    test3.layer.transform = CATransform3DRotate(test3.layer.transform, M_PI_2, 0, 1, 0);
+
+    UIView *test4 = [[UIView alloc] initWithFrame:targetBounds];// head
+    test4.backgroundColor = [[UIColor orangeColor] colorWithAlphaComponent:0.5];
+    test4.layer.transform = CATransform3DTranslate(test4.layer.transform, 0, 100, 0);
+    test4.layer.transform = CATransform3DRotate(test4.layer.transform, M_PI_2, 1, 0, 0);
+
+    UIView *test5 = [[UIView alloc] initWithFrame:targetBounds];// foot
+    test5.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:0.5];
+    test5.layer.transform = CATransform3DTranslate(test5.layer.transform, 0, -100, 0);
+    test5.layer.transform = CATransform3DRotate(test5.layer.transform, M_PI_2, -1, 0, 0);
+//https://www.jianshu.com/p/3dd14cfbdc53
+        [self.animateCube addSubview:test];
+        [self.animateCube addSubview:test1];
+//        [self.animateCube addSubview:test2];
+//        [self.animateCube addSubview:test3];
+//        [self.animateCube addSubview:test4];
+//        [self.animateCube addSubview:test5];
+//       self.animateCube.transform = CGAffineTransformMakeScale(0.5, 0.5);//CGAffineTransform
+//
+//       __block CATransform3D transform = CATransform3DIdentity;
+//
+////       NSLog(@"%@",[NSString logForCATransform3D:transform]);
+//
+//       // Label
+//       UILabel *label = [[UILabel alloc] init];
+//       label.frame = CGRectOffset(self.animateCube.frame, 0, - 100);
+//       label.text = @"AnimatedCube";
+//       [label sizeToFit];
+//       [self.view addSubview:label];
+//
+//       transform.m34 = 1.0/-500;
+//
+//       float angle = M_PI / 360;
+//       self.animateCube.layer.sublayerTransform = transform;
+//       NSTimer *timer = [NSTimer timerWithTimeInterval:1.0/60 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//           transform = CATransform3DRotate(transform, angle, 1, 1, 0.5);
+//           self.animateCube.layer.sublayerTransform = transform;//
+//       }];
+//       [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
 }
 static void YYRunLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info) //监听的代码 CFRunLoopActivity activity, void *info
 {

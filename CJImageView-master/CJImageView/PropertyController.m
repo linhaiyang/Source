@@ -167,7 +167,7 @@
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         
     }];
-//    cell.textLabel.text   = self.dataArray[indexPath.row];
+    cell.imageView.userInteractionEnabled = true;
     return cell;
 }
 -(void)dealloc{

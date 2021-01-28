@@ -29,18 +29,24 @@
     
     self.navigationController.delegate = self;
     
+    CALayer * imgLayer = [CALayer new];
+    imgLayer.position=CGPointMake(200, KNavHeight+100);;
+    imgLayer.bounds =  CGRectMake(0, 0, 50, 50);
+    UIImage * img = [UIImage imageNamed:@"test_image_2"];
+    imgLayer.contents = (__bridge id _Nullable)(img.CGImage);
+    [self.view.layer addSublayer:imgLayer];
     
-    UIImage * testImage = [UIImage imageNamed:@"test_image_2"];
-    self.baseImage = [[UIImageView alloc]initWithImage:testImage];
-    self.baseImage.frame = CGRectMake(0, KNavHeight+100, testImage.size.width/4, testImage.size.height/4);
-    [self.view addSubview:_baseImage];
-    self.baseImage.userInteractionEnabled = true;
-    @weakify(self);
-    [self.baseImage addTapGestureRecognizer:^(UITapGestureRecognizer *recognizer, NSString *gestureId) {
-        @strongify(self);
-        TransitionToController * controller = [TransitionToController new];
-        [self.navigationController pushViewController:controller animated:YES];
-    }];
+//    UIImage * testImage = [UIImage imageNamed:@"test_image_2"];
+//    self.baseImage = [[UIImageView alloc]initWithImage:testImage];
+//    self.baseImage.frame = CGRectMake(0, KNavHeight+100, testImage.size.width/4, testImage.size.height/4);
+//    [self.view addSubview:_baseImage];
+//    self.baseImage.userInteractionEnabled = true;
+//    @weakify(self);
+//    [self.baseImage addTapGestureRecognizer:^(UITapGestureRecognizer *recognizer, NSString *gestureId) {
+//        @strongify(self);
+//        TransitionToController * controller = [TransitionToController new];
+//        [self.navigationController pushViewController:controller animated:YES];
+//    }];
     self.view.backgroundColor = UIColor.whiteColor;
     _timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     self.duration = 1.5f;

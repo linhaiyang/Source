@@ -153,8 +153,6 @@
 		5A6694F325358B570073FDF6 /* XYTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6694EB25358B560073FDF6 /* XYTabBar.m */; };
 		5A6694FB25358B980073FDF6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6694FA25358B980073FDF6 /* HomeViewController.m */; };
 		5A6694FC25358B980073FDF6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6694FA25358B980073FDF6 /* HomeViewController.m */; };
-		5A66950725358BCC0073FDF6 /* PersonListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66950625358BCC0073FDF6 /* PersonListViewController.m */; };
-		5A66950825358BCC0073FDF6 /* PersonListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66950625358BCC0073FDF6 /* PersonListViewController.m */; };
 		5A66950F25358BE40073FDF6 /* ToolDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66950E25358BE40073FDF6 /* ToolDemoViewController.m */; };
 		5A66951025358BE40073FDF6 /* ToolDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66950E25358BE40073FDF6 /* ToolDemoViewController.m */; };
 		5A66951725358BF40073FDF6 /* DraggingCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66951625358BF40073FDF6 /* DraggingCardViewController.m */; };
@@ -501,8 +499,6 @@
 		5A6694ED25358B560073FDF6 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		5A6694F925358B980073FDF6 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		5A6694FA25358B980073FDF6 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		5A66950525358BCC0073FDF6 /* PersonListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonListViewController.h; sourceTree = "<group>"; };
-		5A66950625358BCC0073FDF6 /* PersonListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonListViewController.m; sourceTree = "<group>"; };
 		5A66950D25358BE40073FDF6 /* ToolDemoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToolDemoViewController.h; sourceTree = "<group>"; };
 		5A66950E25358BE40073FDF6 /* ToolDemoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToolDemoViewController.m; sourceTree = "<group>"; };
 		5A66951525358BF40073FDF6 /* DraggingCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DraggingCardViewController.h; sourceTree = "<group>"; };
@@ -1161,8 +1157,6 @@
 				5A2E8A8924B71AF800B859AB /* UploaderController */,
 				5A6694F925358B980073FDF6 /* HomeViewController.h */,
 				5A6694FA25358B980073FDF6 /* HomeViewController.m */,
-				5A66950525358BCC0073FDF6 /* PersonListViewController.h */,
-				5A66950625358BCC0073FDF6 /* PersonListViewController.m */,
 				5A66950D25358BE40073FDF6 /* ToolDemoViewController.h */,
 				5A66950E25358BE40073FDF6 /* ToolDemoViewController.m */,
 				5A66951525358BF40073FDF6 /* DraggingCardViewController.h */,
@@ -1851,6 +1845,8 @@
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
 				"${BUILT_PRODUCTS_DIR}/FBAllocationTracker/FBAllocationTracker.framework",
@@ -1868,6 +1864,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCategories.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBAllocationTracker.framework",
@@ -1929,6 +1927,8 @@
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
 			);
@@ -1943,6 +1943,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCategories.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
 			);
@@ -2045,7 +2047,6 @@
 				5A685ED724D2E7B200BF9737 /* NSData+Encrypt.m in Sources */,
 				5AF95B29257105EE00A03F02 /* DeviceTool.m in Sources */,
 				5A6694F225358B570073FDF6 /* XYTabBar.m in Sources */,
-				5A66950725358BCC0073FDF6 /* PersonListViewController.m in Sources */,
 				5ADABE80257645920077B7C3 /* UIScrollView+Refresh.m in Sources */,
 				5A66951725358BF40073FDF6 /* DraggingCardViewController.m in Sources */,
 				5AE8AD9024C04AFD003C08BF /* UITableViewCell+Tool.m in Sources */,
@@ -2146,7 +2147,6 @@
 				5A729AA325209A15007A7136 /* NSData+Hash.m in Sources */,
 				5AF95AD92570FAE100A03F02 /* imageCompressHelper.m in Sources */,
 				5A5493BE24BD539D00C49207 /* BaseNavigationController.m in Sources */,
-				5A66950825358BCC0073FDF6 /* PersonListViewController.m in Sources */,
 				5AE9BB762505D4180010945B /* LoginModel.m in Sources */,
 				5A0E8C0F2579DB6E002F8708 /* XYTransition.m in Sources */,
 				5A5493C324BD539D00C49207 /* UINavigationItem+Margin.m in Sources */,

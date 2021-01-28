@@ -28,6 +28,7 @@ const NSString *UIView_GestureCallback_gestureKeysHashKey = @"UIView_GestureCall
 
 -(NSString*)addTapGestureRecognizer:(void(^)(UITapGestureRecognizer* recognizer, NSString* gestureId))tapCallback
 {
+    self.userInteractionEnabled = true;
     NSString *rand;
     do {
         rand = [self randomStringWithLength:12];

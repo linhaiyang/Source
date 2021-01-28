@@ -11,7 +11,7 @@
 #import "UIView+Frame.h"
 #import "loadAinitializeTest.h"
 //#import "loadAinitializeTest.h"
-
+//#import <MWPhotoBrowser.h>
 @interface ToolDemoViewController ()
 @property(nonatomic,strong)UIView * operView;
 @property (strong, readwrite, nonatomic) dispatch_semaphore_t dispatchSemaphore;
@@ -21,6 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSMutableArray * photos = [NSMutableArray array];
+//    browser.autoPlayOnAppear = NO; // Auto-play first video
+    
     /**
      GCD (Grand Central Dispatch) 是Apple公司开发的一种技术，
      它旨在优化多核环境中的并发操作并取代传统多线程的编程模式。 在Mac OS X 10.6和IOS 4.0之后开始支持GCD。
