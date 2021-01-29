@@ -22,6 +22,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSMutableArray * photos = [NSMutableArray array];
+    
+    NSDictionary * dic = @{
+        @"dev#ice" :@"iOS",
+        @"nonce" : @"073581",
+        @"signature" :@"44955f66e40c7c7f2ae5f644432c5f62",
+        @"timestamp" : @"1611892024"
+    };
+    /**
+     {
+         "dev#ice" = iOS;
+         nonce = 029595;
+         signature = ccbd64a7f1954c5dbc8450429218dc2e;
+         timestamp = 1611899960;
+     }
+     
+     */
+    NSString * str = [dic jsonStringEncoded];
+    Dlog(@"%@------",str);
+    /**
+     {"nonce":"073581","dev#ice":"iOS","signature":"44955f66e40c7c7f2ae5f644432c5f62","timestamp":"1611892024"}
+     */
+    NSData *strData = [str dataUsingEncoding:NSUTF8StringEncoding];
+    NSData *keyData = [@"Xo823-dl230df23r" dataUsingEncoding:NSUTF8StringEncoding];
+    //Byte 转换成 NSData
+    Byte byte[] = {1,2,3,4,5,6,7,8,9,10};
+    NSData *byteData = [[NSData alloc] initWithBytes:byte length:16];
+    NSData * encryData = [strData aes256EncryptWithKey:keyData iv:byteData];
+    
 //    browser.autoPlayOnAppear = NO; // Auto-play first video
     
     /**

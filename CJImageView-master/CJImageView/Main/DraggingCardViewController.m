@@ -101,27 +101,29 @@
 //https://www.jianshu.com/p/3dd14cfbdc53
         [self.animateCube addSubview:test];
         [self.animateCube addSubview:test1];
-//        [self.animateCube addSubview:test2];
-//        [self.animateCube addSubview:test3];
-//        [self.animateCube addSubview:test4];
-//        [self.animateCube addSubview:test5];
-//       self.animateCube.transform = CGAffineTransformMakeScale(0.5, 0.5);//CGAffineTransform
-//
-//       __block CATransform3D transform = CATransform3DIdentity;
-//
-////       NSLog(@"%@",[NSString logForCATransform3D:transform]);
-//
-//       // Label
-//       UILabel *label = [[UILabel alloc] init];
-//       label.frame = CGRectOffset(self.animateCube.frame, 0, - 100);
-//       label.text = @"AnimatedCube";
-//       [label sizeToFit];
-//       [self.view addSubview:label];
-//
-//       transform.m34 = 1.0/-500;
-//
-//       float angle = M_PI / 360;
-//       self.animateCube.layer.sublayerTransform = transform;
+        [self.animateCube addSubview:test2];
+        [self.animateCube addSubview:test3];
+        [self.animateCube addSubview:test4];
+        [self.animateCube addSubview:test5];
+       self.animateCube.transform = CGAffineTransformMakeScale(0.5, 0.5);//CGAffineTransform
+
+       __block CATransform3D transform = CATransform3DIdentity;
+
+//       NSLog(@"%@",[NSString logForCATransform3D:transform]);
+
+       // Label
+       UILabel *label = [[UILabel alloc] init];
+       label.frame = CGRectOffset(self.animateCube.frame, 0, - 100);
+       label.text = @"AnimatedCube";
+       [label sizeToFit];
+       [self.view addSubview:label];
+
+       transform.m34 = 1.0/-500;
+
+       float angle = M_PI / 360;
+       self.animateCube.layer.sublayerTransform = transform;
+//               transform = CATransform3DRotate(transform, angle*20, 1, 1, 0.5);
+//               self.animateCube.layer.sublayerTransform = transform;//
 //       NSTimer *timer = [NSTimer timerWithTimeInterval:1.0/60 repeats:YES block:^(NSTimer * _Nonnull timer) {
 //           transform = CATransform3DRotate(transform, angle, 1, 1, 0.5);
 //           self.animateCube.layer.sublayerTransform = transform;//

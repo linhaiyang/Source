@@ -35,6 +35,58 @@ MD5算法： SHA1 SHA256 SHA512算法类似MD5
 因为MD5算法产生的结果就是128bit，128个二进制数字。
 
 
+
+aes:
+
+/**
+ Returns an encrypted NSData using AES.
+ 
+ @param key   A key length of 16, 24 or 32 (128, 192 or 256bits).
+ 
+ @param iv    An initialization vector length of 16(128bits).
+              Pass nil when you don't want to use iv.
+ 
+ @return      An NSData encrypted, or nil if an error occurs.
+ */
+- (NSData *)aes256EncryptWithKey:(NSData *)key iv:(NSData *)iv {
+    if (key.length != 16 && key.length != 24 && key.length != 32) {
+        return nil;
+    }
+    if (iv.length != 16 && iv.length != 0) {
+        return nil;
+    }
+    
+    NSData *result = nil;
+    size_t bufferSize = self.length + kCCBlockSizeAES128;
+    void *buffer = malloc(bufferSize);
+    if (!buffer) return nil;
+    size_t encryptedSize = 0;
+    CCCryptorStatus cryptStatus = CCCrypt(kCCEncrypt,
+                                          kCCAlgorithmAES128,
+                                          kCCOptionPKCS7Padding,
+                                          key.bytes,
+                                          key.length,
+                                          iv.bytes,
+                                          self.bytes,
+                                          self.length,
+                                          buffer,
+                                          bufferSize,
+                                          &encryptedSize);
+    if (cryptStatus == kCCSuccess) {
+        result = [[NSData alloc]initWithBytes:buffer length:encryptedSize];
+        free(buffer);
+        return result;
+    } else {
+        free(buffer);
+        return nil;
+    }
+}
+
+
+
+
+
+
 NSData和NSMutableData存储的是二进制数据
 UTF-8：3字节----中文 H----{length = 1, bytes = 0x48}
 byte 字节
