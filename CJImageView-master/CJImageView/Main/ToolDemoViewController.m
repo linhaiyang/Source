@@ -22,6 +22,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSMutableArray * photos = [NSMutableArray array];
+    
+    NSString *file=[[NSBundle mainBundle]pathForResource:@"Array" ofType:@"plist"] ;
+    NSData * data = [NSData dataWithContentsOfFile:file];
+    NSArray * array = [NSArray arrayWithPlistData:data];
+    Dlog(@"%@-----,",[array jsonStringEncoded]);
+    
 //    browser.autoPlayOnAppear = NO; // Auto-play first video
     
     /**
