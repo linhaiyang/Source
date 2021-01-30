@@ -1,4 +1,12 @@
 
+iOS14 隐私适配及部分解决方案
+https://www.jianshu.com/p/1803bd950b90
+适配点
+
+▐ 相册
+ iOS14 新增了“Limited Photo Library Access” 模式，在授权弹窗中增加了 Select Photo 选项。用户可以在 App 请求调用相册时选择部分照片让 App 读取。从 App 的视⻆来看，你的相册里就只有这几张照片，App 无法得知其它照片的存在。
+
+
 背景：WWDC在2019有session提出。到2020年4月，上架APP的启动页必须使用launchscreen.storyboard，不能再使用assert方式了，后面延迟到2020年6月，现在6月已过，就来说下launchscreen.storyboard的使用以及里面遇见的坑。
 
 
@@ -134,3 +142,12 @@ NSScanner是一个类，用于在字符串中扫描指定的字符，尤其是�
             }
         }
 }
+
+
+
+https://www.macdo.cn/21880.html
+Microsoft_Office_16.23.19030902_Installer_32819
+
+
+1.Widgets(小组件)
+3d touch

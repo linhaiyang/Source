@@ -161,7 +161,6 @@
 		5A66952025358C000073FDF6 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66951E25358C000073FDF6 /* MineViewController.m */; };
 		5A66952D25358D810073FDF6 /* AppDelegate+AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66952C25358D810073FDF6 /* AppDelegate+AppService.m */; };
 		5A66952E25358D810073FDF6 /* AppDelegate+AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66952C25358D810073FDF6 /* AppDelegate+AppService.m */; };
-		5A685EA424D034E200BF9737 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A685EA324D034E200BF9737 /* NSDate+Extension.m */; };
 		5A685EA824D036EE00BF9737 /* NSDictionary+JSONString.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A685EA624D036EE00BF9737 /* NSDictionary+JSONString.m */; };
 		5A685EAC24D037DB00BF9737 /* NSFileManager+Paths.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A685EAB24D037DB00BF9737 /* NSFileManager+Paths.m */; };
 		5A685EB824D03C9800BF9737 /* NSString+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A685EB724D03C9800BF9737 /* NSString+Size.m */; };
@@ -510,8 +509,6 @@
 		5A66952525358CE60073FDF6 /* FontAndColorMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontAndColorMacros.h; sourceTree = "<group>"; };
 		5A66952B25358D810073FDF6 /* AppDelegate+AppService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AppService.h"; sourceTree = "<group>"; };
 		5A66952C25358D810073FDF6 /* AppDelegate+AppService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AppService.m"; sourceTree = "<group>"; };
-		5A685EA224D034E200BF9737 /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
-		5A685EA324D034E200BF9737 /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		5A685EA624D036EE00BF9737 /* NSDictionary+JSONString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSONString.m"; sourceTree = "<group>"; };
 		5A685EA724D036EE00BF9737 /* NSDictionary+JSONString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSONString.h"; sourceTree = "<group>"; };
 		5A685EAA24D037DB00BF9737 /* NSFileManager+Paths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Paths.h"; sourceTree = "<group>"; };
@@ -1196,18 +1193,8 @@
 				5A685EA924D037DB00BF9737 /* NSFileManager */,
 				5A685EA524D036DE00BF9737 /* NSDictionary */,
 				5A685E9E24D0324400BF9737 /* NSArray */,
-				5A685E9D24D0299D00BF9737 /* NSDate */,
 			);
 			path = Foundation;
-			sourceTree = "<group>";
-		};
-		5A685E9D24D0299D00BF9737 /* NSDate */ = {
-			isa = PBXGroup;
-			children = (
-				5A685EA224D034E200BF9737 /* NSDate+Extension.h */,
-				5A685EA324D034E200BF9737 /* NSDate+Extension.m */,
-			);
-			path = NSDate;
 			sourceTree = "<group>";
 		};
 		5A685E9E24D0324400BF9737 /* NSArray */ = {
@@ -2047,7 +2034,6 @@
 				5AF95B25257105EE00A03F02 /* EncodeModel.m in Sources */,
 				5A2882A124A1CE5B0059F96C /* UIViewController+Swizzle.m in Sources */,
 				5A38B498250F71610077F6DE /* UITableView+RadiusStyle.m in Sources */,
-				5A685EA424D034E200BF9737 /* NSDate+Extension.m in Sources */,
 				5A0BC90D25135DD000426728 /* UIColor+Hex.m in Sources */,
 				5AE9BB96250737C00010945B /* MPUploadImagesHelper.m in Sources */,
 				5A685ED724D2E7B200BF9737 /* NSData+Encrypt.m in Sources */,

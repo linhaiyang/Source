@@ -35,6 +35,18 @@ static NSString *base64_encode_data(NSData *data){
 - (void)viewDidLoad  {
     [super viewDidLoad];
     
+    NSDate * date = [NSDate new];
+    NSInteger year = date.year;
+    NSInteger month = date.month;
+    NSInteger day = date.day;
+    NSInteger hour = date.hour;
+    NSInteger min = date.minute;
+    NSInteger second = date.second;
+    NSString * dateStr = [date stringWithFormat:@"yyyyMMdd HHmmss"];
+    
+    NSDate * currentDate = [NSDate dateWithString:dateStr
+                                           format:@"yyyyMMdd HHmmss"];
+    
     Class class1=objc_getClass("HomeViewController");
     Class class2=object_getClass(class1);
     Class class3=object_getClass(class2);

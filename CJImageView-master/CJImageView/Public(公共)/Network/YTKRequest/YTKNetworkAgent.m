@@ -180,11 +180,12 @@ static NSString *extracted(YTKNetworkAgent *object, YTKBaseRequest *request) {
     AFConstructingBlock constructingBlock = [request constructingBodyBlock];
     AFHTTPRequestSerializer *requestSerializer = [self requestSerializerForRequest:request];
 
+#ifdef DEBUG
     NSLog(@"网络请求URL:[%@]",url);
     NSLog(@"网络请求参数:%@",param);
     NSLog(@"网络请求类型:%@",[self showRequtestMethod:method]);
     NSLog(@"当前头部信息：[%@]",requestSerializer.HTTPRequestHeaders);
-    
+#endif
     
     switch (method) {
         case YTKRequestMethodGET:
