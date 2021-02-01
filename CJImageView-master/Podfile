@@ -25,7 +25,8 @@ pod "QBImagePickerController" #图片选择器
 pod 'YYText'
 pod 'YYCache'
 pod 'YYCategories'
-pod 'YYImage'
+pod 'YYImage'  # 功能强大的 iOS 图像框架。
+pod 'YYWebImage' # 高性能的 iOS 异步图像加载框架。
 pod 'ReactiveObjC'
 target 'CJImageViewProduction' do
 #target 'CJImageViewTests' do
