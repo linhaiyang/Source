@@ -54,6 +54,7 @@
     self.progressLayer.frame = CGRectMake(0, 0, KScreen_Width, KScreen_Height);
     [self updatePath];
     [self.view.layer addSublayer:self.progressLayer];
+    [self layerAnimation];
     
     UIButton*rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0,0,70,30)];
     [rightButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
