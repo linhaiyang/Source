@@ -91,7 +91,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSString * title = [self.dataArray objectAtIndex:indexPath.row];
     if ([title containsString:@"WebViewController"]) {
-        RootWebViewController * controller = [[RootWebViewController alloc]initWithUrl:@"https://storetest.quyibao.com/store/activity/cut/index.html?id=51"];
+        RootWebViewController * controller = [[RootWebViewController alloc]initWithUrl:@"https://baidu.com"];
         [self.navigationController pushViewController:controller animated:YES];
     }else if ([title containsString:@"AfnRequest--SDwebImage"]){
         PropertyController * controller = [PropertyController new];

@@ -152,7 +152,7 @@ static NSString * const estimatedProgressKeyPath = @"estimatedProgress";
         return;
     }
     //更新返回按钮
-    [self updateNavigationItems];
+//    [self updateNavigationItems];
     
     NSURL * url = webView.URL;
     //打开wkwebview禁用了电话和跳转appstore 通过这个方法打开
