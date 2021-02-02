@@ -143,7 +143,22 @@ NSScanner是一个类，用于在字符串中扫描指定的字符，尤其是�
         }
 }
 
+打开其他App
+        NSURL *url = [NSURL URLWithString:@"asusMallOpen://store.asus.com.cn"];
 
+        if ([[UIApplication sharedApplication] canOpenURL:url]){
+            [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
+
+            }];
+        }
+UniversalLink Associated Domains
+ Universal Link的基本运作流程:
+APP第一次启动或APP更新版本后第一次启动
+APP向工程里配置的域名发起Get请求拉取配置好存放在https服务器上的apple-app-association文件
+APP将apple-app-association注册给系统
+由任意webview发起跳转的url，如果命中了apple-app-association注册过的通用链接
+打开App，触发Universal Link delegate
+没命中，webview继续跳转url
 
 https://www.macdo.cn/21880.html
 Microsoft_Office_16.23.19030902_Installer_32819
