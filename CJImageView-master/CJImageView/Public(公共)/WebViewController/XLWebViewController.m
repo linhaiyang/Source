@@ -8,6 +8,7 @@
 
 #import "XLWebViewController.h"
 #import "UIWebVIew+SwipeGesture.h"
+#import <StoreKit/StoreKit.h>
 
 //#import "XLJSHandler.h"
 //#import "HeaderModel.h"
@@ -16,7 +17,7 @@
 
 static NSString * const canGoBackKeyPath = @"canGoBack";
 static NSString * const estimatedProgressKeyPath = @"estimatedProgress";
-@interface XLWebViewController () <WKNavigationDelegate>
+@interface XLWebViewController () <WKNavigationDelegate,SKStoreProductViewControllerDelegate>
 //@property (nonatomic,strong) XLJSHandler * jsHandler;
 @property (nonatomic,assign) double lastProgress;//上次进度条位置
 @end
@@ -136,7 +137,7 @@ static NSString * const estimatedProgressKeyPath = @"estimatedProgress";
 #pragma mark --navigation delegate
 //加载完毕
 -(void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-    self.title = webView.title;
+    self.title = webView.title?:@"";
     [self updateProgress:webView.estimatedProgress];
     
     [self updateNavigationItems];
@@ -151,30 +152,33 @@ static NSString * const estimatedProgressKeyPath = @"estimatedProgress";
         decisionHandler(WKNavigationActionPolicyAllow);
         return;
     }
-    //更新返回按钮
-//    [self updateNavigationItems];
-    
     NSURL * url = webView.URL;
-    //打开wkwebview禁用了电话和跳转appstore 通过这个方法打开
-    UIApplication *app = [UIApplication sharedApplication];
+    UIApplication *app = [UIApplication sharedApplication];////打开wkwebview禁用了电话和跳转appstore 通过这个方法打开
     if ([url.scheme isEqualToString:@"tel"])
     {
         if ([app canOpenURL:url])
-        {
-            [app openURL:url];
-            decisionHandler(WKNavigationActionPolicyCancel);
-            return;
-        }
-    }
-    if ([url.absoluteString containsString:@"itunes.apple.com"])
-    {
-        if ([app canOpenURL:url])
-        {
-            [app openURL:url];
-            decisionHandler(WKNavigationActionPolicyCancel);
-            return;
-        }
-    }
+                {
+                    [app openURL:url options:@{} completionHandler:nil];
+                    decisionHandler(WKNavigationActionPolicyCancel);
+                    return;
+                }
+            }
+            if ([url.absoluteString containsString:@"itunes.apple.com"]||[url.absoluteString containsString:@"apps.apple.com"])//
+            {
+                if ([app canOpenURL:url])
+                {
+                    SKStoreProductViewController *skstore = [[SKStoreProductViewController alloc] init];
+
+                    skstore.delegate=self;
+
+                    [self presentViewController:skstore animated:YES completion:nil];
+                    [skstore loadProductWithParameters:@{SKStoreProductParameterITunesItemIdentifier:@(414478124)} completionBlock:^(BOOL result, NSError * _Nullable error) {
+
+                    }];
+                    decisionHandler(WKNavigationActionPolicyCancel);
+                    return;
+                }
+            }
     decisionHandler(WKNavigationActionPolicyAllow);
 }
 
@@ -198,5 +202,7 @@ static NSString * const estimatedProgressKeyPath = @"estimatedProgress";
     [_webView removeObserver:self forKeyPath:estimatedProgressKeyPath];
     [_webView removeObserver:self forKeyPath:canGoBackKeyPath];
 }
-
+- (void)productViewControllerDidFinish:(SKStoreProductViewController*)viewController {
+    [viewController dismissViewControllerAnimated:YES completion:nil];
+}
 @end

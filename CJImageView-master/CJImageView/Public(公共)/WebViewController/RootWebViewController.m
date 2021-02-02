@@ -8,8 +8,9 @@
 
 #import "RootWebViewController.h"
 //#import <YYKit.h>
+#import <StoreKit/StoreKit.h>
 
-@interface RootWebViewController ()<WKNavigationDelegate>
+@interface RootWebViewController ()
 
 @property (nonatomic,assign) double lastProgress;//上次进度条位置
 @end
@@ -19,6 +20,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    [self loadProductWithParameters:@{SKStoreProductParameterITunesItemIdentifier:@(1382195436)} completionBlock:^(BOOL result, NSError * _Nullable error) {
+//    if (error) {
+//    //handle the error
+//    }
+//    }];
+
 }
 
 //-(void)updateNavigationItems
