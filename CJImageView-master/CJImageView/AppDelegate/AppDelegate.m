@@ -82,7 +82,7 @@
     anima.duration = 0.3f;
     anima.removedOnCompletion = true;
     self.window.rootViewController = mainTabBar;
-    [[[UIApplication sharedApplication] delegate].window.layer addAnimation:anima forKey:@"revealAnimation"];
+    [self.window.layer addAnimation:anima forKey:@"revealAnimation"];
 }
 -(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
 //    [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
