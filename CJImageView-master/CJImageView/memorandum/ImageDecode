@@ -1,0 +1,21 @@
+
+核心代码：
+[_decoder frameAtIndex:index decodeForDisplay:YES]----->YYCGImageCreateDecodedCopy
+ 
+左边是外部暴露的解码方法，右边是核心解码方法
+
+
+
+我们首先要知道，如果最普通的UIImageView的图片UIImage创建资源赋值，图片是没有解码的，只有当图片被被赋值给UIImageView的时候，Runloop捕获到事件，才会进行解压缩，其中会把二进制压缩的数据，解压成没有压缩的位图，这里就是最耗时的操作
+
+
+YYImage : UIImage的子类，遵守 YYAnimatedImage 协议，帧图片，编解码，帧预加载等高级特性，支持WebP，APNG和GIF的编解码
+YYFrameImage : 能够显示帧动画，仅支持png，jpeg 格式
+YYSpriteSheetImage : 是用来做Spritesheet动画显示的图像类，也是UIImage的子类
+YYImageCoder : 图像的编码和解码功能类，YYImage底层支持，YYImageEncoder负责编码，YYImageDecoder 负责解码，YYImageFrame 负责管理帧图像信息，_YYImageDecoderFrame 内部私有类是其子类，UIImage+YYImageCoder提供了一些便利方法
+YYAnimatedImageView: UIImageView 子类，用于播放图像动画
+
+
+YYImageDecoder 负责解码， YYImageDecoder *decoder = [YYImageDecoder decoderWithData:data scale:scale];
+
+YYImageFrame *frame = [decoder frameAtIndex:0 decodeForDisplay:YES];YYImageFrame 负责管理帧图像信息
