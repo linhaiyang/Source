@@ -34,7 +34,7 @@ static NSString *base64_encode_data(NSData *data){
 }
 - (void)viewDidLoad  {
     [super viewDidLoad];
-    
+        
     NSDate * date = [NSDate new];
     NSInteger year = date.year;
     NSInteger month = date.month;
@@ -54,30 +54,40 @@ static NSString *base64_encode_data(NSData *data){
     Class class5=object_getClass(class4);
     NSLog(@"%p time isa points to address: %p  %p  %p  %p",class1,class2,class3,class4,class5);
     
-    YYTextView * label = [[YYTextView alloc]initWithFrame:CGRectMake(0, 100, 100, 50)];
+    YYTextView * label = [[YYTextView alloc]init];//WithFrame:CGRectMake(0, 100, 100, 50)
     label.text = @"time isa points to address";
     [self.view addSubview:label];
-    label.editable = false;
+//    label.editable = false;
+    
+//    label.keyboardType = UIKeyboardTypeNumberPad;
+//    label.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
     [self addsub:NSStringResourceKeyNamedPipe];
-//    label.textLongPressAction = ^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
-////        UIPasteboard*pasteboard = [UIPasteboard generalPasteboard];
-////        pasteboard.string=text.string;
-//        [containerView becomeFirstResponder];
-//               // 创建 菜单控制器
-//               UIMenuController *menu = [UIMenuController sharedMenuController];
-//               // 创建仨条 Item 每一个起一个名字
-//               UIMenuItem *menuItem1 = [[UIMenuItem alloc] initWithTitle:@"①Item复制" action:@selector(firstItemAction:)];
-//               UIMenuItem *menuItem2 = [[UIMenuItem alloc] initWithTitle:@"②Item粘贴" action:@selector(secondItemAction:)];
-//               UIMenuItem *menuItem3 = [[UIMenuItem alloc] initWithTitle:@"③Item删除" action:@selector(thirdItemAction:)];
-//
-//               // 设置菜单显示 每条 Item
-//               menu.menuItems = @[menuItem1,menuItem2,menuItem3];
-//               // 弹出菜单展示的位置  箭头指向的地方为 origin
-//        [menu setTargetRect:CGRectMake(self.view.bounds.size.width / 2 , self.view.bounds.size.height / 2, 0, 0) inView:self.view];
-//               // 显示
-//               [menu setMenuVisible:YES animated:YES];
-//    };
+    [label makeConstraints:^(MASConstraintMaker *make) {
+//        make.size.equalTo(CGSizeMake(100, 50));
+        make.left.equalTo(0);
+        make.center.equalTo(self.view);
+        make.height.equalTo(kScreenHeight/2);
+    }];
+    
+    
+    CALayer *line = [CALayer layer];
+    [self.view.layer addSublayer:line];
+    line.size =  CGSizeMake(50, 50);
+    line.backgroundColor = UIColor.orangeColor.CGColor;
+    [line yy_setImageWithURL:[NSURL URLWithString:@"http://ww4.sinaimg.cn/wap720/48e3f28djw1evvhkx7o7pj20m211cqaz.jpg"] placeholder:nil];
+    line.centerX = self.view.ui_centerX;
+    line.centerY = self.view.ui_centerY + 100;
+    NSMutableDictionary * dic;
+
+    NSArray * array = @[@1,@2,@3];
+    for(NSNumber * num in array){
+        if (num.longValue == 1)continue;
+        Dlog(@"%@-----5555+++++++++++++++++++++",num);
+    }
+    
+    
 }
+
 -(void)addsub:(NSStringResourceKey)resoure{
     NSString *bananas = @"t123.321abc137d efg/hij kl";
      NSString *separatorString = @"fg";

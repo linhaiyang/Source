@@ -70,4 +70,21 @@
     }
     return arrowImage;
 }
+
+- (NSString *)pathForScaledResource:(NSString *)name ofType:(NSString *)ext {
+    if (name.length == 0) return nil;
+    if ([name hasSuffix:@"/"]) return [self pathForResource:name ofType:ext];
+    
+    NSString *path = nil;
+    NSArray *scales = [NSBundle preferredScales];
+    for (int s = 0; s < scales.count; s++) {
+        CGFloat scale = ((NSNumber *)scales[s]).floatValue;
+        NSString *scaledName = ext.length ? [name stringByAppendingNameScale:scale]
+        : [name stringByAppendingPathScale:scale];
+        path = [self pathForResource:scaledName ofType:ext];
+        if (path) break;
+    }
+    
+    return path;
+}
 @end
