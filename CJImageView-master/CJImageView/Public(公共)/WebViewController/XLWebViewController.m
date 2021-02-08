@@ -152,6 +152,7 @@ static NSString * const estimatedProgressKeyPath = @"estimatedProgress";
         decisionHandler(WKNavigationActionPolicyAllow);
         return;
     }
+    CALayer * layer;
     NSURL * url = webView.URL;
     UIApplication *app = [UIApplication sharedApplication];////打开wkwebview禁用了电话和跳转appstore 通过这个方法打开
     if ([url.scheme isEqualToString:@"tel"])

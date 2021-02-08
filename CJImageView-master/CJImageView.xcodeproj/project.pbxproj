@@ -182,6 +182,8 @@
 		5A729A9E25209A0E007A7136 /* NSData+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A685ED424D2E7B200BF9737 /* NSData+Encrypt.m */; };
 		5A729AA325209A15007A7136 /* NSData+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A685ED324D2E7B200BF9737 /* NSData+Hash.m */; };
 		5A729AA825209A1C007A7136 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A685ECF24D2E7B200BF9737 /* NSData+Base64.m */; };
+		5A79AD2925D136D80045C588 /* CoreAnimation in Resources */ = {isa = PBXBuildFile; fileRef = 5A79AD2825D136D80045C588 /* CoreAnimation */; };
+		5A79AD2A25D136D80045C588 /* CoreAnimation in Resources */ = {isa = PBXBuildFile; fileRef = 5A79AD2825D136D80045C588 /* CoreAnimation */; };
 		5A82CB2325554C2C0035F2D2 /* RootWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66948E253557D70073FDF6 /* RootWebViewController.m */; };
 		5A82CB2825554C3E0035F2D2 /* XLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A669491253557D70073FDF6 /* XLWebViewController.m */; };
 		5A938A6325B7C888002B5169 /* RetainCycleLoggerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A938A5F25B7C888002B5169 /* RetainCycleLoggerPlugin.m */; };
@@ -286,6 +288,8 @@
 		5AF251B125AEF715003B7F25 /* autoreleasepool in Resources */ = {isa = PBXBuildFile; fileRef = 5AF251AF25AEF715003B7F25 /* autoreleasepool */; };
 		5AF251BD25B02D3C003B7F25 /* Tip in Resources */ = {isa = PBXBuildFile; fileRef = 5AF251BC25B02D3C003B7F25 /* Tip */; };
 		5AF251BE25B02D3C003B7F25 /* Tip in Resources */ = {isa = PBXBuildFile; fileRef = 5AF251BC25B02D3C003B7F25 /* Tip */; };
+		5AF6BC4525CD145000509734 /* UIImage+YYimage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF6BC4425CD145000509734 /* UIImage+YYimage.m */; };
+		5AF6BC4625CD145000509734 /* UIImage+YYimage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF6BC4425CD145000509734 /* UIImage+YYimage.m */; };
 		5AF95AC82570F9F400A03F02 /* cameraHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF95AC72570F9F400A03F02 /* cameraHelper.m */; };
 		5AF95AC92570F9F400A03F02 /* cameraHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF95AC72570F9F400A03F02 /* cameraHelper.m */; };
 		5AF95AD82570FAE100A03F02 /* imageCompressHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF95AD72570FAE100A03F02 /* imageCompressHelper.m */; };
@@ -537,6 +541,7 @@
 		5A729A8625208210007A7136 /* NSString+Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encrypt.m"; sourceTree = "<group>"; };
 		5A729A8D2520829A007A7136 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
 		5A729A8E2520829A007A7136 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		5A79AD2825D136D80045C588 /* CoreAnimation */ = {isa = PBXFileReference; lastKnownFileType = text; path = CoreAnimation; sourceTree = "<group>"; };
 		5A938A5C25B7C887002B5169 /* CacheCleanerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheCleanerPlugin.h; sourceTree = "<group>"; };
 		5A938A5D25B7C888002B5169 /* CacheCleanerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheCleanerPlugin.m; sourceTree = "<group>"; };
 		5A938A5E25B7C888002B5169 /* RetainCycleLoggerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetainCycleLoggerPlugin.h; sourceTree = "<group>"; };
@@ -626,6 +631,8 @@
 		5AF2519525AD80A7003B7F25 /* UIScrollView+Gesture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Gesture.m"; sourceTree = "<group>"; };
 		5AF251AF25AEF715003B7F25 /* autoreleasepool */ = {isa = PBXFileReference; lastKnownFileType = text; path = autoreleasepool; sourceTree = "<group>"; };
 		5AF251BC25B02D3C003B7F25 /* Tip */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tip; sourceTree = "<group>"; };
+		5AF6BC4325CD145000509734 /* UIImage+YYimage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+YYimage.h"; sourceTree = "<group>"; };
+		5AF6BC4425CD145000509734 /* UIImage+YYimage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+YYimage.m"; sourceTree = "<group>"; };
 		5AF95AC62570F9F400A03F02 /* cameraHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cameraHelper.h; sourceTree = "<group>"; };
 		5AF95AC72570F9F400A03F02 /* cameraHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cameraHelper.m; sourceTree = "<group>"; };
 		5AF95AD62570FAE100A03F02 /* imageCompressHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = imageCompressHelper.h; sourceTree = "<group>"; };
@@ -1011,6 +1018,8 @@
 			children = (
 				5A2E8AC624B8823D00B859AB /* UIImage+FX.h */,
 				5A2E8AC524B8823D00B859AB /* UIImage+FX.m */,
+				5AF6BC4325CD145000509734 /* UIImage+YYimage.h */,
+				5AF6BC4425CD145000509734 /* UIImage+YYimage.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -1338,6 +1347,7 @@
 				5A19D20D25C13B5F00346ECA /* error */,
 				5A3D634E25CA3BEB0085F14F /* ImageDecode */,
 				8B5C7C9C25C31BAB00D35371 /* Array.plist */,
+				5A79AD2825D136D80045C588 /* CoreAnimation */,
 			);
 			path = memorandum;
 			sourceTree = "<group>";
@@ -1739,6 +1749,7 @@
 				5A17164824921914001CAADF /* MBProgressHUD.bundle in Resources */,
 				5A35580F249CC34A002DAD41 /* NoData.bundle in Resources */,
 				5A19D20E25C13B5F00346ECA /* error in Resources */,
+				5A79AD2925D136D80045C588 /* CoreAnimation in Resources */,
 				5AB1B8FD256533AC0083408B /* NSHomeDirectoryFile in Resources */,
 				5A5DDC7D257F872400DC17D1 /* CGPathFile in Resources */,
 				5AB1B8D325652CD00083408B /* UDID in Resources */,
@@ -1795,6 +1806,7 @@
 				5A5493ED24BD539D00C49207 /* MBProgressHUD.bundle in Resources */,
 				5A5493EE24BD539D00C49207 /* NoData.bundle in Resources */,
 				5A19D20F25C13B5F00346ECA /* error in Resources */,
+				5A79AD2A25D136D80045C588 /* CoreAnimation in Resources */,
 				5AB1B8FE256533AC0083408B /* NSHomeDirectoryFile in Resources */,
 				5A5DDC7E257F872400DC17D1 /* CGPathFile in Resources */,
 				5AB1B8D425652CD00083408B /* UDID in Resources */,
@@ -2004,6 +2016,7 @@
 				5A4365872583187F0033B521 /* KeyBoardManagerController.m in Sources */,
 				5A38B486250F4F130077F6DE /* UIView+AddSubView.m in Sources */,
 				5A28829624A19D100059F96C /* BaseViewController.m in Sources */,
+				5AF6BC4525CD145000509734 /* UIImage+YYimage.m in Sources */,
 				5AE9BBC025075BB20010945B /* YTKChainRequestAgent.m in Sources */,
 				5A2882C424A343A10059F96C /* UINavigationController+BATransitions.m in Sources */,
 				5AF95B27257105EE00A03F02 /* GlobalDefault.m in Sources */,
@@ -2136,6 +2149,7 @@
 				5A5493B124BD539D00C49207 /* MPTagCollectionViewFlowLayout.m in Sources */,
 				5A6694F325358B570073FDF6 /* XYTabBar.m in Sources */,
 				5A0E8C2C257A0EAB002F8708 /* TransitionToController.m in Sources */,
+				5AF6BC4625CD145000509734 /* UIImage+YYimage.m in Sources */,
 				5A55A96724FFB1900037DACF /* NSString+Size.m in Sources */,
 				5AE9BBE72508DFA20010945B /* UIViewController+Alert.m in Sources */,
 				5A5493B624BD539D00C49207 /* UINavigationItem+Lock.m in Sources */,

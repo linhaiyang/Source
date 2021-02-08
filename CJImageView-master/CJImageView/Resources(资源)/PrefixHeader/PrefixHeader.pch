@@ -36,7 +36,8 @@
 #import "NSString+Size.h"
 #import "NSSet+Block.h"
 #import "UIView+GestureCallback.h"
-
+#import "NSBundle+Path.h"
+#import "UIImage+YYimage.h"
 /**Resources(资源)*/
 #import "GlobalDefault.h"
 #import "Marcros.h"
@@ -62,4 +63,6 @@
 #import <MJRefresh/MJRefresh.h>
 #import <KeyboardManager.h>
 #import <YYCategories.h>
+#import <YYWebImage.h>
+#import <YYImage.h>
 #endif /* PrefixHeader_pch */

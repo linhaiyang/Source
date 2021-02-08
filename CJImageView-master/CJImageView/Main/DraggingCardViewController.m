@@ -143,8 +143,8 @@
        float angle = M_PI / 360;
        self.animateCube.layer.sublayerTransform = transform;
        NSTimer *timer = [NSTimer timerWithTimeInterval:1.0/60 repeats:YES block:^(NSTimer * _Nonnull timer) {
-//               transform = CATransform3DRotate(transform, angle*20, 1, 1, 0.5);
-//               self.animateCube.layer.sublayerTransform = transform;//
+               transform = CATransform3DRotate(transform, angle, 1, 1, 0.5);
+               self.animateCube.layer.sublayerTransform = transform;//
 //       NSTimer *timer = [NSTimer timerWithTimeInterval:1.0/60 repeats:YES block:^(NSTimer * _Nonnull timer) {
 //           transform = CATransform3DRotate(transform, angle, 1, 1, 0.5);
 //           self.animateCube.layer.sublayerTransform = transform;//
