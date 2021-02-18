@@ -10,7 +10,7 @@
 #import "MPUploadImagesHelper.h"
 
 //上传图片相关
-#define kImageCollectionCell_Width floorf((KScreen_Width - 10*2- 10*3)/3)
+#define kImageCollectionCell_Width floorf((KScreen_Width() - 10*2- 10*3)/3)
 @interface MPImageCollectionCell : UICollectionViewCell
 
 @property (strong, nonatomic) UIImageView          *imgView;

@@ -7,50 +7,57 @@
 //
 
 #import "DeviceTool.h"
-@implementation DeviceTool
-+(BOOL)isIPhoneX{
-    return [self statusBarHeight]>20;
+
+CGFloat YYScreenScale() {
+    static CGFloat scale;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        scale = [UIScreen mainScreen].scale;
+    });
+    return scale;
 }
-+(CGFloat )statusBarHeight{
-    static CGFloat statusHeight;
-    if (statusHeight == 0.f) {
-        statusHeight= 20.f;
+CGFloat statusBarHeight(){
+    static CGFloat statusHeight= 20.f;;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         if (@available(iOS 11.0, *)) {
             statusHeight = [UIApplication sharedApplication].keyWindow.safeAreaInsets.top;
         }
-    }
+    });
     return statusHeight;
 }
-
-+(CGFloat )NavBarHeight{
-    return [self statusBarHeight] + 44;
-}
-
-+(CGFloat )safeBottomHeight{
-    static CGFloat safeBottomHeight;
-    if (safeBottomHeight == 0.f) {
-        safeBottomHeight = 0.f;
+CGFloat safeBottomHeight(){
+    static CGFloat safeBottomHeight= 0.f;;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         if (@available(iOS 11.0, *)) {
             safeBottomHeight = [UIApplication sharedApplication].keyWindow.safeAreaInsets.bottom;
         }
-    }
+    });
     return safeBottomHeight;
 }
 
-+(CGFloat)screen_Height{
-    static  CGFloat screenHeight;
-    if (screenHeight == 0.f) {
+CGFloat KScreen_Height(){
+    static CGFloat screenHeight= 0.f;;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         screenHeight = [UIScreen mainScreen].bounds.size.height;
-    }
+    });
     return screenHeight;
-//    return YYTextScreenSize().height;
+   
 }
-+(CGFloat)screen_Width{
-    static CGFloat screenWidth;
-    if (screenWidth == 0.f) {
+CGFloat KScreen_Width(){
+    static CGFloat screenWidth= 0.f;;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         screenWidth = [UIScreen mainScreen].bounds.size.width;
-    }
+    });
     return screenWidth;
-//    return YYTextScreenSize().width;
 }
+
+
+
+
+@implementation DeviceTool
+
 @end
