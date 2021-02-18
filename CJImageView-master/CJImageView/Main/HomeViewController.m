@@ -54,7 +54,22 @@ static NSString *base64_encode_data(NSData *data){
     Class class5=object_getClass(class4);
     NSLog(@"%p time isa points to address: %p  %p  %p  %p",class1,class2,class3,class4,class5);
     
-    YYTextView * label = [[YYTextView alloc]init];//WithFrame:CGRectMake(0, 100, 100, 50)
+    
+    YYLabel * yy = [YYLabel new];
+    [self.view addSubview:yy];
+    
+    NSAttributedString * atts = [[NSAttributedString alloc]initWithString:@""];
+    NSMutableString * str1 = [[NSMutableString alloc]initWithString:@"line1"];
+    NSMutableString * str2 = [[NSMutableString alloc]initWithString:@"line2"];
+    YYTextContainer * container = [YYTextContainer containerWithSize:CGSizeMake(15, 20)];
+    
+    YYTextLayout * layout = [YYTextLayout layoutWithContainerSize:CGSizeMake(15, 20) text:str1];
+    
+//    [atts appendString:str1];
+//    [atts appendString:str2];
+
+    
+    YYTextView * label = [[YYTextView alloc]initWithFrame:CGRectMake(0, 100, 100, 50)];
     label.text = @"time isa points to address";
     [self.view addSubview:label];
 //    label.editable = false;
