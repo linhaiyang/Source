@@ -12,15 +12,44 @@
 #import "loadAinitializeTest.h"
 //#import "loadAinitializeTest.h"
 //#import <MWPhotoBrowser.h>
-@interface ToolDemoViewController ()
+@interface ToolDemoViewController ()<CALayerDelegate>
 @property(nonatomic,strong)UIView * operView;
 @property (strong, readwrite, nonatomic) dispatch_semaphore_t dispatchSemaphore;
 @end
 
 @implementation ToolDemoViewController
-
+- (void)drawLayer:(CALayer*)layer inContext:(CGContextRef)ctx
+{
+    //1.使用UIKit进行绘制，因为UIKit只会对当前上下文栈顶的context操作，所以要把形参中的context设置为当前上下文
+    UIGraphicsPushContext(ctx);
+    UIImage* image = [UIImage imageNamed:@"test_image_2.png"];
+    //指定位置和大小绘制图片
+    [image drawInRect:CGRectMake(0, 0,100 , 100)];
+    UIGraphicsPopContext();
+    
+    //    UIGraphicsPushContext(ctx);
+    //2.使用Core Graphics进行绘制，需要显式使用context
+    //    //画一个椭圆
+    //    CGContextAddEllipseInRect(ctx, CGRectMake(0,0,100,100));
+    //    //填充颜色为蓝色
+    //    CGContextSetFillColorWithColor(ctx, [UIColor blueColor].CGColor);
+    //    //在context上绘制
+    //    CGContextFillPath(ctx);
+    //    UIGraphicsPopContext();
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    CALayer* layer = [CALayer layer];
+        layer.anchorPoint = CGPointMake(0, 0);
+        layer.position = CGPointMake(100, 100);
+        layer.bounds = CGRectMake(0, 0, 200, 200);
+        layer.delegate = self;
+        //需要显式调用setNeedsDisplay来刷新才会绘制layer
+        [layer setNeedsDisplay];
+        [self.view.layer addSublayer:layer];
+    
+    
+    
     NSMutableArray * photos = [NSMutableArray array];
     
     NSString *file=[[NSBundle mainBundle]pathForResource:@"Array" ofType:@"plist"] ;

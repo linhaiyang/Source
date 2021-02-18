@@ -124,7 +124,7 @@
 
 +(CGLineCap)lineCapFromCALineCap:(NSString *)lineCap
 {
-    return [[self CAtoCGLineCaps][lineCap] intValue];
+    return [[self CAtoCGLineCaps][lineCap] intValue];//
 }
 
 +(CGLineJoin)lineJoinFromCALineJoin:(NSString *)lineJoin

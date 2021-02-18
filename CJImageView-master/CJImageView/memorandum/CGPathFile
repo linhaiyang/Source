@@ -1,5 +1,19 @@
 
-CGContextRef：类似于画布 你在上面操作你想绘制的东西。
+ //1.使用UIKit在context上绘制，UIKit的所有操作只会在当前栈顶的context，所以需要注意当前栈顶的context是否你需要操作的上下文
+    //UIImage,NSString,UIBezierPath,UIColor等可以直接在当前context上操作
+
+
+并放置在上下文栈顶
+UIGraphicsPushContext(ctx);
+
+//该函数会自动创建一个context，并把它push到上下文栈顶，坐标系也经处理和UIKit的坐标系相同
+UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
+
+
+CGContextRef：类似于画布 你在上面操作你想绘制的东西以堆栈形式存放，只有在当前 context上绘图才有效。iOS有分多种图形上下文，其中UIView自带提供的在drawRect:方法中通过 UIGraphicsGetCurrentContext获取，还有专门为图片处理的context，UIGraphicsBeginImageContext函数生成，还有pdf的context等等。
+
+
+ 只要iOS任务一个视图需要被刷新或者重绘，drawRect:方法就会被调用。
 // 覆盖drawRect方法，你可以在此自定义绘画和动画
 - (void)drawRect:(CGRect)rect
 {
