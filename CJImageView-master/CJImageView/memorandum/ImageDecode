@@ -19,3 +19,17 @@ YYAnimatedImageView: UIImageView 子类，用于播放图像动画
 YYImageDecoder 负责解码， YYImageDecoder *decoder = [YYImageDecoder decoderWithData:data scale:scale];
 
 YYImageFrame *frame = [decoder frameAtIndex:0 decodeForDisplay:YES];YYImageFrame 负责管理帧图像信息
+
+
+        CGBitmapInfo bitmapInfo = kCGBitmapByteOrder32Host;
+        bitmapInfo |= hasAlpha ? kCGImageAlphaPremultipliedFirst : kCGImageAlphaNoneSkipFirst;
+        CGContextRef context = CGBitmapContextCreate(NULL, width, height, 8, 0, YYCGColorSpaceGetDeviceRGB(), bitmapInfo);
+        if (!context) return NULL;
+        CGContextDrawImage(context, CGRectMake(0, 0, width, height), imageRef); // decode
+        CGImageRef newImage = CGBitmapContextCreateImage(context);
+        CFRelease(context);
+        return newImage;
+通过CGBitmapContextCreate创建位图上下文
+通过CGContextDrawImage把原始位图绘制到上下文
+CFDataRef rawData = CGDataProviderCopyData(CGImageGetDataProvider(image.CGImage));该方法可以获取到原始位图信息
+CGBitmapContextCreateImage创建一个新的解压后的位图

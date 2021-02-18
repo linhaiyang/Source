@@ -123,5 +123,10 @@
 //    objc_msgSend()
     objc_getClass("1122321321");
     NSObject * obg = [NSObject new];
+    
+    
+    loadAinitializeTest * test =  [loadAinitializeTest new];
+    test.frame = CGRectMake(0, 100, 300, 300);
+    [self.view addSubview:test];
 }
 @end

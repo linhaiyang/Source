@@ -61,10 +61,26 @@
 }
 
 -(void)drawRect:(CGRect)rect{
-    NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:14], NSFontAttributeName, UIColor.blueColor, NSForegroundColorAttributeName, nil];
-            
+//    NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:14], NSFontAttributeName, UIColor.blueColor, NSForegroundColorAttributeName, nil];
+    CGContextRef context = UIGraphicsGetCurrentContext();
+       UIImage *image = [UIImage imageNamed:@"test_image_2.png"];
+       CGRect rect1 = CGRectMake(100.0, 100.0, 100.0, 100.0);
+    drawImage(context, [image CGImage], rect1);
+    
+    
 //    [@"我的zzzzzzzzzzzzzzzzzz" drawAtPoint:CGPointZero withAttributes:attrs];//不会换行
-    [@"我的abc123456" drawInRect:CGRectMake(0, 10, rect.size.width, rect.size.height) withAttributes:attrs];
+//    [@"我的abc123456" drawInRect:CGRectMake(0, 10, rect.size.width, rect.size.height) withAttributes:attrs];
+}
+void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
+    CGContextSaveGState(context);
+    
+    CGContextTranslateCTM(context, rect.origin.x, rect.origin.y);
+    CGContextTranslateCTM(context, 0, rect.size.height);
+    CGContextScaleCTM(context, 1.0, -1.0);
+    CGContextTranslateCTM(context, -rect.origin.x, -rect.origin.y);
+    CGContextDrawImage(context, rect, image);
+    
+    CGContextRestoreGState(context);
 }
 //- (CGSize)sizeThatFits:(CGSize)size{
 //    Dlog(@"sizeThatFits");
@@ -87,7 +103,7 @@
     self.yyLabel = [[UILabel alloc]init];
     self.yyLabel.text = @"YYLabel 测试YYLabel 测试YYLabel 测试YYLabel 测试YYLabel 测试";
     self.yyLabel.numberOfLines = 0;
-    [self addSubview:self.yyLabel];
+//    [self addSubview:self.yyLabel];
     [loadAinitializeTest initializeTestBegin];
     return self;
 }

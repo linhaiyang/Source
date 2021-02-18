@@ -30,7 +30,7 @@
     self.navigationController.delegate = self;
     
     CALayer * imgLayer = [CALayer new];
-    imgLayer.position=CGPointMake(200, KNavHeight+100);;
+    imgLayer.position=CGPointMake(200, NavBarHeight()+100);;
     imgLayer.bounds =  CGRectMake(0, 0, 50, 50);
     UIImage * img = [UIImage imageNamed:@"test_image_2"];
     imgLayer.contents = (__bridge id _Nullable)(img.CGImage);
@@ -51,7 +51,7 @@
     _timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     self.duration = 1.5f;
     
-    self.progressLayer.frame = CGRectMake(0, 0, KScreen_Width, KScreen_Height);
+    self.progressLayer.frame = CGRectMake(0, 0, KScreen_Width(), KScreen_Height());
     [self updatePath];
     [self.view.layer addSublayer:self.progressLayer];
     [self layerAnimation];

@@ -20,7 +20,7 @@
     [super viewDidLoad];
     UIImage * testImage = [UIImage imageNamed:@"test_image_2"];
     self.baseImage = [[UIImageView alloc]initWithImage:testImage];
-    self.baseImage.frame = CGRectMake(0, 0, KScreen_Width, KScreen_Width*testImage.size.height/testImage.size.width);
+    self.baseImage.frame = CGRectMake(0, 0, KScreen_Width(), KScreen_Width()*testImage.size.height/testImage.size.width);
     [self.view addSubview:_baseImage];
     self.view.backgroundColor = UIColor.whiteColor;
     // Do any additional setup after loading the view.

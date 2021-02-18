@@ -31,7 +31,7 @@
         cache = [YYMemoryCache new];
         cache.shouldRemoveAllObjectsOnMemoryWarning = NO;
         cache.shouldRemoveAllObjectsWhenEnteringBackground = NO;
-        cache.name = @"WeiboImageCache";
+        cache.name = @"UIImageCache";
     });
     return cache;
 }
