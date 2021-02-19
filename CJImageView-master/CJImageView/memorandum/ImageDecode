@@ -21,6 +21,8 @@ YYImageDecoder 负责解码， YYImageDecoder *decoder = [YYImageDecoder decoder
 YYImageFrame *frame = [decoder frameAtIndex:0 decodeForDisplay:YES];YYImageFrame 负责管理帧图像信息
 
 
+
+ 图片解压过程
         CGBitmapInfo bitmapInfo = kCGBitmapByteOrder32Host;
         bitmapInfo |= hasAlpha ? kCGImageAlphaPremultipliedFirst : kCGImageAlphaNoneSkipFirst;
         CGContextRef context = CGBitmapContextCreate(NULL, width, height, 8, 0, YYCGColorSpaceGetDeviceRGB(), bitmapInfo);

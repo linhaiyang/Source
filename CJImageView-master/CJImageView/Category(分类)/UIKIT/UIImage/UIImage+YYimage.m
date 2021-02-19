@@ -13,11 +13,11 @@
     if (!name) return nil;
     UIImage *image = [[self imageCache] objectForKey:name];
     if (image) return image;
-    NSString *ext = name.pathExtension;
-    if (ext.length == 0) ext = @"png";
-    NSString *path = [[NSBundle mainBundle] pathForScaledResource:name ofType:ext];
-    if (!path) return nil;
-    image = [UIImage imageWithContentsOfFile:path];
+//    NSString *ext = name.pathExtension;
+//    if (ext.length == 0) ext = @"png";
+//    NSString *path = [[NSBundle mainBundle] pathForScaledResource:name ofType:ext];
+//    if (!path) return nil;
+    image = [UIImage imageNamed:name];
     image = [image yy_imageByDecoded];
     if (!image) return nil;
     [[self imageCache] setObject:image forKey:name];
