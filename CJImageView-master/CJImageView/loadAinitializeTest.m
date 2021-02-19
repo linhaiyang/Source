@@ -64,8 +64,10 @@
 //    NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:14], NSFontAttributeName, UIColor.blueColor, NSForegroundColorAttributeName, nil];
     CGContextRef context = UIGraphicsGetCurrentContext();
        UIImage *image = [UIImage imageNamed:@"test_image_2.png"];
-       CGRect rect1 = CGRectMake(100.0, 100.0, 100.0, 100.0);
+       CGRect rect1 = CGRectMake(30, 50, 100.0, 100.0);
     drawImage(context, [image CGImage], rect1);
+    
+//    [self FXWithCornerRadius:10 backGroundColor:UIColor.redColor rect:rect];
     
     
 //    [@"我的zzzzzzzzzzzzzzzzzz" drawAtPoint:CGPointZero withAttributes:attrs];//不会换行
@@ -73,13 +75,13 @@
 }
 void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
     CGContextSaveGState(context);
-    
+
     CGContextTranslateCTM(context, rect.origin.x, rect.origin.y);
     CGContextTranslateCTM(context, 0, rect.size.height);
     CGContextScaleCTM(context, 1.0, -1.0);
     CGContextTranslateCTM(context, -rect.origin.x, -rect.origin.y);
     CGContextDrawImage(context, rect, image);
-    
+
     CGContextRestoreGState(context);
 }
 //- (CGSize)sizeThatFits:(CGSize)size{
@@ -100,6 +102,7 @@ void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
 
 -(instancetype)init{
     self = [super init];
+    self.backgroundColor = UIColor.blueColor;
     self.yyLabel = [[UILabel alloc]init];
     self.yyLabel.text = @"YYLabel 测试YYLabel 测试YYLabel 测试YYLabel 测试YYLabel 测试";
     self.yyLabel.numberOfLines = 0;

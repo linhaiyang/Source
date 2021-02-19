@@ -234,6 +234,8 @@
 		5ADABEAC25779DDB0077B7C3 /* UIWebVIew+SwipeGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADABEAA25779DDB0077B7C3 /* UIWebVIew+SwipeGesture.m */; };
 		5ADABED3257889360077B7C3 /* AnalyzeFile in Resources */ = {isa = PBXBuildFile; fileRef = 5ADABED2257889360077B7C3 /* AnalyzeFile */; };
 		5ADABED4257889360077B7C3 /* AnalyzeFile in Resources */ = {isa = PBXBuildFile; fileRef = 5ADABED2257889360077B7C3 /* AnalyzeFile */; };
+		5AE08B8425DF60CE001289F0 /* UIView+FX.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE08B8325DF60CE001289F0 /* UIView+FX.m */; };
+		5AE08B8525DF60CE001289F0 /* UIView+FX.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE08B8325DF60CE001289F0 /* UIView+FX.m */; };
 		5AE1DEDF2501EC4B00F511A6 /* TestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE1DEDE2501EC4B00F511A6 /* TestViewModel.m */; };
 		5AE1DEE1250227A000F511A6 /* TestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE1DEDE2501EC4B00F511A6 /* TestViewModel.m */; };
 		5AE1DEE825024A2000F511A6 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE1DEE725024A2000F511A6 /* LoginModel.m */; };
@@ -577,6 +579,8 @@
 		5ADABEA925779DDB0077B7C3 /* UIWebVIew+SwipeGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebVIew+SwipeGesture.h"; sourceTree = "<group>"; };
 		5ADABEAA25779DDB0077B7C3 /* UIWebVIew+SwipeGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebVIew+SwipeGesture.m"; sourceTree = "<group>"; };
 		5ADABED2257889360077B7C3 /* AnalyzeFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = AnalyzeFile; sourceTree = "<group>"; };
+		5AE08B8225DF60CE001289F0 /* UIView+FX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+FX.h"; sourceTree = "<group>"; };
+		5AE08B8325DF60CE001289F0 /* UIView+FX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+FX.m"; sourceTree = "<group>"; };
 		5AE1DEDD2501EC4B00F511A6 /* TestViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewModel.h; sourceTree = "<group>"; };
 		5AE1DEDE2501EC4B00F511A6 /* TestViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewModel.m; sourceTree = "<group>"; };
 		5AE1DEE625024A2000F511A6 /* LoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
@@ -1035,6 +1039,8 @@
 				5A39C232256BA7590052A133 /* UIView+Nib.m */,
 				5A38B484250F4F120077F6DE /* UIView+AddSubView.h */,
 				5A38B485250F4F120077F6DE /* UIView+AddSubView.m */,
+				5AE08B8225DF60CE001289F0 /* UIView+FX.h */,
+				5AE08B8325DF60CE001289F0 /* UIView+FX.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -2009,6 +2015,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AE08B8425DF60CE001289F0 /* UIView+FX.m in Sources */,
 				5AC1C46B258C996300D95FCD /* CAGradientLayer+Layer.m in Sources */,
 				5AE9BBC625075BB20010945B /* YTKRequest.m in Sources */,
 				5A0E8C0E2579DB6E002F8708 /* XYTransition.m in Sources */,
@@ -2142,6 +2149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AE08B8525DF60CE001289F0 /* UIView+FX.m in Sources */,
 				5A729A8825208210007A7136 /* NSString+Encrypt.m in Sources */,
 				5A5493AD24BD539D00C49207 /* BaseViewController.m in Sources */,
 				5A5493AE24BD539D00C49207 /* UINavigationController+BATransitions.m in Sources */,

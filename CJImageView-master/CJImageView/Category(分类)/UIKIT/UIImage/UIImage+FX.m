@@ -323,37 +323,83 @@
 	//return image
 	return image;
 }
-
++ (YYWebImageManager *)avatarImageManager_10{
+    static YYWebImageManager *manager;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSString *path = [[UIApplication sharedApplication].cachesPath stringByAppendingPathComponent:@"weibo.avatar"];
+        YYImageCache *cache = [[YYImageCache alloc] initWithPath:path];
+        manager = [[YYWebImageManager alloc] initWithCache:cache queue:[YYWebImageManager sharedManager].queue];
+        manager.sharedTransformBlock = ^(UIImage *image, NSURL *url) {
+            if (!image) return image;
+            return [image imageByRoundCornerRadius:10]; // CornerRadius
+        };
+    });
+    return manager;
+}
 - (UIImage *)imageWithCornerRadius:(CGFloat)radius
 {
-    //create drawing context
-	UIGraphicsBeginImageContextWithOptions(self.size, NO, 0.0f);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    //clip image
-    CGContextBeginPath(context);
-    CGContextMoveToPoint(context, 0.0f, radius);
-    CGContextAddLineToPoint(context, 0.0f, self.size.height - radius);
-    CGContextAddArc(context, radius, self.size.height - radius, radius, M_PI, M_PI / 2.0f, 1);
-    CGContextAddLineToPoint(context, self.size.width - radius, self.size.height);
-    CGContextAddArc(context, self.size.width - radius, self.size.height - radius, radius, M_PI / 2.0f, 0.0f, 1);
-    CGContextAddLineToPoint(context, self.size.width, radius);
-    CGContextAddArc(context, self.size.width - radius, radius, radius, 0.0f, -M_PI / 2.0f, 1);
-    CGContextAddLineToPoint(context, radius, 0.0f);
-    CGContextAddArc(context, radius, radius, radius, -M_PI / 2.0f, M_PI, 1);
-    CGContextClip(context);
-    
-    //draw image
-    [self drawAtPoint:CGPointZero];
-    
-    //capture resultant image
-	UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-	UIGraphicsEndImageContext();
-	
-	//return image
-	return image;
+    return [self imageByRoundCornerRadius:radius borderWidth:0 borderColor:nil];
+}
+- (UIImage *)imageByRoundCornerRadius:(CGFloat)radius
+                          borderWidth:(CGFloat)borderWidth
+                          borderColor:(UIColor *)borderColor {
+    return [self imageByRoundCornerRadius:radius
+                                  corners:UIRectCornerAllCorners
+                              borderWidth:borderWidth
+                              borderColor:borderColor
+                           borderLineJoin:kCGLineJoinMiter];
 }
 
+- (UIImage *)imageByRoundCornerRadius:(CGFloat)radius
+                              corners:(UIRectCorner)corners
+                          borderWidth:(CGFloat)borderWidth
+                          borderColor:(UIColor *)borderColor
+                       borderLineJoin:(CGLineJoin)borderLineJoin {
+    
+    if (corners != UIRectCornerAllCorners) {
+        UIRectCorner tmp = 0;
+        if (corners & UIRectCornerTopLeft) tmp |= UIRectCornerBottomLeft;
+        if (corners & UIRectCornerTopRight) tmp |= UIRectCornerBottomRight;
+        if (corners & UIRectCornerBottomLeft) tmp |= UIRectCornerTopLeft;
+        if (corners & UIRectCornerBottomRight) tmp |= UIRectCornerTopRight;
+        corners = tmp;
+    }
+    
+    UIGraphicsBeginImageContextWithOptions(self.size, NO, self.scale);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
+    CGContextScaleCTM(context, 1, -1);
+    CGContextTranslateCTM(context, 0, -rect.size.height);
+    
+    CGFloat minSize = MIN(self.size.width, self.size.height);
+    if (borderWidth < minSize / 2) {
+        UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:CGRectInset(rect, borderWidth, borderWidth) byRoundingCorners:corners cornerRadii:CGSizeMake(radius, borderWidth)];
+        [path closePath];
+        
+        CGContextSaveGState(context);
+        [path addClip];
+        CGContextDrawImage(context, rect, self.CGImage);
+        CGContextRestoreGState(context);
+    }
+    
+    if (borderColor && borderWidth < minSize / 2 && borderWidth > 0) {
+        CGFloat strokeInset = (floor(borderWidth * self.scale) + 0.5) / self.scale;
+        CGRect strokeRect = CGRectInset(rect, strokeInset, strokeInset);
+        CGFloat strokeRadius = radius > self.scale / 2 ? radius - self.scale / 2 : 0;
+        UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:strokeRect byRoundingCorners:corners cornerRadii:CGSizeMake(strokeRadius, borderWidth)];
+        [path closePath];
+        
+        path.lineWidth = borderWidth;
+        path.lineJoinStyle = borderLineJoin;
+        [borderColor setStroke];
+        [path stroke];
+    }
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
 - (UIImage *)imageWithAlpha:(CGFloat)alpha
 {
     //create drawing context
