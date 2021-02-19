@@ -13,7 +13,7 @@
 - (instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor clearColor];
+        self.opaque = [UIColor clearColor];
     }
     return self;
 }
@@ -56,7 +56,7 @@
     //[NSString stringWithFormat:@"MBProgressHUD.bundle/%@", icon]
     if (!_reloadButton) {
         _reloadButton = [[UIButton alloc] initWithFrame:CGRectZero];
-        [_reloadButton setImage:[UIImage imageNamed:[NSString stringWithFormat:@"NoData.bundle/%@", @"blankpage_button_reload"]] forState:UIControlStateNormal];
+        [_reloadButton setImage:[YYImage imageNamed:[NSString stringWithFormat:@"NoData.bundle/%@", @"blankpage_button_reload"]] forState:UIControlStateNormal];
         _reloadButton.adjustsImageWhenHighlighted = YES;
         [_reloadButton addTarget:self action:@selector(reloadButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_reloadButton];
@@ -72,7 +72,7 @@
     if (hasError) {
         //        加载失败
 
-        [_monkeyView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"NoData.bundle/%@", @"blankpage_image_loadFail"]]];
+        [_monkeyView setImage:[YYImage imageNamed:[NSString stringWithFormat:@"NoData.bundle/%@", @"blankpage_image_loadFail"]]];
         _tipLabel.text = @"貌似出了点差错";
         
         if (blankPageType==EaseBlankPageTypeMaterialScheduling) {
@@ -108,7 +108,7 @@
             }
                 break;
         }
-        [_monkeyView setImage:[UIImage imageNamed:imageName]];
+        [_monkeyView setImage:[YYImage imageNamed:imageName]];
         _tipLabel.text = tipStr;
     }
 }

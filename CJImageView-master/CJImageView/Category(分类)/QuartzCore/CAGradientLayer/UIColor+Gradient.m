@@ -57,6 +57,7 @@
  */
 + (void)gradientFromColor:(UIColor*)c1 toColor:(UIColor*)c2 withWidth:(int)width completion:(void (^)(UIColor *color))completion
 {
+    
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
     CGSize size = CGSizeMake(width, 1);
     UIGraphicsBeginImageContextWithOptions(size, NO, 0);

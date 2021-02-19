@@ -22,9 +22,10 @@ typedef NSString * NSStringResourceKey NS_STRING_ENUM;
 @end
 
 @implementation HomeViewController
-@synthesize muStr=_muStr2;
+@synthesize muStr=must;
 -(void)setMuStr:(NSString *)muStr{
 //    _muStr = muStr;
+    must = muStr;
     Dlog(@"111111");
 }
 
@@ -34,7 +35,6 @@ static NSString *base64_encode_data(NSData *data){
 }
 - (void)viewDidLoad  {
     [super viewDidLoad];
-        
     NSDate * date = [NSDate new];
     NSInteger year = date.year;
     NSInteger month = date.month;
@@ -61,7 +61,7 @@ static NSString *base64_encode_data(NSData *data){
     NSAttributedString * atts = [[NSAttributedString alloc]initWithString:@""];
     NSMutableString * str1 = [[NSMutableString alloc]initWithString:@"line1"];
     NSMutableString * str2 = [[NSMutableString alloc]initWithString:@"line2"];
-    YYTextContainer * container = [YYTextContainer containerWithSize:CGSizeMake(15, 20)];
+//    YYTextContainer * container = [YYTextContainer containerWithSize:CGSizeMake(15, 20)];
     
 //    YYTextLayout * layout = [YYTextLayout layoutWithContainerSize:CGSizeMake(15, 20) text:str1];
     
@@ -77,16 +77,16 @@ static NSString *base64_encode_data(NSData *data){
 //    label.keyboardType = UIKeyboardTypeNumberPad;
 //    label.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
     [self addsub:NSStringResourceKeyNamedPipe];
-    [label makeConstraints:^(MASConstraintMaker *make) {
-//        make.size.equalTo(CGSizeMake(100, 50));
-        make.left.equalTo(0);
-        make.center.equalTo(self.view);
-        make.height.equalTo(kScreenHeight/2);
-    }];
+//    [label makeConstraints:^(MASConstraintMaker *make) {
+////        make.size.equalTo(CGSizeMake(100, 50));
+//        make.left.equalTo(0);
+//        make.center.equalTo(self.view);
+//        make.height.equalTo(kScreenHeight/2);
+//    }];
     
     
     CALayer *line = [CALayer layer];
-    [self.view.layer addSublayer:line];
+//    [self.view.layer addSublayer:line];
     line.size =  CGSizeMake(50, 50);
     line.backgroundColor = UIColor.orangeColor.CGColor;
     [line yy_setImageWithURL:[NSURL URLWithString:@"http://ww4.sinaimg.cn/wap720/48e3f28djw1evvhkx7o7pj20m211cqaz.jpg"] placeholder:nil];
@@ -101,6 +101,18 @@ static NSString *base64_encode_data(NSData *data){
     }
     
     
+    UIView * view01 = [UIView new];
+    view01.backgroundColor = UIColor.redColor;
+    view01.center = self.view.center;
+    view01.bounds = CGRectMake(0, 0, 100, 100);
+    [self.view addSubview:view01];
+    
+    UIView * view02 = [UIView new];
+    view02.backgroundColor = UIColor.blueColor;
+    view02.center = self.view.center;
+    view02.bounds = CGRectMake(0, 0, 100, 100);
+    [self.view addSubview:view02];
+    view02.transform = CGAffineTransformMake(0.5, 0, 0, 0.5, 50, 50);
 }
 
 -(void)addsub:(NSStringResourceKey)resoure{

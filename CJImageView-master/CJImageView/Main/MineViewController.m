@@ -111,6 +111,7 @@
                 [self.navigationController pushViewController:controller animated:YES];
             }
         }];
+        CALayer * layer;
         /**
          控制台输入错误信息：-canOpenURL: failed for URL: “XXX://” - error: “This app is not allowed to query for scheme XXX”
          此处XXX为泛指，当应用集成了分享到多个平台的功能时，XXX部分就有可能会出现多条记录。虽然有很多，但是也不用方。

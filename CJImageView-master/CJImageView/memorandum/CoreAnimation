@@ -2,6 +2,14 @@
 anchorPoint:属性是CGPoint值，anchorPoint指定了bounds相对于position的值
 
 
+
+
+
+
+1.CoreGraphics:翻译为核心图层，是一组C级别的API，例如我我们常用的CGGloat、CGSize、CGPoint都是定义在这个框架。因为是C级别的API，所以在iOS、macOS上是通用的。我们使用UIView的 -(void)drawRect: 方法绘图就是使用的CoreGraphics框架。
+
+
+
 //
 //  RefreshAnimation.m
 //  AsusMall
