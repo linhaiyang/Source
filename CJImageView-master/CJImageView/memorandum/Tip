@@ -41,6 +41,34 @@ UIWebView 将被禁止提交审核
 
 
 
+
+
+
+
+https://www.jianshu.com/p/432fea0232b8
+2、像素对齐 VS 像素不对齐
+
+逻辑像素（point）乘以2（2x的视网膜屏） 或3（3x的视网膜屏）得到整数值，或者说得到的浮点数且小数点后都是0的，这就像素对齐了，否则就是像素不对齐。
+
+出现像素不对齐的情况，会导致在GPU渲染时，对没对齐的边缘，需要进行插值计算，这个插值计算的过程会有性能损耗。
+
+
+解决办法
+一、文本计算的坑
+理论上设置View的大小，最好预先设置好，尽量不要计算。
+使用尽可能下的数值，0.01还不够小，直接使用系统提供的CGFLOAT_MIN吧。
+
+三、图片像素不对齐的情况
+
+
+
+
+
+
+
+
+
+
 App Store App申请审核加速
 1、Apple 提供了一个加速审核的通道：
 https://developer.apple.com/appstore/contact/appreviewteam/index.html

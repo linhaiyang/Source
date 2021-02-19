@@ -63,7 +63,7 @@ static NSString *base64_encode_data(NSData *data){
     NSMutableString * str2 = [[NSMutableString alloc]initWithString:@"line2"];
     YYTextContainer * container = [YYTextContainer containerWithSize:CGSizeMake(15, 20)];
     
-    YYTextLayout * layout = [YYTextLayout layoutWithContainerSize:CGSizeMake(15, 20) text:str1];
+//    YYTextLayout * layout = [YYTextLayout layoutWithContainerSize:CGSizeMake(15, 20) text:str1];
     
 //    [atts appendString:str1];
 //    [atts appendString:str2];

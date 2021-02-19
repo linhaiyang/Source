@@ -49,9 +49,7 @@
 - (UIImage *)imageWithCornerRadius:(CGFloat)radius;
 - (UIImage *)imageWithAlpha:(CGFloat)alpha;
 - (UIImage *)imageWithMask:(UIImage *)maskImage;
-
 - (UIImage *)maskImageFromImageAlpha;
-
 /**
 *  @brief  根据颜色生成纯色图片
 *

@@ -9,32 +9,27 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-//#define KNavHeight [DeviceTool NavBarHeight]
-//#define isIphoneX  [DeviceTool isIPhoneX]
-//#define KStatusBarHeight [DeviceTool statusBarHeight]
-//#define KSafeBottomHeight [DeviceTool safeBottomHeight]
-//#define KScreen_Height      [DeviceTool screen_Height]
-//#define KScreen_Width       [DeviceTool screen_Width]
-//// App Frame Height&Width
-//#define App_Frame_Height        [[UIScreen mainScreen] applicationFrame].size.height
-//#define App_Frame_Width         [[UIScreen mainScreen] applicationFrame].size.width
-//
-////不同屏幕尺寸字体适配（320，568是因为效果图为IPHONE5 如果不是则根据实际情况修改）
-//#define kScreenWidthRatio  (KScreen_Width / 375.0)
-//#define kScreenHeightRatio (KScreen_Height / 667.0)
-//#define AdaptedWidth(x)  ceilf((x) * kScreenWidthRatio)
-//#define AdaptedHeight(x) ceilf((x) * kScreenHeightRatio)
-//#define AdaptedFontSize(R)     CHINESE_SYSTEM(AdaptedWidth(R))
-//
-//#define UNICODETOUTF16(x) (((((x - 0x10000) >>10) | 0xD800) << 16)  | (((x-0x10000)&3FF) | 0xDC00))
-//#define MULITTHREEBYTEUTF16TOUNICODE(x,y) (((((x ^ 0xD800) << 2) | ((y ^ 0xDC00) >> 8)) << 8) | ((y ^ 0xDC00) & 0xFF)) + 0x10000
 /// Get main screen's scale.
 CGFloat YYScreenScale();
 /// Convert pixel to point.
 static inline CGFloat CGFloatFromPixel(CGFloat value) {
     return value / YYScreenScale();
 }
-
+/// round point value for pixel-aligned
+static inline CGFloat CGFloatPixelRound(CGFloat value) {
+    CGFloat scale = YYScreenScale();
+    return round(value * scale) / scale;
+}
+/// round point value for pixel-aligned
+static inline CGSize CGSizePixelRound(CGSize size) {
+    CGFloat scale = YYScreenScale();
+    return CGSizeMake(round(size.width * scale) / scale,
+                      round(size.height * scale) / scale);
+}
+/// Convert point to pixel.
+static inline CGFloat CGFloatToPixel(CGFloat value) {
+    return value * YYScreenScale();
+}
 CGFloat statusBarHeight();
 static inline  BOOL isIPhoneX(){
     return statusBarHeight()>20;
@@ -51,6 +46,7 @@ static inline CGFloat AdaptedWidth(CGFloat value){
 static inline CGFloat AdaptedHeight(CGFloat value){
     return ceilf((value) * KScreen_Height() / 667.0);
 }
+
 @interface DeviceTool : NSObject
 @end
 
