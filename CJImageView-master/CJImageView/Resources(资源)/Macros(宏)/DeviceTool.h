@@ -47,7 +47,8 @@ static inline CGFloat AdaptedHeight(CGFloat value){
     return ceilf((value) * KScreen_Height() / 667.0);
 }
 
-@interface DeviceTool : NSObject
+@interface YYImageManager : NSObject
+
 @end
 
 NS_ASSUME_NONNULL_END

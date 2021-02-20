@@ -18,6 +18,9 @@
 typedef NSString * NSStringResourceKey NS_STRING_ENUM;
 
 @interface HomeViewController ()
+{
+    YYLabel *      _titleLabel;
+}
 @property(nonatomic,copy)NSString * muStr;
 @end
 
@@ -29,13 +32,22 @@ typedef NSString * NSStringResourceKey NS_STRING_ENUM;
     Dlog(@"111111");
 }
 
-static NSString *base64_encode_data(NSData *data){
-    
-    return nil;
-}
 - (void)viewDidLoad  {
     [super viewDidLoad];
+    
+    NSString *string = @"Lorem    ipsum dolar   sit  amet.";
+    string = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+
+    NSArray *components = [string componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    components = [components filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self <> ''"]];
+    
+    
+    
+    
     NSDate * date = [NSDate new];
+    
+    
+    
     NSInteger year = date.year;
     NSInteger month = date.month;
     NSInteger day = date.day;
@@ -55,64 +67,35 @@ static NSString *base64_encode_data(NSData *data){
     NSLog(@"%p time isa points to address: %p  %p  %p  %p",class1,class2,class3,class4,class5);
     
     
-    YYLabel * yy = [YYLabel new];
-    [self.view addSubview:yy];
-    
-    NSAttributedString * atts = [[NSAttributedString alloc]initWithString:@""];
-    NSMutableString * str1 = [[NSMutableString alloc]initWithString:@"line1"];
-    NSMutableString * str2 = [[NSMutableString alloc]initWithString:@"line2"];
-//    YYTextContainer * container = [YYTextContainer containerWithSize:CGSizeMake(15, 20)];
-    
-//    YYTextLayout * layout = [YYTextLayout layoutWithContainerSize:CGSizeMake(15, 20) text:str1];
-    
-//    [atts appendString:str1];
-//    [atts appendString:str2];
 
+    _titleLabel = [YYLabel new];
+    _titleLabel.ui_size = CGSizeMake(kScreenWidth - 100, 30);
+//    _titleLabel.left = kWBCellPadding;
+    _titleLabel.origin = CGPointMake(10, 100);
+    _titleLabel.displaysAsynchronously = YES;
+    _titleLabel.ignoreCommonProperties = YES;
+    _titleLabel.fadeOnHighlight = NO;
+    _titleLabel.fadeOnAsynchronouslyDisplay = NO;
+    [self.view addSubview:_titleLabel];
     
-    YYTextView * label = [[YYTextView alloc]initWithFrame:CGRectMake(0, 100, 100, 50)];
-    label.text = @"time isa points to address";
-    [self.view addSubview:label];
-//    label.editable = false;
+    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:@"热门"];
     
-//    label.keyboardType = UIKeyboardTypeNumberPad;
-//    label.keyboardDismissMode = UIScrollViewKeyboardDismissModeInteractive;
-    [self addsub:NSStringResourceKeyNamedPipe];
-//    [label makeConstraints:^(MASConstraintMaker *make) {
-////        make.size.equalTo(CGSizeMake(100, 50));
-//        make.left.equalTo(0);
-//        make.center.equalTo(self.view);
-//        make.height.equalTo(kScreenHeight/2);
-//    }];
-    
-    
-    CALayer *line = [CALayer layer];
-//    [self.view.layer addSublayer:line];
-    line.size =  CGSizeMake(50, 50);
-    line.backgroundColor = UIColor.orangeColor.CGColor;
-    [line yy_setImageWithURL:[NSURL URLWithString:@"http://ww4.sinaimg.cn/wap720/48e3f28djw1evvhkx7o7pj20m211cqaz.jpg"] placeholder:nil];
-    line.centerX = self.view.ui_centerX;
-    line.centerY = self.view.ui_centerY + 100;
-    NSMutableDictionary * dic;
-
-    NSArray * array = @[@1,@2,@3];
-    for(NSNumber * num in array){
-        if (num.longValue == 1)continue;
-        Dlog(@"%@-----5555+++++++++++++++++++++",num);
-    }
+    text.yy_color = UIColorHex(929292);
+    text.yy_font = [UIFont systemFontOfSize:14];
     
     
-    UIView * view01 = [UIView new];
-    view01.backgroundColor = UIColor.redColor;
-    view01.center = self.view.center;
-    view01.bounds = CGRectMake(0, 0, 100, 100);
-    [self.view addSubview:view01];
+    UIImage *blueVImage = [UIImage YYImageNamed:@"error"];
     
-    UIView * view02 = [UIView new];
-    view02.backgroundColor = UIColor.blueColor;
-    view02.center = self.view.center;
-    view02.bounds = CGRectMake(0, 0, 100, 100);
-    [self.view addSubview:view02];
-    view02.transform = CGAffineTransformMake(0.5, 0, 0, 0.5, 50, 50);
+    NSMutableAttributedString *blueVText = [NSMutableAttributedString yy_attachmentStringWithContent:blueVImage contentMode:UIViewContentModeCenter attachmentSize:blueVImage.size alignToFont:[UIFont systemFontOfSize:14] alignment:YYTextVerticalAlignmentCenter];
+//        NSAttributedString *blueVText = [self _attachmentWithFontSize:kWBCellNameFontSize image:blueVImage shrink:NO];
+//    [text appendString:@" "];
+    [text appendAttributedString:blueVText];
+    
+    
+    YYTextContainer *container = [YYTextContainer containerWithSize:CGSizeMake(100, 30)];
+    YYTextLayout*titleTextLayout = [YYTextLayout layoutWithContainer:container text:text];
+    _titleLabel.textLayout = titleTextLayout;
+    CGFloat  width=titleTextLayout.textBoundingRect.size.width;
 }
 
 -(void)addsub:(NSStringResourceKey)resoure{

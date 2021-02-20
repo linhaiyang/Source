@@ -1,3 +1,5 @@
+    setImageWithURL:picBg placeholder:nil options:YYWebImageOptionAvoidSetImage
+
 
 核心代码：
 [_decoder frameAtIndex:index decodeForDisplay:YES]----->YYCGImageCreateDecodedCopy
