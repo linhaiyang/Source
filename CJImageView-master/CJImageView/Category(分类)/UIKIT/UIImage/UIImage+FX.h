@@ -31,7 +31,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <YYWebImage/YYWebImageManager.h>
 
 @interface UIImage (FX)
 
@@ -50,6 +50,7 @@
 - (UIImage *)imageWithAlpha:(CGFloat)alpha;
 - (UIImage *)imageWithMask:(UIImage *)maskImage;
 - (UIImage *)maskImageFromImageAlpha;
++ (YYWebImageManager *)avatarImageManager_10;
 /**
 *  @brief  根据颜色生成纯色图片
 *
@@ -58,4 +59,6 @@
 *  @return 纯色图片
 */
 + (void)imageWithColor:(UIColor *)color completion:(void (^)(UIImage *img))completion;
+
+
 @end

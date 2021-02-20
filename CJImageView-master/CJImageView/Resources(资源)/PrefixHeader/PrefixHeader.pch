@@ -39,6 +39,7 @@
 #import "NSBundle+Path.h"
 #import "UIImage+YYimage.h"
 #import "UIView+FX.h"
+#import "NSAttributedString+Tool.h"
 
 /**Resources(资源)*/
 #import "GlobalDefault.h"

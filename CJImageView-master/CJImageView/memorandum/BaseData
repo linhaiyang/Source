@@ -165,4 +165,10 @@ https://www.jianshu.com/p/1803bd950b90      iOS14 隐私适配及部分解决方
   int y;
   UIButton * button;
 }
+
+
+
+
+
   
+    setImageWithURL:picBg placeholder:nil options:YYWebImageOptionAvoidSetImage

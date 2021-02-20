@@ -58,6 +58,6 @@ CGFloat KScreen_Width(){
 
 
 
-@implementation DeviceTool
+@implementation YYImageManager
 
 @end

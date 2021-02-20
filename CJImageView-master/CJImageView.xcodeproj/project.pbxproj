@@ -192,6 +192,8 @@
 		5A944BB225949A970087DD9A /* YYText in Resources */ = {isa = PBXBuildFile; fileRef = 5A944BB025949A970087DD9A /* YYText */; };
 		5A9C02E22599F0A20045F0F4 /* UIColor+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9C02E12599F0A10045F0F4 /* UIColor+Gradient.m */; };
 		5A9C02E72599F0A60045F0F4 /* UIColor+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9C02E12599F0A10045F0F4 /* UIColor+Gradient.m */; };
+		5AAADFED25E1148B00A7C0D3 /* NSAttributedString+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAADFEC25E1148B00A7C0D3 /* NSAttributedString+Tool.m */; };
+		5AAADFEE25E1148B00A7C0D3 /* NSAttributedString+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAADFEC25E1148B00A7C0D3 /* NSAttributedString+Tool.m */; };
 		5AB1B8CB256520DF0083408B /* AppDelegate+Monitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB1B8CA256520DF0083408B /* AppDelegate+Monitor.m */; };
 		5AB1B8CC256520DF0083408B /* AppDelegate+Monitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AB1B8CA256520DF0083408B /* AppDelegate+Monitor.m */; };
 		5AB1B8D325652CD00083408B /* UDID in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B8D225652CD00083408B /* UDID */; };
@@ -551,6 +553,8 @@
 		5A944BB025949A970087DD9A /* YYText */ = {isa = PBXFileReference; lastKnownFileType = text; path = YYText; sourceTree = "<group>"; };
 		5A9C02E02599F0A10045F0F4 /* UIColor+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Gradient.h"; sourceTree = "<group>"; };
 		5A9C02E12599F0A10045F0F4 /* UIColor+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Gradient.m"; sourceTree = "<group>"; };
+		5AAADFEB25E1148B00A7C0D3 /* NSAttributedString+Tool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Tool.h"; sourceTree = "<group>"; };
+		5AAADFEC25E1148B00A7C0D3 /* NSAttributedString+Tool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Tool.m"; sourceTree = "<group>"; };
 		5AB1B8C9256520DF0083408B /* AppDelegate+Monitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Monitor.h"; sourceTree = "<group>"; };
 		5AB1B8CA256520DF0083408B /* AppDelegate+Monitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Monitor.m"; sourceTree = "<group>"; };
 		5AB1B8D225652CD00083408B /* UDID */ = {isa = PBXFileReference; lastKnownFileType = text; path = UDID; sourceTree = "<group>"; };
@@ -1209,6 +1213,7 @@
 		5A685E9C24D0298D00BF9737 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				5AAADFEA25E1147100A7C0D3 /* NSAttributedString */,
 				5ADABE9625776A270077B7C3 /* NSSet */,
 				5A39C239256BB2CF0052A133 /* NSBundle */,
 				5A685ECE24D2E76800BF9737 /* NSData */,
@@ -1321,6 +1326,15 @@
 				5A938A5F25B7C888002B5169 /* RetainCycleLoggerPlugin.m */,
 			);
 			path = FBRetainCycle;
+			sourceTree = "<group>";
+		};
+		5AAADFEA25E1147100A7C0D3 /* NSAttributedString */ = {
+			isa = PBXGroup;
+			children = (
+				5AAADFEB25E1148B00A7C0D3 /* NSAttributedString+Tool.h */,
+				5AAADFEC25E1148B00A7C0D3 /* NSAttributedString+Tool.m */,
+			);
+			path = NSAttributedString;
 			sourceTree = "<group>";
 		};
 		5AB1B8D125652CAA0083408B /* memorandum */ = {
@@ -2063,6 +2077,7 @@
 				5AE9BBD0250783D90010945B /* ClassifyApi.m in Sources */,
 				5AE9BBDD250795870010945B /* UIButton+JKImagePosition.m in Sources */,
 				5A28829A24A19D6A0059F96C /* BaseNavigationController.m in Sources */,
+				5AAADFED25E1148B00A7C0D3 /* NSAttributedString+Tool.m in Sources */,
 				5A669493253557D70073FDF6 /* XLWebViewController.m in Sources */,
 				5A2882C724A343A10059F96C /* UINavigationItem+Margin.m in Sources */,
 				5AF95B002570FEDF00A03F02 /* Reachability.m in Sources */,
@@ -2197,6 +2212,7 @@
 				5ADABE8D257743950077B7C3 /* NSString+AttributedString.m in Sources */,
 				5AF95B28257105EE00A03F02 /* GlobalDefault.m in Sources */,
 				5A5493C824BD539D00C49207 /* GCDGroup.m in Sources */,
+				5AAADFEE25E1148B00A7C0D3 /* NSAttributedString+Tool.m in Sources */,
 				5A5493CA24BD539D00C49207 /* UINavigationController+StackManager.m in Sources */,
 				5ADABE9A25776A430077B7C3 /* NSSet+Block.m in Sources */,
 				5AE9BB892507336A0010945B /* MPUploadImageItemService.m in Sources */,

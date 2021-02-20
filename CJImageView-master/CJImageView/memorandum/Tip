@@ -77,14 +77,29 @@ https://github.com/facebook?q=&type=&language=objective-c%2B%2B
 
 
 
-
-
-
+正则表达式，又称正规表示法，是对字符串操作的一种逻辑公式。正则表达式可以检测给定的字符串是否符合我们定义的逻辑，也可以从字符串中获取我们想要的特定部分。它可以迅速地用极简单的方式达到字符串的复杂控制。
+NSRegularExpression
+// <a href="sinaweibo://customweibosource" rel="nofollow">iPhone 5siPhone 5s</a>
+static NSRegularExpression *hrefRegex, *textRegex;
+static dispatch_once_t onceToken;
+dispatch_once(&onceToken, ^{
+    hrefRegex = [NSRegularExpression regularExpressionWithPattern:@"(?<=href=\").+(?=\" )" options:kNilOptions error:NULL];
+    textRegex = [NSRegularExpression regularExpressionWithPattern:@"(?<=>).+(?=<)" options:kNilOptions error:NULL];
+});
+NSTextCheckingResult *hrefResult, *textResult;
+NSString *href = nil, *text = nil;
+hrefResult = [hrefRegex firstMatchInString:_status.source options:kNilOptions range:NSMakeRange(0, _status.source.length)];
+textResult = [textRegex firstMatchInString:_status.source options:kNilOptions range:NSMakeRange(0, _status.source.length)];
 
 
 
 NSPredicate:是预测的意思 但是我们常翻译成谓词
 使用NSPredicate可以定义模糊查询条件 根据一定的条件 我们就可以从一个数组中快速找出 符合一定条件的元素对象
+
+
+ NSString* number=@"^[0-9]+$";
+    NSPredicate *numberPre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",number];
+    return [numberPre evaluateWithObject:textString];
 
 NSString *string = @"Lorem    ipsum dolar   sit  amet.";
 string = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
@@ -96,7 +111,6 @@ components = [components filteredArrayUsingPredicate:[NSPredicate predicateWithF
 
 NSCharacterSet:其实是许多字符或者数字或者符号的组合，在网络处理的时候会用到
     stringByTrimmingCharactersInSet//这个方法 仅仅 去除了 开头 和 结尾 的指定字符集中连续字符
-
 
 
 
