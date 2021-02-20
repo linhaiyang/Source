@@ -63,8 +63,10 @@ https://www.jianshu.com/p/432fea0232b8
 
 
 
-
-
+像素混合
+像素混合是指在某视图为透明背景色，GPU在渲染视图时，需要将该视图和下层视图混合(Blend)后才能计算出该像素点的实际颜色；这增加了GPU的工作，损耗了性能。
+iPhone模拟器中的Debug ->Color Blended Layers
+发生了像素混合的区域显示红色，正常则显示绿色。
 
 
 
