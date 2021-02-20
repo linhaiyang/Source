@@ -15,7 +15,9 @@
     if (image) return image;
     NSString *ext = name.pathExtension;
     if (ext.length == 0) ext = @"png";
-    NSString *path = [[NSBundle mainBundle] pathForScaledResource:name ofType:ext];
+    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"MBProgressHUD" ofType:@"bundle"];
+    NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+    NSString *path = [bundle pathForScaledResource:name ofType:ext];
     if (!path) return nil;
     image = [UIImage imageWithContentsOfFile:path];
     image = [image yy_imageByDecoded];

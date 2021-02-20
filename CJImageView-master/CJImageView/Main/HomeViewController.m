@@ -84,7 +84,7 @@ typedef NSString * NSStringResourceKey NS_STRING_ENUM;
     text.yy_font = [UIFont systemFontOfSize:14];
     
     
-    UIImage *blueVImage = [UIImage YYImageNamed:@"MBProgressHUD.bundle/error.png"];
+    UIImage *blueVImage = [UIImage YYImageNamed:@"error"];
     
     NSMutableAttributedString *blueVText = [NSMutableAttributedString yy_attachmentStringWithContent:blueVImage contentMode:UIViewContentModeCenter attachmentSize:blueVImage.size alignToFont:[UIFont systemFontOfSize:14] alignment:YYTextVerticalAlignmentCenter];
 //        NSAttributedString *blueVText = [self _attachmentWithFontSize:kWBCellNameFontSize image:blueVImage shrink:NO];
