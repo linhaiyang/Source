@@ -78,7 +78,7 @@ typedef NSString * NSStringResourceKey NS_STRING_ENUM;
     _titleLabel.fadeOnAsynchronouslyDisplay = NO;
     [self.view addSubview:_titleLabel];
     
-    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:@"热门"];
+    NSMutableAttributedString *text = [[NSMutableAttributedString alloc] initWithString:@"热门热门热门热门热门热门热门热门热门热门热门热门"];
     
     text.yy_color = UIColorHex(929292);
     text.yy_font = [UIFont systemFontOfSize:14];
@@ -87,15 +87,41 @@ typedef NSString * NSStringResourceKey NS_STRING_ENUM;
     UIImage *blueVImage = [UIImage YYImageNamed:@"error"];
     
     NSMutableAttributedString *blueVText = [NSMutableAttributedString yy_attachmentStringWithContent:blueVImage contentMode:UIViewContentModeCenter attachmentSize:blueVImage.size alignToFont:[UIFont systemFontOfSize:14] alignment:YYTextVerticalAlignmentCenter];
+    
 //        NSAttributedString *blueVText = [self _attachmentWithFontSize:kWBCellNameFontSize image:blueVImage shrink:NO];
 //    [text appendString:@" "];
     [text appendAttributedString:blueVText];
     
     
     YYTextContainer *container = [YYTextContainer containerWithSize:CGSizeMake(100, 30)];
+    container.maximumNumberOfRows = 0;
+    container.truncationType = YYTextTruncationTypeEnd;
     YYTextLayout*titleTextLayout = [YYTextLayout layoutWithContainer:container text:text];
+    
     _titleLabel.textLayout = titleTextLayout;
     CGFloat  width=titleTextLayout.textBoundingRect.size.width;
+    
+    
+    
+    
+    
+    /**
+     // 高亮状态的背景
+     YYTextBorder *highlightBorder = [YYTextBorder new];
+     highlightBorder.insets = UIEdgeInsetsMake(-2, 0, -2, 0);
+     highlightBorder.cornerRadius = 2;
+     highlightBorder.fillColor = kWBCellTextHighlightBackgroundColor;
+     
+     [text setColor:kWBCellTextHighlightColor range:text.rangeOfAll];
+     
+     // 高亮状态
+     YYTextHighlight *highlight = [YYTextHighlight new];
+     [highlight setBackgroundBorder:highlightBorder];
+     // 数据信息，用于稍后用户点击
+     highlight.userInfo = @{kWBLinkTagName : tag};
+     [text setTextHighlight:highlight range:text.rangeOfAll];
+     
+     */
 }
 
 -(void)addsub:(NSStringResourceKey)resoure{

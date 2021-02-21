@@ -196,7 +196,7 @@ NSScanner是一个类，用于在字符串中扫描指定的字符，尤其是�
             }];
         }
 UniversalLink Associated Domains
- Universal Link的基本运作流程:
+Universal Link的基本运作流程:
 APP第一次启动或APP更新版本后第一次启动
 APP向工程里配置的域名发起Get请求拉取配置好存放在https服务器上的apple-app-association文件
 APP将apple-app-association注册给系统
@@ -213,3 +213,10 @@ Microsoft_Office_16.23.19030902_Installer_32819
 
 
 https://blog.csdn.net/deft_mkjing/article/details/79866973
+
+https://www.jianshu.com/p/13c4fb1cedea //weak 底层实现
+
+各位评委你们好，我是林海阳，今年32岁，从事iOS开发5年时间，很荣幸有机会来参加公司的面试。
+
+
+我是我朋友带进这行业的，我以前学工业工程的，做了两年做的并不好，我觉得这个行业很难做不出成绩，中间也是频繁换工作，就一些台企会招这个岗位的工作，
