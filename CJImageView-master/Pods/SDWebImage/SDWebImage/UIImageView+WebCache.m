@@ -172,7 +172,7 @@ static char TAG_ACTIVITY_SHOW;
 }
 
 - (void)addActivityIndicator {
-    if (!self.activityIndicator) {
+    if (!self.activityIndicator) {//UIActivityIndicatorView
         self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:[self getIndicatorStyle]];
         self.activityIndicator.translatesAutoresizingMaskIntoConstraints = NO;
 

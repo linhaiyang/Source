@@ -15,6 +15,8 @@
 @interface ToolDemoViewController ()<CALayerDelegate>
 @property(nonatomic,strong)UIView * operView;
 @property (strong, readwrite, nonatomic) dispatch_semaphore_t dispatchSemaphore;
+@property(nonatomic, strong) UITableView *tableView;    // toView
+@property (strong, nonatomic) MKMapView *mapView;    // fromView
 @end
 
 @implementation ToolDemoViewController
@@ -47,8 +49,11 @@
         //需要显式调用setNeedsDisplay来刷新才会绘制layer
         [layer setNeedsDisplay];
         [self.view.layer addSublayer:layer];
-    
-    
+    @weakify(self);
+    [self configRightBaritemWithImage:[UIImage imageNamed:@"icon_tabbar_homepage_selected"] buttonItemClick:^(UIBarButtonItem *barButton) {
+        @strongify(self);
+        [self listOrMapShowItemClick];
+    }];
     
     NSMutableArray * photos = [NSMutableArray array];
     
@@ -128,5 +133,45 @@
     loadAinitializeTest * test =  [loadAinitializeTest new];
     test.frame = CGRectMake(0, 100, 300, 300);
     [self.view addSubview:test];
+    [self transition];
+}
+
+
+-(void)transition{
+    MKMapView *mapView = [[MKMapView alloc] init];
+    mapView.frame = self.view.bounds;
+    self.mapView = mapView;
+    [self.view addSubview:self.mapView];  // 首先显示mapView视图
+    self.mapView.mapType = MKMapTypeStandard;
+    self.mapView.rotateEnabled = NO; // 不旋转
+
+    // toView
+    UITableView *tableView = [[UITableView alloc] init];
+    tableView.frame = self.view.bounds;
+    tableView.backgroundColor = UIColor.orangeColor;
+//    tableView.delegate = self;
+//    tableView.dataSource = self;
+    self.tableView = tableView;
+}
+- (void)listOrMapShowItemClick{
+
+    static BOOL tran;
+   if (tran == false) {
+          // 点击 “列表”  翻转显示到列表tableview
+       tran = true;
+          // 翻转到列表那一页
+          // tableView添加到mapView的父视图上， mapView从父视图移除
+          [UIView transitionFromView:self.mapView toView:self.tableView duration:0.5f options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
+                  NSLog(@"翻转到了列表页面");
+           }];
+   }else{
+       tran = false;
+           // 点击 地图 翻转显示 地图页面
+//           self.listOrMapShowItem.title = @"列表";
+           // mapView添加到tableView的父视图上， tableView从父视图移除
+           [UIView transitionFromView:self.tableView toView:self.mapView duration:0.5f options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
+                   NSLog(@"翻转到了地图页面");
+           }];
+        }
 }
 @end

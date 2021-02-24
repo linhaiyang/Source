@@ -75,45 +75,82 @@
 //    [self.animateCube.layer addSublayer:layer5];
 //    [self.animateCube.layer addSublayer:layer6];
 
-
+/**
+ frame = (0 0; 200 200); transform3D =
+ [1, 0, 0, 0;
+ 0, 1, 0, 0;
+ 0, 0, 1, 0;
+ 0, 0, 100, 1];
+ 
+ */
     UIView *test = [[UIView alloc] initWithFrame:targetBounds];// front
-    test.backgroundColor = [[UIColor blueColor] colorWithAlphaComponent:0.5];
+    test.backgroundColor = [[UIColor blueColor] colorWithAlphaComponent:1];
     test.layer.transform = CATransform3DTranslate(test.layer.transform, 0, 0, 100);
-
+/**
+ frame = (0 0; 200 200); transform3D =
+ 1, 0, 0, 0;
+ 0, 1, 0, 0;
+ 0, 0, 1, 0;
+ 0, 0, -100, 1];
+ 
+ */
     UIView *test1 = [[UIView alloc] initWithFrame:targetBounds];// back
-    test1.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.5];
+    test1.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:1];
     test1.layer.transform = CATransform3DTranslate(test1.layer.transform, 0, 0, -100);
 
+    /**
+     frame = (0 0; 0 200); transform3D =
+     [0, 0, -1, 0;
+     0, 1, 0, 0;
+     1, 0, 0, 0;
+     -100, 0, 0, 1];
+     
+     */
     UIView *test2 = [[UIView alloc] initWithFrame:targetBounds];// left
-    test2.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.5];
+    test2.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:1];
     test2.layer.transform = CATransform3DTranslate(test2.layer.transform, -100, 0, 0);
     test2.layer.transform = CATransform3DRotate(test2.layer.transform, M_PI_2, 0, 1, 0);
 
+    /**
+     
+     frame = (200 0; 0 200); transform3D =
+     [0, 0, -1, 0;
+     0, 1, 0, 0;
+     1, 0, 0, 0;
+     100, 0, 0, 1];
+     */
     UIView *test3 = [[UIView alloc] initWithFrame:targetBounds];// right
-    test3.backgroundColor = [[UIColor purpleColor] colorWithAlphaComponent:0.5];
+    test3.backgroundColor = [[UIColor purpleColor] colorWithAlphaComponent:1];
     test3.layer.transform = CATransform3DTranslate(test3.layer.transform, 100, 0, 0);
     test3.layer.transform = CATransform3DRotate(test3.layer.transform, M_PI_2, 0, 1, 0);
 
+    /**
+     frame = (0 200; 200 0); transform3D =
+     [1, 0, 0, 0;
+     0, 0, 1, 0;
+     0,-1, 0, 0;
+     0, 100, 0, 1];
+     */
     UIView *test4 = [[UIView alloc] initWithFrame:targetBounds];// head
-    test4.backgroundColor = [[UIColor orangeColor] colorWithAlphaComponent:0.5];
+    test4.backgroundColor = [[UIColor orangeColor] colorWithAlphaComponent:1];
     test4.layer.transform = CATransform3DTranslate(test4.layer.transform, 0, 100, 0);
     test4.layer.transform = CATransform3DRotate(test4.layer.transform, M_PI_2, 1, 0, 0);
 
+    /**
+     frame = (0 0; 200 0); transform3D =
+     [1, 0, 0, 0;
+     0, 0, -1, 0;
+     0, 1, 0, 0;
+     0, -100, 0, 1];
+     */
     UIView *test5 = [[UIView alloc] initWithFrame:targetBounds];// foot
-    test5.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:0.5];
+    test5.backgroundColor = [[UIColor greenColor] colorWithAlphaComponent:1];
     test5.layer.transform = CATransform3DTranslate(test5.layer.transform, 0, -100, 0);
     test5.layer.transform = CATransform3DRotate(test5.layer.transform, M_PI_2, -1, 0, 0);
 //https://www.jianshu.com/p/3dd14cfbdc53
-//        [self.animateCube addSubview:test];
-//        [self.animateCube addSubview:test1];
-//        [self.animateCube addSubview:test2];
-//        [self.animateCube addSubview:test3];
-//        [self.animateCube addSubview:test4];
-//        [self.animateCube addSubview:test5];
        self.animateCube.transform = CGAffineTransformMakeScale(0.5, 0.5);//CGAffineTransform
-//
-    [self.animateCube.layer setTransformTranslationX:100];
-    [self.animateCube.layer setTransformRotationZ:M_PI_2/2];
+//    [self.animateCube.layer setTransformTranslationX:100];
+//    [self.animateCube.layer setTransformRotationZ:M_PI_2/2];
        __block CATransform3D transform = CATransform3DIdentity;
 //
 ////       NSLog(@"%@",[NSString logForCATransform3D:transform]);
@@ -140,17 +177,28 @@
 
        transform.m34 = 1.0/-500;
 
-       float angle = M_PI / 360;
-       self.animateCube.layer.sublayerTransform = transform;
-       NSTimer *timer = [NSTimer timerWithTimeInterval:1.0/60 repeats:YES block:^(NSTimer * _Nonnull timer) {
-               transform = CATransform3DRotate(transform, angle, 1, 1, 0.5);
-               self.animateCube.layer.sublayerTransform = transform;//
+       float angle = M_PI / 360;  //M_PI代表角度
+//       self.animateCube.layer.sublayerTransform = CATransform3DMakeRotation(0.78, 1, 1, 0.5);
 //       NSTimer *timer = [NSTimer timerWithTimeInterval:1.0/60 repeats:YES block:^(NSTimer * _Nonnull timer) {
-//           transform = CATransform3DRotate(transform, angle, 1, 1, 0.5);
-//           self.animateCube.layer.sublayerTransform = transform;//
-       }];
+//               transform = CATransform3DRotate(transform, angle, 1, 1, 0.5);
+//               self.animateCube.layer.sublayerTransform = transform;//
+//       }];
+//       [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     
-       [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    /**
+     CAAimation动画
+     translation对应平行移动;scale对应缩放;rotation对应旋转.
+     
+     
+     UIView动画
+     坐标尺寸类bounds，frame，center
+     视图显示类 backgroundColor alpha hidden
+     形态变化类 transform：修改这个属性可以实现旋转、形变、移动、翻转等动画效果，其通过矩阵运算的方式来实现，因此更加强大
+     
+     */
+    
+    
+
 }
 static void YYRunLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info) //监听的代码 CFRunLoopActivity activity, void *info
 {
@@ -174,4 +222,58 @@ static void YYRunLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopAc
     // 测试是否开启了RunLoop，如果开启RunLoop，则来不了这里，因为RunLoop开启了循环。
     NSLog(@"未开启RunLoop");
 }
+    
+    -(void)addAnimation{
+        CGSize size =CGSizeMake(141, 60);
+        CGFloat kPadding = YYTextCGFloatPixelHalf(6.0),kRadius = 5.f;
+        CGFloat kHeight = 32.0;
+        CGFloat kArrow =14.0;
+        CGRect rect = (CGRect) {.size = size, .origin = CGPointZero};
+        CAShapeLayer * layer = [CAShapeLayer new];
+        [self.view.layer addSublayer:layer];
+        CGPathRef boxPath = CGPathCreateWithRect(rect, NULL);
+        
+        CGMutablePathRef path = CGPathCreateMutable();
+        CGPathMoveToPoint(path, NULL, kPadding + kRadius, kPadding);
+        CGPathAddLineToPoint(path, NULL, size.width - kPadding - kRadius, kPadding);
+        CGPathAddQuadCurveToPoint(path, NULL, size.width - kPadding, kPadding, size.width - kPadding, kPadding + kRadius);
+        CGPathAddLineToPoint(path, NULL, size.width - kPadding, kHeight);
+        CGPathAddCurveToPoint(path, NULL, size.width - kPadding, kPadding + kHeight, size.width - kPadding - kRadius, kPadding + kHeight, size.width - kPadding - kRadius, kPadding + kHeight);
+        CGPathAddLineToPoint(path, NULL, size.width / 2 + kArrow, kPadding + kHeight);
+        CGPathAddLineToPoint(path, NULL, size.width / 2, kPadding + kHeight + kArrow);
+        CGPathAddLineToPoint(path, NULL, size.width / 2 - kArrow, kPadding + kHeight);
+        CGPathAddLineToPoint(path, NULL, kPadding + kRadius, kPadding + kHeight);
+        CGPathAddQuadCurveToPoint(path, NULL, kPadding, kPadding + kHeight, kPadding, kHeight);
+        CGPathAddLineToPoint(path, NULL, kPadding, kPadding + kRadius);
+        CGPathAddQuadCurveToPoint(path, NULL, kPadding, kPadding, kPadding + kRadius, kPadding);
+        CGPathCloseSubpath(path);
+        layer.path = path;
+        layer.size = size;
+        layer.center = self.view.center;
+        layer.lineWidth = 2;
+        layer.contentsScale = [[UIScreen mainScreen] scale];
+        layer.strokeColor = UIColor.blueColor.CGColor;
+        layer.lineCap = kCALineCapRound;
+        layer.lineJoin = kCALineJoinBevel;
+        layer.fillColor = nil; // 默认为blackColor
+        NSTimeInterval animationDuration = 0.8;
+        CAMediaTimingFunction *linearCurve = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+        CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
+        animationGroup.duration = animationDuration;
+        animationGroup.repeatCount = INFINITY;
+        animationGroup.removedOnCompletion = NO;
+        animationGroup.timingFunction = linearCurve;
+
+        CABasicAnimation *strokeStartAnimation = [CABasicAnimation animationWithKeyPath:@"strokeStart"];
+        strokeStartAnimation.fromValue = @0.015;
+        strokeStartAnimation.toValue = @0.515;
+    //x-xcode-debug-views://7f8040e76640?DBGViewDebuggerLaunchSessionParameter=7f8040e76640: runtime: Layout Issues: Position is ambiguous for RefreshAnimation.
+
+        CABasicAnimation *strokeEndAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+        strokeEndAnimation.fromValue = @0.485;
+        strokeEndAnimation.toValue = @0.985;
+
+        animationGroup.animations = @[strokeStartAnimation, strokeEndAnimation];
+    }
+    
 @end

@@ -166,8 +166,9 @@ https://www.jianshu.com/p/1803bd950b90      iOS14 隐私适配及部分解决方
   UIButton * button;
 }
 
-
-
+禁用方法
+- (instancetype)init NS_UNAVAILABLE;
++ (instancetype)new NS_UNAVAILABLE;
 
 
   

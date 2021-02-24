@@ -8,6 +8,27 @@
 
 #import "loadAinitializeTest.h"
 
+
+
+@interface loadLabel : UILabel
+
+
+@end
+
+@implementation loadLabel
+
+- (CGSize)sizeThatFits:(CGSize)size{
+    CGSize s = [super sizeThatFits:size];
+    s.height = s.height + 10.f;
+    return s;
+}
+-(CGSize)intrinsicContentSize{
+    CGSize size = [self sizeThatFits:CGSizeMake(self.ui_width, 0)];
+    return CGSizeMake(size.width, size.height+30);
+}
+@end
+
+
 @interface loadAinitializeTest()
 
 @property(nonatomic,strong)UILabel * yyLabel;
@@ -41,9 +62,12 @@
 
 -(void)layoutSubviews{
     [super layoutSubviews];
-    Dlog(@"%f---layoutSubviews",self.ui_width);
-    [self.yyLabel sizeToFit];
-    self.yyLabel.frame = CGRectMake(0, 0, self.ui_width, self.yyLabel.ui_height);
+    
+    self.yyLabel.origin = CGPointMake(0, 0 );
+
+    self.yyLabel.frame = CGRectMake(0, 0, self.ui_width, 0);
+    [self.yyLabel sizeToFit];//-------会调用label 的- (CGSize)sizeThatFits:(CGSize)size方法
+    Dlog(@"%f---layoutSubviews",self.yyLabel.intrinsicContentSize.height);
 //    self.yyLabel.frame = CGRectZero;
     //触发label 的 sizeThatFits方法
     /**
@@ -56,16 +80,16 @@
  
  */
 -(CGSize)intrinsicContentSize{
-    CGSize size = [self.yyLabel sizeThatFits:CGSizeMake(50, 0)];
+    CGSize size = [self.yyLabel sizeThatFits:CGSizeMake(self.ui_width, 0)];
     return CGSizeMake(size.width, size.height+30);
 }
 
 -(void)drawRect:(CGRect)rect{
 //    NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:14], NSFontAttributeName, UIColor.blueColor, NSForegroundColorAttributeName, nil];
-    CGContextRef context = UIGraphicsGetCurrentContext();
-       UIImage *image = [UIImage imageNamed:@"test_image_2.png"];
-       CGRect rect1 = CGRectMake(30, 50, 100.0, 100.0);
-    drawImage(context, [image CGImage], rect1);
+//    CGContextRef context = UIGraphicsGetCurrentContext();
+//       UIImage *image = [UIImage imageNamed:@"test_image_2.png"];
+//       CGRect rect1 = CGRectMake(30, 50, 100.0, 100.0);
+//    drawImage(context, [image CGImage], rect1);
     
 //    [self FXWithCornerRadius:10 backGroundColor:UIColor.redColor rect:rect];
     
@@ -84,17 +108,17 @@ void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
 
     CGContextRestoreGState(context);
 }
-//- (CGSize)sizeThatFits:(CGSize)size{
-//    Dlog(@"sizeThatFits");
-//    /**
-//     sizeToFit:会计算出最优的 size 而且会改变自己的size
-//     sizeThatFits:会计算出最优的 size 但是不会改变 自己的 size
-//
-//     */
-//    CGSize s = [super sizeThatFits:size];
-//    s.height = s.height + 10.f;
-//    return s;
-//}
+- (CGSize)sizeThatFits:(CGSize)size{
+    Dlog(@"sizeThatFits");
+    /**
+     sizeToFit:会计算出最优的 size 而且会改变自己的size
+     sizeThatFits:会计算出最优的 size 但是不会改变 自己的 size
+
+     */
+    CGSize s = [super sizeThatFits:size];
+    s.height = s.height + 10.f;
+    return s;
+}
 //-(id)copyWithZone:(NSZone *)zone{
 //    loadAinitializeTest * test = [[loadAinitializeTest allocWithZone:zone]init];
 //    return test;
@@ -102,11 +126,12 @@ void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
 
 -(instancetype)init{
     self = [super init];
+    self.clipsToBounds = true;
     self.backgroundColor = UIColor.blueColor;
-    self.yyLabel = [[UILabel alloc]init];
+    self.yyLabel = [[loadLabel alloc]init];
     self.yyLabel.text = @"YYLabel 测试YYLabel 测试YYLabel 测试YYLabel 测试YYLabel 测试";
     self.yyLabel.numberOfLines = 0;
-//    [self addSubview:self.yyLabel];
+    [self addSubview:self.yyLabel];
     [loadAinitializeTest initializeTestBegin];
     return self;
 }
@@ -142,3 +167,6 @@ void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
 
 
 @end
+
+
+

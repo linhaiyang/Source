@@ -17,6 +17,102 @@
 
 typedef NSString * NSStringResourceKey NS_STRING_ENUM;
 
+UIImage* coverImage(){
+        static UIImage *image;
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            CGSize size =CGSizeMake(141, 60);
+            CGFloat kPadding = YYTextCGFloatPixelHalf(6.0),kRadius = 5.f;
+            CGFloat kHeight = 32.0;
+            CGFloat kArrow =14.0;
+            CGRect rect = (CGRect) {.size = size, .origin = CGPointZero};
+            
+            UIGraphicsBeginImageContextWithOptions(size, NO, 0);
+            CGContextRef context = UIGraphicsGetCurrentContext();
+            
+            CGPathRef boxPath = CGPathCreateWithRect(rect, NULL);
+            
+            CGMutablePathRef path = CGPathCreateMutable();
+            CGPathMoveToPoint(path, NULL, kPadding + kRadius, kPadding);
+            CGPathAddLineToPoint(path, NULL, size.width - kPadding - kRadius, kPadding);
+            CGPathAddQuadCurveToPoint(path, NULL, size.width - kPadding, kPadding, size.width - kPadding, kPadding + kRadius);
+            CGPathAddLineToPoint(path, NULL, size.width - kPadding, kHeight);
+            CGPathAddCurveToPoint(path, NULL, size.width - kPadding, kPadding + kHeight, size.width - kPadding - kRadius, kPadding + kHeight, size.width - kPadding - kRadius, kPadding + kHeight);
+            CGPathAddLineToPoint(path, NULL, size.width / 2 + kArrow, kPadding + kHeight);
+            CGPathAddLineToPoint(path, NULL, size.width / 2, kPadding + kHeight + kArrow);
+            CGPathAddLineToPoint(path, NULL, size.width / 2 - kArrow, kPadding + kHeight);
+            CGPathAddLineToPoint(path, NULL, kPadding + kRadius, kPadding + kHeight);
+            CGPathAddQuadCurveToPoint(path, NULL, kPadding, kPadding + kHeight, kPadding, kHeight);
+            CGPathAddLineToPoint(path, NULL, kPadding, kPadding + kRadius);
+            CGPathAddQuadCurveToPoint(path, NULL, kPadding, kPadding, kPadding + kRadius, kPadding);
+            CGPathCloseSubpath(path);
+            
+            CGMutablePathRef arrowPath = CGPathCreateMutable();
+            CGPathMoveToPoint(arrowPath, NULL, size.width / 2 - kArrow, YYTextCGFloatPixelFloor(kPadding) + kHeight);
+            CGPathAddLineToPoint(arrowPath, NULL, size.width / 2 + kArrow, YYTextCGFloatPixelFloor(kPadding) + kHeight);
+            CGPathAddLineToPoint(arrowPath, NULL, size.width / 2, kPadding + kHeight + kArrow);
+            CGPathCloseSubpath(arrowPath);
+            
+            // inner shadow
+            CGContextSaveGState(context); {
+                CGFloat blurRadius = 25;
+                CGSize offset = CGSizeMake(0, 15);
+                CGColorRef shadowColor = [UIColor colorWithWhite:0 alpha:0.16].CGColor;
+                CGColorRef opaqueShadowColor = CGColorCreateCopyWithAlpha(shadowColor, 1.0);
+                CGContextAddPath(context, path);
+                CGContextClip(context);
+                CGContextSetAlpha(context, CGColorGetAlpha(shadowColor));
+                CGContextBeginTransparencyLayer(context, NULL); {
+                    CGContextSetShadowWithColor(context, offset, blurRadius, opaqueShadowColor);
+                    CGContextSetBlendMode(context, kCGBlendModeSourceOut);
+                    CGContextSetFillColorWithColor(context, opaqueShadowColor);
+                    CGContextAddPath(context, path);
+                    CGContextFillPath(context);
+                } CGContextEndTransparencyLayer(context);
+                CGColorRelease(opaqueShadowColor);
+            } CGContextRestoreGState(context);
+
+            // outer shadow
+            CGContextSaveGState(context); {
+                CGContextAddPath(context, boxPath);
+                CGContextAddPath(context, path);
+                CGContextEOClip(context);
+                CGColorRef shadowColor = [UIColor colorWithWhite:0 alpha:0.32].CGColor;
+                CGContextSetShadowWithColor(context, CGSizeMake(0, 1.5), 3, shadowColor);
+                CGContextBeginTransparencyLayer(context, NULL); {
+                    CGContextAddPath(context, path);
+                    [[UIColor colorWithWhite:0.7 alpha:1.000] setFill];
+                    CGContextFillPath(context);
+                } CGContextEndTransparencyLayer(context);
+            } CGContextRestoreGState(context);
+////
+////            // arrow
+            CGContextSaveGState(context); {
+                CGContextAddPath(context, arrowPath);
+                [[UIColor colorWithWhite:1 alpha:0.95] set];
+                CGContextFillPath(context);
+            } CGContextRestoreGState(context);
+//
+//            // stroke
+            CGContextSaveGState(context); {
+                CGContextAddPath(context, path);
+                [[UIColor blueColor] setStroke];
+                CGContextSetLineWidth(context, YYTextCGFloatFromPixel(1));
+                CGContextStrokePath(context);
+            } CGContextRestoreGState(context);
+            
+            CFRelease(boxPath);
+            CFRelease(path);
+            CFRelease(arrowPath);
+            
+            image = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            
+        });
+        return image;
+}
+
+
 @interface HomeViewController ()
 {
     YYLabel *      _titleLabel;
@@ -32,9 +128,13 @@ typedef NSString * NSStringResourceKey NS_STRING_ENUM;
     Dlog(@"111111");
 }
 
+
+
+
+/***/
 - (void)viewDidLoad  {
     [super viewDidLoad];
-    
+//    YYTextMagnifier
     NSString *string = @"Lorem    ipsum dolar   sit  amet.";
     string = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 
@@ -103,7 +203,14 @@ typedef NSString * NSStringResourceKey NS_STRING_ENUM;
     
     
     
+//    UIImageView * img = [[UIImageView alloc]init];
+//    img.image = coverImage();
+//    img.size = CGSizeMake(141, 60);
+//    img.center = self.view.center;
+//    [self.view addSubview:img];
     
+    
+//    [layer addAnimation:animationGroup forKey:@"progress"];
     
     /**
      // 高亮状态的背景
@@ -124,74 +231,7 @@ typedef NSString * NSStringResourceKey NS_STRING_ENUM;
      */
 }
 
--(void)addsub:(NSStringResourceKey)resoure{
-    NSString *bananas = @"t123.321abc137d efg/hij kl";
-     NSString *separatorString = @"fg";
-     BOOL result;
-
-     NSScanner *aScanner = [NSScanner scannerWithString:bananas];
-
-     //扫描字符串
-     //扫描到指定字符串时停止，返回结果为指定字符串之前的字符串
-     NSLog(@"扫描仪所在的位置：%lu", aScanner.scanLocation);
-    
-    
-    NSString *container;
-        result = [aScanner scanUpToString:separatorString intoString:&container];
-        NSLog(@"扫描成功：%@", result?@"YES":@"NO");
-        NSLog(@"扫描的返回结果：%@", container);
-        NSLog(@"扫描仪所在的位置：%lu", aScanner.scanLocation);
-    
-    
-    //扫描整数
-      //将会接着上一次扫描结束的位置继续扫描
-      NSLog(@"-------------------------------------1");
-      NSLog(@"扫描仪所在的位置：%lu", aScanner.scanLocation);
-      NSInteger anInteger;
-      result = [aScanner scanInteger:&anInteger];
-      NSLog(@"扫描成功：%@", result?@"YES":@"NO");
-      NSLog(@"扫描的返回结果：%ld", anInteger);
-      NSLog(@"扫描仪所在的位置：%lu", aScanner.scanLocation);
-    
-    
-    NSLog(@"-------------------------------------2");
-    aScanner.scanLocation = 1;      //将扫描仪的位置置为首位置
-    NSLog(@"扫描仪所在的位置：%lu", aScanner.scanLocation);
-    NSInteger anInteger2;
-    result = [aScanner scanInteger:&anInteger2];
-    NSLog(@"扫描成功：%@", result?@"YES":@"NO");
-    NSLog(@"扫描的返回结果：%ld", anInteger2);
-    NSLog(@"扫描仪所在的位置：%lu", aScanner.scanLocation);
-    
-    
-    NSLog(@"-------------------------------------5");
-    aScanner.scanLocation = 0;      //将扫描仪的位置置为首位置
-    NSLog(@"扫描仪所在的位置：%lu", aScanner.scanLocation);
-    NSString *str;
-    NSCharacterSet *characterSet = [NSCharacterSet characterSetWithCharactersInString:@"/"];
-    result = [aScanner scanUpToCharactersFromSet:characterSet intoString:&str];
-    NSLog(@"扫描成功：%@", result?@"YES":@"NO");
-    NSLog(@"扫描的返回结果：%@", str);
-    NSLog(@"扫描仪所在的位置：%lu", aScanner.scanLocation);
-    
-    
-    NSLog(@"-------------------------------------6");
-    NSString * numStr = @"a 1 b 2 c 3 d 4 e 5 f 6 o";
-        NSScanner * bscanner = [NSScanner scannerWithString:numStr];
-        NSCharacterSet * numSet = [NSCharacterSet decimalDigitCharacterSet];
-        while ( NO == [bscanner isAtEnd]) {
-            NSString * intoStr2;
-            NSLog(@"----%ld",bscanner.scanLocation);
-            if ([bscanner scanUpToCharactersFromSet:numSet intoString:&intoStr2]) {
-//                NSLog(@"-----------%@",intoStr2);
-                NSLog(@"----%ld",bscanner.scanLocation);
-                int num;
-                if ([bscanner scanInt:&num]) {
-                    NSLog(@"num=%d, %ld",num, bscanner.scanLocation);
-                }
-            }
-        }
-}
+-(void)addsub:(NSStringResourceKey)resoure{}
 /*
 #pragma mark - Navigation
 

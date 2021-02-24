@@ -182,8 +182,6 @@
 		5A729A9E25209A0E007A7136 /* NSData+Encrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A685ED424D2E7B200BF9737 /* NSData+Encrypt.m */; };
 		5A729AA325209A15007A7136 /* NSData+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A685ED324D2E7B200BF9737 /* NSData+Hash.m */; };
 		5A729AA825209A1C007A7136 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A685ECF24D2E7B200BF9737 /* NSData+Base64.m */; };
-		5A79AD2925D136D80045C588 /* CoreAnimation in Resources */ = {isa = PBXBuildFile; fileRef = 5A79AD2825D136D80045C588 /* CoreAnimation */; };
-		5A79AD2A25D136D80045C588 /* CoreAnimation in Resources */ = {isa = PBXBuildFile; fileRef = 5A79AD2825D136D80045C588 /* CoreAnimation */; };
 		5A82CB2325554C2C0035F2D2 /* RootWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A66948E253557D70073FDF6 /* RootWebViewController.m */; };
 		5A82CB2825554C3E0035F2D2 /* XLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A669491253557D70073FDF6 /* XLWebViewController.m */; };
 		5A938A6325B7C888002B5169 /* RetainCycleLoggerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A938A5F25B7C888002B5169 /* RetainCycleLoggerPlugin.m */; };
@@ -220,6 +218,8 @@
 		5AB1B92A256678D30083408B /* MJRefrshDoc in Resources */ = {isa = PBXBuildFile; fileRef = 5AB1B928256678D30083408B /* MJRefrshDoc */; };
 		5AB821202588B783003560A9 /* git in Resources */ = {isa = PBXBuildFile; fileRef = 5AB8211F2588B783003560A9 /* git */; };
 		5AB821212588B783003560A9 /* git in Resources */ = {isa = PBXBuildFile; fileRef = 5AB8211F2588B783003560A9 /* git */; };
+		5ABB0AF225E4A1C20074C3ED /* ImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABB0AF125E4A1C20074C3ED /* ImageTableViewCell.m */; };
+		5ABB0AF325E4A1C20074C3ED /* ImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ABB0AF125E4A1C20074C3ED /* ImageTableViewCell.m */; };
 		5AC1C462258C98A600D95FCD /* CAShapeLayer+UIBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC1C461258C98A600D95FCD /* CAShapeLayer+UIBezierPath.m */; };
 		5AC1C463258C98A600D95FCD /* CAShapeLayer+UIBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC1C461258C98A600D95FCD /* CAShapeLayer+UIBezierPath.m */; };
 		5AC1C46B258C996300D95FCD /* CAGradientLayer+Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AC1C46A258C996300D95FCD /* CAGradientLayer+Layer.m */; };
@@ -545,7 +545,6 @@
 		5A729A8625208210007A7136 /* NSString+Encrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Encrypt.m"; sourceTree = "<group>"; };
 		5A729A8D2520829A007A7136 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
 		5A729A8E2520829A007A7136 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
-		5A79AD2825D136D80045C588 /* CoreAnimation */ = {isa = PBXFileReference; lastKnownFileType = text; path = CoreAnimation; sourceTree = "<group>"; };
 		5A938A5C25B7C887002B5169 /* CacheCleanerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheCleanerPlugin.h; sourceTree = "<group>"; };
 		5A938A5D25B7C888002B5169 /* CacheCleanerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheCleanerPlugin.m; sourceTree = "<group>"; };
 		5A938A5E25B7C888002B5169 /* RetainCycleLoggerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RetainCycleLoggerPlugin.h; sourceTree = "<group>"; };
@@ -569,6 +568,8 @@
 		5AB1B91E256647170083408B /* AFNFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = AFNFile; sourceTree = "<group>"; };
 		5AB1B928256678D30083408B /* MJRefrshDoc */ = {isa = PBXFileReference; lastKnownFileType = text; path = MJRefrshDoc; sourceTree = "<group>"; };
 		5AB8211F2588B783003560A9 /* git */ = {isa = PBXFileReference; lastKnownFileType = text; path = git; sourceTree = "<group>"; };
+		5ABB0AF025E4A1C20074C3ED /* ImageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageTableViewCell.h; sourceTree = "<group>"; };
+		5ABB0AF125E4A1C20074C3ED /* ImageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageTableViewCell.m; sourceTree = "<group>"; };
 		5AC1C460258C98A600D95FCD /* CAShapeLayer+UIBezierPath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CAShapeLayer+UIBezierPath.h"; sourceTree = "<group>"; };
 		5AC1C461258C98A600D95FCD /* CAShapeLayer+UIBezierPath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CAShapeLayer+UIBezierPath.m"; sourceTree = "<group>"; };
 		5AC1C469258C996300D95FCD /* CAGradientLayer+Layer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CAGradientLayer+Layer.h"; sourceTree = "<group>"; };
@@ -801,6 +802,8 @@
 				5A4365862583187F0033B521 /* KeyBoardManagerController.m */,
 				5A4815342559268E001DC006 /* loadAinitializeTest.h */,
 				5A4815352559268E001DC006 /* loadAinitializeTest.m */,
+				5ABB0AF025E4A1C20074C3ED /* ImageTableViewCell.h */,
+				5ABB0AF125E4A1C20074C3ED /* ImageTableViewCell.m */,
 				5AB1B8D125652CAA0083408B /* memorandum */,
 				435830A91C33D42F0074D713 /* Supporting Files */,
 			);
@@ -1367,7 +1370,6 @@
 				5A19D20D25C13B5F00346ECA /* error */,
 				5A3D634E25CA3BEB0085F14F /* ImageDecode */,
 				8B5C7C9C25C31BAB00D35371 /* Array.plist */,
-				5A79AD2825D136D80045C588 /* CoreAnimation */,
 			);
 			path = memorandum;
 			sourceTree = "<group>";
@@ -1769,7 +1771,6 @@
 				5A17164824921914001CAADF /* MBProgressHUD.bundle in Resources */,
 				5A35580F249CC34A002DAD41 /* NoData.bundle in Resources */,
 				5A19D20E25C13B5F00346ECA /* error in Resources */,
-				5A79AD2925D136D80045C588 /* CoreAnimation in Resources */,
 				5AB1B8FD256533AC0083408B /* NSHomeDirectoryFile in Resources */,
 				5A5DDC7D257F872400DC17D1 /* CGPathFile in Resources */,
 				5AB1B8D325652CD00083408B /* UDID in Resources */,
@@ -1826,7 +1827,6 @@
 				5A5493ED24BD539D00C49207 /* MBProgressHUD.bundle in Resources */,
 				5A5493EE24BD539D00C49207 /* NoData.bundle in Resources */,
 				5A19D20F25C13B5F00346ECA /* error in Resources */,
-				5A79AD2A25D136D80045C588 /* CoreAnimation in Resources */,
 				5AB1B8FE256533AC0083408B /* NSHomeDirectoryFile in Resources */,
 				5A5DDC7E257F872400DC17D1 /* CGPathFile in Resources */,
 				5AB1B8D425652CD00083408B /* UDID in Resources */,
@@ -2114,6 +2114,7 @@
 				435830AE1C33D42F0074D713 /* AppDelegate.m in Sources */,
 				5A0E8C23257A0CAB002F8708 /* TransitionController.m in Sources */,
 				5AE1DEE825024A2000F511A6 /* LoginModel.m in Sources */,
+				5ABB0AF225E4A1C20074C3ED /* ImageTableViewCell.m in Sources */,
 				5A2882C324A343A10059F96C /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				5AB1B8CB256520DF0083408B /* AppDelegate+Monitor.m in Sources */,
 				5A2E8AC024B87BAA00B859AB /* ImageItemModel.m in Sources */,
@@ -2249,6 +2250,7 @@
 				5AE9BB7B250615BC0010945B /* MPRequstFailedHelper.m in Sources */,
 				5A5493D824BD539D00C49207 /* ImageItemModel.m in Sources */,
 				5AE9BBBB25075BB20010945B /* NetWorkBaseUrlConfig.m in Sources */,
+				5ABB0AF325E4A1C20074C3ED /* ImageTableViewCell.m in Sources */,
 				5AF95B26257105EE00A03F02 /* EncodeModel.m in Sources */,
 				5A5493D924BD539D00C49207 /* EaseBlankPageView.m in Sources */,
 				5A938A7225B7DE46002B5169 /* CacheCleanerPlugin.m in Sources */,
