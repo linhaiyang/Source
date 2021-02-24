@@ -1,4 +1,17 @@
 
+    /**
+     CAAimation动画
+     translation对应平行移动;scale对应缩放;rotation对应旋转.
+     
+     
+     UIView动画
+     坐标尺寸类bounds，frame，center
+     视图显示类 backgroundColor alpha hidden
+     形态变化类 transform：修改这个属性可以实现旋转、形变、移动、翻转等动画效果，其通过矩阵运算的方式来实现，因此更加强大
+     
+     */
+
+
 1.UIViewControllerContextTransitioning  转场动画，就是控制器切换过程中的过渡动画。
 
 <UIViewControllerAnimatedTransitioning>
@@ -37,6 +50,13 @@ UIViewAnimationTransition------做uiview动画时候用
 
 Layer---->CAAnimation
 /*右翻转*/CATransition: CAAnimation
+
+属性动画只对图层的可动画属性起作用，所以如果要改变一个不能动画的属性（比如图片），或者从层级关系中添加或者移除图层，属性动画将不起作用。
+
+于是就有了过渡的概念。过渡并不像属性动画那样平滑地在两个值之间做动画，而是影响到整个图层的变化。过渡动画首先展示之前的图层外观，然后通过一个交换过渡到新的外观。
+
+为了创建一个过渡动画，我们将使用CATransition，同样是另一个CAAnimation的子类，和别的子类不同，CAAnimation有一个type和subtype来标识变换效果；
+
 //CATransaction
             CATransition *anima = [CATransition animation];
             anima.type = @"cube";//设置动画的类型
@@ -149,3 +169,114 @@ animationWithKeyPath的值：
 }
 
 */
+
+
+
+
+
+
+
+
+
+@implementation RefreshAnimation{
+    CAShapeLayer *_lineLayer;
+    CATransform3D trans;
+}
+-(instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+        if (self) {
+            self.backgroundColor = [UIColor clearColor];
+            self.translatesAutoresizingMaskIntoConstraints = NO;
+            UIBezierPath* linePath = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width/2, self.frame.size.height/2) radius:10 startAngle:(CGFloat) (M_PI*3/2) endAngle:(CGFloat) (M_PI/2+M_PI*5) clockwise:YES];
+                CAShapeLayer *lineLayer = [CAShapeLayer layer];
+                lineLayer.lineWidth = 2;
+             lineLayer.contentsScale = [[UIScreen mainScreen] scale];
+             lineLayer.frame = CGRectMake(0.0f, 0.0f, self.frame.size.width, self.frame.size.height);
+                lineLayer.strokeColor = kCOLOR_BG_BLUE.CGColor;
+             lineLayer.lineCap = kCALineCapRound;
+             lineLayer.lineJoin = kCALineJoinBevel;
+                lineLayer.path = linePath.CGPath;
+                lineLayer.fillColor = nil; // 默认为blackColor
+                [self.layer addSublayer:lineLayer];
+             
+             CALayer *maskLayer = [CALayer layer];
+             maskLayer.contents = (__bridge id)[[UIImage imageNamed:@"MBProgressHUD.bundle/angle-mask"] CGImage];
+             maskLayer.frame = lineLayer.bounds;
+             lineLayer.mask = maskLayer;
+            _lineLayer = lineLayer;
+            
+            trans = CATransform3DIdentity;
+        }
+        return self;
+}
+- (void)setComplete:(CGFloat)complete{
+    
+    if (_lineLayer.mask.animationKeys) {
+        return;
+    }
+    if (_complete == complete) {
+        return;
+    }
+    if (complete >=1.f) {
+        complete = 1.f;
+    }
+    CGFloat percent = complete - _complete;
+    trans = CATransform3DRotate(trans, M_PI*2*percent, 0, 0, 1);
+    _lineLayer.transform = trans;
+    _complete = complete;
+}
+-(void)addAnimation{
+    NSTimeInterval animationDuration = 0.8;
+    CAMediaTimingFunction *linearCurve = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+    animation.fromValue = (id) 0;
+    animation.toValue = @(M_PI*2);
+    animation.duration = animationDuration;
+    animation.timingFunction = linearCurve;
+    animation.removedOnCompletion = NO;
+    animation.repeatCount = INFINITY;
+    animation.fillMode = kCAFillModeForwards;
+    animation.autoreverses = NO;
+    if (_lineLayer.mask.animationKeys) {
+        return;
+    }
+    [_lineLayer.mask addAnimation:animation forKey:@"rotate"];
+
+    CAAnimationGroup *animationGroup = [CAAnimationGroup animation];
+    animationGroup.duration = animationDuration;
+    animationGroup.repeatCount = INFINITY;
+    animationGroup.removedOnCompletion = NO;
+    animationGroup.timingFunction = linearCurve;
+
+    CABasicAnimation *strokeStartAnimation = [CABasicAnimation animationWithKeyPath:@"strokeStart"];
+    strokeStartAnimation.fromValue = @0.015;
+    strokeStartAnimation.toValue = @0.515;
+//x-xcode-debug-views://7f8040e76640?DBGViewDebuggerLaunchSessionParameter=7f8040e76640: runtime: Layout Issues: Position is ambiguous for RefreshAnimation.
+
+    CABasicAnimation *strokeEndAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    strokeEndAnimation.fromValue = @0.485;
+    strokeEndAnimation.toValue = @0.985;
+
+    animationGroup.animations = @[strokeStartAnimation, strokeEndAnimation];
+    [_lineLayer addAnimation:animationGroup forKey:@"progress"];
+}
+-(void)removeAnimation{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    [self->_lineLayer removeAllAnimations];
+    [self->_lineLayer.mask removeAllAnimations];
+    });
+    _complete = 0.f;
+    _lineLayer.transform = CATransform3DIdentity;
+    trans = CATransform3DIdentity;
+//    [self removeFromSuperview];
+}
+-(CGSize)intrinsicContentSize{//translatesAutoresizingMaskIntoConstraints
+//    [super intrinsicContentSize];
+//    CGFloat contentViewH = 165;
+//    CGFloat contentViewW = 165;
+    return CGSizeMake(self.frame.size.width, self.frame.size.height);
+}
+-(void)dealloc{
+    [_lineLayer removeAllAnimations];
+    [_lineLayer.mask removeAllAnimations];
+}

@@ -78,11 +78,19 @@
     /**The name of the transition. Current legal transition types include
      * `fade', `moveIn', `push' and `reveal'. Defaults to `fade'. */
     anima.type =kCATransitionFade;// @"cube" 设置动画的类型
-    anima.subtype = kCATransitionFromRight; //设置动画的方向
+//    anima.subtype = kCATransitionFromRight; //设置动画的方向
     anima.duration = 0.3f;
     anima.removedOnCompletion = true;
+    
+    CATransition *transition = [CATransition animation];
+    transition.duration = 0.3f;
+    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+    transition.type = kCATransitionFade;
+//    [layer addAnimation:transition forKey:@"contents"];
     self.window.rootViewController = mainTabBar;
     [self.window.layer addAnimation:anima forKey:@"revealAnimation"];
+    
+    
 }
 -(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options{
 //    [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {

@@ -10,6 +10,8 @@
 #import "LogInApi.h"
 #import "RACObserveController.h"
 #import "ClassifyApi.h"
+#import "ImageTableViewCell.h"
+
 #define  MRScreenWidth [UIScreen mainScreen].bounds.size.width
 #define  MRScreenHeight [UIScreen mainScreen].bounds.size.height
 @interface PropertyController ()<UIScrollViewDelegate,UITableViewDataSource, UITableViewDelegate>
@@ -86,7 +88,7 @@
     } failure:^(YTKBaseRequest * _Nonnull batchRequest) {
         [MPRequstFailedHelper requstFailed:batchRequest];
     }];
-    self.muAry = @[@"http://img.daimg.com/uploads/allimg/201103/1-2011031K128.jpg",
+    self.muAry = @[@"http://ww4.sinaimg.cn/or360/9a099b04gw1evvzlou4tmj20yi0rsgt7.jpg",
                    @"http://img.daimg.com/uploads/allimg/201104/1-201104000616.jpg",
                    @"http://img.daimg.com/uploads/allimg/201103/1-201103230950.jpg",
                    @"http://img.daimg.com/uploads/allimg/201103/1-201103230406.jpg",
@@ -150,7 +152,8 @@
     [self.tableV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(UIEdgeInsetsMake(-0, 0, 0, 0));
     }];
-    self.tableV.rowHeight = 50.f;
+    self.tableV.rowHeight = 160.f;
+    self.tableV.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
 //    [self testRetainCycle];
     
 }
@@ -160,14 +163,49 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell * cell = [UITableViewCell registerCell:tableView];
+    ImageTableViewCell * cell = [ImageTableViewCell registerCell:tableView];
     cell.accessoryType    = UITableViewCellAccessoryDisclosureIndicator;
-    [cell.imageView sd_setImageWithURL:self.muAry[indexPath.row] placeholderImage:[UIImage imageNamed:@"test_image_2"]options:SDWebImageLowPriority progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-        Dlog(@"%ld----SDWebImageLowPriority-----%ld",receivedSize,expectedSize);
-    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        
+//    [cell.imageView sd_setImageWithURL:self.muAry[indexPath.row] placeholderImage:[UIImage imageNamed:@"test_image_2"]options:SDWebImageLowPriority progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+//        Dlog(@"%ld----SDWebImageLowPriority-----%ld",receivedSize,expectedSize);
+//    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//
+//    }];
+    
+    /**
+     （1）UIViewContentModeScaleToFill属性会导致图片变形。
+
+     （2）UIViewContentModeScaleAspectFit会保证图片比例不变，而且全部显示在ImageView中，这意味着ImageView会有部分空白。
+
+     （3）UIViewContentModeScaleAspectFill也会证图片比例不变，但是是填充整个ImageView的，可能只有部分图片显示出来。
+
+     
+     */
+    
+    [cell.mainImageView.layer yy_setImageWithURL:[NSURL URLWithString:self.muAry[indexPath.row]] placeholder:[UIImage YYImageNamed:@""] options:YYWebImageOptionAvoidSetImage completion:^(UIImage * _Nullable image, NSURL * _Nonnull url, YYWebImageFromType from, YYWebImageStage stage, NSError * _Nullable error) {
+        if (image) {
+            int width = image.size.width;
+            int height = image.size.height;
+            CGFloat scale = (height / width);
+            if (scale < 0.99 || isnan(scale)) { // 宽图把左右两边裁掉
+                cell.mainImageView.contentMode = UIViewContentModeScaleAspectFill;
+                cell.mainImageView.layer.contentsRect = CGRectMake(0, 0, 1, 1);
+            } else { // 高图只保留顶部
+                cell.mainImageView.contentMode = UIViewContentModeScaleToFill;
+                cell.mainImageView.layer.contentsRect = CGRectMake(0, 0, 1, (float)width / height);
+            }
+            [cell.mainImageView.layer yy_cancelCurrentImageRequest];
+    //        cell.mainImageView.contentMode = UIViewContentModeScaleAspectFill;
+            cell.mainImageView.layer.contents = (__bridge id _Nullable)(image.CGImage);
+            CATransition *transition = [CATransition animation];
+            transition.duration = 0.15;
+            transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
+            transition.type = kCATransitionFade;
+            [cell.mainImageView.layer addAnimation:transition forKey:@"contents"];
+            cell.mainImageView.userInteractionEnabled = true;
+        }
+       
     }];
-    cell.imageView.userInteractionEnabled = true;
+    
     return cell;
 }
 -(void)dealloc{
