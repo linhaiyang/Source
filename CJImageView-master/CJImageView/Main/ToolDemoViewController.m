@@ -14,6 +14,7 @@
 
 //#import "loadAinitializeTest.h"
 //#import <MWPhotoBrowser.h>
+NSString * const kNotificationName = @"kNotificationName";
 @interface ToolDemoViewController ()<CALayerDelegate>
 @property(nonatomic,strong)UIView * operView;
 @property (strong, readwrite, nonatomic) dispatch_semaphore_t dispatchSemaphore;
@@ -50,11 +51,19 @@
         layer.delegate = self;
         //需要显式调用setNeedsDisplay来刷新才会绘制layer
         [layer setNeedsDisplay];
+    layer.shouldRasterize = YES;//视图光栅化
         [self.view.layer addSublayer:layer];
     @weakify(self);
     [self configRightBaritemWithImage:[UIImage imageNamed:@"icon_tabbar_homepage_selected"] buttonItemClick:^(UIBarButtonItem *barButton) {
         @strongify(self);
-        [self listOrMapShowItemClick];
+//        [self listOrMapShowItemClick];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationName object:@"通知说话开始"];
+
+        NSNotification *notification = [NSNotification notificationWithName:kNotificationName
+                                                                         object:@"通知说话开始"];
+            [[NSNotificationQueue defaultQueue] enqueueNotification:notification
+                                                       postingStyle:NSPostASAP];
+           NSLog(@"按钮说话");
     }];
     
     NSMutableArray * photos = [NSMutableArray array];
@@ -142,9 +151,24 @@
             
     }];
 
-    
-
+    // 注册通知
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(actionNotification:)
+                                                     name:kNotificationName
+                                                   object:nil];
 }
+
+- (void) actionNotification: (NSNotification*)notification
+{
+    NSString* message = notification.object;
+    NSLog(@"%@",message);
+
+    sleep(3);
+
+    NSLog(@"通知说话结束");
+}
+
+
 - (void)observeValueForKeyPath:(nullable NSString *)keyPath ofObject:(nullable id)object change:(nullable NSDictionary<NSKeyValueChangeKey, id> *)change context:(nullable void *)context{
 
 }
