@@ -24,10 +24,10 @@
     [super viewDidLoad];
     
      
-//    UIButton * button  = [UIButton buttonWithType:UIButtonTypeCustom];
-//    [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-//        
-//    }];
+    UIButton * button  = [UIButton buttonWithType:UIButtonTypeCustom];
+    [[button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        
+    }];
     
     UITextField * field = [UITextField new];
 //    field.placeholder = @"输入筛选数据";

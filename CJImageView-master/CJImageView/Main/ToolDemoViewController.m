@@ -10,6 +10,8 @@
 #import "GCD.h"
 #import "UIView+Frame.h"
 #import "loadAinitializeTest.h"
+#import "NSObject+RACKVOWrapper.h"
+
 //#import "loadAinitializeTest.h"
 //#import <MWPhotoBrowser.h>
 @interface ToolDemoViewController ()<CALayerDelegate>
@@ -133,14 +135,24 @@
     loadAinitializeTest * test =  [loadAinitializeTest new];
     test.frame = CGRectMake(0, 100, 300, 300);
     [self.view addSubview:test];
-    [self transition];
+//    [self transition];
+//    NSObject * obgj  =  [NSObject new];
+    [test addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew context:nil];
+    [test rac_observeKeyPath:@"name" options:NSKeyValueObservingOptionNew observer:self block:^(id value, NSDictionary *change, BOOL causedByDealloc, BOOL affectedOnlyLastComponent) {
+            
+    }];
+
+    
+
 }
+- (void)observeValueForKeyPath:(nullable NSString *)keyPath ofObject:(nullable id)object change:(nullable NSDictionary<NSKeyValueChangeKey, id> *)change context:(nullable void *)context{
 
-
+}
 -(void)transition{
     MKMapView *mapView = [[MKMapView alloc] init];
     mapView.frame = self.view.bounds;
     self.mapView = mapView;
+    
     [self.view addSubview:self.mapView];  // 首先显示mapView视图
     self.mapView.mapType = MKMapTypeStandard;
     self.mapView.rotateEnabled = NO; // 不旋转
@@ -155,23 +167,23 @@
 }
 - (void)listOrMapShowItemClick{
 
-    static BOOL tran;
-   if (tran == false) {
-          // 点击 “列表”  翻转显示到列表tableview
-       tran = true;
-          // 翻转到列表那一页
-          // tableView添加到mapView的父视图上， mapView从父视图移除
-          [UIView transitionFromView:self.mapView toView:self.tableView duration:0.5f options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
-                  NSLog(@"翻转到了列表页面");
-           }];
-   }else{
-       tran = false;
-           // 点击 地图 翻转显示 地图页面
-//           self.listOrMapShowItem.title = @"列表";
-           // mapView添加到tableView的父视图上， tableView从父视图移除
-           [UIView transitionFromView:self.tableView toView:self.mapView duration:0.5f options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
-                   NSLog(@"翻转到了地图页面");
-           }];
-        }
+//    static BOOL tran;
+//   if (tran == false) {
+//          // 点击 “列表”  翻转显示到列表tableview
+//       tran = true;
+//          // 翻转到列表那一页
+//          // tableView添加到mapView的父视图上， mapView从父视图移除
+//          [UIView transitionFromView:self.mapView toView:self.tableView duration:0.5f options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
+//                  NSLog(@"翻转到了列表页面");
+//           }];
+//   }else{
+//       tran = false;
+//           // 点击 地图 翻转显示 地图页面
+////           self.listOrMapShowItem.title = @"列表";
+//           // mapView添加到tableView的父视图上， tableView从父视图移除
+//           [UIView transitionFromView:self.tableView toView:self.mapView duration:0.5f options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
+//                   NSLog(@"翻转到了地图页面");
+//           }];
+//        }
 }
 @end

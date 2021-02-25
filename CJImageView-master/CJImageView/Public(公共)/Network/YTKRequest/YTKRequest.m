@@ -76,7 +76,7 @@ static dispatch_queue_t ytkrequest_cache_writing_queue() {
     if (!self) {
         return nil;
     }
-
+    [aDecoder decodeObjectForKey:@""];
     self.version = [[aDecoder decodeObjectOfClass:[NSNumber class] forKey:NSStringFromSelector(@selector(version))] integerValue];
     self.sensitiveDataString = [aDecoder decodeObjectOfClass:[NSString class] forKey:NSStringFromSelector(@selector(sensitiveDataString))];
     self.stringEncoding = [[aDecoder decodeObjectOfClass:[NSNumber class] forKey:NSStringFromSelector(@selector(stringEncoding))] integerValue];

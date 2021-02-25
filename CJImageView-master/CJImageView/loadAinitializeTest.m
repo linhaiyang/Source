@@ -11,8 +11,6 @@
 
 
 @interface loadLabel : UILabel
-
-
 @end
 
 @implementation loadLabel
@@ -32,6 +30,7 @@
 @interface loadAinitializeTest()
 
 @property(nonatomic,strong)UILabel * yyLabel;
+@property(nonatomic,copy)NSString * name;
 
 @end
 
@@ -66,6 +65,7 @@
     self.yyLabel.origin = CGPointMake(0, 0 );
 
     self.yyLabel.frame = CGRectMake(0, 0, self.ui_width, 0);
+    
     [self.yyLabel sizeToFit];//-------会调用label 的- (CGSize)sizeThatFits:(CGSize)size方法
     Dlog(@"%f---layoutSubviews",self.yyLabel.intrinsicContentSize.height);
 //    self.yyLabel.frame = CGRectZero;
@@ -129,6 +129,17 @@ void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
     self.clipsToBounds = true;
     self.backgroundColor = UIColor.blueColor;
     self.yyLabel = [[loadLabel alloc]init];
+    @weakify(self);
+    self.yyLabel.userInteractionEnabled = true;
+    [self.yyLabel addTapGestureRecognizer:^(UITapGestureRecognizer *recognizer, NSString *gestureId) {
+        @strongify(self);
+        [self willChangeValueForKey:@"name"];
+        self.name = @"name";
+        [self didChangeValueForKey:@""];
+    }];
+    
+    
+    
     self.yyLabel.text = @"YYLabel 测试YYLabel 测试YYLabel 测试YYLabel 测试YYLabel 测试";
     self.yyLabel.numberOfLines = 0;
     [self addSubview:self.yyLabel];

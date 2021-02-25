@@ -201,7 +201,9 @@ UIImage* coverImage(){
     _titleLabel.textLayout = titleTextLayout;
     CGFloat  width=titleTextLayout.textBoundingRect.size.width;
     
-    
+    _titleLabel.textTapAction = ^(UIView * _Nonnull containerView, NSAttributedString * _Nonnull text, NSRange range, CGRect rect) {
+        
+    };
     
 //    UIImageView * img = [[UIImageView alloc]init];
 //    img.image = coverImage();
