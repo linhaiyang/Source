@@ -128,6 +128,14 @@ NSString * const kNotificationName = @"kNotificationName";
     dispatch_queue_t queue = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_SERIAL);
     dispatch_queue_t queue2 = dispatch_queue_create("com.demo.serialQueue", DISPATCH_QUEUE_CONCURRENT);
     dispatch_queue_t queue3 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+//    _ioQueue = dispatch_queue_create("com.hackemist.SDWebImageCache", DISPATCH_QUEUE_SERIAL);
+    dispatch_sync(queue, ^{
+        NSFileManager*fileManager = [NSFileManager new];
+        Dlog(@"12123312321---fileManager");
+        Dlog(@"%@",NSThread.currentThread);
+    });
+    Dlog(@"12123312321");
     /**
      Global queues是全局队列是并发队列，并由整个进程共享。进程中存在三个全局队列：高、中（默认）、低三个优先级队列。可以调用dispatch_get_global_queue函数传入优先级来访问队列。
      dispatch_queue_create使用户队列，由用户通过dispatch_queue_create来自行创建的串行队列，可以用于完成同步机制

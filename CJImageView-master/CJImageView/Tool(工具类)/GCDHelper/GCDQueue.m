@@ -221,6 +221,7 @@ static GCDQueue *backgroundPriorityGlobalQueue;
      As an optimization, this function invokes the barrier block
      on the current thread when possible.
      
+     
      作为一个建议,这个方法尽量在当前线程池中调用.
      */
     

@@ -109,7 +109,7 @@ NSPredicate:是预测的意思 但是我们常翻译成谓词
     return [numberPre evaluateWithObject:textString];
 
 NSString *string = @"Lorem    ipsum dolar   sit  amet.";
-string = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+string = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];whitespaceAndNewlineCharacterSet
 
 NSArray *components = [string componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 components = [components filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self <> ''"]];

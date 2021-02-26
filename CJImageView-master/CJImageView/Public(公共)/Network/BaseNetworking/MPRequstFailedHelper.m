@@ -24,6 +24,21 @@
 //        [MBProgressHUD showError:[NSString stringWithFormat:@"服务繁忙，请稍候重试(%ld)",(long)request.responseStatusCode] ToView:nil];
         [MBProgressHUD showError:[NSString stringWithFormat:@"服务繁忙，请稍候重试(%ld)",(long)request.responseStatusCode]];
     }
+    
+    /**
+     if (   error.code != NSURLErrorNotConnectedToInternet
+         && error.code != NSURLErrorCancelled
+         && error.code != NSURLErrorTimedOut
+         && error.code != NSURLErrorInternationalRoamingOff
+         && error.code != NSURLErrorDataNotAllowed
+         && error.code != NSURLErrorCannotFindHost
+         && error.code != NSURLErrorCannotConnectToHost) {
+         @synchronized (self.failedURLs) {
+             [self.failedURLs addObject:url];
+         }
+     }
+     
+     */
 }
 /**
  代码 说明

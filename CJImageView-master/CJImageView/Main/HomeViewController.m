@@ -134,14 +134,17 @@ UIImage* coverImage(){
 /***/
 - (void)viewDidLoad  {
     [super viewDidLoad];
+    
+    
+    
 //    YYTextMagnifier
-    NSString *string = @"Lorem    ipsum dolar   sit  amet.";
-    string = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    NSString *string = @" Lorem    ipsum dolar   sit  amet. ";
+    string = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];//头尾空白
 
     NSArray *components = [string componentsSeparatedByCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     components = [components filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self <> ''"]];
     
-    
+    NSString*string2 = [string stringByAppendingPathScale:2];
     
     
     NSDate * date = [NSDate new];
@@ -156,6 +159,7 @@ UIImage* coverImage(){
     NSInteger second = date.second;
     NSString * dateStr = [date stringWithFormat:@"yyyyMMdd HHmmss"];
     
+    NSInteger integer = [date timeIntervalSinceNow];
     NSDate * currentDate = [NSDate dateWithString:dateStr
                                            format:@"yyyyMMdd HHmmss"];
     
