@@ -42,13 +42,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     CALayer* layer = [CALayer layer];
-        layer.anchorPoint = CGPointMake(0, 0);
+        layer.anchorPoint = CGPointMake(0.5, 0);//锚定点  position 在layer中位置。。。定义旋转 缩放等操作的轴/点
         layer.position = CGPointMake(100, 100);
         layer.bounds = CGRectMake(0, 0, 200, 200);
         layer.delegate = self;
         //需要显式调用setNeedsDisplay来刷新才会绘制layer
         [layer setNeedsDisplay];
         [self.view.layer addSublayer:layer];
+//    layer.transform = CATransform3DScale(layer.transform, 0.5, 0.5, 1);
+//    [layer setTransformScale:0.5];
+//    [layer setTransformRotationZ:M_PI_2/2]; 
+    layer.backgroundColor = UIColor.orangeColor.CGColor;
     @weakify(self);
     [self configRightBaritemWithImage:[UIImage imageNamed:@"icon_tabbar_homepage_selected"] buttonItemClick:^(UIBarButtonItem *barButton) {
         @strongify(self);
@@ -81,12 +85,6 @@
     /**
      {"nonce":"073581","dev#ice":"iOS","signature":"44955f66e40c7c7f2ae5f644432c5f62","timestamp":"1611892024"}
      */
-    NSData *strData = [str dataUsingEncoding:NSUTF8StringEncoding];
-    NSData *keyData = [@"Xo823-dl230df23r" dataUsingEncoding:NSUTF8StringEncoding];
-    //Byte 转换成 NSData
-    Byte byte[] = {1,2,3,4,5,6,7,8,9,10};
-    NSData *byteData = [[NSData alloc] initWithBytes:byte length:16];
-    NSData * encryData = [strData aes256EncryptWithKey:keyData iv:byteData];
     
 //    browser.autoPlayOnAppear = NO; // Auto-play first video
     
@@ -123,17 +121,11 @@
      Global queues是全局队列是并发队列，并由整个进程共享。进程中存在三个全局队列：高、中（默认）、低三个优先级队列。可以调用dispatch_get_global_queue函数传入优先级来访问队列。
      dispatch_queue_create使用户队列，由用户通过dispatch_queue_create来自行创建的串行队列，可以用于完成同步机制
      
-     */
-    
-//    objc_msgSend()
-    objc_getClass("1122321321");
-    NSObject * obg = [NSObject new];
-    
-    
-    loadAinitializeTest * test =  [loadAinitializeTest new];
-    test.frame = CGRectMake(0, 100, 300, 300);
-    [self.view addSubview:test];
-    [self transition];
+     */    
+//    loadAinitializeTest * test =  [loadAinitializeTest new];
+//    test.frame = CGRectMake(0, 100, 300, 300);
+//    [self.view addSubview:test];
+//    [self transition];
 }
 
 

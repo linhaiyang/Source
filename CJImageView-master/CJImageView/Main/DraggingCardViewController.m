@@ -195,10 +195,79 @@
      视图显示类 backgroundColor alpha hidden
      形态变化类 transform：修改这个属性可以实现旋转、形变、移动、翻转等动画效果，其通过矩阵运算的方式来实现，因此更加强大
      
+     1242 × 828
      */
+    UIImage * image = [UIImage imageNamed:@"test_image_2.png"];
+    CGFloat imageWidth =floorf(image.size.width / 5);
+    CGFloat imageheight =floorf(image.size.height / 5);
+    UIView * contentView = [[UIView alloc]initWithFrame:CGRectMake(0, self.animateCube.ui_bottom + 100, imageWidth, imageheight)];
+//    contentView.backgroundColor = UIColor.orangeColor;
+    [self.view addSubview:contentView];
+    contentView.userInteractionEnabled = true;
     
+    UIView * layer0 = [UIView new];
+    layer0.layer.contentsRect = CGRectMake(0, 0.5, 1, 0.5);
+    layer0.frame = CGRectMake(0, imageheight/2, imageWidth, imageheight/2);
+    layer0.layer.contents = (__bridge id _Nullable)(image.CGImage);
+    [contentView addSubview:layer0];
+    
+    // 创建渐变图层
+    CAGradientLayer *shadomLayer = [CAGradientLayer layer];
+
+    // 设置渐变颜色
+        shadomLayer.colors = @[(id)[UIColor clearColor],(id)[[UIColor blackColor] CGColor]];
+
+        shadomLayer.frame = layer0.bounds;
+
+//        _shadomLayer = shadomLayer;
+
+    // 设置不透明度 0
+        shadomLayer.opacity = 0;
+
+        [layer0.layer addSublayer:shadomLayer];
+    
+    
+    UIView * layer1 = [UIView new];
+    layer1.layer.contentsRect = CGRectMake(0, 0, 1, 0.5);
+    layer1.layer.anchorPoint = CGPointMake(0.5, 1);
+    layer1.frame = CGRectMake(0, 0, imageWidth, imageheight/2);
+    layer1.layer.contents = (__bridge id _Nullable)(image.CGImage);
+
+    [contentView addSubview:layer1];
     
 
+    
+    UIPanGestureRecognizer * tap = [[UIPanGestureRecognizer alloc]initWithActionBlock:^(UIPanGestureRecognizer * sender) {
+        // 获取手指偏移量
+            CGPoint transP = [sender translationInView:contentView];
+
+        // 初始化形变
+            CATransform3D transform3D = CATransform3DIdentity;
+
+        // 设置立体效果
+            transform3D.m34 = -1 / 1000.0;
+
+        CGFloat transY = transP.y<imageheight?transP.y :imageheight;
+        // 计算折叠角度，因为需要逆时针旋转，所以取反
+            CGFloat angle = -transY / imageheight * M_PI;
+
+        layer1.layer.transform = CATransform3DRotate(transform3D, angle, 1, 0, 0);
+        
+        shadomLayer.opacity = transY * 1 /  imageheight;
+        if (sender.state == UIGestureRecognizerStateEnded) { // 手指抬起
+                // 还原
+                [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.1f initialSpringVelocity:0.1 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+
+                    layer1.layer.transform = CATransform3DIdentity;
+                    // 还原阴影
+                    shadomLayer.opacity = 0;
+                } completion:nil];
+            }
+
+    }];
+    [contentView addGestureRecognizer:tap];
+    
+    
 }
 static void YYRunLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info) //监听的代码 CFRunLoopActivity activity, void *info
 {

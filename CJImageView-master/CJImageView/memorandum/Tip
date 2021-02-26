@@ -94,6 +94,11 @@ hrefResult = [hrefRegex firstMatchInString:_status.source options:kNilOptions ra
 textResult = [textRegex firstMatchInString:_status.source options:kNilOptions range:NSMakeRange(0, _status.source.length)];
 
 
+NSString *regTags=[[NSString alloc] initWithFormat:@"(^|&|\\?)+%@=+([^&]*)(&|$)", name]; // 从url中获取key=name的参数
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regTags
+                                                                           options:NSRegularExpressionCaseInsensitive
+                                                                             error:&error];
+
 
 NSPredicate:是预测的意思 但是我们常翻译成谓词
 使用NSPredicate可以定义模糊查询条件 根据一定的条件 我们就可以从一个数组中快速找出 符合一定条件的元素对象

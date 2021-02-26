@@ -229,6 +229,12 @@ UIImage* coverImage(){
      [text setTextHighlight:highlight range:text.rangeOfAll];
      
      */
+    /**
+     1.1 ARC以后引入了__weak的概念来修饰Objective-C对象,使用这个关键字修饰的对象,对象的引用计数不会+1,这个关键字和__unsafe_unretained有些类似,只是在对象释放的时候__weak会将引用的对象置为nil,而__unsafe_unretained不会,这将会导致野指针的产生,所以一般情况下,我们一般不属于强引用某个对象的时候,可以使用__weak进行修饰,典型的例子就是代理
+     */
+    NSObject *obj = [[NSObject alloc] init];//<NSObject: 0x6000009344e0>
+    id __weak obj1 = obj;//(id) obj1 = 0x00007fff6151f55a
+    id __weak obj2 = obj;//(id) obj2 = 0x00007fff20176310
 }
 
 -(void)addsub:(NSStringResourceKey)resoure{}
