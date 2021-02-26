@@ -10,8 +10,11 @@
 #import "GCD.h"
 #import "UIView+Frame.h"
 #import "loadAinitializeTest.h"
+#import "NSObject+RACKVOWrapper.h"
+
 //#import "loadAinitializeTest.h"
 //#import <MWPhotoBrowser.h>
+NSString * const kNotificationName = @"kNotificationName";
 @interface ToolDemoViewController ()<CALayerDelegate>
 @property(nonatomic,strong)UIView * operView;
 @property (strong, readwrite, nonatomic) dispatch_semaphore_t dispatchSemaphore;
@@ -48,6 +51,7 @@
         layer.delegate = self;
         //需要显式调用setNeedsDisplay来刷新才会绘制layer
         [layer setNeedsDisplay];
+    layer.shouldRasterize = YES;//视图光栅化
         [self.view.layer addSublayer:layer];
 //    layer.transform = CATransform3DScale(layer.transform, 0.5, 0.5, 1);
 //    [layer setTransformScale:0.5];
@@ -56,7 +60,14 @@
     @weakify(self);
     [self configRightBaritemWithImage:[UIImage imageNamed:@"icon_tabbar_homepage_selected"] buttonItemClick:^(UIBarButtonItem *barButton) {
         @strongify(self);
-        [self listOrMapShowItemClick];
+//        [self listOrMapShowItemClick];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationName object:@"通知说话开始"];
+
+        NSNotification *notification = [NSNotification notificationWithName:kNotificationName
+                                                                         object:@"通知说话开始"];
+            [[NSNotificationQueue defaultQueue] enqueueNotification:notification
+                                                       postingStyle:NSPostASAP];
+           NSLog(@"按钮说话");
     }];
     
     NSMutableArray * photos = [NSMutableArray array];
@@ -121,18 +132,53 @@
      Global queues是全局队列是并发队列，并由整个进程共享。进程中存在三个全局队列：高、中（默认）、低三个优先级队列。可以调用dispatch_get_global_queue函数传入优先级来访问队列。
      dispatch_queue_create使用户队列，由用户通过dispatch_queue_create来自行创建的串行队列，可以用于完成同步机制
      
+<<<<<<< HEAD
      */    
 //    loadAinitializeTest * test =  [loadAinitializeTest new];
 //    test.frame = CGRectMake(0, 100, 300, 300);
 //    [self.view addSubview:test];
 //    [self transition];
+//    objc_msgSend()
+    objc_getClass("1122321321");
+    NSObject * obg = [NSObject new];
+    
+    
+    loadAinitializeTest * test =  [loadAinitializeTest new];
+    test.frame = CGRectMake(0, 100, 300, 300);
+    [self.view addSubview:test];
+//    [self transition];
+//    NSObject * obgj  =  [NSObject new];
+    [test addObserver:self forKeyPath:@"name" options:NSKeyValueObservingOptionNew context:nil];
+    [test rac_observeKeyPath:@"name" options:NSKeyValueObservingOptionNew observer:self block:^(id value, NSDictionary *change, BOOL causedByDealloc, BOOL affectedOnlyLastComponent) {
+            
+    }];
+
+    // 注册通知
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(actionNotification:)
+                                                     name:kNotificationName
+                                                   object:nil];
+}
+
+- (void) actionNotification: (NSNotification*)notification
+{
+    NSString* message = notification.object;
+    NSLog(@"%@",message);
+
+    sleep(3);
+
+    NSLog(@"通知说话结束");
 }
 
 
+- (void)observeValueForKeyPath:(nullable NSString *)keyPath ofObject:(nullable id)object change:(nullable NSDictionary<NSKeyValueChangeKey, id> *)change context:(nullable void *)context{
+
+}
 -(void)transition{
     MKMapView *mapView = [[MKMapView alloc] init];
     mapView.frame = self.view.bounds;
     self.mapView = mapView;
+    
     [self.view addSubview:self.mapView];  // 首先显示mapView视图
     self.mapView.mapType = MKMapTypeStandard;
     self.mapView.rotateEnabled = NO; // 不旋转
@@ -147,23 +193,23 @@
 }
 - (void)listOrMapShowItemClick{
 
-    static BOOL tran;
-   if (tran == false) {
-          // 点击 “列表”  翻转显示到列表tableview
-       tran = true;
-          // 翻转到列表那一页
-          // tableView添加到mapView的父视图上， mapView从父视图移除
-          [UIView transitionFromView:self.mapView toView:self.tableView duration:0.5f options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
-                  NSLog(@"翻转到了列表页面");
-           }];
-   }else{
-       tran = false;
-           // 点击 地图 翻转显示 地图页面
-//           self.listOrMapShowItem.title = @"列表";
-           // mapView添加到tableView的父视图上， tableView从父视图移除
-           [UIView transitionFromView:self.tableView toView:self.mapView duration:0.5f options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
-                   NSLog(@"翻转到了地图页面");
-           }];
-        }
+//    static BOOL tran;
+//   if (tran == false) {
+//          // 点击 “列表”  翻转显示到列表tableview
+//       tran = true;
+//          // 翻转到列表那一页
+//          // tableView添加到mapView的父视图上， mapView从父视图移除
+//          [UIView transitionFromView:self.mapView toView:self.tableView duration:0.5f options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
+//                  NSLog(@"翻转到了列表页面");
+//           }];
+//   }else{
+//       tran = false;
+//           // 点击 地图 翻转显示 地图页面
+////           self.listOrMapShowItem.title = @"列表";
+//           // mapView添加到tableView的父视图上， tableView从父视图移除
+//           [UIView transitionFromView:self.tableView toView:self.mapView duration:0.5f options:UIViewAnimationOptionTransitionFlipFromLeft completion:^(BOOL finished) {
+//                   NSLog(@"翻转到了地图页面");
+//           }];
+//        }
 }
 @end

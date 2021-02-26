@@ -141,7 +141,7 @@ https://www.jianshu.com/p/1803bd950b90      iOS14 隐私适配及部分解决方
 
 3.NSConcreteMallocBlock 保存在堆中的block，当引用计数为 0 时会被销毁。好了，这个就是今天的主角 ，用copy修饰的block。
 
-
+https://www.jianshu.com/p/9fe59064220c
 
 
 weak 实现原理的概括
