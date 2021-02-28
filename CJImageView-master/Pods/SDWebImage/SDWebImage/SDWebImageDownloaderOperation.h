@@ -17,7 +17,7 @@ extern NSString *const SDWebImageDownloadFinishNotification;
 
 @interface SDWebImageDownloaderOperation : NSOperation <SDWebImageOperation>
 
-/**
+/**SDWebImageOperation
  * The request used by the operation's connection.
  */
 @property (strong, nonatomic, readonly) NSURLRequest *request;

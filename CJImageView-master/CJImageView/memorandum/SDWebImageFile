@@ -50,3 +50,6 @@ SDWebImageDownloaderOperation : NSOperation 下载操作
 下载结束：
 [self.memCache setObject:image forKey:key cost:cost];存到缓存
 storeImageDataToDisk//存到磁盘
+
+
+self.connection = [[NSURLConnection alloc] initWithRequest:self.request delegate:self startImmediately:NO];
