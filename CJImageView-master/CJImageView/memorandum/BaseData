@@ -178,3 +178,8 @@ Runtime维护了一个weak表，用于存储指向某个对象的所有weak指�
 禁用方法
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
+
+
+inputAccessoryView：附件视图，就是上面汉子和拼音
+
+inputView：就是下面的按键输入法

@@ -7,8 +7,45 @@
 //
 
 #import "AppDelegate+Monitor.h"
-
+#import <AFNetworking/AFNetworkReachabilityManager.h>
 @implementation AppDelegate (Monitor)
+
+-(void)startNetworkMonitor{
+    // 如果要检测网络状态的变化,必须用检测管理器的单例的startMonitoring
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    // 检测网络连接的单例,网络变化时的回调方法
+    [[AFNetworkReachabilityManager sharedManager]setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        NSLog(@"%ld",(long)status);
+        switch (status) {
+
+            case AFNetworkReachabilityStatusUnknown:
+                NSLog(@"网络错误");
+                break;
+
+            case AFNetworkReachabilityStatusNotReachable:
+                NSLog(@"没有连接网络");
+                break;
+
+            case AFNetworkReachabilityStatusReachableViaWWAN:
+                NSLog(@"手机自带网络");
+                break;
+
+            case AFNetworkReachabilityStatusReachableViaWiFi:
+                NSLog(@"wifi");
+                break;
+
+        }
+    }];
+    /*     AFNetworkReachabilityStatusUnknown          = -1,
+     AFNetworkReachabilityStatusNotReachable     = 0,
+     AFNetworkReachabilityStatusReachableViaWWAN = 1,
+     AFNetworkReachabilityStatusReachableViaWiFi = 2,
+     */
+
+
+}
+
+
 // 在AppDelete实现该方法
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
