@@ -17,5 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)initCSocket;
 
 @end
+@interface KeyBoardView : UILabel
+{
+    UIToolbar *_inputAccessoryView;
+    UIPickerView    *_inputView;
+}
 
+@end
 NS_ASSUME_NONNULL_END

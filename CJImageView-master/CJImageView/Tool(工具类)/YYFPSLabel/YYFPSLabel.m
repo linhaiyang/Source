@@ -28,7 +28,7 @@
     self = [super initWithFrame:frame];
     
     self.layer.cornerRadius = 5;
-    self.clipsToBounds = YES;
+//    self.clipsToBounds = YES;
     self.textAlignment = NSTextAlignmentCenter;
     self.userInteractionEnabled = NO;
     self.backgroundColor = [UIColor colorWithWhite:0.000 alpha:0.700];

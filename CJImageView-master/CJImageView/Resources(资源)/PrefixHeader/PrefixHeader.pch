@@ -64,7 +64,7 @@
 #import <ReactiveObjC/RACEXTScope.h>
 #import <UIImageView+WebCache.h>
 #import <MJRefresh/MJRefresh.h>
-#import <KeyboardManager.h>
+#import <IQKeyboardManager/IQKeyboardManager.h>
 #import <YYCategories.h>
 #import <YYWebImage/YYWebImage.h>
 #import <YYImage.h>

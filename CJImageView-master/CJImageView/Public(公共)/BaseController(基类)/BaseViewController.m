@@ -17,10 +17,8 @@
 @implementation BaseViewController
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-#ifdef DEBUG
-#ifdef LOCAL
+#if __has_include(<FBMemoryProfiler/FBMemoryProfiler.h>)
     [self testRetainCycle];
-#endif
 #endif
 }
 - (void)viewDidLoad {
@@ -48,8 +46,8 @@
 #if __has_include(<FBMemoryProfiler/FBMemoryProfiler.h>)
     FBRetainCycleDetector *detector = [[FBRetainCycleDetector alloc] init];
     [detector addCandidate:self];
-    NSSet *retainCycles = [detector findRetainCycles];
-    NSLog(@"------retainCycles----------%@", retainCycles);
+//    NSSet *retainCycles = [detector findRetainCycles];
+//    NSLog(@"------retainCycles----------%@", retainCycles);
 #endif
 
 }

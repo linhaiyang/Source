@@ -101,16 +101,6 @@ int i = 0;
 
 
 
-px: pixel，像素，屏幕上显示的最小单位。
-
-pt: point ，点，是一个标准的长度单位，1pt＝1/72英寸.
-
-iPhone 4之后(x, y, width, height) = (20, 30, 40, 50)，就表示高度为40个点，宽度为50个点，放在(20, 20)个点的位置。这种处理方法，将之前以像素作为单位自动转换成以点作为单位，使得iPhone 3GS的应用程序，不用修改也可运行在iPhone 4上面。
-而图片并非矢量数据，处理方式有所不同。假设图片 example.png，大小为 30 x 40像素（这里的单位是像素，数字图片的单位通常都为像素）。当这张example.png在iPhone 3GS和iPhone 4中使用时候，都占据屏幕上30 x 40个点。而因为iPhone 4中1个点等于2个像素，也就是30 x 40像素的图片，占据了60 x 80像素的屏幕，因此这图片在iPhone 4中看起来就会模糊。
-
-
-
-
 https://www.jianshu.com/p/cbdf76959406  //iOS基础之字节处理
 
 https://www.cnblogs.com/1-434/articles/10580036.html  //Tagged Pointer
@@ -183,3 +173,6 @@ Runtime维护了一个weak表，用于存储指向某个对象的所有weak指�
 inputAccessoryView：附件视图，就是上面汉子和拼音
 
 inputView：就是下面的按键输入法
+
+
+Installing IQKeyboardManager 6.2.1 (was 3.3.7 and source changed to `https://cdn.cocoapods.org/` from `trunk`)

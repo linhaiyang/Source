@@ -3,7 +3,7 @@ platform :ios, '10.0'
 abstract_target 'CJImageViewDebu' do#多个target，模拟一个抽象的target
 # Comment the next line if you don't want to use dynamic frameworks Add this if you are targeting iOS 8+ or using Swift
   use_frameworks!
-
+source 'https://github.com/CocoaPods/Specs.git' #指定数据源
 # Pods for CJImageView
 #pod 'CocoaAsyncSocket'
 #pod 'Socket.IO-Client-Swift', '~> 15.2.0'
@@ -18,7 +18,7 @@ pod 'SDWebImage', '~> 3.7.5'
 #pod 'FLEX', :configurations => ['Debug']#应用进行样式的修改和控件的读取。
 pod 'Masonry','~>0.6.1'
 pod 'AFNetworking', '~>3.0'
-pod 'IQKeyboardManager', '~> 3.3.7'
+pod 'IQKeyboardManager', '~>  6.2.0'
 pod 'YYModel', '~> 1.0.4' #json转model
 pod "QBImagePickerController" #图片选择器
 #pod 'YYKit'

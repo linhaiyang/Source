@@ -88,22 +88,22 @@
     // 普通 和 即将刷新 的临界点
     CGFloat normal2pullingOffsetY = happenOffsetY - self.mj_h;
     CGFloat pullingPercent = (happenOffsetY - offsetY) / self.mj_h;
-    NSLog(@"%f----normal2pullingOffsetY-----%f",offsetY,normal2pullingOffsetY);
+//    NSLog(@"%f----normal2pullingOffsetY-----%f",offsetY,normal2pullingOffsetY);
     if (self.scrollView.isDragging) { // 如果正在拖拽
         
         self.pullingPercent = pullingPercent;
         if (self.state == MJRefreshStateIdle && offsetY < normal2pullingOffsetY) {
             // 转为即将刷新状态
-            NSLog(@"MJRefreshStatePulling");
+//            NSLog(@"MJRefreshStatePulling");
             self.state = MJRefreshStatePulling;
         } else if (self.state == MJRefreshStatePulling && offsetY >= normal2pullingOffsetY) {
             // 转为普通状态
-            NSLog(@"MJRefreshStateIdle");
+//            NSLog(@"MJRefreshStateIdle");
             self.state = MJRefreshStateIdle;
         }
     } else if (self.state == MJRefreshStatePulling) {// 即将刷新 && 手松开
         // 开始刷新
-        NSLog(@"MJRefreshStatePulling-----noDragging");
+//        NSLog(@"MJRefreshStatePulling-----noDragging");
         [self beginRefreshing];
     } else if (pullingPercent < 1) {
         self.pullingPercent = pullingPercent;

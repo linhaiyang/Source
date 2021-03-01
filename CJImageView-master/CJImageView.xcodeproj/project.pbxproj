@@ -1721,6 +1721,7 @@
 						TestTargetID = 435830A51C33D42F0074D713;
 					};
 					5A5493A824BD539D00C49207 = {
+						DevelopmentTeam = M4B5K66C4K;
 						LastSwiftMigration = 1200;
 						ProvisioningStyle = Automatic;
 					};
@@ -2530,7 +2531,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = M4B5K66C4K;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",
@@ -2569,7 +2570,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = M4B5K66C4K;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/CJImageView/Vender(第三方)/ijkPlayer",

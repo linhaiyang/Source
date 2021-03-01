@@ -74,6 +74,7 @@
     navBar.tintColor = [UIColor clearColor];
     
     navBar.translucent = false;//不透明的
+//    navBar.opaque = true;//不透明的
     __block UINavigationBar * bnavBar = navBar;
     [UIImage imageWithColor:[UIColor clearColor] completion:^(UIImage *img) {
         [bnavBar setShadowImage:img];

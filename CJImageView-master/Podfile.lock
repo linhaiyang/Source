@@ -20,7 +20,7 @@ PODS:
     - FBAllocationTracker (~> 0.1)
     - FBRetainCycleDetector (~> 0.1)
   - FBRetainCycleDetector (0.1.4)
-  - IQKeyboardManager (3.3.7)
+  - IQKeyboardManager (6.2.1)
   - Masonry (0.6.4)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.1.17)
@@ -46,7 +46,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - Bugly
   - FBMemoryProfiler
-  - IQKeyboardManager (~> 3.3.7)
+  - IQKeyboardManager (~> 6.2.0)
   - Masonry (~> 0.6.1)
   - MBProgressHUD (~> 1.2.0)
   - MJRefresh (~> 3.1.12)
@@ -61,13 +61,14 @@ DEPENDENCIES:
   - YYWebImage
 
 SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - IQKeyboardManager
   trunk:
     - AFNetworking
     - Bugly
     - FBAllocationTracker
     - FBMemoryProfiler
     - FBRetainCycleDetector
-    - IQKeyboardManager
     - Masonry
     - MBProgressHUD
     - MJRefresh
@@ -87,7 +88,7 @@ SPEC CHECKSUMS:
   FBAllocationTracker: dfdca3f71aceca6a85e95e3c6ec76a9785eba0f1
   FBMemoryProfiler: 623fc5f8a61f7d02ec75c87e3b97c90f621d8b02
   FBRetainCycleDetector: 46f8179bbb1c587deee3ea838a1a3ee02acf5015
-  IQKeyboardManager: 249c3946acf61345c18b038eb50863fe2793e3a8
+  IQKeyboardManager: 964638372b4a61892cc74fdfa6fd26de8c9464a2
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: ee5b68f639775462faba4db0fd243baf4d42c2cf
@@ -101,6 +102,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 686897509df3f81e9186986c71d6674887fdbc9b
+PODFILE CHECKSUM: 827ae2e6e700842f6a83de966a65097d5646bdaf
 
 COCOAPODS: 1.9.0.beta.2

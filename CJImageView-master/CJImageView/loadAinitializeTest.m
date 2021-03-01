@@ -181,3 +181,56 @@ void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
 
 
 
+
+
+
+@implementation KeyBoardView
+
+- (instancetype)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
+        [self setUI];
+    }
+    return self;
+}
+- (void)setUI{
+    self.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap =[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGes:)];
+    [self addGestureRecognizer:tap];
+}
+- (void)tapGes:(UITapGestureRecognizer *)ges{
+    [self becomeFirstResponder];
+}
+-(UIView *)inputAccessoryView{
+    if(!_inputAccessoryView)
+    {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 100)];
+        view.backgroundColor = [UIColor grayColor];
+
+        UIToolbar *toolBar = [[UIToolbar alloc]init];
+        toolBar.frame = CGRectMake(0, 0, 100, 44);
+        UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dodo)];
+        toolBar.items = [NSArray arrayWithObject:right];
+        
+        [view addSubview:toolBar];
+        return view;
+    }
+    return _inputAccessoryView;
+}
+-(void)dodo{
+    [self resignFirstResponder];
+}
+- (BOOL)canBecomeFirstResponder{
+    return YES;
+}
+//-(UIPickerView *)inputView{
+//    if(!_inputView)
+//    {
+//        UIPickerView *  pickView = [[UIPickerView alloc]init];
+////        pickView.delegate =self;
+////        pickView.dataSource = self;
+//        pickView.showsSelectionIndicator = YES;
+//        return pickView;
+//    }
+//    return _inputView;
+//}
+@end
