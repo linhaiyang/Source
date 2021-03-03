@@ -222,7 +222,7 @@ NSInteger const kIQPreviousNextButtonToolbarTag     =   -1005;
             [self setEnable:YES];
 			[self setKeyboardDistanceFromTextField:10.0];
             [self setShouldPlayInputClicks:YES];
-            [self setShouldResignOnTouchOutside:NO];
+            [self setShouldResignOnTouchOutside:true];
             [self setOverrideKeyboardAppearance:NO];
             [self setKeyboardAppearance:UIKeyboardAppearanceDefault];
             [self setEnableAutoToolbar:YES];
@@ -546,8 +546,8 @@ NSInteger const kIQPreviousNextButtonToolbarTag     =   -1005;
 -(UIWindow *)keyWindow
 {
     UIView *textFieldView = _textFieldView;
-
-    if (textFieldView.window)
+    UIWindow * win = (textFieldView.window);
+    if (win)
     {
         return textFieldView.window;
     }

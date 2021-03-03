@@ -160,7 +160,14 @@ NSString * const kNotificationName = @"kNotificationName";
     [test rac_observeKeyPath:@"name" options:NSKeyValueObservingOptionNew observer:self block:^(id value, NSDictionary *change, BOOL causedByDealloc, BOOL affectedOnlyLastComponent) {
             
     }];
-
+    __block loadAinitializeTest * block = test;
+    
+//    UIWindow * win1 = self.view.window;
+//    UIWindow * win2 = test.window;
+    
+//    [test.window addTapGestureRecognizer:^(UITapGestureRecognizer *recognizer, NSString *gestureId) {
+//        [block removeFromSuperview];
+//    }];
     // 注册通知
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(actionNotification:)

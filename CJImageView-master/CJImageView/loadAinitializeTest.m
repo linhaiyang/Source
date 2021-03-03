@@ -200,22 +200,22 @@ void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
 - (void)tapGes:(UITapGestureRecognizer *)ges{
     [self becomeFirstResponder];
 }
--(UIView *)inputAccessoryView{
-    if(!_inputAccessoryView)
-    {
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 100)];
-        view.backgroundColor = [UIColor grayColor];
-
-        UIToolbar *toolBar = [[UIToolbar alloc]init];
-        toolBar.frame = CGRectMake(0, 0, 100, 44);
-        UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dodo)];
-        toolBar.items = [NSArray arrayWithObject:right];
-        
-        [view addSubview:toolBar];
-        return view;
-    }
-    return _inputAccessoryView;
-}
+//-(UIView *)inputAccessoryView{
+//    if(!_inputAccessoryView)
+//    {
+//        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 100)];
+//        view.backgroundColor = [UIColor grayColor];
+//
+//        UIToolbar *toolBar = [[UIToolbar alloc]init];
+//        toolBar.frame = CGRectMake(0, 0, 100, 44);
+//        UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dodo)];
+//        toolBar.items = [NSArray arrayWithObject:right];
+//        
+//        [view addSubview:toolBar];
+//        return view;
+//    }
+//    return _inputAccessoryView;
+//}
 -(void)dodo{
     [self resignFirstResponder];
 }
@@ -233,4 +233,21 @@ void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
 //    }
 //    return _inputView;
 //}
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    if (action == @selector(copy:))
+    {
+        return YES;
+    }
+    else if (action == @selector(select:))
+    {
+        return YES;
+    }
+    else if (action == @selector(selectAll:))
+    {
+        return YES;
+    }
+    
+    return [super canPerformAction:action withSender:sender];
+}
 @end
