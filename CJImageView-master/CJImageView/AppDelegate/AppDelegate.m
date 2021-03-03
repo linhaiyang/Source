@@ -54,7 +54,7 @@
     [Bugly startWithAppId:@"e8b5d2256e"];
 #endif
     //统一处理一些为数组、集合等对nil插入会引起闪退
-    [SYSafeCategory callSafeCategory];
+//    [SYSafeCategory callSafeCategory];
     
     Dlog(@"didFinishLaunchingWithOptions");
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];

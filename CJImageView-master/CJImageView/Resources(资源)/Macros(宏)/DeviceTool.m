@@ -58,10 +58,11 @@ CGFloat KScreen_Width(){
 
 
 
-@implementation YYImageManager
--(instancetype)init{
-    self = [super init];
-    self.failedURLsLock = dispatch_semaphore_create(1);
-    return self;
+@implementation GlobalManager
+
++(instancetype)shareManager{
+    GlobalManager * manager = [[GlobalManager alloc] init];
+    manager.lock = dispatch_semaphore_create(1);
+    return manager;
 }
 @end

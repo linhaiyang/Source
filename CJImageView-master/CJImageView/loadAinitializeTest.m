@@ -222,15 +222,15 @@ void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
 - (BOOL)canBecomeFirstResponder{
     return YES;
 }
-//-(UIPickerView *)inputView{
-//    if(!_inputView)
-//    {
-//        UIPickerView *  pickView = [[UIPickerView alloc]init];
-////        pickView.delegate =self;
-////        pickView.dataSource = self;
-//        pickView.showsSelectionIndicator = YES;
-//        return pickView;
-//    }
-//    return _inputView;
-//}
+-(UIPickerView *)inputView{
+    if(!_inputView)
+    {
+        UIPickerView *  pickView = [[UIPickerView alloc]init];
+//        pickView.delegate =self;
+//        pickView.dataSource = self;
+        pickView.showsSelectionIndicator = YES;
+        return pickView;
+    }
+    return _inputView;
+}
 @end

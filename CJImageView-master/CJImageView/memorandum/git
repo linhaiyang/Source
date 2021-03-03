@@ -14,3 +14,8 @@
 
 忽略文件.gitnore
 
+
+/**
+CocoaPods 自 1.8 版本开始默认使用 trunk CDN (https://cdn.cocoapods.org/) 作为 spec 的源，本意是非常好的，
+避免了需要本地 clone 一份庞大的 Specs 仓库导致每次 update 都要全量更新的问题。然而不知为何国内连 trunk CDN 都被限制访问了。
+

@@ -176,3 +176,22 @@ inputView：就是下面的按键输入法
 
 
 Installing IQKeyboardManager 6.2.1 (was 3.3.7 and source changed to `https://cdn.cocoapods.org/` from `trunk`)
+
+    [self rangeOfString:string].location != NSNotFound;
+
++ (BOOL)isOnMainThread {
+    return [NSOperationQueue.currentQueue isEqual:NSOperationQueue.mainQueue] || [NSThread isMainThread];
+}
+
+//NSObject的对象方法，任何继承自NSObject的对象都可以调用
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
+//NSObject的类方法，任何继承自NSObject的类都可以调用
++ (NSMethodSignature *)instanceMethodSignatureForSelector:(SEL)aSelector
+
+        invocation = [NSInvocation invocationWithMethodSignature:[target methodSignatureForSelector:action]];
+        invocation.target = target;
+        invocation.selector = action;
+
+4.给要执行的方法设置参数
+使用setArgument:atIndex:方法给要执行的方法设置参数，注意下标从2开始，因为0、1已经被target与selector占用
+[invocation setArgument:&arg1 atIndex:2];
