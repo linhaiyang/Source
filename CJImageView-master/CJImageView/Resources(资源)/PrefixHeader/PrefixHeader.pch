@@ -54,6 +54,7 @@
 /**Tools*/
 #import "MBProgressHUD+JJ.h"
 #import "GCD.h"
+#import "YYGestureRecognizer.h"
 
 /**Pods*/
 //#import <YYLabel.h>

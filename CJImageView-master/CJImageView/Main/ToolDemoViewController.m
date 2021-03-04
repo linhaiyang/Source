@@ -174,12 +174,14 @@ NSString * const kNotificationName = @"kNotificationName";
                                  object:nil];
     __block  loadAinitializeTest * blocktest = test;
     [GCDQueue.mainQueue execute:^{
-        [blocktest.window addTapGestureRecognizer:^(UITapGestureRecognizer *recognizer, NSString *gestureId) {
-            [blocktest.window removeGestureRecognizer:recognizer];
-            [blocktest removeFromSuperview];
-            
-
-        }];
+//        [blocktest.window addTapGestureRecognizer:^(UITapGestureRecognizer *recognizer, NSString *gestureId) {
+//            [blocktest.window removeGestureRecognizer:recognizer];
+//            [blocktest removeFromSuperview];
+//
+//
+//        }];
+      CGPoint point =  [blocktest convertPoint:CGPointMake(10, 10) toViewOrWindow:self.view];
+        Dlog(@"%f------%f",point.x,point.y);
     } afterDelay:0.5];
 }
 

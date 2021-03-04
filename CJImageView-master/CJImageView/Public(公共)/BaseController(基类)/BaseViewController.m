@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = CViewBgColor;
-    self.extendedLayoutIncludesOpaqueBars=YES;//是否延伸到包含不透明的状态栏。在navBar.translucent = false;//不透明的情况下
+    self.extendedLayoutIncludesOpaqueBars=YES;//是否延伸到包含不透明的状态栏。
     
 /**在navBar.translucent = true;//透明的情况下，UIviewcontroller延伸到navBar下，告诉uiviewcontroller不要讲其扩展到整个屏幕。*/
 //    self.edgesForExtendedLayout = UIRectEdgeAll;//------uiviewcontroller延伸到整个屏幕

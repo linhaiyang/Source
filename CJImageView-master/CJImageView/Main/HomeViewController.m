@@ -113,6 +113,7 @@ UIImage* coverImage(){
 }
 
 
+void (^blk)(void) = ^{NSLog(@"Global Block");};
 @interface HomeViewController ()
 {
     YYLabel *      _titleLabel;
@@ -136,6 +137,7 @@ UIImage* coverImage(){
     [super viewDidLoad];
     
     
+    NSLog(@"%@------",[blk class]);//__NSGlobalBlock__------就是将在全局作用域下实现一个Block！
     
 //    YYTextMagnifier
     NSString *string = @" Lorem    ipsum dolar   sit  amet. ";

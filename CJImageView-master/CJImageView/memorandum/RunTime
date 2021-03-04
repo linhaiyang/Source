@@ -151,6 +151,15 @@ Test的super_class的super_class的super_class（NSObject的Class，因为UIResp
     ((void(*)(id,SEL))objc_msgSend)(getclass,@selector(runTest));
 //    其中(void(*)(id,SEL,int) 表示
 //    返回类型为void 参数为id，方法名，参数类型
+    {
+        if (!_getter) {
+            _getter = NSSelectorFromString(_name);
+        }
+        if (!_setter) {
+            _setter = NSSelectorFromString([NSString stringWithFormat:@"set%@%@:", [_name substringToIndex:1].uppercaseString, [_name substringFromIndex:1]]);
+        }
+    }
+
 
 respondsToSelector 用来判断某一个方法时候实现
 instancesRespondToSelector 类方法
