@@ -48,9 +48,7 @@
 //        return @"1";
 //    };
 //}
-+ (void)dataWithBytesNoCopy:(void *)bytes{
-    
-}
+
 - (void)initCSocket{
     UIViewController * controller=self.viewController;
     self.didSelecBlock = ^NSString * _Nonnull(NSString * _Nonnull blockT) {
@@ -249,5 +247,16 @@ void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
     }
     
     return [super canPerformAction:action withSender:sender];
+}
+-(UIPickerView *)inputView{
+    if(!_inputView)
+    {
+        UIPickerView *  pickView = [[UIPickerView alloc]init];
+//        pickView.delegate =self;
+//        pickView.dataSource = self;
+        pickView.showsSelectionIndicator = YES;
+        return pickView;
+    }
+    return _inputView;
 }
 @end

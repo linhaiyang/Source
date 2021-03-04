@@ -140,7 +140,6 @@ NSString * const kNotificationName = @"kNotificationName";
      Global queues是全局队列是并发队列，并由整个进程共享。进程中存在三个全局队列：高、中（默认）、低三个优先级队列。可以调用dispatch_get_global_queue函数传入优先级来访问队列。
      dispatch_queue_create使用户队列，由用户通过dispatch_queue_create来自行创建的串行队列，可以用于完成同步机制
      
-<<<<<<< HEAD
      */    
 //    loadAinitializeTest * test =  [loadAinitializeTest new];
 //    test.frame = CGRectMake(0, 100, 300, 300);
@@ -172,7 +171,16 @@ NSString * const kNotificationName = @"kNotificationName";
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(actionNotification:)
                                                      name:kNotificationName
-                                                   object:nil];
+                                 object:nil];
+    __block  loadAinitializeTest * blocktest = test;
+    [GCDQueue.mainQueue execute:^{
+        [blocktest.window addTapGestureRecognizer:^(UITapGestureRecognizer *recognizer, NSString *gestureId) {
+            [blocktest.window removeGestureRecognizer:recognizer];
+            [blocktest removeFromSuperview];
+            
+
+        }];
+    } afterDelay:0.5];
 }
 
 - (void) actionNotification: (NSNotification*)notification

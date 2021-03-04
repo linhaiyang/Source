@@ -52,8 +52,9 @@ static inline CGFloat AdaptedHeight(CGFloat value){
     return ceilf((value) * KScreen_Height() / 667.0);
 }
 
-@interface YYImageManager : NSObject
-@property (strong, nonatomic, nonnull) dispatch_semaphore_t failedURLsLock;
+@interface GlobalManager : NSObject
++(instancetype)shareManager;
+@property (strong, nonatomic, nonnull) dispatch_semaphore_t lock;
 /**
  @synchronized (self.runningOperations) { //简单的线程安全写法@synchronized
      [self.runningOperations addObject:operation];

@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (Nib)
 + (instancetype)loadNib;
+@property(nonatomic,strong,readonly)UIWindow * alertWindow;
 @end
 
 NS_ASSUME_NONNULL_END

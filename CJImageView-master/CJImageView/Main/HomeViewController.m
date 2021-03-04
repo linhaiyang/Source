@@ -241,6 +241,8 @@ UIImage* coverImage(){
     NSObject *obj = [[NSObject alloc] init];//<NSObject: 0x6000009344e0>
     id __weak obj1 = obj;//(id) obj1 = 0x00007fff6151f55a
     id __weak obj2 = obj;//(id) obj2 = 0x00007fff20176310
+    
+
 }
 
 -(void)addsub:(NSStringResourceKey)resoure{}
