@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CustomerController.h"
 
 #if __has_include(<Bugly/Bugly.h>)
 #import <Bugly/Bugly.h>
@@ -72,7 +73,7 @@
     return YES;
 }
 -(void)initRootViewController{
-    MainTabBarController*mainTabBar = [MainTabBarController new];
+    CustomerController*mainTabBar = [CustomerController new];
     //UIViewAnimationTransition
     CATransition *anima = [CATransition animation];//CATransaction事务 Transition过渡
     /**The name of the transition. Current legal transition types include
@@ -88,7 +89,7 @@
     transition.type = kCATransitionFade;
 //    [layer addAnimation:transition forKey:@"contents"];
     self.window.rootViewController = mainTabBar;
-    [self.window.layer addAnimation:anima forKey:@"revealAnimation"];
+    [self.window.layer addAnimation:transition forKey:@"revealAnimation"];
     
     
 }

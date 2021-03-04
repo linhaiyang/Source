@@ -64,5 +64,46 @@
 -(void)encodeWithCoder:(NSCoder *)aCoder{
     
 }
+//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+////    _trackingTouch = NO;
+////    UITouch *t = touches.anyObject;
+////    CGPoint p = [t locationInView:_bView];
+////    if (CGRectContainsPoint(_bView.bounds, p)) {
+////        _trackingTouch = YES;
+////        _bView.backgroundColor = HEXCOLOR(f0f0f0);//
+////
+////    }
+//    self.backgroundColor = HEXCOLOR(f0f0f0);//
+////    if (!_trackingTouch) {
+////        [super touchesBegan:touches withEvent:event];
+////    }
+////    self.backgroundColor = kWBCellInnerViewHighlightColor;
+//}
+//
+//- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+//    self.backgroundColor = UIColor.whiteColor;
+////    [self.viewController performSelector:@selector(fadeRootController)];
+////    if (_trackingTouch) {
+////        [self fadeRootController];
+////    }
+////    else{
+////        [super touchesEnded:touches withEvent:event];
+////    }
+////    if ([_cell.delegate respondsToSelector:@selector(cellDidClickCard:)]) {
+////        [_cell.delegate cellDidClickCard:_cell];
+////    }
+//}
+//
+//- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event{
+//
+////    if (!_trackingTouch) {
+////        [super touchesCancelled:touches withEvent:event];
+////    }
+////    self.backgroundColor = HEXCOLOR(f7f7f7);
+//    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(setBackgroundColor:) object: HEXCOLOR(f0f0f0)];
+//    self.backgroundColor = UIColor.whiteColor;
+//
+////    self.backgroundColor = _isRetweet ? [UIColor whiteColor] : kWBCellInnerViewColor;
+//}
 @end
 

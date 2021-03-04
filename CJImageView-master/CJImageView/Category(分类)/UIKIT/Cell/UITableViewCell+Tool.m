@@ -35,7 +35,7 @@
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(self)];
     if (!cell) {
         cell = [[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil].firstObject;
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return cell;
 }
@@ -48,7 +48,7 @@
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(self)];
     if (!cell) {
         cell = [[self alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass(self)];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+//        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return cell;
 }

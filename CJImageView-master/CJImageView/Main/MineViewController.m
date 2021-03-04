@@ -88,7 +88,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     NSString * title = [self.dataArray objectAtIndex:indexPath.row];
     if ([title containsString:@"WebViewController"]) {
         RootWebViewController * controller = [[RootWebViewController alloc]initWithUrl:@"https://itunes.apple.com/cn/app/id414478124?mt=8"];
@@ -136,8 +136,9 @@
         }else{
             [self.tableV.mj_header beginRefreshing];
         }
+        
 }
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CFRunLoopRef ref;

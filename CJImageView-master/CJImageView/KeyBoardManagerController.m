@@ -8,20 +8,22 @@
 
 #import "KeyBoardManagerController.h"
 #import "loadAinitializeTest.h"
+#import "YYControl.h"
+
 #import <IQKeyboardManager/IQKeyboardManager.h>
 @interface keyBoardViewCell : UITableViewCell
-@property(nonatomic,strong)UITextField * txf;
+@property(nonatomic,strong)YYControl * txf;
 @end
 
 @implementation keyBoardViewCell
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        UITextField * field = [UITextField new];
+        YYControl * field = [YYControl new];
 //        [field addPlaceholder:@"输入筛选数据" withPlaceHolderColor:UIColor.lightGrayColor Font:12];
-        field.toolbarPlaceholder = @"输入筛选数据";
+//        field.toolbarPlaceholder = @"输入筛选数据";
         field.frame = CGRectMake(10, 0, kScreenWidth - 20, 50);
-        field.keyboardType = UIKeyboardTypeNumberPad;
+//        field.keyboardType = UIKeyboardTypeNumberPad;
         [self.contentView addSubview:field];
         self.txf = field;
     }
@@ -41,6 +43,7 @@
 //}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.fd_prefersNavigationBarHidden = true;
     self.tableV = [self.view addTableViewDelegate:self];
     [self.tableV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
@@ -89,13 +92,18 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return 50;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     keyBoardViewCell *cell = [keyBoardViewCell registerCell:tableView];
     cell.accessoryType    = UITableViewCellAccessoryDisclosureIndicator;
-    cell.txf.delegate = self;
+//    cell.txf.delegate = self;
+//    UIImage * img = [cell.contentView snapshotImage];
+    CGPoint point =  [cell.txf convertPoint:CGPointMake(0, 0) toViewOrWindow:tableView];
+    if (indexPath.row == 0) {
+        Dlog(@"%f------%f",point.x,point.y);
+    }
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
