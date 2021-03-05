@@ -73,7 +73,7 @@
     return YES;
 }
 -(void)initRootViewController{
-    CustomerController*mainTabBar = [CustomerController new];
+    MainTabBarController*mainTabBar = [MainTabBarController new];
     //UIViewAnimationTransition
     CATransition *anima = [CATransition animation];//CATransaction事务 Transition过渡
     /**The name of the transition. Current legal transition types include

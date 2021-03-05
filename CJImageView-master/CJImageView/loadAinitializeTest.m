@@ -129,13 +129,18 @@ void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
     self.yyLabel = [[loadLabel alloc]init];
     @weakify(self);
     self.yyLabel.userInteractionEnabled = true;
-    [self.yyLabel addTapGestureRecognizer:^(UITapGestureRecognizer *recognizer, NSString *gestureId) {
-        @strongify(self);
-        [self willChangeValueForKey:@"name"];
-        self.name = @"name";
-        [self didChangeValueForKey:@""];
-    }];
+//    [self.yyLabel addTapGestureRecognizer:^(UITapGestureRecognizer *recognizer, NSString *gestureId) {
+//        @strongify(self);
+//        [self willChangeValueForKey:@"name"];
+//        self.name = @"name";
+//        [self didChangeValueForKey:@""];
+//    }];
     
+//    @weakify(self);
+    [self.yyLabel addLongPressGestureRecognizer:^(UILongPressGestureRecognizer *recognizer, NSString *gestureId) {
+        @strongify(self);
+        [self becomeFirstResponder];
+    }];
     
     
     self.yyLabel.text = @"YYLabel 测试YYLabel 测试YYLabel 测试YYLabel 测试YYLabel 测试";
@@ -172,8 +177,21 @@ void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
      */
 }
 
-
-
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
+    if (action == @selector(select:) ||
+        action == @selector(selectAll:)) {
+        return true;
+    }
+    if (action == @selector(paste:)) {
+        return true;
+    }
+    
+    
+    return [super canPerformAction:action withSender:sender];;
+}
+- (BOOL)canBecomeFirstResponder{
+    return YES;
+}
 
 @end
 
