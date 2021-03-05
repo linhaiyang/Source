@@ -58,7 +58,9 @@
     imageView.clipsToBounds = YES;
     [self.contentView addSubview:imageView];
     self.mainImageView  =  imageView;
-    
+    self.backgroundView.backgroundColor = [UIColor orangeColor];
+//    self.contentView.backgroundColor = [UIColor blueColor];
+    self.backgroundColor = [UIColor greenColor];
     return self;
 }
 -(void)encodeWithCoder:(NSCoder *)aCoder{

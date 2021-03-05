@@ -154,10 +154,12 @@
 //    anima.removedOnCompletion = true;
     
     CATransition *transition = [CATransition animation];
-    transition.duration = 0.5f;
+    transition.duration = 1.f;
     transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseOut];
-    transition.type = kCATransitionFade;
+    transition.type = kCATransitionPush;
 //    [layer addAnimation:transition forKey:@"contents"];
+//    5.动画切换方向
+    transition.subtype = kCATransitionFromTop;//顶部
     self.view.window.rootViewController = mainTabBar;
     [self.view.window.layer addAnimation:transition forKey:@"revealAnimation"];
 }
