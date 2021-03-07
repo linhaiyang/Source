@@ -60,6 +60,8 @@
 -(void)layoutSubviews{
     [super layoutSubviews];
     
+    UITextField * txf;
+    
     self.yyLabel.origin = CGPointMake(0, 0 );
 
     self.yyLabel.frame = CGRectMake(0, 0, self.ui_width, 0);
@@ -136,7 +138,10 @@ void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
         [self didChangeValueForKey:@""];
     }];
     
-    
+        KeyBoardView * keyBoard = [[KeyBoardView alloc]init];
+        [self addSubview:keyBoard];
+        keyBoard.frame = CGRectMake(100, 200, 100, 50);
+        keyBoard.text = @"keyborad";
     
     self.yyLabel.text = @"YYLabel 测试YYLabel 测试YYLabel 测试YYLabel 测试YYLabel 测试";
     self.yyLabel.numberOfLines = 0;
@@ -198,22 +203,22 @@ void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
 - (void)tapGes:(UITapGestureRecognizer *)ges{
     [self becomeFirstResponder];
 }
-//-(UIView *)inputAccessoryView{
-//    if(!_inputAccessoryView)
-//    {
-//        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 100)];
-//        view.backgroundColor = [UIColor grayColor];
-//
-//        UIToolbar *toolBar = [[UIToolbar alloc]init];
-//        toolBar.frame = CGRectMake(0, 0, 100, 44);
-//        UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dodo)];
-//        toolBar.items = [NSArray arrayWithObject:right];
-//        
-//        [view addSubview:toolBar];
-//        return view;
-//    }
-//    return _inputAccessoryView;
-//}
+-(UIView *)inputAccessoryView{
+    if(!_inputAccessoryView)
+    {
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 100)];
+        view.backgroundColor = [UIColor grayColor];
+
+        UIToolbar *toolBar = [[UIToolbar alloc]init];
+        toolBar.frame = CGRectMake(0, 0, 100, 44);
+        UIBarButtonItem *right = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dodo)];
+        toolBar.items = [NSArray arrayWithObject:right];
+        
+        [view addSubview:toolBar];
+        return view;
+    }
+    return _inputAccessoryView;
+}
 -(void)dodo{
     [self resignFirstResponder];
 }
@@ -231,32 +236,16 @@ void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
 //    }
 //    return _inputView;
 //}
-- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
-{
-    if (action == @selector(copy:))
-    {
-        return YES;
-    }
-    else if (action == @selector(select:))
-    {
-        return YES;
-    }
-    else if (action == @selector(selectAll:))
-    {
-        return YES;
-    }
-    
-    return [super canPerformAction:action withSender:sender];
-}
--(UIPickerView *)inputView{
-    if(!_inputView)
-    {
-        UIPickerView *  pickView = [[UIPickerView alloc]init];
-//        pickView.delegate =self;
-//        pickView.dataSource = self;
-        pickView.showsSelectionIndicator = YES;
-        return pickView;
-    }
-    return _inputView;
-}
+
+//-(UIPickerView *)inputView{
+//    if(!_inputView)
+//    {
+//        UIPickerView *  pickView = [[UIPickerView alloc]init];
+////        pickView.delegate =self;
+////        pickView.dataSource = self;
+//        pickView.showsSelectionIndicator = YES;
+//        return pickView;
+//    }
+//    return _inputView;
+//}
 @end

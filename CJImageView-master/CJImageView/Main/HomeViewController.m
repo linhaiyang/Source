@@ -245,9 +245,43 @@ void (^blk)(void) = ^{NSLog(@"Global Block");};
     id __weak obj2 = obj;//(id) obj2 = 0x00007fff20176310
     
 
+    [self CTLabel];
 }
 
--(void)addsub:(NSStringResourceKey)resoure{}
+-(void)CTLabel{
+    
+    CATextLayer * label =  [[CATextLayer alloc]init];
+    label.backgroundColor = UIColor.blueColor.CGColor;
+    label.frame = CGRectMake(0, 300, kScreenWidth, 100);
+    [self.view.layer addSublayer:label];
+    
+    UIFont *font = [UIFont systemFontOfSize:20];
+    CTFontRef ctFont = CTFontCreateWithName((CFStringRef)font.fontName,
+                                            font.pointSize, NULL);
+    CTFontRef ref = font.CTFontRef;
+    CGColorRef cgColor = [UIColor whiteColor].CGColor;
+    CGFloat leading = 25.0;
+    CTTextAlignment alignment = kCTRightTextAlignment; // just for test purposes
+    const CTParagraphStyleSetting styleSettings[] = {
+        {kCTParagraphStyleSpecifierLineSpacingAdjustment, sizeof(CGFloat), &leading},
+        {kCTParagraphStyleSpecifierAlignment, sizeof(CTTextAlignment), &alignment}
+    };
+    CTParagraphStyleRef paragraphStyle = CTParagraphStyleCreate(styleSettings, 2);
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                (__bridge id)ctFont, (id)kCTFontAttributeName,
+                                (__bridge id)cgColor, (id)kCTForegroundColorAttributeName,
+                                (id)paragraphStyle, (id)kCTParagraphStyleAttributeName,
+                                nil];
+    CFRelease(ctFont);
+    CFRelease(paragraphStyle);
+
+    NSMutableAttributedString *attrStr = [[NSMutableAttributedString alloc]
+                                                     initWithString:@"呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵呵"
+                                                         attributes:attributes];
+    label.string = attrStr;
+//    [attrStr release];
+    
+}
 /*
 #pragma mark - Navigation
 

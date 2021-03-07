@@ -162,6 +162,7 @@
     transition.subtype = kCATransitionFromTop;//顶部
     self.view.window.rootViewController = mainTabBar;
     [self.view.window.layer addAnimation:transition forKey:@"revealAnimation"];
+    [self.view.window.layer addFadeAnimationWithDuration:0.5 curve:UIViewAnimationCurveEaseOut];
 }
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [super touchesBegan:touches withEvent:event];
