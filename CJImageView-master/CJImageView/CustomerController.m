@@ -32,6 +32,7 @@
 //        _bView.backgroundColor = HEXCOLOR(f0f0f0);//
 //
 //    }
+    Dlog(@"touchesBegan");
     self.backgroundColor = HEXCOLOR(f0f0f0);//
 //    if (!_trackingTouch) {
 //        [super touchesBegan:touches withEvent:event];
@@ -51,6 +52,8 @@
 //    if ([_cell.delegate respondsToSelector:@selector(cellDidClickCard:)]) {
 //        [_cell.delegate cellDidClickCard:_cell];
 //    }
+    Dlog(@"touchesEnded");
+
 }
 
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event{
@@ -59,14 +62,14 @@
 //        [super touchesCancelled:touches withEvent:event];
 //    }
 //    self.backgroundColor = HEXCOLOR(f7f7f7);
-    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(setBackgroundColor:) object:HEXCOLOR(f7f7f7)];
-    self.backgroundColor = HEXCOLOR(f7f7f7);
+//    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(setBackgroundColor:) object:HEXCOLOR(f7f7f7)];
+//    self.backgroundColor = HEXCOLOR(f7f7f7);
+    Dlog(@"touchesCancelled");
+
 
 //    self.backgroundColor = _isRetweet ? [UIColor whiteColor] : kWBCellInnerViewColor;
 }
--(BOOL)canBecomeFirstResponder{
-    return true;
-}
+
 @end
 
 @interface CustomerController ()
@@ -82,13 +85,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = UIColor.orangeColor;
-    YYControl * bgView = [[YYControl alloc]initWithFrame:CGRectMake(0, 100, kScreenWidth, 50)];
+    customerControllerView * bgView = [[customerControllerView alloc]initWithFrame:CGRectMake(0, 100, kScreenWidth, 50)];
     bgView.backgroundColor = HEXCOLOR(f7f7f7);
     bgView.exclusiveTouch = YES;
     [self.view addSubview:bgView];
 //    _bView = bgView;
     bgView.userInteractionEnabled = true;
-    __block  UIView * blockView = bgView;
+//    __block  UIView * blockView = bgView;
 //    YYGestureRecognizer *gesture = [YYGestureRecognizer new];
 //    [bgView addGestureRecognizer:gesture];
 //    gesture.action = ^(YYGestureRecognizer *gesture, YYGestureRecognizerState state) {
@@ -103,14 +106,10 @@
 //        }else if (state == YYGestureRecognizerStateMoved){
 //            Dlog(@"YYGestureRecognizerStateMoved");
 //        }
-//        CGFloat width = gesture.currentPoint.x;
-//        CGFloat height = gesture.currentPoint.y;
-//        wlabel.width = width < 30 ? 30 : width;
-//        wlabel.height = height < 30 ? 30 : height;
 //    };
     
 //    [bgView addTapGestureRecognizer:^(UITapGestureRecognizer *recognizer, NSString *gestureId) {
-//        blockView.backgroundColor = HEXCOLOR(f0f0f0);
+////        blockView.backgroundColor = HEXCOLOR(f0f0f0);
 //        if (recognizer.state == UIGestureRecognizerStateBegan) {
 //            Dlog(@"YYGestureRecognizerStateBegan");
 //        }else if (recognizer.state == UIGestureRecognizerStateCancelled){
@@ -123,25 +122,62 @@
 ////            [self fadeRootController];
 //            Dlog(@"UIGestureRecognizerStateEnded");
 //        }
+//        Dlog(@"UIGestureRecognizerStateEnded-------");
 //    }];
     
-    bgView.touchBlock = ^(YYControl *view, YYGestureRecognizerState state, NSSet *touches, UIEvent *event) {
-        if (state == YYGestureRecognizerStateCancelled) {
-                    Dlog(@"YYGestureRecognizerStateCancelled");
-        
-                }else if (state == YYGestureRecognizerStateEnded){
-                    Dlog(@"YYGestureRecognizerStateEnded");
-                    [self fadeRootController];
-                }else if (state == YYGestureRecognizerStateBegan){
-                    Dlog(@"YYGestureRecognizerStateBegan");
-                }else if (state == YYGestureRecognizerStateMoved){
-                    Dlog(@"YYGestureRecognizerStateMoved");
-                }
-    };
+    UITapGestureRecognizer *tg = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapHandler:)];
+    tg.numberOfTapsRequired = 1;
+    tg.numberOfTouchesRequired = 1;
+    [bgView addGestureRecognizer:tg];
     
+    //（是否取消向事件响应链传递）：默认 YES，自定义的手势响应后，系统手势不再响应
+//    ，但自定义手势识别前，会先执行系统手势。设置为 NO 后，自定义手势和系统手势会同时识别响应。
+    tg.cancelsTouchesInView = true;
+
+    //（延迟响应链的识别）：
+//    默认 NO，先执行响应链中的方法（系统方法），识别到自定义手势后，不再执行系统方法。
+//    设置为 YES 后，优先识别自定义手势，当自定义手势识别失败后才会响应系统方法
+    tg.delaysTouchesBegan = false;
+
+
+    
+    
+    //    UITapGestureRecognizer *tg2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapHandlerTwo:)];
+//    tg2.numberOfTapsRequired = 2;
+//    tg2.numberOfTouchesRequired = 1;
+//    [bgView addGestureRecognizer:tg2];
+//
+//    UITapGestureRecognizer *tg3 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapHandlerthree:)];
+//    tg3.numberOfTapsRequired = 3;
+//    tg3.numberOfTouchesRequired = 1;
+//    [bgView addGestureRecognizer:tg3];
+//
+//    [tg2 requireGestureRecognizerToFail:tg3];
+//    [tg requireGestureRecognizerToFail:tg2];
+    
+    //    bgView.touchBlock = ^(YYControl *view, YYGestureRecognizerState state, NSSet *touches, UIEvent *event) {
+    //        if (state == YYGestureRecognizerStateCancelled) {
+    //                    Dlog(@"YYGestureRecognizerStateCancelled");
+    //
+    //                }else if (state == YYGestureRecognizerStateEnded){
+    //                    Dlog(@"YYGestureRecognizerStateEnded");
+    ////                    [self fadeRootController];
+    //                }else if (state == YYGestureRecognizerStateBegan){
+    //                    Dlog(@"YYGestureRecognizerStateBegan");
+    //                }else if (state == YYGestureRecognizerStateMoved){
+    //                    Dlog(@"YYGestureRecognizerStateMoved");
+    //                }
+    //    };
 }
-
-
+-(void)tapHandler:(UITapGestureRecognizer *)tap{
+    Dlog(@"tap1");
+}
+-(void)tapHandlerTwo:(UITapGestureRecognizer *)tap{
+    Dlog(@"tap2");
+}
+-(void)tapHandlerthree:(UITapGestureRecognizer *)taptapHandlerthree{
+    Dlog(@"tap3");
+}
 -(void)fadeRootController{
     MainTabBarController*mainTabBar = [MainTabBarController new];
     //UIViewAnimationTransition

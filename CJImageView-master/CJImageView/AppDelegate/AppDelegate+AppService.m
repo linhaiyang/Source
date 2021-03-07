@@ -29,7 +29,7 @@
 
 -(void)registKeyBoradManager{
     [[IQKeyboardManager sharedManager] setEnable:true];
-    [[IQKeyboardManager sharedManager] registerTextFieldViewClass:[YYTextView class] didBeginEditingNotificationName:YYTextViewTextDidBeginEditingNotification didEndEditingNotificationName:YYTextViewTextDidEndEditingNotification];
+//    [[IQKeyboardManager sharedManager] registerTextFieldViewClass:[YYTextView class] didBeginEditingNotificationName:YYTextViewTextDidBeginEditingNotification didEndEditingNotificationName:YYTextViewTextDidEndEditingNotification];
 
 //    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = true;//Resigns Keyboard on touching outside of UITextField/View.
 }

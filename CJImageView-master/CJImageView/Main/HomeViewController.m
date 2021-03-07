@@ -211,6 +211,18 @@ void (^blk)(void) = ^{NSLog(@"Global Block");};
         
     };
     
+        YYTextView * textView = [[YYTextView alloc]initWithFrame:CGRectMake(100, 300, kScreenWidth - 100, 100)];
+        textView.placeholderText = @"YYTextView placthoder";
+        [self.view addSubview:textView];
+    NSMutableAttributedString *tagText = [[NSMutableAttributedString alloc] initWithString:@"YYTextView"];
+    [tagText yy_insertString:@"   " atIndex:0];
+    
+    [tagText yy_appendString:@"   "];
+//    tagText.yy_font = UIFont;
+    tagText.yy_color = [UIColor blueColor];
+    [tagText yy_setTextBinding:[YYTextBinding bindingWithDeleteConfirm:true] range:tagText.yy_rangeOfAll];
+    textView.attributedText = tagText;
+    
 //    UIImageView * img = [[UIImageView alloc]init];
 //    img.image = coverImage();
 //    img.size = CGSizeMake(141, 60);
