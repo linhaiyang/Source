@@ -332,6 +332,8 @@
 		8B32C70325753A240050A147 /* Bugly in Resources */ = {isa = PBXBuildFile; fileRef = 8B32C70125753A240050A147 /* Bugly */; };
 		8B5C7C9D25C31BAB00D35371 /* Array.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B5C7C9C25C31BAB00D35371 /* Array.plist */; };
 		8B5C7C9E25C31BAB00D35371 /* Array.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B5C7C9C25C31BAB00D35371 /* Array.plist */; };
+		8BA9E8AF25F64C990068C823 /* WZZPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA9E8AE25F64C990068C823 /* WZZPopViewController.m */; };
+		8BA9E8B025F64C990068C823 /* WZZPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA9E8AE25F64C990068C823 /* WZZPopViewController.m */; };
 		8BAD990125AE02490031CE42 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8BAD990025AE02490031CE42 /* .gitignore */; };
 		8BAD990225AE02490031CE42 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8BAD990025AE02490031CE42 /* .gitignore */; };
 		8BE8769C256A2D5A00F7F143 /* HttpFile in Resources */ = {isa = PBXBuildFile; fileRef = 8BE8769B256A2D5A00F7F143 /* HttpFile */; };
@@ -675,6 +677,8 @@
 		8B2C8734257003C500C43812 /* LHY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LHY.m; sourceTree = "<group>"; };
 		8B32C70125753A240050A147 /* Bugly */ = {isa = PBXFileReference; lastKnownFileType = text; path = Bugly; sourceTree = "<group>"; };
 		8B5C7C9C25C31BAB00D35371 /* Array.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Array.plist; sourceTree = "<group>"; };
+		8BA9E8AD25F64C990068C823 /* WZZPopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZZPopViewController.h; sourceTree = "<group>"; };
+		8BA9E8AE25F64C990068C823 /* WZZPopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZZPopViewController.m; sourceTree = "<group>"; };
 		8BAD990025AE02490031CE42 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		8BE8769B256A2D5A00F7F143 /* HttpFile */ = {isa = PBXFileReference; lastKnownFileType = text; path = HttpFile; sourceTree = "<group>"; };
 		910612C4969EA109705B385E /* Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig"; path = "Target Support Files/Pods-CJImageViewDefault-CJImageViewDebug/Pods-CJImageViewDefault-CJImageViewDebug.debug.xcconfig"; sourceTree = "<group>"; };
@@ -814,6 +818,8 @@
 				5ACCFBE425F0C51800D6483B /* CustomerController.m */,
 				5A4365852583187F0033B521 /* KeyBoardManagerController.h */,
 				5A4365862583187F0033B521 /* KeyBoardManagerController.m */,
+				8BA9E8AD25F64C990068C823 /* WZZPopViewController.h */,
+				8BA9E8AE25F64C990068C823 /* WZZPopViewController.m */,
 				5A4815342559268E001DC006 /* loadAinitializeTest.h */,
 				5A4815352559268E001DC006 /* loadAinitializeTest.m */,
 				5ABB0AF025E4A1C20074C3ED /* ImageTableViewCell.h */,
@@ -2098,6 +2104,7 @@
 				5A2E8ACB24B8831400B859AB /* MPFileManager.m in Sources */,
 				5AE9BBBA25075BB20010945B /* NetWorkBaseUrlConfig.m in Sources */,
 				5A109680249B417B000398F5 /* GCDSemaphore.m in Sources */,
+				8BA9E8AF25F64C990068C823 /* WZZPopViewController.m in Sources */,
 				5A2E8ABD24B87A8000B859AB /* ImageUploadHelper.m in Sources */,
 				5A9C02E22599F0A20045F0F4 /* UIColor+Gradient.m in Sources */,
 				5AE9BBB225075BB20010945B /* YTKNetworkConfig.m in Sources */,
@@ -2237,6 +2244,7 @@
 				5A0E8C0F2579DB6E002F8708 /* XYTransition.m in Sources */,
 				5A5493C324BD539D00C49207 /* UINavigationItem+Margin.m in Sources */,
 				5A39C234256BA7590052A133 /* UIView+Nib.m in Sources */,
+				8BA9E8B025F64C990068C823 /* WZZPopViewController.m in Sources */,
 				5A66952E25358D810073FDF6 /* AppDelegate+AppService.m in Sources */,
 				5A5493C424BD539D00C49207 /* UIView+EaseBlankPage.m in Sources */,
 				5AF95B012570FEDF00A03F02 /* Reachability.m in Sources */,

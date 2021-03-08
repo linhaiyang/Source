@@ -11,9 +11,12 @@
 #import "MPUploadImagesService.h"
 #import "MPRequstFailedHelper.h"
 #import "cameraHelper.h"
+#import "WZZPopViewController.h"
 
-@interface UploadImagesViewController ()<UITableViewDataSource, UITableViewDelegate,UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, QBImagePickerControllerDelegate>
+@interface UploadImagesViewController ()<UITableViewDataSource, UITableViewDelegate,UIActionSheetDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate, QBImagePickerControllerDelegate,UIPopoverPresentationControllerDelegate>
 @property (strong, nonatomic) MPUploadImagesHelper *curUploadImageHelper;
+@property (nonatomic, strong) UIButton *rightItem;
+@property (nonatomic, strong) WZZPopViewController *popVC;
 
 @end
 
@@ -29,15 +32,52 @@
     //初始化
        _curUploadImageHelper=[MPUploadImagesHelper MPUploadImageForSend:NO];
     //设置右边
-       UIButton*rightButton = [[UIButton alloc]initWithFrame:CGRectMake(0,0,70,30)];
-       [rightButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
-       [rightButton setTitle:@"保存" forState:UIControlStateNormal];
-       [rightButton addTarget:self action:@selector(myAction)forControlEvents:UIControlEventTouchUpInside];
-       UIBarButtonItem*rightItem = [[UIBarButtonItem alloc]initWithCustomView:rightButton];
-       self.navigationItem.rightBarButtonItem= rightItem;
+//       UIButton*rightButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//       [rightButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+//       [rightButton setTitle:@"保存" forState:UIControlStateNormal];
+//       [rightButton addTarget:self action:@selector(popAction)forControlEvents:UIControlEventTouchUpInside];
+//    [rightButton sizeToFit];
+//       UIBarButtonItem*rightItem = [[UIBarButtonItem alloc]initWithCustomView:rightButton];
+       
+    
+    UIBarButtonItem * item = [[UIBarButtonItem alloc]initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(popAction)];
+    self.navigationItem.rightBarButtonItem= item;
+//    self.rightItem = rightButton;
+}
+-(void)popAction{
+    
+    //初始化 VC
+    self.popVC = [[WZZPopViewController alloc] init];
+    //设置 VC 弹出方式
+    self.popVC.modalPresentationStyle = UIModalPresentationPopover;
+    //设置依附的按钮
+        self.popVC.popoverPresentationController.barButtonItem = self.navigationItem.rightBarButtonItem;
+//    self.popVC.popoverPresentationController.sourceView = self.navigationItem.rightBarButtonItem.customView;
+    //可以指示小箭头颜色
+    self.popVC.popoverPresentationController.backgroundColor = [UIColor yellowColor];
+    //箭头方向
+    self.popVC.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionAny;
+    
+    // 指定箭头所指区域的矩形框范围（位置和尺寸）,以sourceView的左上角为坐标原点
+    // 这个可以 通过 Point 或  Size 调试位置
+    // 使用导航栏的左右按钮不需要这句代码
+//    self.popVC.popoverPresentationController.sourceRect = self.navigationItem.rightBarButtonItem.customView.bounds;
+    self.popVC.popoverPresentationController.popoverLayoutMargins  = UIEdgeInsetsMake(-15, 0, 15, 0 );
+
+    //代理
+    self.popVC.popoverPresentationController.delegate = self;
+    [self presentViewController:self.popVC animated:YES completion:nil];
+    
+    //content尺寸
+    //self.itemPopVC.preferredContentSize = CGSizeMake(400, 400);
+}
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
+    return UIModalPresentationNone;
 }
 
-
+- (BOOL)popoverPresentationControllerShouldDismissPopover:(UIPopoverPresentationController *)popoverPresentationController{
+    return YES;   //点击蒙版popover消失， 默认YES
+}
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;

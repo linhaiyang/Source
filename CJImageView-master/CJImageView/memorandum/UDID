@@ -16,3 +16,29 @@ UIPasteboard
 cotetext
 https://blog.csdn.net/xiaoxiaobukuang/article/details/52461528
 
+
+UIInputViewController、、这里的那些分享功能(Facebook, Twitter, 新浪微博, 腾讯微博...)需要你在手机上绑定了登录账户, 才能正常显示。
+PopViewController
+UIMenuController
+UIActivityViewController
+UIAlertController
+UICloudSharingController
+UICollectionViewController
+UIColorPickerViewController
+UIDocumentBrowserViewController
+UIDocumentInteractionController
+UIDocumentMenuViewController
+UIDocumentPickerExtensionViewController
+UIDocumentPickerViewController
+UIFontPickerViewController
+UIImagePickerController
+UIPageViewController
+UIPopoverPresentationController
+
+UIPresentationController
+UINavigationController
+
+UIPrinterPickerController
+UIReferenceLibraryViewController
+UISearchController
+UITableViewController

@@ -153,6 +153,10 @@ void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
     self.yyLabel.numberOfLines = 0;
     [self addSubview:self.yyLabel];
     [loadAinitializeTest initializeTestBegin];
+    
+        [self addGestureRecognizer:[[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(becomeFirstRes)]];
+
+    
     return self;
 }
 
@@ -184,23 +188,75 @@ void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
 }
 
 - (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
-    if (action == @selector(select:) ||
-        action == @selector(selectAll:)) {
+    if (action == @selector(myCut::) ||
+        action == @selector(myPaste::)) {
         return true;
     }
-    if (action == @selector(paste:)) {
-        return true;
-    }
+//    if (action == @selector(copy:)) {
+//        return true;
+//    }
     
     
     return [super canPerformAction:action withSender:sender];;
+}
+-(void)becomeFirstRes{
+    NSLog(@"%s",__func__);
+    
+    //1.设置label为第一响应者
+    //通过设置第一响应者UIMenuController可以获得支持哪些操作的信息,操作怎么处理
+    [self becomeFirstResponder];
+    
+    //2.设置UIMenuController
+    UIMenuController * menu = [UIMenuController sharedMenuController];
+    
+    //自定义 UIMenuController
+    
+    UIMenuItem * item1 = [[UIMenuItem alloc]initWithTitle:@"剪切" action:@selector(myCut:)];
+    UIMenuItem * item2 = [[UIMenuItem alloc]initWithTitle:@"粘贴" action:@selector(myPaste:)];
+    menu.menuItems = @[item1,item2];
+    
+    NSLog(@"%d",menu.isMenuVisible);
+    //当长按label的时候，这个方法会不断调用，menu就会出现一闪一闪不断显示，需要在此处进行判断
+    if (menu.isMenuVisible)return;
+    /**
+     *  设置UIMenuController的显示相关信息
+     *
+     *  @param targetRect UIMenuController 需要指向的矩形框
+     *  @param targetView targetRect会以targetView的左上角为坐标原点进行显示
+     */
+//    - (void)setTargetRect:(CGRect)targetRect inView:(UIView *)targetView;
+    [menu setTargetRect:self.bounds inView:self];
+//    [menu setTargetRect:self.frame inView:self.superview];
+    
+    [menu setMenuVisible:YES animated:YES];
+    
+}
+- (void)pressesEnded:(NSSet<UIPress *> *)presses withEvent:(nullable UIPressesEvent *)event API_AVAILABLE(ios(9.0)){
+    [self becomeFirstResponder];
 }
 
 -(void)select:(id)sender{
     
 }
+-(void)copy:(id)sender{
+    
+}
+- (void)myCut:(UIMenuController *)menu
+{
+    //当没有文字的时候调用这个方法会崩溃
+     if (!self.yyLabel.text) return;
+    //复制文字到剪切板
+    UIPasteboard * paste = [UIPasteboard generalPasteboard];
+    paste.string = self.yyLabel.text;
 
+}
 
+- (void)myPaste:(UIMenuController *)menu
+{
+    //将剪切板文字赋值给label
+    UIPasteboard * paste = [UIPasteboard generalPasteboard];
+    self.yyLabel.text = paste.string;
+}
 - (BOOL)canBecomeFirstResponder{
     return YES;
 }
