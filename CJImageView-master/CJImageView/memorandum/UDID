@@ -59,3 +59,29 @@ CTFramesetter是由CFAttributedString(NSAttributedString)初始化而来，可�
 ————————————————
 版权声明：本文为CSDN博主「xiaoxiaobukuang」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/xiaoxiaobukuang/article/details/52368694
+=======
+UIInputViewController、、这里的那些分享功能(Facebook, Twitter, 新浪微博, 腾讯微博...)需要你在手机上绑定了登录账户, 才能正常显示。
+PopViewController
+UIMenuController
+UIActivityViewController
+UIAlertController
+UICloudSharingController
+UICollectionViewController
+UIColorPickerViewController
+UIDocumentBrowserViewController
+UIDocumentInteractionController
+UIDocumentMenuViewController
+UIDocumentPickerExtensionViewController
+UIDocumentPickerViewController
+UIFontPickerViewController
+UIImagePickerController
+UIPageViewController
+UIPopoverPresentationController
+
+UIPresentationController
+UINavigationController
+
+UIPrinterPickerController
+UIReferenceLibraryViewController
+UISearchController
+UITableViewController
