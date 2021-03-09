@@ -499,7 +499,19 @@ dispatch_semaphore_signal(_lock);
         if (lineOrigins == NULL) goto fail;
         CTFrameGetLineOrigins(ctFrame, CFRangeMake(0, lineCount), lineOrigins);
     }
-    
+    /**
+     （1）、CTFont
+     （2）、CTFontCollection
+     （3）、CTFontDescriptor
+     （4）、CTFrame
+     （5）、CTFramesetter
+     （6）、CTGlyphInfo
+     （7）、CTLine
+     （8）、CTParagraphStyle
+     （9）、CTRun
+     （10）、CTTextTab
+     （11）、CTTypesetter
+     */
     CGRect textBoundingRect = CGRectZero;
     CGSize textBoundingSize = CGSizeZero;
     NSInteger rowIdx = -1;

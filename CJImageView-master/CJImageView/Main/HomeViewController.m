@@ -293,7 +293,17 @@ void (^blk)(void) = ^{NSLog(@"Global Block");};
     label.string = attrStr;
 //    [attrStr release];
     
+//    [self activityController];
+    
 }
+
+
+-(void)activityController{
+    NSString *textToShare = @"要分享的文本内容";
+    UIActivityViewController * controller = [[UIActivityViewController alloc]initWithActivityItems:@[textToShare] applicationActivities:nil];
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
 /*
 #pragma mark - Navigation
 

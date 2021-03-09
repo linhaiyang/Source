@@ -23,7 +23,7 @@
     return self;
 }
 - (NSString *)requestUrl {
-    return @"storeapi/wx/home/global-index";
+    return @"/storeapi/wx/home/version.html";
 }
 - (YTKRequestMethod)requestMethod {
     return YTKRequestMethodGET;

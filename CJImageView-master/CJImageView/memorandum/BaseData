@@ -195,3 +195,82 @@ Installing IQKeyboardManager 6.2.1 (was 3.3.7 and source changed to `https://cdn
 4.给要执行的方法设置参数
 使用setArgument:atIndex:方法给要执行的方法设置参数，注意下标从2开始，因为0、1已经被target与selector占用
 [invocation setArgument:&arg1 atIndex:2];
+
+
+在32位系统中
+ int        占4个字节
+ long       占4个字节----1
+ long long  占8个字节
+ 
+ NSInteger  是int的别名, 占4个字节-----2
+ int32_t    是int的别名, 占4个字节 -------int 占4个字节
+ int64_t    是long long的别名, 占8个字节  ------
+ 
+ 在64位系统中
+ int        占4个字节
+ long       占8个字节----1
+ long long  占8个字节
+ 
+ NSInteger  是long的别名, 占8个字节------2
+ int32_t    是int的别名, 占4个字节
+ int64_t    是long long的别名, 占8个字节
+ 
+ 
+ 4字节的整数变量, 它的范围是 -2147483648 ~ 2147483647
+ 如果不带符号, 它的范围是   0 ~ 4294967295
+ 
+ 8字节的整数变量, 它的范围是 -9223372036854775808 ~ 9223372036854775807
+ 如果不带符号, 它的范围是 0 ~ 18446744073709551615
+
+
+
+
+/*
+麦克风权限：Privacy - Microphone Usage Description是否允许此App使用你的麦克风？
+
+相机权限：Privacy - Camera Usage Description 是否允许此App使用你的相机？
+
+相册权限：Privacy - Photo Library Usage Description 是否允许此App访问你的媒体资料库？
+
+通讯录权限：Privacy - Contacts Usage Description 是否允许此App访问你的通讯录？
+
+蓝牙权限：Privacy - Bluetooth Peripheral Usage Description是否许允此App使用蓝牙？
+
+语音转文字权限：Privacy - Speech Recognition Usage Description是否允许此App使用语音识别？
+
+日历权限：Privacy - Calendars Usage Description
+
+定位权限：Privacy - Location When In Use Usage Description
+
+定位权限:Privacy - Location Always Usage Description
+
+位置权限：Privacy - Location Usage Description
+
+媒体库权限：Privacy - Media Library Usage Description
+
+健康分享权限：Privacy - Health Share Usage Description
+
+健康更新权限：Privacy - Health Update Usage Description
+
+运动使用权限：Privacy - Motion Usage Description
+
+音乐权限：Privacy - Music Usage Description
+
+提醒使用权限：Privacy - Reminders Usage Description
+
+Siri使用权限：Privacy - Siri Usage Description
+
+电视供应商使用权限：Privacy - TV Provider Usage Description
+
+视频用户账号使用权限：Privacy - Video Subscriber Account Usage Description
+
+info.plist开启网络服务：
+
+<key>App Transport Security Settings</key>
+
+<dict>
+
+<key>Allow Arbitrary Loads</key>
+
+<string>
+*/

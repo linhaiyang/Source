@@ -16,3 +16,46 @@ UIPasteboard
 cotetext
 https://blog.csdn.net/xiaoxiaobukuang/article/details/52461528
 
+
+
+Core Text是和Core Graphics配合使用的，一般是在UIView的drawRect方法中的Graphics Context上进行绘制的。 且Core Text真正负责绘制的是文本部分，图片还是需要自己去手动绘制，所以你必须关注很多绘制的细节部分。
+
+CoreText 框架中最常用的几个类：
+（1）、CTFont
+（2）、CTFontCollection
+（3）、CTFontDescriptor
+（4）、CTFrame
+（5）、CTFramesetter
+（6）、CTGlyphInfo
+（7）、CTLine
+（8）、CTParagraphStyle
+（9）、CTRun
+（10）、CTTextTab
+（11）、CTTypesetter
+
+
+（1）、CFAttributedStringRef
+
+属性字符串，用于存储需要绘制的文字字符和字符属性
+
+（2）、CTFramesetterRef
+
+framesetter对应的类型是 CTFramesetter，通过CFAttributedStringRef进行初始化，它作为CTFrame对象的生产工厂，负责根据path生产对应的CTFrame；
+
+（3）、CTFrame
+
+CTFrame是可以通过CTFrameDraw函数直接绘制到context上的，当然你可以在绘制之前，操作CTFrame中的CTLine，进行一些参数的微调；
+
+（3）、CTLine
+
+在CTFrame内部是由多个CTLine来组成的，每个CTLine代表一行；可以看做Core Text绘制中的一行的对象 通过它可以获得当前行的line ascent,line descent ,line leading,还可以获得Line下的所有Glyph Runs；
+
+（4）、CTRun
+
+或者叫做 Glyph Run，每个CTLine又是由多个CTRun组成的，每个CTRun代表一组显示风格一致的文本，是一组共享想相同attributes（属性）的字形的集合体；
+
+总结：
+CTFramesetter是由CFAttributedString(NSAttributedString)初始化而来，可以认为它是CTFrame的一个Factory，通过传入CGPath生成相应的CTFrame并使用它进行渲染：直接以CTFrame为参数使用CTFrameDraw绘制或者从CTFrame中获取CTLine进行微调后使用CTLineDraw进行绘制。CTFrame 作为一个整体的画布(Canvas)，其中由行(CTLine)组成，而每行可以分为一个或多个小方块（CTRun）。
+————————————————
+版权声明：本文为CSDN博主「xiaoxiaobukuang」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/xiaoxiaobukuang/article/details/52368694

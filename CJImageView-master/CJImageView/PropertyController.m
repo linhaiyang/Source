@@ -80,7 +80,8 @@
     LogInApi*request = [[LogInApi alloc] init];
     NSError *loadCacheError = nil;
     if ([request loadCacheWithError:&loadCacheError]) {
-        id obj = [NSJSONSerialization JSONObjectWithData:[request responseData] options:NSJSONReadingMutableContainers error:nil];
+//        id obj = [NSJSONSerialization JSONObjectWithData:[request responseJSONObject] options:NSJSONReadingMutableContainers error:nil];
+        Dlog(@"loadCacheWithError-----%@--------",[request responseJSONObject]);
     }
     [request startRequestWithCompletionBlockWithSuccess:^(BaseRequestService * _Nonnull batchRequest) {
         LoginModel * model = batchRequest.paraData;

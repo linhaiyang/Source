@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #define LOCK(lock) dispatch_semaphore_wait(lock, DISPATCH_TIME_FOREVER);
 #define UNLOCK(lock) dispatch_semaphore_signal(lock);//YYImageManager.failedURLsLock
-
+#define KStatusBarHeight  safeBottomHeight()
 
 /// Get main screen's scale.
 CGFloat YYScreenScale();

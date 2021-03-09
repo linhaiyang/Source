@@ -26,7 +26,7 @@ int const Default_pageSize = 20;
     NSString * version = GlobalInstance.appVersion;
     NSString * systemVersion = GlobalInstance.systemVersion;
     NSString * deviveName = GlobalInstance.device_name;
-    NSString * token = GlobalUserInfo.token?GlobalUserInfo.token:@"";
+    NSString * token = GlobalUserInfo.token?GlobalUserInfo.token:@"Yq3uhy8iMbjagow-MaTpYi1fDE2MTUxODQ3MTYO0O0O";
     NSDictionary *headerDictionary=@{@"platform":@"ios",@"version":[NSString stringWithFormat:@"%@",version],@"device":[NSString stringWithFormat:@"%@-%@", deviveName, systemVersion],@"token":token};
     NSString * headStr = [headerDictionary JSONString];
     return headerDictionary;
@@ -68,7 +68,7 @@ failure:(void (^)(YTKBaseRequest *batchRequest))failure{
     //    NSString *token = [GlobalUserDefault token] ? [GlobalUserDefault token] :
     //    [dic setObject: @"api-vt2s57b6fvli0i08o3bc5bet4j" forKey:@"token"];
         // 设备来源
-        [dic setObject:@"iOS" forKey:@"dev#ice"];
+        [dic setObject:@"iOS" forKey:@"device"];
         // 随机值
         int a = arc4random() % 100000;
         NSString *nonce = [NSString stringWithFormat:@"%06d", a];
@@ -83,6 +83,8 @@ failure:(void (^)(YTKBaseRequest *batchRequest))failure{
         NSString *key = @"Asus!@#$%^&*()Store";
         NSString *signature = [NSString stringWithFormat:@"%@%@%@", nonce, timestamp, key].md5String;
         [dic setObject:signature forKey:@"signature"];
+    
+    [dic setObject:@"2" forKey:@"type"];
     if (self.page > 0) {
         [dic setObject:[NSString stringWithFormat:@"%d",self.page] forKey:@"page"];
         if (self.page_size == 0) {
