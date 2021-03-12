@@ -42,6 +42,13 @@ NSString * const kNotificationName = @"kNotificationName";
     //    CGContextFillPath(ctx);
     //    UIGraphicsPopContext();
 }
+
+-(instancetype)init{
+    self = [super init];
+    Dlog(@"ToolDemoViewController INIt");
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     CALayer* layer = [CALayer layer];

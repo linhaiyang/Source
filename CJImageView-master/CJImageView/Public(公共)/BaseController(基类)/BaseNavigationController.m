@@ -26,7 +26,7 @@
 //    self.navigationBar set
 //    self.navigationBar
 //    self.navigationBar.translucent = false;
-    NSLog(@"%ld----------",self.navigationBar.subviews.count);
+    NSLog(@"%@---------subviews-",self.navigationBar);
     
     UIView*overlay = [[UIView alloc] initWithFrame:CGRectMake(0, -20, [UIScreen mainScreen].bounds.size.width, CGRectGetHeight(self.navigationBar.bounds) + 20)];
     overlay.userInteractionEnabled = NO;
@@ -34,6 +34,9 @@
 //    [self.navigationBar insertSubview:overlay atIndex:0];
 //    [self.navigationBar.layer insertSublayer:overlay.layer atIndex:0];
     overlay.backgroundColor = [UIColor orangeColor];
+    
+    
+//    self.navigationItem.backBarButtonItem
 }
 
 + (void)initialize {
@@ -87,11 +90,11 @@
 
 #pragma mark -  拦截所有push方法
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    if (self.viewControllers.count > 0) {
+   if (self.viewControllers.count > 0) {
         
     }
     if (self.viewControllers.count > 0) {
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"button_navibars_4w"] style:UIBarButtonItemStyleDone target:self action:@selector(back)];
+        viewController.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"button_navibars_4w"] style:UIBarButtonItemStyleDone target:self action:@selector(back)];
         // 如果navigationController的字控制器个数大于两个就隐藏
         viewController.hidesBottomBarWhenPushed = YES;
         
