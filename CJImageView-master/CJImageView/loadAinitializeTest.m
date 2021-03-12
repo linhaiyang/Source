@@ -162,7 +162,7 @@ void drawImage(CGContextRef context, CGImageRef image , CGRect rect){
 
 +(void)initializeTestBegin{
     
-    NSString * string = @"loadMy";
+    NSString * string = @"严";//<6c6f6164 4d79><e4b8a5>
     NSData * data = [string dataUsingEncoding:NSUTF8StringEncoding];
     
     Byte byte[] = {1,2,3,4,5,6,7,8,9,10};

@@ -55,9 +55,6 @@
 		5A2882C224A343A10059F96C /* UINavigationController+StackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2882B124A343A10059F96C /* UINavigationController+StackManager.m */; };
 		5A2882C324A343A10059F96C /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2882B224A343A10059F96C /* UINavigationController+FDFullscreenPopGesture.m */; };
 		5A2882C424A343A10059F96C /* UINavigationController+BATransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2882B524A343A10059F96C /* UINavigationController+BATransitions.m */; };
-		5A2882C524A343A10059F96C /* UINavigationItem+Lock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2882B924A343A10059F96C /* UINavigationItem+Lock.m */; };
-		5A2882C624A343A10059F96C /* UINavigationItem+Loading.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2882BA24A343A10059F96C /* UINavigationItem+Loading.m */; };
-		5A2882C724A343A10059F96C /* UINavigationItem+Margin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2882BB24A343A10059F96C /* UINavigationItem+Margin.m */; };
 		5A2E8A8324B6F37000B859AB /* SYSafeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E8A8024B6F37000B859AB /* SYSafeCategory.m */; };
 		5A2E8A8424B6F37000B859AB /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E8A8224B6F37000B859AB /* JRSwizzle.m */; };
 		5A2E8A8824B70D1400B859AB /* LogInApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E8A8724B70D1400B859AB /* LogInApi.m */; };
@@ -102,14 +99,12 @@
 		5A5493AD24BD539D00C49207 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A28829524A19D100059F96C /* BaseViewController.m */; };
 		5A5493AE24BD539D00C49207 /* UINavigationController+BATransitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2882B524A343A10059F96C /* UINavigationController+BATransitions.m */; };
 		5A5493B124BD539D00C49207 /* MPTagCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E8AD924B9A9C600B859AB /* MPTagCollectionViewFlowLayout.m */; };
-		5A5493B624BD539D00C49207 /* UINavigationItem+Lock.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2882B924A343A10059F96C /* UINavigationItem+Lock.m */; };
 		5A5493B724BD539D00C49207 /* SYSafeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E8A8024B6F37000B859AB /* SYSafeCategory.m */; };
 		5A5493B824BD539D00C49207 /* ImageUploadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E8A9824B7267900B859AB /* ImageUploadCell.m */; };
 		5A5493B924BD539D00C49207 /* UIViewController+LL_Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2882A324A1D30F0059F96C /* UIViewController+LL_Utils.m */; };
 		5A5493BB24BD539D00C49207 /* GCDSemaphore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109679249B417B000398F5 /* GCDSemaphore.m */; };
 		5A5493BC24BD539D00C49207 /* ImageUploadHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E8ABC24B87A8000B859AB /* ImageUploadHelper.m */; };
 		5A5493BE24BD539D00C49207 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A28829924A19D6A0059F96C /* BaseNavigationController.m */; };
-		5A5493C324BD539D00C49207 /* UINavigationItem+Margin.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2882BB24A343A10059F96C /* UINavigationItem+Margin.m */; };
 		5A5493C424BD539D00C49207 /* UIView+EaseBlankPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A355806249CC03A002DAD41 /* UIView+EaseBlankPage.m */; };
 		5A5493C624BD539D00C49207 /* PropertyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2882A924A1FB970059F96C /* PropertyController.m */; };
 		5A5493C824BD539D00C49207 /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109677249B417B000398F5 /* GCDGroup.m */; };
@@ -124,7 +119,6 @@
 		5A5493D924BD539D00C49207 /* EaseBlankPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A3557FF249CC03A002DAD41 /* EaseBlankPageView.m */; };
 		5A5493DA24BD539D00C49207 /* LogInApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E8A8724B70D1400B859AB /* LogInApi.m */; };
 		5A5493DB24BD539D00C49207 /* GCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A109676249B417B000398F5 /* GCDTimer.m */; };
-		5A5493DC24BD539D00C49207 /* UINavigationItem+Loading.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2882BA24A343A10059F96C /* UINavigationItem+Loading.m */; };
 		5A5493DD24BD539D00C49207 /* UINavigationController+JZExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2882AF24A343A10059F96C /* UINavigationController+JZExtension.m */; };
 		5A5493DE24BD539D00C49207 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E8A8224B6F37000B859AB /* JRSwizzle.m */; };
 		5A5493E024BD539D00C49207 /* UIImage+FX.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2E8AC524B8823D00B859AB /* UIImage+FX.m */; };
@@ -449,12 +443,6 @@
 		5A2882B224A343A10059F96C /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		5A2882B324A343A10059F96C /* UINavigationController+JZExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+JZExtension.h"; sourceTree = "<group>"; };
 		5A2882B524A343A10059F96C /* UINavigationController+BATransitions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+BATransitions.m"; sourceTree = "<group>"; };
-		5A2882B724A343A10059F96C /* UINavigationItem+Margin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+Margin.h"; sourceTree = "<group>"; };
-		5A2882B824A343A10059F96C /* UINavigationItem+Loading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+Loading.h"; sourceTree = "<group>"; };
-		5A2882B924A343A10059F96C /* UINavigationItem+Lock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+Lock.m"; sourceTree = "<group>"; };
-		5A2882BA24A343A10059F96C /* UINavigationItem+Loading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+Loading.m"; sourceTree = "<group>"; };
-		5A2882BB24A343A10059F96C /* UINavigationItem+Margin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+Margin.m"; sourceTree = "<group>"; };
-		5A2882BC24A343A10059F96C /* UINavigationItem+Lock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+Lock.h"; sourceTree = "<group>"; };
 		5A2E8A7F24B6F37000B859AB /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
 		5A2E8A8024B6F37000B859AB /* SYSafeCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SYSafeCategory.m; sourceTree = "<group>"; };
 		5A2E8A8124B6F37000B859AB /* SYSafeCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SYSafeCategory.h; sourceTree = "<group>"; };
@@ -993,19 +981,6 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
-		5A2882B624A343A10059F96C /* UINavigationItem */ = {
-			isa = PBXGroup;
-			children = (
-				5A2882B724A343A10059F96C /* UINavigationItem+Margin.h */,
-				5A2882BB24A343A10059F96C /* UINavigationItem+Margin.m */,
-				5A2882B824A343A10059F96C /* UINavigationItem+Loading.h */,
-				5A2882BA24A343A10059F96C /* UINavigationItem+Loading.m */,
-				5A2882BC24A343A10059F96C /* UINavigationItem+Lock.h */,
-				5A2882B924A343A10059F96C /* UINavigationItem+Lock.m */,
-			);
-			path = UINavigationItem;
-			sourceTree = "<group>";
-		};
 		5A2E8A7E24B6F37000B859AB /* SySafeCategory */ = {
 			isa = PBXGroup;
 			children = (
@@ -1142,7 +1117,6 @@
 				5A2882AF24A343A10059F96C /* UINavigationController+JZExtension.m */,
 				5A2882AD24A343A10059F96C /* UINavigationController+FDFullscreenPopGesture.h */,
 				5A2882B224A343A10059F96C /* UINavigationController+FDFullscreenPopGesture.m */,
-				5A2882B624A343A10059F96C /* UINavigationItem */,
 			);
 			path = UINavigationController;
 			sourceTree = "<group>";
@@ -2104,7 +2078,6 @@
 				5A669492253557D70073FDF6 /* RootWebViewController.m in Sources */,
 				5A685ED624D2E7B200BF9737 /* NSData+Hash.m in Sources */,
 				5A55A96C2500F27A0037DACF /* RACObserveController.m in Sources */,
-				5A2882C524A343A10059F96C /* UINavigationItem+Lock.m in Sources */,
 				5A2E8A8324B6F37000B859AB /* SYSafeCategory.m in Sources */,
 				5AEDA97F25F7119B00E7E732 /* AAPLCustomPresentationController.m in Sources */,
 				5AC1C462258C98A600D95FCD /* CAShapeLayer+UIBezierPath.m in Sources */,
@@ -2129,7 +2102,6 @@
 				5A28829A24A19D6A0059F96C /* BaseNavigationController.m in Sources */,
 				5AAADFED25E1148B00A7C0D3 /* NSAttributedString+Tool.m in Sources */,
 				5A669493253557D70073FDF6 /* XLWebViewController.m in Sources */,
-				5A2882C724A343A10059F96C /* UINavigationItem+Margin.m in Sources */,
 				5AF95B002570FEDF00A03F02 /* Reachability.m in Sources */,
 				5A35580D249CC03A002DAD41 /* UIView+EaseBlankPage.m in Sources */,
 				5A2882AA24A1FB970059F96C /* PropertyController.m in Sources */,
@@ -2175,7 +2147,6 @@
 				5A10967E249B417B000398F5 /* GCDTimer.m in Sources */,
 				5A6A5B622591C59E00E3D925 /* UIViewController+MJPopupViewController.m in Sources */,
 				5ADABE9925776A430077B7C3 /* NSSet+Block.m in Sources */,
-				5A2882C624A343A10059F96C /* UINavigationItem+Loading.m in Sources */,
 				5A2882C124A343A10059F96C /* UINavigationController+JZExtension.m in Sources */,
 				5A2E8A8424B6F37000B859AB /* JRSwizzle.m in Sources */,
 				5A685EAC24D037DB00BF9737 /* NSFileManager+Paths.m in Sources */,
@@ -2228,7 +2199,6 @@
 				5A55A96724FFB1900037DACF /* NSString+Size.m in Sources */,
 				5ACCFBE625F0C51800D6483B /* CustomerController.m in Sources */,
 				5AE9BBE72508DFA20010945B /* UIViewController+Alert.m in Sources */,
-				5A5493B624BD539D00C49207 /* UINavigationItem+Lock.m in Sources */,
 				5A5493B724BD539D00C49207 /* SYSafeCategory.m in Sources */,
 				5A38B499250F71610077F6DE /* UITableView+RadiusStyle.m in Sources */,
 				5AE9BBBF25075BB20010945B /* YTKNetworkAgent.m in Sources */,
@@ -2258,6 +2228,7 @@
 				5AE9BB762505D4180010945B /* LoginModel.m in Sources */,
 				5A0E8C0F2579DB6E002F8708 /* XYTransition.m in Sources */,
 				5A5493C324BD539D00C49207 /* UINavigationItem+Margin.m in Sources */,
+				5AEDA9AC25F7172A00E7E732 /* LMLandScapeControlView.m in Sources */,
 				5AE4571125F62C1E00FF8598 /* UIViewController+AlertController.m in Sources */,
 				5A39C234256BA7590052A133 /* UIView+Nib.m in Sources */,
 				8BA9E8B025F64C990068C823 /* WZZPopViewController.m in Sources */,
@@ -2313,7 +2284,6 @@
 				5A938A7225B7DE46002B5169 /* CacheCleanerPlugin.m in Sources */,
 				5A5493DA24BD539D00C49207 /* LogInApi.m in Sources */,
 				5A5493DB24BD539D00C49207 /* GCDTimer.m in Sources */,
-				5A5493DC24BD539D00C49207 /* UINavigationItem+Loading.m in Sources */,
 				5A4365882583187F0033B521 /* KeyBoardManagerController.m in Sources */,
 				5A5493DD24BD539D00C49207 /* UINavigationController+JZExtension.m in Sources */,
 				5A5493DE24BD539D00C49207 /* JRSwizzle.m in Sources */,
