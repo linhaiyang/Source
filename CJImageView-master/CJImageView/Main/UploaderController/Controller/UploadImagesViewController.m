@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.title=@"上传图片";
+//    self.navigationItem.title=@"上传图片";
     [self.view addSubview:self.tableV];
     [self.tableV mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
@@ -42,6 +42,7 @@
     
     UIBarButtonItem * item = [[UIBarButtonItem alloc]initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(popAction)];
     self.navigationItem.rightBarButtonItem= item;
+    [item setTitlePositionAdjustment:UIOffsetMake(8, 0) forBarMetrics:UIBarMetricsDefault];
 //    self.rightItem = rightButton;
 }
 -(void)popAction{

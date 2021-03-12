@@ -8,7 +8,7 @@
 
 #import "BaseNavigationController.h"
 
-@interface BaseNavigationController ()
+@interface BaseNavigationController ()<UINavigationControllerDelegate>
 
 @end
 
@@ -34,7 +34,13 @@
 //    [self.navigationBar insertSubview:overlay atIndex:0];
 //    [self.navigationBar.layer insertSublayer:overlay.layer atIndex:0];
     overlay.backgroundColor = [UIColor orangeColor];
+    
+    self.delegate = self;
+    
+    
+    
 }
+
 
 + (void)initialize {
     Dlog(@"初始化导航控制器");
@@ -68,34 +74,39 @@
 //    UIImage *image = [UIImage imageWithColor:color];//
 //    [navBar setBackgroundColor:[UIColor clearColor]];
 ////
-    [navBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];//UIViewController 从导航栏底部开始
-    [navBar setBarTintColor:KColorNavDefault];//UIViewController 从导航栏顶部开始
+    [navBar setBackgroundImage:[UIImage imageWithColor:UIColor.orangeColor] forBarMetrics:UIBarMetricsDefault];//UIViewController 从导航栏底部开始
+//    [navBar setBarTintColor:KColorNavDefault];
     
     navBar.tintColor = [UIColor clearColor];
     
-    navBar.translucent = false;//不透明的
+    navBar.translucent = false;//不透明的//UIViewController 从导航栏顶部开始
 //    navBar.opaque = true;//不透明的
     __block UINavigationBar * bnavBar = navBar;
     [UIImage imageWithColor:[UIColor clearColor] completion:^(UIImage *img) {
         [bnavBar setShadowImage:img];
     }];
     // 设置导航栏颜色
-    
-
 }
 
 
 #pragma mark -  拦截所有push方法
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    if (self.viewControllers.count > 0) {
-        
+    viewController.extendedLayoutIncludesOpaqueBars=YES;//是否延伸到包含不透明的状态栏。
+
+//
+//    viewController.navigationItem.leftMargin = 8;
+
+    if (@available(iOS 11.0, *)) {
+        Dlog(@"%@--------",viewController.navigationItem.backButtonTitle);
+        viewController.navigationItem.backButtonTitle = @"";
+    } else {
+            UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"button_navibars_4w"] style:UIBarButtonItemStylePlain target:self action:@selector(back)];
+            [backButton setImageInsets:UIEdgeInsetsMake(0, -8, 0, 8)];
+            viewController.navigationItem.backBarButtonItem = backButton;
+        // Fallback on earlier versions
     }
     if (self.viewControllers.count > 0) {
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"button_navibars_4w"] style:UIBarButtonItemStyleDone target:self action:@selector(back)];
-        // 如果navigationController的字控制器个数大于两个就隐藏
         viewController.hidesBottomBarWhenPushed = YES;
-        
-        
     }
     [super pushViewController:viewController animated:animated];
 }
@@ -105,5 +116,6 @@
     [super popViewControllerAnimated:YES];
      //这里就可以自行修改返回按钮的各种属性等
 }
-
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+}
 @end

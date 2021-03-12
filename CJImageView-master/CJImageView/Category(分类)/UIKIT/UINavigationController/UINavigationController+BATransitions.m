@@ -58,7 +58,7 @@
 //               NSLog(@"不包含key=%@的属性",key);
            }
        }];
-       [self.navigationController pushViewController:instance animated:YES];
+       [self pushViewController:instance animated:YES];
 }
 /**
  *  检测对象是否存在该属性
